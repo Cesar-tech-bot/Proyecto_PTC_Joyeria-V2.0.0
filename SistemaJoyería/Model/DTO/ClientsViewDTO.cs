@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaJoyería.Model.DTO
 {
-    public class ClientsViewDTO
+    public class ClientsViewDTO : dbContext
     {
         private int idClient;
 

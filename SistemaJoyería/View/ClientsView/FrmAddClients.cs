@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaJoyería.Controller.ClientsController;
 
 namespace SistemaJoyería.View.ClientsView
 {
@@ -15,6 +16,8 @@ namespace SistemaJoyería.View.ClientsView
         public FrmAddClients()
         {
             InitializeComponent();
+            AddClientsController addClientsController = new AddClientsController(this);
+            
         }
     }
 }
