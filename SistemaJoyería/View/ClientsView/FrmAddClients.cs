@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaJoyería.Controller.ClientsController;
 
 namespace SistemaJoyería.View.ClientsView
 {
-    public partial class FrmClientsView : Form
+    public partial class FrmAddClients : Form
     {
-        public FrmClientsView()
+        public FrmAddClients()
         {
             InitializeComponent();
-            ViewClientsController viewClientsController = new ViewClientsController(this);
         }
     }
 }
