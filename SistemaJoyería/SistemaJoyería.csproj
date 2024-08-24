@@ -50,6 +50,7 @@
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmSuppliers.cs" />
+    <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />

@@ -18,6 +18,6 @@ namespace SistemaJoyería.View.ClientsView
             InitializeComponent();
             AddClientsController addClientsController = new AddClientsController(this);
             
-        }
+        }   
     }
 }
