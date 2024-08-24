@@ -66,6 +66,7 @@ namespace SistemaJoyería.Controller.ClientsController
                 if (resultado == 1)
                 {
                     MessageBox.Show("El cliente fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
                 else
                 {
