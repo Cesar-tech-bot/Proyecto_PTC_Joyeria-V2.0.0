@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using SistemaJoyería.View.ClientsView;
 using SistemaJoyería.Model.DAO;
 using System.Text.RegularExpressions;
+using System.Data;
 
 namespace SistemaJoyería.Controller.ClientsController
 {
@@ -66,7 +67,7 @@ namespace SistemaJoyería.Controller.ClientsController
                 if (resultado == 1)
                 {
                     MessageBox.Show("El cliente fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    ObjAddCView.Close();
                 }
                 else
                 {

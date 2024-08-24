@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvClientsTable = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddClients = new System.Windows.Forms.Button();
+            this.cmsMenuClient = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsActualizarClient = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsEliminarClient = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).BeginInit();
             this.panel1.SuspendLayout();
+            this.cmsMenuClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -82,6 +87,27 @@
             this.btnAddClients.Text = "Añadir";
             this.btnAddClients.UseVisualStyleBackColor = false;
             // 
+            // cmsMenuClient
+            // 
+            this.cmsMenuClient.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsMenuClient.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsActualizarClient,
+            this.cmsEliminarClient});
+            this.cmsMenuClient.Name = "cmsMenuClient";
+            this.cmsMenuClient.Size = new System.Drawing.Size(145, 52);
+            // 
+            // cmsActualizarClient
+            // 
+            this.cmsActualizarClient.Name = "cmsActualizarClient";
+            this.cmsActualizarClient.Size = new System.Drawing.Size(144, 24);
+            this.cmsActualizarClient.Text = "Actualizar";
+            // 
+            // cmsEliminarClient
+            // 
+            this.cmsEliminarClient.Name = "cmsEliminarClient";
+            this.cmsEliminarClient.Size = new System.Drawing.Size(144, 24);
+            this.cmsEliminarClient.Text = "Eliminar";
+            // 
             // FrmClientsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -94,6 +120,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.cmsMenuClient.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -104,5 +131,8 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvClientsTable;
         public System.Windows.Forms.Button btnAddClients;
+        public System.Windows.Forms.ToolStripMenuItem cmsActualizarClient;
+        public System.Windows.Forms.ToolStripMenuItem cmsEliminarClient;
+        public System.Windows.Forms.ContextMenuStrip cmsMenuClient;
     }
 }

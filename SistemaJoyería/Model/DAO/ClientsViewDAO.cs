@@ -38,5 +38,28 @@ namespace SistemaJoyería.Model.DAO
             }
 
         }
+
+        public int EliminarClient()
+        {
+            try
+            {
+                //Establecemos una conexión
+                command.Connection = getConnection();
+                //Definir que acción se desea realizar
+                string queryDelete = "DELETE Clients WHERE  idClient = @param1";
+                SqlCommand cmdDelete = new SqlCommand(queryDelete, command.Connection);
+                cmdDelete.Parameters.AddWithValue("param1", IdClient);
+                return cmdDelete.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message} No se pudo eliminar la información de libro, verifique su conexión a internet o que los servicios esten activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
     }
 }

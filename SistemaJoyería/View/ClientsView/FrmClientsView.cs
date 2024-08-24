@@ -18,5 +18,6 @@ namespace SistemaJoyería.View.ClientsView
             InitializeComponent();
             ViewClientsController viewClientsController = new ViewClientsController(this);
         }
+        
     }
 }
