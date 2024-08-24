@@ -106,7 +106,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(180, 62);
             this.btnOK.TabIndex = 36;
-            this.btnOK.Text = "Aceptar";
+            this.btnOK.Text = "Ingresar";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // btnDelete
@@ -116,7 +116,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(180, 62);
             this.btnDelete.TabIndex = 37;
-            this.btnDelete.Text = "Borrar";
+            this.btnDelete.Text = "Limpiar";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // tbEmail
@@ -149,7 +149,7 @@
             this.tbClientsName.Location = new System.Drawing.Point(162, 45);
             this.tbClientsName.Name = "tbClientsName";
             this.tbClientsName.Size = new System.Drawing.Size(728, 27);
-            this.tbClientsName.TabIndex = 35;
+            this.tbClientsName.TabIndex = 35;          
             // 
             // txtEmail
             // 
