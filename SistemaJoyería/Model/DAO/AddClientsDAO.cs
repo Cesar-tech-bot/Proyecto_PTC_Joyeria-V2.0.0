@@ -15,15 +15,17 @@ namespace SistemaJoyería.Model.DAO
     {
         SqlCommand command = new SqlCommand();
 
-        public int RegistrarClientes()
+        public int InsertClients()
         {
             try
             {
                 //Establecemos una conexión
                 command.Connection = getConnection();
-                //Definir que acción se desea realizar
+                //Definir qué consulta, en este caso INSERT
                 string queryInsert = "INSERT INTO Clients VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7)";
+                //Se crea un objeto para ejecutar la consulta con la conexión establecida
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
+                //Definimos el valor de cada parámetro con DTO
                 cmdInsert.Parameters.AddWithValue("param1", FirstName);
                 cmdInsert.Parameters.AddWithValue("param2", LastName);
                 cmdInsert.Parameters.AddWithValue("param3", Phone);
@@ -31,6 +33,7 @@ namespace SistemaJoyería.Model.DAO
                 cmdInsert.Parameters.AddWithValue("param5", BirthDate);
                 cmdInsert.Parameters.AddWithValue("param6", IdentityDocument);
                 cmdInsert.Parameters.AddWithValue("param7", AddressClient);
+                //Retornamos la ejecución de la consulta
                 return cmdInsert.ExecuteNonQuery();
             }
             catch (Exception ex)

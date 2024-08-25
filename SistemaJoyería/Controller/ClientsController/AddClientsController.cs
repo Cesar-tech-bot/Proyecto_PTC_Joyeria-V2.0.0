@@ -21,9 +21,11 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             ObjAddCView = viewAdd;
 
+            //Evento de Registrar (CRUD)
             viewAdd.btnOK.Click += new EventHandler(SaveRegister);
-            viewAdd.btnDelete.Click += new EventHandler(CleanInformation);
-            //Sección de validaciones de View
+            //Sección Eventos del View
+            viewAdd.btnDelete.Click += new EventHandler(ClearInformation);
+            //Restricciones
             viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(TbClientsName_KeyPress);
             viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(TbClientsSurname_KeyPress);
             viewAdd.tbCellphoneN.KeyPress += new KeyPressEventHandler(TbCellphoneN_KeyPress);
@@ -33,27 +35,46 @@ namespace SistemaJoyería.Controller.ClientsController
 
         }
 
+        //Método de Agregar Cliente (CRUD)
         void SaveRegister(object sender, EventArgs e)
-        {
-            if (!(string.IsNullOrEmpty(ObjAddCView.tbClientsName.Text.Trim()) ||
+        {//Creamos todas las validaciones
+
+            if(!( //Validamos si están vacios los espacios (ClientsName y ClientsSurname)
+                  string.IsNullOrEmpty(ObjAddCView.tbClientsName.Text.Trim()) ||
                   string.IsNullOrEmpty(ObjAddCView.tbClientsSurname.Text.Trim()) ||
+
+                  //Usamos los métodos de validaciones para qué tipo de caracteres  permitirán, etc...
                   !IsValidName(ObjAddCView.tbClientsName.Text.Trim()) ||
                   !IsValidName(ObjAddCView.tbClientsSurname.Text.Trim()) ||
+
+                  //Usamos el método de validación respectivo para ClientsBirhtday
                   !IsValidAge(ObjAddCView.dtpClientsBirthday.Value) ||
+
+                  //Validamos si no está vacio el campo
                   string.IsNullOrEmpty(ObjAddCView.tbCellphoneN.Text.Trim()) ||
+                  //Usamos el método de CellPhoneN
                   !IsValidPhoneNumber(ObjAddCView.tbCellphoneN.Text.Trim()) ||
+
+                  //Validamos si no está vacio el campo
                   string.IsNullOrEmpty(ObjAddCView.tbDuiDoc.Text.Trim()) ||
+                  //Usamos el método de DuiDoc
                   !IsValidDuiDoc(ObjAddCView.tbDuiDoc.Text.Trim()) ||
+                  //Validamos si no está vacio el campo
+
                   string.IsNullOrEmpty(ObjAddCView.tbEmail.Text.Trim()) ||
-                  ObjAddCView.tbEmail.Text.Contains(" ") ||
+                  //Validamos que no esté vacio el campo
+                  //ObjAddCView.tbEmail.Text.Contains(" ") ||
+
                   string.IsNullOrEmpty(ObjAddCView.tbAddress.Text.Trim()) ||
+                  //Ponemos un límiete de 100 carácteres
                   ObjAddCView.tbAddress.Text.Length > 100 ||
-                  IsNumeric(ObjAddCView.tbAddress.Text.Trim())))
+                  //Usamos el método respectivo parta Adress
+                  IsNumeric(ObjAddCView.tbAddress.Text.Trim())))    
             {
-                // Crear un objeto de tipo ClientsDAO
+                // Creamos un objeto de tipo ClientsDAO
                 AddClientsDAO daoClient = new AddClientsDAO();
 
-                // Enviando valores de la vista hacia el DTO de clientes
+                // Enviamos los valores de la vista hacia el DTO de clientes
                 daoClient.FirstName = ObjAddCView.tbClientsName.Text.Trim();
                 daoClient.LastName = ObjAddCView.tbClientsSurname.Text.Trim();
                 daoClient.BirthDate = ObjAddCView.dtpClientsBirthday.Value;
@@ -62,11 +83,12 @@ namespace SistemaJoyería.Controller.ClientsController
                 daoClient.Email = ObjAddCView.tbEmail.Text.Trim();
                 daoClient.AddressClient = ObjAddCView.tbAddress.Text.Trim();
 
-                // Registrar cliente en la base de datos
-                int resultado = daoClient.RegistrarClientes();
+                // Registramos el cliente en la base de datos
+                int resultado = daoClient.InsertClients();
                 if (resultado == 1)
                 {
                     MessageBox.Show("El cliente fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   //Se refrezca el DGV
                     ObjAddCView.Close();
                 }
                 else
@@ -77,35 +99,57 @@ namespace SistemaJoyería.Controller.ClientsController
             else
             {
                 MessageBox.Show("Datos faltantes o incorrectos, complete el formulario con la información requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }  
         }
 
-        // Métodos de validación 
-        private bool IsValidName(string text) 
-        { return Regex.IsMatch(text, @"^[a-zA-Z]+( [a-zA-Z]+)?$"); }
-        private bool IsValidAge(DateTime birthDate) 
+        //Métodos de validación 
+
+        //Método que valida si un nombre o apellido es válido.
+        private bool IsValidName(string text)
         {
+          //Se asegura de que los nombres y apellidos solo contengan letras y opcionalmente un solo espacio entre dos palabras.
+          return Regex.IsMatch(text, @"^[a-zA-Z]+( [a-zA-Z]+)?$");
+        }
+
+        //Método que valida si la fecha de nacimiento corresponde a una persona mayor de 18 años.
+        private bool IsValidAge(DateTime birthDate)
+        {
+            //Calcula la edad restando el año actual del año de nacimiento y ajusta si el cumpleaños aún no ha ocurrido este año.
             int age = DateTime.Now.Year - birthDate.Year;
+
+            //Aquí se verifica si el cumpleaños ya ocurrió este año.
             if (DateTime.Now.DayOfYear < birthDate.DayOfYear)
             {
-                age--;
+                age--; //Se ajusta la edad si el cumpleaños aún no ha ocurrido.
             }
-            return age >= 18;
+
+            return age >= 18; //Se asegura de que la edad sea de al menos 18 años.
         }
-        private bool IsValidPhoneNumber(string phoneNumber) 
+
+        //Método que valida si un número de teléfono es válido.
+        private bool IsValidPhoneNumber(string phoneNumber)
         {
+            //Verifica que el número de teléfono solo contenga dígitos y tenga una longitud de hasta 18 caracteres.
             return Regex.IsMatch(phoneNumber, @"^\d{1,18}$");
         }
-        private bool IsValidDuiDoc(string duiDoc) 
+
+        //Método que valida si un documento DUI es válido.
+        private bool IsValidDuiDoc(string duiDoc)
         {
+            //Verifica que el DUI tenga el formato correcto de 8 dígitos, un guion, seguido de un dígito.
             return Regex.IsMatch(duiDoc, @"^\d{8}-\d$");
         }
+
+        //Método que verifica si son solo números.
         private bool IsNumeric(string text)
         {
+            //Se asegura de que todos los caracteres en el texto sean dígitos.
             return text.All(char.IsDigit);
         }
 
-        public void CleanInformation(object sender, EventArgs e)
+
+        //Eventos del View
+        public void ClearInformation(object sender, EventArgs e)
         {
             ObjAddCView.tbClientsName.Clear();
             ObjAddCView.tbClientsSurname.Clear();
@@ -117,6 +161,7 @@ namespace SistemaJoyería.Controller.ClientsController
 
         }
 
+        //Restricciones 
         private void TbClientsName_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir solo letras y un único espacio

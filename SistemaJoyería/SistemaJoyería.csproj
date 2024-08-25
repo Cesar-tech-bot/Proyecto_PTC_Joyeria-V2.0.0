@@ -68,6 +68,12 @@
     <Compile Include="View\ClientsView\FrmClientsView.Designer.cs">
       <DependentUpon>FrmClientsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ClientsView\FrmUpdateClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ClientsView\FrmUpdateClients.Designer.cs">
+      <DependentUpon>FrmUpdateClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClientsView\FrmClientsView.resx">
       <DependentUpon>FrmClientsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClientsView\FrmUpdateClients.resx">
+      <DependentUpon>FrmUpdateClients.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
