@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.SuppliersController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SistemaJoyería.View.Suppliers
 {
-    public partial class FrmAddSuplliers : Form
+    public partial class FrmAddSuppliers : Form
     {
-        public FrmAddSuplliers()
+        public FrmAddSuppliers()
         {
             InitializeComponent();
         }

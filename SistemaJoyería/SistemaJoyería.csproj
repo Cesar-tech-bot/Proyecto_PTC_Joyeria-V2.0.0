@@ -54,10 +54,12 @@
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
     <Compile Include="Model\DAO\ProductsViewDAO.cs" />
-    <Compile Include="Model\DAO\SuppliersView.cs" />
+    <Compile Include="Model\DAO\AddSuppliersViewDAO.cs" />
+    <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />
+    <Compile Include="Model\DTO\AddSuppliersViewDTO.cs" />
     <Compile Include="Model\DTO\SuppliersViewDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,11 +87,11 @@
     <Compile Include="View\ProductsView\FrmProductsView.Designer.cs">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Suppliers\FrmAddSuplliers.cs">
+    <Compile Include="View\Suppliers\FrmAddSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Suppliers\FrmAddSuplliers.Designer.cs">
-      <DependentUpon>FrmAddSuplliers.cs</DependentUpon>
+    <Compile Include="View\Suppliers\FrmAddSuppliers.Designer.cs">
+      <DependentUpon>FrmAddSuppliers.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Suppliers\FrmSuppliers.cs">
       <SubType>Form</SubType>
@@ -115,8 +117,8 @@
     <EmbeddedResource Include="View\ProductsView\FrmProductsView.resx">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Suppliers\FrmAddSuplliers.resx">
-      <DependentUpon>FrmAddSuplliers.cs</DependentUpon>
+    <EmbeddedResource Include="View\Suppliers\FrmAddSuppliers.resx">
+      <DependentUpon>FrmAddSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Suppliers\FrmSuppliers.resx">
       <DependentUpon>FrmSuppliers.cs</DependentUpon>
