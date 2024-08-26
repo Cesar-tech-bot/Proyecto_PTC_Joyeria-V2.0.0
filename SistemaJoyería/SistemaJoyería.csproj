@@ -86,6 +86,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Suppliers\FrmAddSuplliers.resx">
+      <DependentUpon>FrmAddSuplliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Suppliers\FrmSuppliers.resx">
+      <DependentUpon>FrmSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
