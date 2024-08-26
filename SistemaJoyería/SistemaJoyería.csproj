@@ -113,6 +113,9 @@
     <EmbeddedResource Include="View\ProductsView\FrmProductsView.resx">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Suppliers\FrmAddSuplliers.resx">
+      <DependentUpon>FrmAddSuplliers.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
