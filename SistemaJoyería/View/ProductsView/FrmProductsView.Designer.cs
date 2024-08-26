@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.lbIDProduct = new System.Windows.Forms.Label();
             this.txtIDProducts = new System.Windows.Forms.TextBox();
             this.btnKeep = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.MenuProductos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.MenuProductos.SuspendLayout();
@@ -69,6 +69,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 498);
             this.panel1.TabIndex = 2;
+            // 
+            // txtSupplierName
+            // 
+            this.txtSupplierName.Location = new System.Drawing.Point(7, 187);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.Size = new System.Drawing.Size(177, 20);
+            this.txtSupplierName.TabIndex = 10;
             // 
             // lbIDProduct
             // 
@@ -162,9 +169,13 @@
             this.dgvProducts.AllowUserToAddRows = false;
             this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.ContextMenuStrip = this.MenuProductos;
             this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProducts.Location = new System.Drawing.Point(200, 0);
             this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.ReadOnly = true;
+            this.dgvProducts.RowHeadersVisible = false;
+            this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
             this.dgvProducts.Size = new System.Drawing.Size(600, 498);
             this.dgvProducts.TabIndex = 3;
             // 
@@ -187,13 +198,6 @@
             this.cmsUpdateProduct.Name = "cmsUpdateProduct";
             this.cmsUpdateProduct.Size = new System.Drawing.Size(178, 22);
             this.cmsUpdateProduct.Text = "Actualizar producto";
-            // 
-            // txtSupplierName
-            // 
-            this.txtSupplierName.Location = new System.Drawing.Point(7, 187);
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(177, 20);
-            this.txtSupplierName.TabIndex = 10;
             // 
             // FrmProductsView
             // 
