@@ -22,7 +22,7 @@ namespace SistemaJoyería.Controller.ProductsController
             ////Eventos que se ejecutan con click
             View.cmsDeleteProduct.Click += new EventHandler(DeleteProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
-            View.dgvProducts.CellClick += new DataGridViewCellEventHandler(SelectProduct);
+            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
         }
 
         void CargaInicial(object sender, EventArgs e)
@@ -34,16 +34,16 @@ namespace SistemaJoyería.Controller.ProductsController
         {
             ProductsViewDAO daoPD = new ProductsViewDAO();
             DataSet ds = daoPD.ShowDGV();
-            ObjView.dgvProducts.DataSource = ds.Tables["vw_Products"];
+            ObjView.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
 
         void DeleteProduct(object sender, EventArgs e)
         {
             //capturando el indice de la fila
 
-            int pos = ObjView.dgvProducts.CurrentRow.Index;
+            int pos = ObjView.dgvProduct.CurrentRow.Index;
             ProductsViewDAO daoDelete = new ProductsViewDAO();
-            daoDelete.IDProducto1 = int.Parse(ObjView.dgvProducts[0, pos].Value.ToString());
+            daoDelete.IDProducto1 = int.Parse(ObjView.dgvProduct[0, pos].Value.ToString());
             int retorno = daoDelete.DeleteRecord();
             if (retorno == 1)
             {
@@ -88,8 +88,8 @@ namespace SistemaJoyería.Controller.ProductsController
 
         void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
-            int pos = ObjView.dgvProducts.CurrentRow.Index;
-            ObjView.txtIDProducts.Text = ObjView.dgvProducts[0, pos].Value.ToString();
+            int pos = ObjView.dgvProduct.CurrentRow.Index;
+            ObjView.txtIDProducts.Text = ObjView.dgvProduct[0, pos].Value.ToString();
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.lbIDProduct = new System.Windows.Forms.Label();
             this.txtIDProducts = new System.Windows.Forms.TextBox();
             this.btnKeep = new System.Windows.Forms.Button();
@@ -40,13 +41,12 @@
             this.lbMaterialProduct = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.lbProducts = new System.Windows.Forms.Label();
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.MenuProductos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.MenuProductos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 498);
             this.panel1.TabIndex = 2;
+            // 
+            // txtSupplierName
+            // 
+            this.txtSupplierName.Location = new System.Drawing.Point(7, 187);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.Size = new System.Drawing.Size(177, 20);
+            this.txtSupplierName.TabIndex = 10;
             // 
             // lbIDProduct
             // 
@@ -157,16 +164,20 @@
             this.lbProducts.TabIndex = 0;
             this.lbProducts.Text = "Nombre del Producto";
             // 
-            // dgvProducts
+            // dgvProduct
             // 
-            this.dgvProducts.AllowUserToAddRows = false;
-            this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProducts.Location = new System.Drawing.Point(200, 0);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.Size = new System.Drawing.Size(600, 498);
-            this.dgvProducts.TabIndex = 3;
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.ContextMenuStrip = this.MenuProductos;
+            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduct.Location = new System.Drawing.Point(200, 0);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.RowHeadersVisible = false;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgvProduct.Size = new System.Drawing.Size(600, 498);
+            this.dgvProduct.TabIndex = 3;
             // 
             // MenuProductos
             // 
@@ -188,25 +199,18 @@
             this.cmsUpdateProduct.Size = new System.Drawing.Size(178, 22);
             this.cmsUpdateProduct.Text = "Actualizar producto";
             // 
-            // txtSupplierName
-            // 
-            this.txtSupplierName.Location = new System.Drawing.Point(7, 187);
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(177, 20);
-            this.txtSupplierName.TabIndex = 10;
-            // 
             // FrmProductsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 498);
-            this.Controls.Add(this.dgvProducts);
+            this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.panel1);
             this.Name = "FrmProductsView";
             this.Text = "FrmProductsView";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.MenuProductos.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -225,7 +229,7 @@
         private System.Windows.Forms.Label lbMaterialProduct;
         public System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label lbProducts;
-        public System.Windows.Forms.DataGridView dgvProducts;
+        public System.Windows.Forms.DataGridView dgvProduct;
         public System.Windows.Forms.ToolStripMenuItem cmsDeleteProduct;
         public System.Windows.Forms.ToolStripMenuItem cmsUpdateProduct;
         public System.Windows.Forms.TextBox txtSupplierName;
