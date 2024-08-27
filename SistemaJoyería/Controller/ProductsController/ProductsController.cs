@@ -25,6 +25,11 @@ namespace SistemaJoyería.Controller.ProductsController
             //View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
             View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
+            View.btnRestart.Click += new EventHandler(RestartRegister);
+            View.txtProductName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
+            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
+            View.txtSupplierName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
+            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
         }
 
         void CargaInicial(object sender, EventArgs e)
@@ -38,7 +43,20 @@ namespace SistemaJoyería.Controller.ProductsController
             DataSet ds = daoPD.ShowDGV();
             ObjView.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
+        private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y un único espacio
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
 
+            // Evitar más de un espacio consecutivo
+            if (e.KeyChar == ' ' && (sender as TextBox).Text.EndsWith(" "))
+            {
+                e.Handled = true;
+            }
+        }
         void DeleteProduct(object sender, EventArgs e)
         {
             //capturando el indice de la fila
@@ -121,6 +139,16 @@ namespace SistemaJoyería.Controller.ProductsController
                 MessageBox.Show("Datos faltantes, complete el formulario con la informacion requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void RestartRegister(object sender, EventArgs e)
+        {
+            // Limpiar los TextBox
+            ObjView.txtProductName.Text = string.Empty;
+            ObjView.txtProductMaterial.Text = string.Empty;
+            ObjView.txtSupplierName.Text = string.Empty;
+            ObjView.txtProductDescription.Text = string.Empty;
+        }
+
         void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
             int pos = ObjView.dgvProduct.CurrentRow.Index;
