@@ -3,6 +3,7 @@ using SistemaJoyería.View.ProductsView;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace SistemaJoyería.Controller.ProductsController
             View.Load += new EventHandler(CargaInicial);
             ////Eventos que se ejecutan con click
             View.cmsDeleteProduct.Click += new EventHandler(DeleteProduct);
+            //View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
             View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
         }
@@ -52,6 +54,7 @@ namespace SistemaJoyería.Controller.ProductsController
             else
             {
                 MessageBox.Show("El producto seleccionado no pudo ser eliminado", "proceso incompletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowDGVProducts();
             }
         }
 
@@ -85,7 +88,6 @@ namespace SistemaJoyería.Controller.ProductsController
                 MessageBox.Show("Datos faltantes, complete el formulario con la informacion requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
             int pos = ObjView.dgvProduct.CurrentRow.Index;
