@@ -58,6 +58,39 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
+        //public void UpdateProduct(object sender, EventArgs e)
+        //{
+        //    ProductsViewDAO daoUpdate = new ProductsViewDAO();
+        //    daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text.Trim());
+        //    daoUpdate.NombreProducto1 = ObjView.txtProductName.Text.Trim();
+        //    daoUpdate.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
+        //    daoUpdate.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
+        //    daoUpdate.DescripcionProducto1 = ObjView.txtProductDescription.Text.Trim();
+
+        //    int valorRetornado = daoUpdate.UpdateProduct();
+        //    if (valorRetornado == 2)
+        //    {
+        //        MessageBox.Show("Los datos han sido actualizado exitosamente",
+        //                        "Proceso completado",
+        //                        MessageBoxButtons.OK,
+        //                        MessageBoxIcon.Information);
+        //    }
+        //    else if (valorRetornado == 1)
+        //    {
+        //        MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+        //                        "Proceso interrumpido",
+        //                        MessageBoxButtons.OK,
+        //                        MessageBoxIcon.Warning);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+        //                        "Proceso interrumpido",
+        //                        MessageBoxButtons.OK,
+        //                        MessageBoxIcon.Error);
+        //    }
+        //}
+
         void KeepRegistrer(object sender, EventArgs e)
         {
             //Verificar que los campos esten lleno
