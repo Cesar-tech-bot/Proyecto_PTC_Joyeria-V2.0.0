@@ -79,7 +79,7 @@ namespace SistemaJoyería.Controller.ProductsController
         void UpdateProduct(object sender, EventArgs e)
         {
             ProductsViewDAO daoUpdate = new ProductsViewDAO();
-            daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text.Trim());
+            daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text);
             daoUpdate.NombreProducto1 = ObjView.txtProductName.Text.Trim();
             daoUpdate.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
             daoUpdate.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
