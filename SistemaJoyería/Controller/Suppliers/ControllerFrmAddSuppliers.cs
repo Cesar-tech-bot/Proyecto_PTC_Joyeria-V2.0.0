@@ -1,17 +1,32 @@
 ﻿using SistemaJoyería.DTO;
 using SistemaJoyería.Model.DAO;
-using SistemaJoyería.Model.DTO;
+using SistemaJoyería.View.Suppliers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaJoyería.Controller.SuppliersController
+namespace SistemaJoyería.Controller.Suppliers
 {
-    public class FrmAddSuppliersController
+    internal class ControllerFrmAddSuppliers
     {
         private AddSuppliersDAO suppliersDAO = new AddSuppliersDAO();
+        private SupplierDTO supplier = new SupplierDTO();
+        private FrmAddSuppliers vistaControlada;
+
+        public ControllerFrmAddSuppliers(FrmAddSuppliers vistaPasada)
+        {
+            vistaControlada = vistaPasada;
+            //Codigo para que cuando se presione guardar se ejecute registersupplier
+            vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
+        }
+
 
         public void RegisterSupplier(SupplierDTO supplier)
         {
+            CreateSupplierDTO();
             int result = suppliersDAO.RegisterSupplier(supplier);
             if (result > 0)
             {
@@ -37,16 +52,13 @@ namespace SistemaJoyería.Controller.SuppliersController
             }
         }
 
-        public SupplierDTO CreateSupplierDTO(string nombreEmpresa, string nombreContacto, string telefono, string email, string direccion)
+        public SupplierDTO CreateSupplierDTO()
         {
-            SupplierDTO supplier = new SupplierDTO
-            {
-                NombreEmpresa = nombreEmpresa,
-                NombreContacto = nombreContacto,
-                Telefono = telefono,
-                Email = email,
-                Direccion = direccion
-            };
+            supplier.NombreEmpresa = vistaControlada.txtNombreEmpresa.Text;
+            supplier.NombreContacto = vistaControlada.txtNombreContacto.Text;
+            supplier.Telefono = vistaControlada.txtTelefono.Text;
+            supplier.Email = vistaControlada.txtEmail.Text;
+            supplier.Direccion = vistaControlada.txtDireccion.Text;
 
             return supplier;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SistemaJoyería.DTO
 {
-    public class SupplierDTO
+    public class SupplierDTO : dbContext
     {
         public int Id { get; set; }
         public string NombreEmpresa { get; set; }

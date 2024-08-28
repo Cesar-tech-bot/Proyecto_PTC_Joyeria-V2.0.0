@@ -6,42 +6,33 @@ using SistemaJoyería.Model.DTO;
 
 namespace SistemaJoyería.Model.DAO
 {
-    public class AddSuppliersDAO
+    public class AddSuppliersDAO : SupplierDTO
     {
         private SqlCommand command = new SqlCommand();
-
-        private SqlConnection getConnection()
-        {
-            // Tu cadena de conexión aquí
-            return new SqlConnection("DBCRUD");
-        }
 
         public int RegisterSupplier(SupplierDTO supplier)
         {
             try
             {
                 command.Connection = getConnection();
-                command.Connection.Open();
 
                 string queryInsert = "INSERT INTO Proveedores (NombreEmpresa, NombreContacto, Telefono, Email, Direccion) VALUES (@NombreEmpresa, @NombreContacto, @Telefono, @Email, @Direccion)";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
-
+                MessageBox.Show(supplier.Telefono);
                 cmdInsert.Parameters.AddWithValue("@NombreEmpresa", supplier.NombreEmpresa);
                 cmdInsert.Parameters.AddWithValue("@NombreContacto", supplier.NombreContacto);
                 cmdInsert.Parameters.AddWithValue("@Telefono", supplier.Telefono);
                 cmdInsert.Parameters.AddWithValue("@Email", supplier.Email);
                 cmdInsert.Parameters.AddWithValue("@Direccion", supplier.Direccion);
 
-                return cmdInsert.ExecuteNonQuery();
+
+                int respuesta = cmdInsert.ExecuteNonQuery();
+                return respuesta;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message} No se pudo registrar proveedor, verifique su conexión a internet o que los servicios estén activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
-            }
-            finally
-            {
-                command.Connection.Close();
             }
         }
 

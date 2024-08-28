@@ -1,4 +1,4 @@
-﻿using SistemaJoyería.Controller.SuppliersController;
+﻿using SistemaJoyería.Controller.Suppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,7 @@ namespace SistemaJoyería.View.Suppliers
         public FrmAddSuppliers()
         {
             InitializeComponent();
+            new ControllerFrmAddSuppliers(this);
         }
     }
 }

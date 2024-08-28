@@ -326,7 +326,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // FrmAddSuplliers
+            // FrmAddSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -339,7 +339,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Name = "FrmAddSuplliers";
+            this.Name = "FrmAddSuppliers";
             this.Text = "FrmAddSuplliers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -365,11 +365,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtNombreContacto;
-        private System.Windows.Forms.TextBox txtNombreEmpresa;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.Label Email;
@@ -378,6 +373,11 @@
         private System.Windows.Forms.Label NombreEmpresa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtNombreContacto;
+        public System.Windows.Forms.TextBox txtNombreEmpresa;
     }
 }
