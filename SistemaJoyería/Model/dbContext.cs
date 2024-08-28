@@ -12,6 +12,7 @@ namespace SistemaJoyería.Model
     { 
         public static SqlConnection getConnection()
         {
+            //Conexion
                 try
                 {
                     //Defininmos el server
