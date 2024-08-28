@@ -22,10 +22,10 @@ namespace SistemaJoyería.Controller.ProductsController
             View.Load += new EventHandler(CargaInicial);
             ////Eventos que se ejecutan con click
             View.cmsDeleteProduct.Click += new EventHandler(DeleteProduct);
-            //View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
+            View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
-            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
             View.btnRestart.Click += new EventHandler(RestartRegister);
+            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
             View.txtProductName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
             View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
             View.txtSupplierName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
@@ -76,38 +76,26 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
-        //public void UpdateProduct(object sender, EventArgs e)
-        //{
-        //    ProductsViewDAO daoUpdate = new ProductsViewDAO();
-        //    daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text.Trim());
-        //    daoUpdate.NombreProducto1 = ObjView.txtProductName.Text.Trim();
-        //    daoUpdate.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
-        //    daoUpdate.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
-        //    daoUpdate.DescripcionProducto1 = ObjView.txtProductDescription.Text.Trim();
+        void UpdateProduct(object sender, EventArgs e)
+        {
+            ProductsViewDAO daoUpdate = new ProductsViewDAO();
+            daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text.Trim());
+            daoUpdate.NombreProducto1 = ObjView.txtProductName.Text.Trim();
+            daoUpdate.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
+            daoUpdate.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
+            daoUpdate.DescripcionProducto1 = ObjView.txtProductDescription.Text.Trim();
+            int retorno = daoUpdate.UpdateProduct();
+            if (retorno == 1)
+            {
+                MessageBox.Show("El libro seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowDGVProducts();
+            }
+            else
+            {
+                MessageBox.Show("El libro seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
-        //    int valorRetornado = daoUpdate.UpdateProduct();
-        //    if (valorRetornado == 2)
-        //    {
-        //        MessageBox.Show("Los datos han sido actualizado exitosamente",
-        //                        "Proceso completado",
-        //                        MessageBoxButtons.OK,
-        //                        MessageBoxIcon.Information);
-        //    }
-        //    else if (valorRetornado == 1)
-        //    {
-        //        MessageBox.Show("Los datos no pudieron ser actualizados completamente",
-        //                        "Proceso interrumpido",
-        //                        MessageBoxButtons.OK,
-        //                        MessageBoxIcon.Warning);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-        //                        "Proceso interrumpido",
-        //                        MessageBoxButtons.OK,
-        //                        MessageBoxIcon.Error);
-        //    }
-        //}
 
         void KeepRegistrer(object sender, EventArgs e)
         {

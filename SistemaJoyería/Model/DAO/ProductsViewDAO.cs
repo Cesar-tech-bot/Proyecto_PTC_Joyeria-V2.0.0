@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaJoyería.Controller.ProductsController;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net.Sockets;
 
 namespace SistemaJoyería.Model.DAO
 {
@@ -48,13 +50,13 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexion
                 command.Connection = getConnection();
                 //Definir que accion se desea realizar   (un parametro para cada campo
-                string queryInsert = "INSERT INTO Products Values (@param1, @param2, @param3, @param4, @param5)";
+                string queryInsert = "INSERT INTO Products Values (@param1, @param2, @param3, @param4)";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
-                cmdInsert.Parameters.AddWithValue("Param1", IDProducto1);
-                cmdInsert.Parameters.AddWithValue("Param2", NombreProducto1);
-                cmdInsert.Parameters.AddWithValue("Param3", MaterialProducto1);
-                cmdInsert.Parameters.AddWithValue("Param4", NombreProveedor1);
-                cmdInsert.Parameters.AddWithValue("Param5", DescripcionProducto1);
+                cmdInsert.Parameters.AddWithValue("Param1", NombreProducto1);
+                cmdInsert.Parameters.AddWithValue("Param2", MaterialProducto1);
+                cmdInsert.Parameters.AddWithValue("Param3", NombreProveedor1);
+                cmdInsert.Parameters.AddWithValue("Param4", DescripcionProducto1);
+                //cmdInsert.Parameters.AddWithValue("Param5", IDProducto1);
                 return cmdInsert.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -113,7 +115,11 @@ namespace SistemaJoyería.Model.DAO
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message} No se logro actualizar la informacion del producto, verefique su conexión a internet o que los servicios estes activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
+                return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
             }
         }
     }
