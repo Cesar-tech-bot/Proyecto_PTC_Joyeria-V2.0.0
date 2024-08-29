@@ -71,12 +71,6 @@
     <Compile Include="View\ClientsView\FrmClientsView.Designer.cs">
       <DependentUpon>FrmClientsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\InventoryView\FrmInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\InventoryView\FrmInventory.Designer.cs">
-      <DependentUpon>FrmInventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\LoginView\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,9 +109,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClientsView\FrmClientsView.resx">
       <DependentUpon>FrmClientsView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\InventoryView\FrmInventory.resx">
-      <DependentUpon>FrmInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductsView\FrmProductsView.resx">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
