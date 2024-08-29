@@ -19,7 +19,7 @@ namespace SistemaJoyería.Controller.Suppliers
         public ControllerFrmAddSuppliers(FrmAddSuppliers vistaPasada)
         {
             vistaControlada = vistaPasada;
-                    // Código para que cuando se presione guardar se ejecute RegisterSupplier
+            // Código para que cuando se presione guardar se ejecute RegisterSupplier
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
             // Código para que cuando se presione editar se ejecute UpdateSupplier
             vistaPasada.btnEditar.Click += (sender, e) => UpdateSupplier(supplier);
