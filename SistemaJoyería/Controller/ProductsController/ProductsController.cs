@@ -21,6 +21,7 @@ namespace SistemaJoyería.Controller.ProductsController
             //Crear evento para cuando se inicie el Formulario
             View.Load += new EventHandler(CargaInicial);
             ////Eventos que se ejecutan con click
+            ///
             View.cmsDeleteProduct.Click += new EventHandler(DeleteProduct);
             View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
@@ -43,6 +44,7 @@ namespace SistemaJoyería.Controller.ProductsController
             DataSet ds = daoPD.ShowDGV();
             ObjView.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
+        
         private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir solo letras y un único espacio
@@ -75,11 +77,19 @@ namespace SistemaJoyería.Controller.ProductsController
                 ShowDGVProducts();
             }
         }
-
+        void SelectProduct(object sender, DataGridViewCellEventArgs e)
+        {
+            int pos = ObjView.dgvProduct.CurrentRow.Index;
+            ObjView.txtIDProducts.Text = ObjView.dgvProduct[0, pos].Value.ToString();
+            ObjView.txtProductName.Text = ObjView.dgvProduct[1, pos].Value.ToString();
+            ObjView.txtProductMaterial.Text = ObjView.dgvProduct[2, pos].Value.ToString();
+            ObjView.txtSupplierName.Text = ObjView.dgvProduct[3, pos].Value.ToString();
+            ObjView.txtProductDescription.Text = ObjView.dgvProduct[4, pos].Value.ToString();
+        }
         void UpdateProduct(object sender, EventArgs e)
         {
             ProductsViewDAO daoUpdate = new ProductsViewDAO();
-            daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text);
+            daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text.Trim());
             daoUpdate.NombreProducto1 = ObjView.txtProductName.Text.Trim();
             daoUpdate.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
             daoUpdate.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
@@ -87,12 +97,12 @@ namespace SistemaJoyería.Controller.ProductsController
             int retorno = daoUpdate.UpdateProduct();
             if (retorno == 1)
             {
-                MessageBox.Show("El libro seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El producto seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ShowDGVProducts();
             }
             else
             {
-                MessageBox.Show("El libro seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El producto seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -135,12 +145,6 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjView.txtProductMaterial.Text = string.Empty;
             ObjView.txtSupplierName.Text = string.Empty;
             ObjView.txtProductDescription.Text = string.Empty;
-        }
-
-        void SelectProduct(object sender, DataGridViewCellEventArgs e)
-        {
-            int pos = ObjView.dgvProduct.CurrentRow.Index;
-            ObjView.txtIDProducts.Text = ObjView.dgvProduct[0, pos].Value.ToString();
         }
     }
 }
