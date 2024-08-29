@@ -1,4 +1,4 @@
-﻿using SistemaJoyería.Controller.Suppliers;
+﻿using SistemaJoyería.Controller.DashboardController;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaJoyería.View.Suppliers
+namespace SistemaJoyería.View.DashboardView
 {
-    public partial class FrmSuppliers : Form
+    public partial class FrmDashboardView : Form
     {
-        public FrmSuppliers()
+        public FrmDashboardView()
         {
             InitializeComponent();
-            new ControllerSuppliers(this);
+            DashboardController controller = new DashboardController(this);
         }
     }
 }
