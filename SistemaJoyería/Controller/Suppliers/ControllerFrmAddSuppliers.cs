@@ -21,12 +21,6 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada = vistaPasada;
             // Código para que cuando se presione guardar se ejecute RegisterSupplier
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
-            // Código para que cuando se presione editar se ejecute UpdateSupplier
-            vistaPasada.btnEditar.Click += (sender, e) => UpdateSupplier(supplier);
-            // Código para que cuando se presione eliminar se ejecute DeleteSupplier
-            vistaPasada.btnEliminar.Click += (sender, e) => DeleteSupplier();
-            // Código para que cuando se presione limpiar se ejecute ClearFields
-            vistaPasada.btnLimpiar.Click += (sender, e) => ClearFields();
         }
 
 

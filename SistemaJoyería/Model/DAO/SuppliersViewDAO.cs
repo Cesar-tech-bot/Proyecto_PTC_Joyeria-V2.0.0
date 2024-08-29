@@ -76,5 +76,24 @@ namespace SistemaJoyeria.DAO
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        public void Delete(string idMala)
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = "DELETE FROM Proveedores WHERE Id = @idMala";
+
+                using (SqlCommand cmdDelete = new SqlCommand(query, command.Connection))
+                {
+                    cmdDelete.Parameters.AddWithValue("@idMala", idMala);
+                    cmdDelete.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
