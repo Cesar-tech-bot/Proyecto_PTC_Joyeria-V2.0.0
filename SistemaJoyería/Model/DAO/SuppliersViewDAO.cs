@@ -7,7 +7,7 @@ namespace SistemaJoyeria.DAO
 {
     public class SupplierDAO
     {
-        private string connectionString = "Your_Connection_String_Here";
+        private string connectionString = "DB_CRUD";
 
         public void Add(SupplierDTO supplier)
         {
