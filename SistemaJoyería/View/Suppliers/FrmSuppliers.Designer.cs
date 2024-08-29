@@ -34,16 +34,15 @@
             this.txtBuscarRegistro = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dgvSupplier = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listSuppliers = new System.Windows.Forms.ListView();
+            this.proveedorId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.proveedorEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.proveedorContacto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.proveedorTelefono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.proveedorEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.proveedorDireccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,64 +112,35 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // dgvSupplier
+            // listSuppliers
             // 
-            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dgvSupplier.Location = new System.Drawing.Point(150, 68);
-            this.dgvSupplier.Name = "dgvSupplier";
-            this.dgvSupplier.Size = new System.Drawing.Size(644, 274);
-            this.dgvSupplier.TabIndex = 21;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "NombreEmpresa";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NombreContacto";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Telefono";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Email";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Direccion";
-            this.Column6.Name = "Column6";
+            this.listSuppliers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.proveedorId,
+            this.proveedorEmpresa,
+            this.proveedorContacto,
+            this.proveedorTelefono,
+            this.proveedorEmail,
+            this.proveedorDireccion});
+            this.listSuppliers.HideSelection = false;
+            this.listSuppliers.Location = new System.Drawing.Point(123, 68);
+            this.listSuppliers.Name = "listSuppliers";
+            this.listSuppliers.Size = new System.Drawing.Size(712, 295);
+            this.listSuppliers.TabIndex = 6;
+            this.listSuppliers.UseCompatibleStateImageBehavior = false;
+            this.listSuppliers.View = System.Windows.Forms.View.Details;
             // 
             // FrmSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 375);
-            this.Controls.Add(this.dgvSupplier);
+            this.Controls.Add(this.listSuppliers);
             this.Controls.Add(this.panel1);
             this.Name = "FrmSuppliers";
             this.Text = "FrmSuppliers";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,13 +151,13 @@
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dgvSupplier;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         public System.Windows.Forms.Label txtBuscarRegistro;
+        public System.Windows.Forms.ListView listSuppliers;
+        private System.Windows.Forms.ColumnHeader proveedorId;
+        private System.Windows.Forms.ColumnHeader proveedorEmpresa;
+        private System.Windows.Forms.ColumnHeader proveedorContacto;
+        private System.Windows.Forms.ColumnHeader proveedorTelefono;
+        private System.Windows.Forms.ColumnHeader proveedorEmail;
+        private System.Windows.Forms.ColumnHeader proveedorDireccion;
     }
 }
