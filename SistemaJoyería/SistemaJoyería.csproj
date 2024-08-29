@@ -50,12 +50,14 @@
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\ProductsController\ProductsController.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
+    <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
     <Compile Include="Model\DAO\ProductsViewDAO.cs" />
     <Compile Include="Model\DAO\AddSuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
+    <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />

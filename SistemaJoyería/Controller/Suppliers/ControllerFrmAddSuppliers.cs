@@ -35,44 +35,6 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        public void UpdateSupplier(SupplierDTO supplier)
-        {
-            if (string.IsNullOrEmpty(vistaControlada.txtId.Text))
-            {
-                MessageBox.Show("Seleccione un proveedor para editar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            CreateSupplierDTO();
-            supplier.ID = int.Parse(vistaControlada.txtId.Text);
-            int result = suppliersDAO.UpdateSupplier(supplier);
-            if (result > 0)
-            {
-                MessageBox.Show("Proveedor actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearFields();
-            }
-        }
-
-        public void DeleteSupplier()
-        {
-            if (string.IsNullOrEmpty(vistaControlada.txtId.Text))
-            {
-                MessageBox.Show("Seleccione un proveedor para eliminar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (MessageBox.Show("¿Está seguro de eliminar este proveedor?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                int id = int.Parse(vistaControlada.txtId.Text);
-                int result = suppliersDAO.DeleteSupplier(id);
-                if (result > 0)
-                {
-                    MessageBox.Show("Proveedor eliminado exitosamente", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearFields();
-                }
-            }
-        }
-
         public SupplierDTO CreateSupplierDTO()
         {
             supplier.NombreEmpresa = vistaControlada.txtNombreEmpresa.Text;

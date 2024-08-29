@@ -12,7 +12,7 @@ namespace SistemaJoyería.Controller.Suppliers
 {
     public class ControllerSuppliers
     {
-        private  SupplierDAO _supplierDAO = new SupplierDAO();
+        private SupplierDAO _supplierDAO = new SupplierDAO();
         private SupplierDTO supplier = new SupplierDTO();
         FrmSuppliers vistaControlada;
 
@@ -22,13 +22,27 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaPasada.btnAgregar.Click += (sender, e) => AddSupplier(supplier);
             vistaPasada.btnBuscar.Click += (sender, e) => _supplierDAO.SearchData(vistaPasada);
             vistaPasada.btnEliminar.Click += (sender, e) => EliminarSupplier();
+            vistaPasada.btnActualizar.Click += (sender, e) => ActualizarSupplier();
             _supplierDAO.GetData(vistaPasada);
         }
+
+        public void ActualizarSupplier()
+        {
+            if (vistaControlada.listSuppliers.SelectedItems.Count > 0)
+            {
+                string idBuena = vistaControlada.listSuppliers.SelectedItems[0].Text;
+                MessageBox.Show(idBuena);
+                FrmUpdateSuppliers frmUpdate = new FrmUpdateSuppliers(idBuena);
+                frmUpdate.Show();
+            }
+            _supplierDAO.GetData(vistaControlada);
+        } 
 
         public void AddSupplier(SupplierDTO supplier)
         {
             FrmAddSuppliers frmAdd = new FrmAddSuppliers();
-            frmAdd.Show();  
+            frmAdd.Show();
+            _supplierDAO.GetData(vistaControlada);
         }
 
         public void EliminarSupplier()

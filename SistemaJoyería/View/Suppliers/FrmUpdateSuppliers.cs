@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.Suppliers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,10 @@ namespace SistemaJoyería.View.Suppliers
 {
     public partial class FrmUpdateSuppliers : Form
     {
-        public FrmUpdateSuppliers()
+        public FrmUpdateSuppliers(string idBuena)
         {
             InitializeComponent();
+            new ControllerFrmUpdateSuppliers(idBuena, this);
         }
     }
 }
