@@ -17,6 +17,7 @@ namespace SistemaJoyería.Controller.Suppliers
         public ControllerSuppliers(FrmSuppliers vistaPasada)
         {
             vistaPasada.btnAgregar.Click += (sender, e) => AddSupplier(supplier);
+            vistaPasada.btnBuscar.Click += (sender, e) => _supplierDAO.SearchData(vistaPasada);
             _supplierDAO.GetData(vistaPasada);
         }
 

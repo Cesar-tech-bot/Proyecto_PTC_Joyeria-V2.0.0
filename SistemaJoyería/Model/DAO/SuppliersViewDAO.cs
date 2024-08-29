@@ -39,5 +39,36 @@ namespace SistemaJoyeria.DAO
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        public void SearchData(FrmSuppliers vistaPasada)
+        {
+            try
+            {
+                command.Connection = getConnection();
+
+                string query = "SELECT * FROM Proveedores WHERE NombreEmpresa LIKE @searchingFor";
+                using (SqlCommand cmdGet = new SqlCommand(query, command.Connection))
+                {
+                    cmdGet.Parameters.AddWithValue("@searchingFor", "%" + vistaPasada.txtSearch.Text + "%");
+                    SqlDataReader reader = cmdGet.ExecuteReader();
+                    vistaPasada.listSuppliers.Items.Clear();
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["Id"].ToString());
+                        item.SubItems.Add(reader["NombreEmpresa"].ToString());
+                        item.SubItems.Add(reader["NombreContacto"].ToString());
+                        item.SubItems.Add(reader["Telefono"].ToString());
+                        item.SubItems.Add(reader["Email"].ToString());
+                        item.SubItems.Add(reader["Direccion"].ToString());
+                        vistaPasada.listSuppliers.Items.Add(item);
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
