@@ -30,7 +30,6 @@
         {
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.Label();
-            this.tbDuiDoc = new System.Windows.Forms.TextBox();
             this.txtDuiDoc = new System.Windows.Forms.Label();
             this.dtpClientsBirthday = new System.Windows.Forms.DateTimePicker();
             this.txtClientsBirthday = new System.Windows.Forms.Label();
@@ -38,12 +37,13 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbClientsSurname = new System.Windows.Forms.TextBox();
-            this.tbCellphoneN = new System.Windows.Forms.TextBox();
             this.tbClientsName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.Label();
             this.txtCellphoneN = new System.Windows.Forms.Label();
             this.txtClientsSurname = new System.Windows.Forms.Label();
             this.txtClientsName = new System.Windows.Forms.Label();
+            this.mskCellphoneN = new System.Windows.Forms.MaskedTextBox();
+            this.mskDuiDoc = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // tbAddress
@@ -63,13 +63,6 @@
             this.txtAddress.Size = new System.Drawing.Size(93, 25);
             this.txtAddress.TabIndex = 42;
             this.txtAddress.Text = "Dirección";
-            // 
-            // tbDuiDoc
-            // 
-            this.tbDuiDoc.Location = new System.Drawing.Point(740, 237);
-            this.tbDuiDoc.Name = "tbDuiDoc";
-            this.tbDuiDoc.Size = new System.Drawing.Size(113, 22);
-            this.tbDuiDoc.TabIndex = 41;
             // 
             // txtDuiDoc
             // 
@@ -135,21 +128,13 @@
             this.tbClientsSurname.Size = new System.Drawing.Size(728, 27);
             this.tbClientsSurname.TabIndex = 33;
             // 
-            // tbCellphoneN
-            // 
-            this.tbCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCellphoneN.Location = new System.Drawing.Point(740, 171);
-            this.tbCellphoneN.Name = "tbCellphoneN";
-            this.tbCellphoneN.Size = new System.Drawing.Size(161, 27);
-            this.tbCellphoneN.TabIndex = 34;
-            // 
             // tbClientsName
             // 
             this.tbClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsName.Location = new System.Drawing.Point(162, 45);
             this.tbClientsName.Name = "tbClientsName";
             this.tbClientsName.Size = new System.Drawing.Size(728, 27);
-            this.tbClientsName.TabIndex = 35;          
+            this.tbClientsName.TabIndex = 35;
             // 
             // txtEmail
             // 
@@ -191,14 +176,31 @@
             this.txtClientsName.TabIndex = 31;
             this.txtClientsName.Text = "Nombre";
             // 
+            // mskCellphoneN
+            // 
+            this.mskCellphoneN.Location = new System.Drawing.Point(749, 174);
+            this.mskCellphoneN.Mask = "0000-0000";
+            this.mskCellphoneN.Name = "mskCellphoneN";
+            this.mskCellphoneN.Size = new System.Drawing.Size(80, 22);
+            this.mskCellphoneN.TabIndex = 44;
+            // 
+            // mskDuiDoc
+            // 
+            this.mskDuiDoc.Location = new System.Drawing.Point(749, 243);
+            this.mskDuiDoc.Mask = "00000000-0";
+            this.mskDuiDoc.Name = "mskDuiDoc";
+            this.mskDuiDoc.Size = new System.Drawing.Size(80, 22);
+            this.mskDuiDoc.TabIndex = 44;
+            // 
             // FrmAddClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 599);
+            this.Controls.Add(this.mskCellphoneN);
+            this.Controls.Add(this.mskDuiDoc);
             this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.tbDuiDoc);
             this.Controls.Add(this.txtDuiDoc);
             this.Controls.Add(this.dtpClientsBirthday);
             this.Controls.Add(this.txtClientsBirthday);
@@ -206,7 +208,6 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbClientsSurname);
-            this.Controls.Add(this.tbCellphoneN);
             this.Controls.Add(this.tbClientsName);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtCellphoneN);
@@ -225,7 +226,6 @@
 
         public System.Windows.Forms.TextBox tbAddress;
         public System.Windows.Forms.Label txtAddress;
-        public System.Windows.Forms.TextBox tbDuiDoc;
         public System.Windows.Forms.Label txtDuiDoc;
         public System.Windows.Forms.DateTimePicker dtpClientsBirthday;
         public System.Windows.Forms.Label txtClientsBirthday;
@@ -233,11 +233,12 @@
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.TextBox tbEmail;
         public System.Windows.Forms.TextBox tbClientsSurname;
-        public System.Windows.Forms.TextBox tbCellphoneN;
         public System.Windows.Forms.TextBox tbClientsName;
         public System.Windows.Forms.Label txtEmail;
         public System.Windows.Forms.Label txtCellphoneN;
         public System.Windows.Forms.Label txtClientsSurname;
         public System.Windows.Forms.Label txtClientsName;
+        public System.Windows.Forms.MaskedTextBox mskCellphoneN;
+        public System.Windows.Forms.MaskedTextBox mskDuiDoc;
     }
 }

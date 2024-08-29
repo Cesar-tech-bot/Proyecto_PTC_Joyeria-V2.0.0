@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaJoyería.View.LoginView;
-
 namespace SistemaJoyería
 {
     internal static class Program
