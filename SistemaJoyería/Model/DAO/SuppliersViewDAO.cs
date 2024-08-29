@@ -9,14 +9,8 @@ namespace SistemaJoyeria.DAO
 {
     public class SupplierDAO : SupplierDTO
     {
-<<<<<<< HEAD
-        private string connectionString = "DB_CRUD";
-
-        public void Add(SupplierDTO supplier)
-=======
         private SqlCommand command = new SqlCommand();
         public void GetData(FrmSuppliers vistaPasada)
->>>>>>> 9e5998298dd6e7a20f5837cee1167725836c7e64
         {
             try
             {

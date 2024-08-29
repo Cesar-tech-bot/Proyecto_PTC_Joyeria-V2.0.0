@@ -12,7 +12,7 @@ namespace SistemaJoyería.Controller.Suppliers
 {
     public class ControllerSuppliers
     {
-        private readonly SupplierDAO _supplierDAO = new SupplierDAO();
+        private  SupplierDAO _supplierDAO = new SupplierDAO();
         private SupplierDTO supplier = new SupplierDTO();
         FrmSuppliers vistaControlada;
 

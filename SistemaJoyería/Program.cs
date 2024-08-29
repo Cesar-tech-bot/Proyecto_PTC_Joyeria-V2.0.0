@@ -18,7 +18,7 @@ namespace SistemaJoyería
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddSuppliers());
+            Application.Run(new FrmSuppliers());
         }
     }
 }
