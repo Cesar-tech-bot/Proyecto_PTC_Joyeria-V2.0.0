@@ -102,7 +102,7 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string queryUpdate = "UPDATE Clientes SET NombreProducto = @param1, MaterialProduct = @param2, NombreProveedor = @param3, DescripcionProducto = @param4 WHERE IDProducto = @param5";
+                string queryUpdate = "UPDATE Products SET NombreProducto = @param1, MaterialProducto = @param2, NombreProveedor = @param3, DescripcionProducto = @param4 WHERE IDProducto = @param5";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
                 cmdUpdate.Parameters.AddWithValue("param1", NombreProducto1);
                 cmdUpdate.Parameters.AddWithValue("param2", MaterialProducto1);
