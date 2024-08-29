@@ -1,5 +1,5 @@
-﻿using SistemaJoyería.DTO;
-using SistemaJoyería.Model.DAO;
+﻿using SistemaJoyería.Model.DAO;
+using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
 using System.Collections.Generic;
@@ -50,7 +50,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
 
             CreateSupplierDTO();
-            supplier.Id = int.Parse(vistaControlada.txtId.Text);
+            supplier.ID = int.Parse(vistaControlada.txtId.Text);
             int result = suppliersDAO.UpdateSupplier(supplier);
             if (result > 0)
             {

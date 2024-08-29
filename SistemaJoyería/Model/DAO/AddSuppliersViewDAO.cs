@@ -1,9 +1,7 @@
-﻿using System;
+﻿using SistemaJoyeria.Model.DTO;
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using SistemaJoyería.DTO;
-using SistemaJoyería.Model.DTO;
-
 namespace SistemaJoyería.Model.DAO
 {
     public class AddSuppliersDAO : SupplierDTO
@@ -18,7 +16,6 @@ namespace SistemaJoyería.Model.DAO
 
                 string queryInsert = "INSERT INTO Proveedores (NombreEmpresa, NombreContacto, Telefono, Email, Direccion) VALUES (@NombreEmpresa, @NombreContacto, @Telefono, @Email, @Direccion)";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
-                MessageBox.Show(supplier.Telefono);
                 cmdInsert.Parameters.AddWithValue("@NombreEmpresa", supplier.NombreEmpresa);
                 cmdInsert.Parameters.AddWithValue("@NombreContacto", supplier.NombreContacto);
                 cmdInsert.Parameters.AddWithValue("@Telefono", supplier.Telefono);
@@ -46,7 +43,7 @@ namespace SistemaJoyería.Model.DAO
                 string queryUpdate = "UPDATE Proveedores SET NombreEmpresa = @NombreEmpresa, NombreContacto = @NombreContacto, Telefono = @Telefono, Email = @Email, Direccion = @Direccion WHERE Id = @Id";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
-                cmdUpdate.Parameters.AddWithValue("@Id", supplier.Id);
+                cmdUpdate.Parameters.AddWithValue("@Id", supplier.ID);
                 cmdUpdate.Parameters.AddWithValue("@NombreEmpresa", supplier.NombreEmpresa);
                 cmdUpdate.Parameters.AddWithValue("@NombreContacto", supplier.NombreContacto);
                 cmdUpdate.Parameters.AddWithValue("@Telefono", supplier.Telefono);
