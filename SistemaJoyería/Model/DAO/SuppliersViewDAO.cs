@@ -9,14 +9,8 @@ namespace SistemaJoyeria.DAO
 {
     public class SupplierDAO : SupplierDTO
     {
-<<<<<<< HEAD
-        private string connectionString = "DB_CRUD";
-
-        public void Add(SupplierDTO supplier)
-=======
         private SqlCommand command = new SqlCommand();
         public void GetData(FrmSuppliers vistaPasada)
->>>>>>> 9e5998298dd6e7a20f5837cee1167725836c7e64
         {
             try
             {
@@ -69,6 +63,25 @@ namespace SistemaJoyeria.DAO
                         vistaPasada.listSuppliers.Items.Add(item);
                     }
                     reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void Delete(string idMala)
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = "DELETE FROM Proveedores WHERE Id = @idMala";
+
+                using (SqlCommand cmdDelete = new SqlCommand(query, command.Connection))
+                {
+                    cmdDelete.Parameters.AddWithValue("@idMala", idMala);
+                    cmdDelete.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

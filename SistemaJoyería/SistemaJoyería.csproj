@@ -50,12 +50,14 @@
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\ProductsController\ProductsController.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
+    <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
     <Compile Include="Model\DAO\ProductsViewDAO.cs" />
     <Compile Include="Model\DAO\AddSuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
+    <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />
@@ -98,6 +100,12 @@
     <Compile Include="View\Suppliers\FrmSuppliers.Designer.cs">
       <DependentUpon>FrmSuppliers.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Suppliers\FrmUpdateSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Suppliers\FrmUpdateSuppliers.Designer.cs">
+      <DependentUpon>FrmUpdateSuppliers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -121,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Suppliers\FrmSuppliers.resx">
       <DependentUpon>FrmSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Suppliers\FrmUpdateSuppliers.resx">
+      <DependentUpon>FrmUpdateSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
