@@ -29,40 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.lbIDProduct = new System.Windows.Forms.Label();
             this.txtIDProducts = new System.Windows.Forms.TextBox();
             this.btnKeep = new System.Windows.Forms.Button();
-            this.txtProductDescription = new System.Windows.Forms.TextBox();
             this.lbDescriptionProduct = new System.Windows.Forms.Label();
             this.lbNameSupplier = new System.Windows.Forms.Label();
-            this.txtProductMaterial = new System.Windows.Forms.TextBox();
             this.lbMaterialProduct = new System.Windows.Forms.Label();
-            this.txtProductName = new System.Windows.Forms.TextBox();
             this.lbProducts = new System.Windows.Forms.Label();
             this.MenuProductos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSearchProduct = new System.Windows.Forms.Button();
-            this.txtSearchProductos = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRestart = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtProductMaterial = new System.Windows.Forms.TextBox();
+            this.cmbSuppliers = new System.Windows.Forms.ComboBox();
+            this.txtProductDescription = new System.Windows.Forms.TextBox();
+            this.txtSearchProductos = new System.Windows.Forms.TextBox();
             this.MenuProductos.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtSupplierName
-            // 
-            this.txtSupplierName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSupplierName.Location = new System.Drawing.Point(26, 152);
-            this.txtSupplierName.Multiline = true;
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(177, 34);
-            this.txtSupplierName.TabIndex = 10;
             // 
             // lbIDProduct
             // 
@@ -96,15 +87,6 @@
             this.btnKeep.Text = "Guardar";
             this.btnKeep.UseVisualStyleBackColor = false;
             // 
-            // txtProductDescription
-            // 
-            this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductDescription.Location = new System.Drawing.Point(26, 304);
-            this.txtProductDescription.Multiline = true;
-            this.txtProductDescription.Name = "txtProductDescription";
-            this.txtProductDescription.Size = new System.Drawing.Size(177, 103);
-            this.txtProductDescription.TabIndex = 6;
-            // 
             // lbDescriptionProduct
             // 
             this.lbDescriptionProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -129,15 +111,6 @@
             this.lbNameSupplier.TabIndex = 3;
             this.lbNameSupplier.Text = "Nombre del Proveedor";
             // 
-            // txtProductMaterial
-            // 
-            this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductMaterial.Location = new System.Drawing.Point(25, 228);
-            this.txtProductMaterial.Multiline = true;
-            this.txtProductMaterial.Name = "txtProductMaterial";
-            this.txtProductMaterial.Size = new System.Drawing.Size(177, 34);
-            this.txtProductMaterial.TabIndex = 3;
-            // 
             // lbMaterialProduct
             // 
             this.lbMaterialProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -149,15 +122,6 @@
             this.lbMaterialProduct.Size = new System.Drawing.Size(155, 16);
             this.lbMaterialProduct.TabIndex = 2;
             this.lbMaterialProduct.Text = "Material del Producto";
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductName.Location = new System.Drawing.Point(26, 76);
-            this.txtProductName.Multiline = true;
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(177, 34);
-            this.txtProductName.TabIndex = 1;
             // 
             // lbProducts
             // 
@@ -194,8 +158,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btnSearchProduct);
             this.panel1.Controls.Add(this.txtSearchProductos);
+            this.panel1.Controls.Add(this.btnSearchProduct);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -212,28 +176,20 @@
             this.btnSearchProduct.Text = "Buscar";
             this.btnSearchProduct.UseVisualStyleBackColor = false;
             // 
-            // txtSearchProductos
-            // 
-            this.txtSearchProductos.Location = new System.Drawing.Point(331, 24);
-            this.txtSearchProductos.Multiline = true;
-            this.txtSearchProductos.Name = "txtSearchProductos";
-            this.txtSearchProductos.Size = new System.Drawing.Size(438, 31);
-            this.txtSearchProductos.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.txtProductDescription);
+            this.panel2.Controls.Add(this.cmbSuppliers);
+            this.panel2.Controls.Add(this.txtProductMaterial);
+            this.panel2.Controls.Add(this.txtProductName);
             this.panel2.Controls.Add(this.btnRestart);
             this.panel2.Controls.Add(this.lbProducts);
             this.panel2.Controls.Add(this.lbMaterialProduct);
-            this.panel2.Controls.Add(this.txtProductMaterial);
-            this.panel2.Controls.Add(this.txtProductName);
-            this.panel2.Controls.Add(this.txtSupplierName);
             this.panel2.Controls.Add(this.lbNameSupplier);
             this.panel2.Controls.Add(this.lbIDProduct);
             this.panel2.Controls.Add(this.lbDescriptionProduct);
             this.panel2.Controls.Add(this.txtIDProducts);
-            this.panel2.Controls.Add(this.txtProductDescription);
             this.panel2.Controls.Add(this.btnKeep);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 83);
@@ -268,6 +224,50 @@
             this.dgvProduct.Size = new System.Drawing.Size(816, 559);
             this.dgvProduct.TabIndex = 14;
             // 
+            // txtProductName
+            // 
+            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductName.Location = new System.Drawing.Point(27, 76);
+            this.txtProductName.Multiline = true;
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(177, 34);
+            this.txtProductName.TabIndex = 12;
+            // 
+            // txtProductMaterial
+            // 
+            this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductMaterial.Location = new System.Drawing.Point(27, 152);
+            this.txtProductMaterial.Multiline = true;
+            this.txtProductMaterial.Name = "txtProductMaterial";
+            this.txtProductMaterial.Size = new System.Drawing.Size(177, 34);
+            this.txtProductMaterial.TabIndex = 13;
+            // 
+            // cmbSuppliers
+            // 
+            this.cmbSuppliers.FormattingEnabled = true;
+            this.cmbSuppliers.Location = new System.Drawing.Point(27, 240);
+            this.cmbSuppliers.Name = "cmbSuppliers";
+            this.cmbSuppliers.Size = new System.Drawing.Size(171, 21);
+            this.cmbSuppliers.TabIndex = 14;
+            // 
+            // txtProductDescription
+            // 
+            this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductDescription.Location = new System.Drawing.Point(27, 304);
+            this.txtProductDescription.Multiline = true;
+            this.txtProductDescription.Name = "txtProductDescription";
+            this.txtProductDescription.Size = new System.Drawing.Size(177, 118);
+            this.txtProductDescription.TabIndex = 15;
+            // 
+            // txtSearchProductos
+            // 
+            this.txtSearchProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSearchProductos.Location = new System.Drawing.Point(339, 24);
+            this.txtSearchProductos.Multiline = true;
+            this.txtSearchProductos.Name = "txtSearchProductos";
+            this.txtSearchProductos.Size = new System.Drawing.Size(438, 31);
+            this.txtSearchProductos.TabIndex = 15;
+            // 
             // FrmProductsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,22 +292,22 @@
         private System.Windows.Forms.Label lbIDProduct;
         public System.Windows.Forms.TextBox txtIDProducts;
         public System.Windows.Forms.Button btnKeep;
-        public System.Windows.Forms.TextBox txtProductDescription;
         private System.Windows.Forms.Label lbDescriptionProduct;
         private System.Windows.Forms.Label lbNameSupplier;
-        public System.Windows.Forms.TextBox txtProductMaterial;
         private System.Windows.Forms.Label lbMaterialProduct;
-        public System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label lbProducts;
         public System.Windows.Forms.ToolStripMenuItem cmsDeleteProduct;
         public System.Windows.Forms.ToolStripMenuItem cmsUpdateProduct;
-        public System.Windows.Forms.TextBox txtSupplierName;
         public System.Windows.Forms.ContextMenuStrip MenuProductos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.DataGridView dgvProduct;
-        public System.Windows.Forms.TextBox txtSearchProductos;
         public System.Windows.Forms.Button btnRestart;
         public System.Windows.Forms.Button btnSearchProduct;
+        public System.Windows.Forms.TextBox txtSearchProductos;
+        public System.Windows.Forms.TextBox txtProductDescription;
+        public System.Windows.Forms.ComboBox cmbSuppliers;
+        public System.Windows.Forms.TextBox txtProductMaterial;
+        public System.Windows.Forms.TextBox txtProductName;
     }
 }

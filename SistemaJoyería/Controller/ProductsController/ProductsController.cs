@@ -13,11 +13,11 @@ namespace SistemaJoyería.Controller.ProductsController
 {
     internal class ProductsController
     {
-        FrmProductsView ObjView;
+        FrmProductsView ObjProducts;
 
         public ProductsController(FrmProductsView View)
         {
-            ObjView = View;
+            ObjProducts = View;
             //Crear evento para cuando se inicie el Formulario
             View.Load += new EventHandler(CargaInicial);
             ////Eventos que se ejecutan con click
@@ -29,7 +29,6 @@ namespace SistemaJoyería.Controller.ProductsController
             View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
             View.txtProductName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
             View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
-            View.txtSupplierName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
             View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
         }
 
@@ -42,7 +41,7 @@ namespace SistemaJoyería.Controller.ProductsController
         {
             ProductsViewDAO daoPD = new ProductsViewDAO();
             DataSet ds = daoPD.ShowDGV();
-            ObjView.dgvProduct.DataSource = ds.Tables["vw_Products"];
+            ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
         
         private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
@@ -63,9 +62,9 @@ namespace SistemaJoyería.Controller.ProductsController
         {
             //capturando el indice de la fila
 
-            int pos = ObjView.dgvProduct.CurrentRow.Index;
+            int pos = ObjProducts.dgvProduct.CurrentRow.Index;
             ProductsViewDAO daoDelete = new ProductsViewDAO();
-            daoDelete.IDProducto1 = int.Parse(ObjView.dgvProduct[0, pos].Value.ToString());
+            daoDelete.IDProducto1 = int.Parse(ObjProducts.dgvProduct[0, pos].Value.ToString());
             int retorno = daoDelete.DeleteRecord();
             if (retorno == 1)
             {
@@ -79,21 +78,21 @@ namespace SistemaJoyería.Controller.ProductsController
         }
         void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
-            int pos = ObjView.dgvProduct.CurrentRow.Index;
-            ObjView.txtIDProducts.Text = ObjView.dgvProduct[0, pos].Value.ToString();
-            ObjView.txtProductName.Text = ObjView.dgvProduct[1, pos].Value.ToString();
-            ObjView.txtProductMaterial.Text = ObjView.dgvProduct[2, pos].Value.ToString();
-            ObjView.txtSupplierName.Text = ObjView.dgvProduct[3, pos].Value.ToString();
-            ObjView.txtProductDescription.Text = ObjView.dgvProduct[4, pos].Value.ToString();
+            int pos = ObjProducts.dgvProduct.CurrentRow.Index;
+            ObjProducts.txtIDProducts.Text = ObjProducts.dgvProduct[0, pos].Value.ToString();
+            ObjProducts.txtProductName.Text = ObjProducts.dgvProduct[1, pos].Value.ToString();
+            ObjProducts.txtProductMaterial.Text = ObjProducts.dgvProduct[2, pos].Value.ToString();
+            ObjProducts.cmbSuppliers.Text = ObjProducts.dgvProduct[3, pos].Value.ToString();
+            ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
         }
         void UpdateProduct(object sender, EventArgs e)
         {
             ProductsViewDAO daoUpdate = new ProductsViewDAO();
-            daoUpdate.IDProducto1 = int.Parse(ObjView.txtIDProducts.Text.Trim());
-            daoUpdate.NombreProducto1 = ObjView.txtProductName.Text.Trim();
-            daoUpdate.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
-            daoUpdate.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
-            daoUpdate.DescripcionProducto1 = ObjView.txtProductDescription.Text.Trim();
+            daoUpdate.IDProducto1 = int.Parse(ObjProducts.txtIDProducts.Text.Trim());
+            daoUpdate.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
+            daoUpdate.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
+            daoUpdate.NombreProveedor1 = ObjProducts.cmbSuppliers.Text.Trim();
+            daoUpdate.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
             int retorno = daoUpdate.UpdateProduct();
             if (retorno == 1)
             {
@@ -110,17 +109,17 @@ namespace SistemaJoyería.Controller.ProductsController
         void KeepRegistrer(object sender, EventArgs e)
         {
             //Verificar que los campos esten lleno
-            if (!string.IsNullOrEmpty(ObjView.txtProductName.Text.Trim()) &&
-                !string.IsNullOrEmpty(ObjView.txtSupplierName.Text.Trim()) &&
-                !string.IsNullOrEmpty(ObjView.txtProductMaterial.Text.Trim()) &&
-                !string.IsNullOrEmpty(ObjView.txtProductDescription.Text.Trim()))
+            if (!string.IsNullOrEmpty(ObjProducts.txtProductName.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjProducts.cmbSuppliers.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjProducts.txtProductMaterial.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjProducts.txtProductDescription.Text.Trim()))
             {
                 //Crear un objeto de tipo dao
                 ProductsViewDAO daoInsert = new ProductsViewDAO();
-                daoInsert.NombreProducto1 = ObjView.txtProductName.Text.Trim();
-                daoInsert.MaterialProducto1 = ObjView.txtProductMaterial.Text.Trim();
-                daoInsert.NombreProveedor1 = ObjView.txtSupplierName.Text.Trim();
-                daoInsert.DescripcionProducto1 = ObjView.txtProductDescription.Text.Trim();
+                daoInsert.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
+                daoInsert.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
+                daoInsert.NombreProveedor1 = ObjProducts.cmbSuppliers.Text.Trim();
+                daoInsert.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
                 int retorno = daoInsert.registrerproducts();
                 if (retorno == 1)
                 {
@@ -141,10 +140,10 @@ namespace SistemaJoyería.Controller.ProductsController
         private void RestartRegister(object sender, EventArgs e)
         {
             // Limpiar los TextBox
-            ObjView.txtProductName.Text = string.Empty;
-            ObjView.txtProductMaterial.Text = string.Empty;
-            ObjView.txtSupplierName.Text = string.Empty;
-            ObjView.txtProductDescription.Text = string.Empty;
+            ObjProducts.txtProductName.Text = string.Empty;
+            ObjProducts.txtProductMaterial.Text = string.Empty;
+            ObjProducts.cmbSuppliers.Text = string.Empty;
+            ObjProducts.txtProductDescription.Text = string.Empty;
         }
     }
 }
