@@ -18,6 +18,5 @@ namespace SistemaJoyería.View.ProductsView
             InitializeComponent();
             ProductsController control = new ProductsController(this);
         }
-
     }
 }
