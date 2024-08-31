@@ -16,13 +16,13 @@ namespace SistemaJoyería.Model
                 try
                 {
                     //Defininmos el server
-                    string server = "LAPTOP-MU6BRPB9\\SQLEXPRESS";
+
                     //Ahora la DB
                     string database = "DB_CRUD";
                 //Creamos la conexión 
-                SqlConnection conexion = new SqlConnection("Server =" + server +
-                                                           "; DataBase = " + database +
-                                                           "; Integrated Security = true");
+                SqlConnection conexion = new SqlConnection("Server =" + server + "; DataBase = " + database + "; Integrated Security = true");
+
+
                 conexion.Open();
                     //Retornamos la conexion abierta
                     return conexion;
