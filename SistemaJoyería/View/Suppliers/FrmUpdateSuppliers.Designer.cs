@@ -1,6 +1,6 @@
 ﻿namespace SistemaJoyería.View.Suppliers
 {
-    partial class FrmAddSuppliers
+    partial class FrmUpdateSuppliers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddSuppliers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdateSuppliers));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,10 +55,10 @@
             // 
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(419, 92);
+            this.groupBox2.Location = new System.Drawing.Point(425, 94);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(249, 262);
-            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil";
             // 
@@ -97,10 +97,10 @@
             this.groupBox1.Controls.Add(this.Telefono);
             this.groupBox1.Controls.Add(this.NombreContacto);
             this.groupBox1.Controls.Add(this.NombreEmpresa);
-            this.groupBox1.Location = new System.Drawing.Point(11, 92);
+            this.groupBox1.Location = new System.Drawing.Point(17, 94);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(387, 262);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar Datos";
             // 
@@ -224,14 +224,14 @@
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(690, 133);
+            this.btnGuardar.Location = new System.Drawing.Point(696, 135);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 32);
-            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // FrmAddSuppliers
+            // FrmUpdateSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,8 +240,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGuardar);
-            this.Name = "FrmAddSuppliers";
-            this.Text = "FrmAddSuplliers";
+            this.Name = "FrmUpdateSuppliers";
+            this.Text = "FrmUpdateSuppliers";
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -255,18 +255,18 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label Id;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtNombreContacto;
+        public System.Windows.Forms.TextBox txtNombreEmpresa;
+        public System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label Telefono;
         private System.Windows.Forms.Label NombreContacto;
         private System.Windows.Forms.Label NombreEmpresa;
         public System.Windows.Forms.Button btnGuardar;
-        public System.Windows.Forms.TextBox txtDireccion;
-        public System.Windows.Forms.TextBox txtEmail;
-        public System.Windows.Forms.TextBox txtTelefono;
-        public System.Windows.Forms.TextBox txtNombreContacto;
-        public System.Windows.Forms.TextBox txtNombreEmpresa;
-        private System.Windows.Forms.Label Id;
-        public System.Windows.Forms.TextBox txtId;
     }
 }
