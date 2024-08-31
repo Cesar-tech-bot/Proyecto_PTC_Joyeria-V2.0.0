@@ -41,6 +41,36 @@ namespace SistemaJoyería.Model.DAO
             }
 
         }
+        //Llenar combo box
+        public DataSet GetSuppliers()
+        {
+            try
+            {
+
+                command.Connection = getConnection();
+
+                //Definir instruccion de lo que se quiere hacer
+                string query = "Select Id, NombreContacto From Proveedores";
+
+                //Creando un objeto de tipo comando donde recibe la instruccion y la conexión
+                SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
+                cmdSelect.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "Proveedores");
+                return ds;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Error al obtener los proveedores, verifique su conexion a internet o que el acceso al servidor o base de datos esten activos", "Error de Ejecucion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
 
         //Registrar productos
         public int registrerproducts()
@@ -102,7 +132,7 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string queryUpdate = "UPDATE Clientes SET NombreProducto = @param1, MaterialProduct = @param2, NombreProveedor = @param3, DescripcionProducto = @param4 WHERE IDProducto = @param5";
+                string queryUpdate = "UPDATE Products SET NombreProducto = @param1, MaterialProducto = @param2, NombreProveedor = @param3, DescripcionProducto = @param4 WHERE IDProducto = @param5";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
                 cmdUpdate.Parameters.AddWithValue("param1", NombreProducto1);
                 cmdUpdate.Parameters.AddWithValue("param2", MaterialProducto1);

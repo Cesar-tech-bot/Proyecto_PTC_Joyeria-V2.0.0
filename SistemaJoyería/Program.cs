@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaJoyería.View.LoginView;
-using SistemaJoyería.View.Suppliers;
+using SistemaJoyería.View.LoginView;
 
 namespace SistemaJoyería
 {
@@ -18,7 +18,8 @@ namespace SistemaJoyería
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSuppliers());
+            Application.Run(new FrmLogin());
+
         }
     }
 }
