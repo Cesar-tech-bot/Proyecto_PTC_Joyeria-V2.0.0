@@ -55,9 +55,9 @@
             // 
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(425, 94);
+            this.groupBox2.Location = new System.Drawing.Point(438, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 262);
+            this.groupBox2.Size = new System.Drawing.Size(333, 300);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil";
@@ -66,7 +66,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(49, 211);
+            this.dateTimePicker1.Location = new System.Drawing.Point(100, 245);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 26);
             this.dateTimePicker1.TabIndex = 1;
@@ -77,9 +77,9 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 140);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 180);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -97,9 +97,9 @@
             this.groupBox1.Controls.Add(this.Telefono);
             this.groupBox1.Controls.Add(this.NombreContacto);
             this.groupBox1.Controls.Add(this.NombreEmpresa);
-            this.groupBox1.Location = new System.Drawing.Point(17, 94);
+            this.groupBox1.Location = new System.Drawing.Point(21, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(387, 262);
+            this.groupBox1.Size = new System.Drawing.Size(387, 300);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar Datos";
@@ -108,7 +108,7 @@
             // 
             this.Id.AutoSize = true;
             this.Id.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.Location = new System.Drawing.Point(22, 51);
+            this.Id.Location = new System.Drawing.Point(18, 51);
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(24, 18);
             this.Id.TabIndex = 4;
@@ -118,7 +118,7 @@
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(109, 215);
+            this.txtDireccion.Location = new System.Drawing.Point(105, 215);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(233, 26);
             this.txtDireccion.TabIndex = 3;
@@ -127,7 +127,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(109, 187);
+            this.txtEmail.Location = new System.Drawing.Point(105, 187);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(233, 26);
             this.txtEmail.TabIndex = 2;
@@ -136,7 +136,7 @@
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(109, 154);
+            this.txtTelefono.Location = new System.Drawing.Point(105, 154);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(118, 26);
             this.txtTelefono.TabIndex = 1;
@@ -145,7 +145,7 @@
             // 
             this.txtNombreContacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreContacto.Location = new System.Drawing.Point(172, 120);
+            this.txtNombreContacto.Location = new System.Drawing.Point(168, 120);
             this.txtNombreContacto.Name = "txtNombreContacto";
             this.txtNombreContacto.Size = new System.Drawing.Size(209, 26);
             this.txtNombreContacto.TabIndex = 1;
@@ -154,7 +154,7 @@
             // 
             this.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(170, 82);
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(166, 82);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(209, 26);
             this.txtNombreEmpresa.TabIndex = 1;
@@ -163,7 +163,7 @@
             // 
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(63, 45);
+            this.txtId.Location = new System.Drawing.Point(59, 45);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(57, 26);
             this.txtId.TabIndex = 1;
@@ -172,7 +172,7 @@
             // 
             this.Direccion.AutoSize = true;
             this.Direccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(22, 219);
+            this.Direccion.Location = new System.Drawing.Point(18, 219);
             this.Direccion.Name = "Direccion";
             this.Direccion.Size = new System.Drawing.Size(84, 18);
             this.Direccion.TabIndex = 0;
@@ -182,7 +182,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(22, 189);
+            this.Email.Location = new System.Drawing.Point(18, 189);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(51, 18);
             this.Email.TabIndex = 0;
@@ -192,7 +192,7 @@
             // 
             this.Telefono.AutoSize = true;
             this.Telefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(22, 156);
+            this.Telefono.Location = new System.Drawing.Point(18, 156);
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(80, 18);
             this.Telefono.TabIndex = 0;
@@ -202,7 +202,7 @@
             // 
             this.NombreContacto.AutoSize = true;
             this.NombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreContacto.Location = new System.Drawing.Point(22, 122);
+            this.NombreContacto.Location = new System.Drawing.Point(18, 122);
             this.NombreContacto.Name = "NombreContacto";
             this.NombreContacto.Size = new System.Drawing.Size(148, 18);
             this.NombreContacto.TabIndex = 0;
@@ -212,7 +212,7 @@
             // 
             this.NombreEmpresa.AutoSize = true;
             this.NombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreEmpresa.Location = new System.Drawing.Point(22, 84);
+            this.NombreEmpresa.Location = new System.Drawing.Point(18, 84);
             this.NombreEmpresa.Name = "NombreEmpresa";
             this.NombreEmpresa.Size = new System.Drawing.Size(142, 18);
             this.NombreEmpresa.TabIndex = 0;
@@ -224,9 +224,9 @@
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(696, 135);
+            this.btnGuardar.Location = new System.Drawing.Point(330, 367);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(87, 32);
+            this.btnGuardar.Size = new System.Drawing.Size(138, 51);
             this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
