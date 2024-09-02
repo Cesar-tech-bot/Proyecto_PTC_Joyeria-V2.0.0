@@ -15,14 +15,12 @@ namespace SistemaJoyería.Model
             //Conexion
                 try
                 {
-                    //Defininmos el server
-
-                    //Ahora la DB
-                    string database = "DB_CRUD";
+                //Defininmos el server
+                string server = "";
+                //Ahora la DB
+                string database = "DB_CRUD";
                 //Creamos la conexión 
                 SqlConnection conexion = new SqlConnection("Server =" + server + "; DataBase = " + database + "; Integrated Security = true");
-
-
                 conexion.Open();
                     //Retornamos la conexion abierta
                     return conexion;
