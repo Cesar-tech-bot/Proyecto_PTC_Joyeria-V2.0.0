@@ -1,4 +1,5 @@
 ﻿using SistemaJoyería.Controller.Inventario;
+using SistemaJoyería.Controller.Suppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace SistemaJoyería.View.InventarioView
         public Inventario()
         {
             InitializeComponent();
-            Inventario obj = new Inventario(this);
+            new Inventario(this);
         }
     }
 }
