@@ -39,24 +39,24 @@
             this.cmsDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.lbPriceProduct = new System.Windows.Forms.Label();
-            this.lbDate = new System.Windows.Forms.Label();
-            this.txtProductName = new System.Windows.Forms.TextBox();
-            this.txtProductMaterial = new System.Windows.Forms.TextBox();
-            this.cmbSuppliers = new System.Windows.Forms.ComboBox();
-            this.mktPriceProduct = new System.Windows.Forms.MaskedTextBox();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.txtProductDescription = new System.Windows.Forms.TextBox();
-            this.btnKeep = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtSearchProductos = new System.Windows.Forms.TextBox();
-            this.btnSearchProduct = new System.Windows.Forms.Button();
-            this.btnRestart = new System.Windows.Forms.Button();
-            this.lbCantidad = new System.Windows.Forms.Label();
-            this.txtStock = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnSearchProduct = new System.Windows.Forms.Button();
+            this.txtSearchProductos = new System.Windows.Forms.TextBox();
+            this.btnRestart = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.lbCantidad = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lbPriceProduct = new System.Windows.Forms.Label();
+            this.btnKeep = new System.Windows.Forms.Button();
+            this.txtProductDescription = new System.Windows.Forms.TextBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.mktPriceProduct = new System.Windows.Forms.MaskedTextBox();
+            this.cmbSuppliers = new System.Windows.Forms.ComboBox();
+            this.txtProductMaterial = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.MenuProductos.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -164,6 +164,48 @@
             this.panel1.Size = new System.Drawing.Size(1046, 83);
             this.panel1.TabIndex = 12;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRefresh.BackColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(934, 24);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(91, 31);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "Refrescar";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            // 
+            // btnSearchProduct
+            // 
+            this.btnSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearchProduct.BackColor = System.Drawing.Color.White;
+            this.btnSearchProduct.Location = new System.Drawing.Point(714, 24);
+            this.btnSearchProduct.Name = "btnSearchProduct";
+            this.btnSearchProduct.Size = new System.Drawing.Size(91, 31);
+            this.btnSearchProduct.TabIndex = 11;
+            this.btnSearchProduct.Text = "Buscar";
+            this.btnSearchProduct.UseVisualStyleBackColor = false;
+            // 
+            // txtSearchProductos
+            // 
+            this.txtSearchProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchProductos.Location = new System.Drawing.Point(233, 24);
+            this.txtSearchProductos.Multiline = true;
+            this.txtSearchProductos.Name = "txtSearchProductos";
+            this.txtSearchProductos.Size = new System.Drawing.Size(438, 31);
+            this.txtSearchProductos.TabIndex = 10;
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnRestart.BackColor = System.Drawing.Color.White;
+            this.btnRestart.Location = new System.Drawing.Point(824, 24);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(91, 31);
+            this.btnRestart.TabIndex = 12;
+            this.btnRestart.Text = "Reiniciar";
+            this.btnRestart.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -191,6 +233,128 @@
             this.panel2.Size = new System.Drawing.Size(233, 559);
             this.panel2.TabIndex = 13;
             // 
+            // txtStock
+            // 
+            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStock.Location = new System.Drawing.Point(27, 329);
+            this.txtStock.Multiline = true;
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(177, 26);
+            this.txtStock.TabIndex = 6;
+            // 
+            // lbCantidad
+            // 
+            this.lbCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbCantidad.AutoSize = true;
+            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidad.ForeColor = System.Drawing.Color.Black;
+            this.lbCantidad.Location = new System.Drawing.Point(24, 310);
+            this.lbCantidad.Name = "lbCantidad";
+            this.lbCantidad.Size = new System.Drawing.Size(46, 16);
+            this.lbCantidad.TabIndex = 24;
+            this.lbCantidad.Text = "Stock";
+            // 
+            // lbDate
+            // 
+            this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.Black;
+            this.lbDate.Location = new System.Drawing.Point(25, 256);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(130, 16);
+            this.lbDate.TabIndex = 18;
+            this.lbDate.Text = "Fecha de Entrada";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(141, 473);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(84, 33);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // lbPriceProduct
+            // 
+            this.lbPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbPriceProduct.AutoSize = true;
+            this.lbPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPriceProduct.ForeColor = System.Drawing.Color.Black;
+            this.lbPriceProduct.Location = new System.Drawing.Point(24, 203);
+            this.lbPriceProduct.Name = "lbPriceProduct";
+            this.lbPriceProduct.Size = new System.Drawing.Size(144, 16);
+            this.lbPriceProduct.TabIndex = 16;
+            this.lbPriceProduct.Text = "Precio del Producto";
+            // 
+            // btnKeep
+            // 
+            this.btnKeep.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKeep.BackColor = System.Drawing.Color.White;
+            this.btnKeep.ForeColor = System.Drawing.Color.Black;
+            this.btnKeep.Location = new System.Drawing.Point(12, 473);
+            this.btnKeep.Name = "btnKeep";
+            this.btnKeep.Size = new System.Drawing.Size(84, 33);
+            this.btnKeep.TabIndex = 8;
+            this.btnKeep.Text = "Guardar";
+            this.btnKeep.UseVisualStyleBackColor = false;
+            // 
+            // txtProductDescription
+            // 
+            this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductDescription.Location = new System.Drawing.Point(27, 390);
+            this.txtProductDescription.Multiline = true;
+            this.txtProductDescription.Name = "txtProductDescription";
+            this.txtProductDescription.Size = new System.Drawing.Size(177, 60);
+            this.txtProductDescription.TabIndex = 7;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDate.Location = new System.Drawing.Point(28, 275);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(197, 20);
+            this.dtpDate.TabIndex = 5;
+            this.dtpDate.Value = new System.DateTime(2024, 9, 3, 18, 50, 5, 0);
+            // 
+            // mktPriceProduct
+            // 
+            this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mktPriceProduct.Location = new System.Drawing.Point(28, 222);
+            this.mktPriceProduct.Mask = "00,00";
+            this.mktPriceProduct.Name = "mktPriceProduct";
+            this.mktPriceProduct.Size = new System.Drawing.Size(171, 20);
+            this.mktPriceProduct.TabIndex = 4;
+            // 
+            // cmbSuppliers
+            // 
+            this.cmbSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbSuppliers.FormattingEnabled = true;
+            this.cmbSuppliers.Location = new System.Drawing.Point(28, 166);
+            this.cmbSuppliers.Name = "cmbSuppliers";
+            this.cmbSuppliers.Size = new System.Drawing.Size(171, 21);
+            this.cmbSuppliers.TabIndex = 3;
+            // 
+            // txtProductMaterial
+            // 
+            this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductMaterial.Location = new System.Drawing.Point(28, 100);
+            this.txtProductMaterial.Multiline = true;
+            this.txtProductMaterial.Name = "txtProductMaterial";
+            this.txtProductMaterial.Size = new System.Drawing.Size(177, 34);
+            this.txtProductMaterial.TabIndex = 2;
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductName.Location = new System.Drawing.Point(28, 35);
+            this.txtProductName.Multiline = true;
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(177, 34);
+            this.txtProductName.TabIndex = 1;
+            // 
             // dgvProduct
             // 
             this.dgvProduct.AllowUserToAddRows = false;
@@ -206,167 +370,6 @@
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(813, 559);
             this.dgvProduct.TabIndex = 14;
-            // 
-            // lbPriceProduct
-            // 
-            this.lbPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbPriceProduct.AutoSize = true;
-            this.lbPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPriceProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbPriceProduct.Location = new System.Drawing.Point(24, 203);
-            this.lbPriceProduct.Name = "lbPriceProduct";
-            this.lbPriceProduct.Size = new System.Drawing.Size(144, 16);
-            this.lbPriceProduct.TabIndex = 16;
-            this.lbPriceProduct.Text = "Precio del Producto";
-            // 
-            // lbDate
-            // 
-            this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.ForeColor = System.Drawing.Color.Black;
-            this.lbDate.Location = new System.Drawing.Point(25, 256);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(130, 16);
-            this.lbDate.TabIndex = 18;
-            this.lbDate.Text = "Fecha de Entrada";
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductName.Location = new System.Drawing.Point(28, 35);
-            this.txtProductName.Multiline = true;
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(177, 34);
-            this.txtProductName.TabIndex = 1;
-            // 
-            // txtProductMaterial
-            // 
-            this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductMaterial.Location = new System.Drawing.Point(28, 100);
-            this.txtProductMaterial.Multiline = true;
-            this.txtProductMaterial.Name = "txtProductMaterial";
-            this.txtProductMaterial.Size = new System.Drawing.Size(177, 34);
-            this.txtProductMaterial.TabIndex = 2;
-            // 
-            // cmbSuppliers
-            // 
-            this.cmbSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbSuppliers.FormattingEnabled = true;
-            this.cmbSuppliers.Location = new System.Drawing.Point(28, 166);
-            this.cmbSuppliers.Name = "cmbSuppliers";
-            this.cmbSuppliers.Size = new System.Drawing.Size(171, 21);
-            this.cmbSuppliers.TabIndex = 3;
-            // 
-            // mktPriceProduct
-            // 
-            this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mktPriceProduct.Location = new System.Drawing.Point(28, 222);
-            this.mktPriceProduct.Mask = "00,00";
-            this.mktPriceProduct.Name = "mktPriceProduct";
-            this.mktPriceProduct.Size = new System.Drawing.Size(171, 20);
-            this.mktPriceProduct.TabIndex = 4;
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDate.Location = new System.Drawing.Point(28, 275);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(197, 20);
-            this.dtpDate.TabIndex = 5;
-            this.dtpDate.Value = new System.DateTime(2024, 9, 3, 18, 50, 5, 0);
-            // 
-            // txtProductDescription
-            // 
-            this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductDescription.Location = new System.Drawing.Point(27, 390);
-            this.txtProductDescription.Multiline = true;
-            this.txtProductDescription.Name = "txtProductDescription";
-            this.txtProductDescription.Size = new System.Drawing.Size(177, 60);
-            this.txtProductDescription.TabIndex = 7;
-            // 
-            // btnKeep
-            // 
-            this.btnKeep.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnKeep.BackColor = System.Drawing.Color.White;
-            this.btnKeep.ForeColor = System.Drawing.Color.Black;
-            this.btnKeep.Location = new System.Drawing.Point(12, 473);
-            this.btnKeep.Name = "btnKeep";
-            this.btnKeep.Size = new System.Drawing.Size(84, 33);
-            this.btnKeep.TabIndex = 8;
-            this.btnKeep.Text = "Guardar";
-            this.btnKeep.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdate.BackColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(141, 473);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(84, 33);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Actualizar";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // txtSearchProductos
-            // 
-            this.txtSearchProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSearchProductos.Location = new System.Drawing.Point(233, 24);
-            this.txtSearchProductos.Multiline = true;
-            this.txtSearchProductos.Name = "txtSearchProductos";
-            this.txtSearchProductos.Size = new System.Drawing.Size(438, 31);
-            this.txtSearchProductos.TabIndex = 10;
-            // 
-            // btnSearchProduct
-            // 
-            this.btnSearchProduct.BackColor = System.Drawing.Color.White;
-            this.btnSearchProduct.Location = new System.Drawing.Point(714, 24);
-            this.btnSearchProduct.Name = "btnSearchProduct";
-            this.btnSearchProduct.Size = new System.Drawing.Size(91, 31);
-            this.btnSearchProduct.TabIndex = 11;
-            this.btnSearchProduct.Text = "Buscar";
-            this.btnSearchProduct.UseVisualStyleBackColor = false;
-            // 
-            // btnRestart
-            // 
-            this.btnRestart.BackColor = System.Drawing.Color.White;
-            this.btnRestart.Location = new System.Drawing.Point(824, 24);
-            this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(91, 31);
-            this.btnRestart.TabIndex = 12;
-            this.btnRestart.Text = "Reiniciar";
-            this.btnRestart.UseVisualStyleBackColor = false;
-            // 
-            // lbCantidad
-            // 
-            this.lbCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantidad.ForeColor = System.Drawing.Color.Black;
-            this.lbCantidad.Location = new System.Drawing.Point(24, 310);
-            this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(46, 16);
-            this.lbCantidad.TabIndex = 24;
-            this.lbCantidad.Text = "Stock";
-            // 
-            // txtStock
-            // 
-            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(27, 329);
-            this.txtStock.Multiline = true;
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(177, 26);
-            this.txtStock.TabIndex = 6;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(934, 24);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(91, 31);
-            this.btnRefresh.TabIndex = 13;
-            this.btnRefresh.Text = "Refrescar";
-            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // FrmProductsView
             // 

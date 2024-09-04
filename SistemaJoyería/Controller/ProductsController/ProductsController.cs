@@ -215,7 +215,7 @@ namespace SistemaJoyería.Controller.ProductsController
             else
             {
                 //segmento false
-                MessageBox.Show("Datos faltantes, complete el formulario con la informacion requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Complete el formulario con la informacion requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
