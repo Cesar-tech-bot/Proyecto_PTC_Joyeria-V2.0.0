@@ -28,9 +28,10 @@ namespace SistemaJoyería.Controller.ProductsController
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
             View.btnRestart.Click += new EventHandler(RestartRegister);
             View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
-            View.txtProductName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
-            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
-            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
+            View.txtProductName.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtStock.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
             View.btnUpdate.Click += new EventHandler(UpdateProduct);
             View.btnRefresh.Click += new EventHandler(ResfreshDGV);
             View.btnSearchProduct.Click += new EventHandler(SearchProductsEvent);
@@ -82,7 +83,7 @@ namespace SistemaJoyería.Controller.ProductsController
         }
 
         //solo permite letras
-        private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtLetters_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir solo letras y un único espacio
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
@@ -97,7 +98,17 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
-        //solo permite
+        //solo permite numeros
+        private void txtNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        //solo permite 4 numeros y coma
         private bool MskValidation(string text)
         {
             // Definimos un patrón para validar el formato del texto
