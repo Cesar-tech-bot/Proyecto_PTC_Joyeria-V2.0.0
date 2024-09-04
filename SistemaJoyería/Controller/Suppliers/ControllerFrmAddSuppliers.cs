@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,29 +20,37 @@ namespace SistemaJoyería.Controller.Suppliers
         public ControllerFrmAddSuppliers(FrmAddSuppliers vistaPasada)
         {
             vistaControlada = vistaPasada;
-            // Código para que cuando se presione guardar se ejecute RegisterSupplier
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
-        }
 
+            // Add event handlers for input validation
+            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
+            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
+            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
+            vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
+            vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
+        }
 
         public void RegisterSupplier(SupplierDTO supplier)
         {
-            CreateSupplierDTO();
-            int result = suppliersDAO.RegisterSupplier(supplier);
-            if (result > 0)
+            if (ValidateAllFields())
             {
-                MessageBox.Show("Proveedor registrado exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearFields();
+                CreateSupplierDTO();
+                int result = suppliersDAO.RegisterSupplier(supplier);
+                if (result > 0)
+                {
+                    MessageBox.Show("Proveedor registrado exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
+                }
             }
         }
 
         public SupplierDTO CreateSupplierDTO()
         {
-            supplier.NombreEmpresa = vistaControlada.txtNombreEmpresa.Text;
-            supplier.NombreContacto = vistaControlada.txtNombreContacto.Text;
-            supplier.Telefono = vistaControlada.txtTelefono.Text;
-            supplier.Email = vistaControlada.txtEmail.Text;
-            supplier.Direccion = vistaControlada.txtDireccion.Text;
+            supplier.NombreEmpresa = vistaControlada.txtNombreEmpresa.Text.Trim();
+            supplier.NombreContacto = vistaControlada.txtNombreContacto.Text.Trim();
+            supplier.Telefono = vistaControlada.txtTelefono.Text.Trim();
+            supplier.Email = vistaControlada.txtEmail.Text.Trim();
+            supplier.Direccion = vistaControlada.txtDireccion.Text.Trim();
             return supplier;
         }
 
@@ -53,6 +62,55 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.txtTelefono.Clear();
             vistaControlada.txtEmail.Clear();
             vistaControlada.txtDireccion.Clear();
+        }
+
+        private bool ValidateAllFields()
+        {
+            if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
+                string.IsNullOrWhiteSpace(vistaControlada.txtNombreContacto.Text) ||
+                string.IsNullOrWhiteSpace(vistaControlada.txtTelefono.Text) ||
+                string.IsNullOrWhiteSpace(vistaControlada.txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(vistaControlada.txtDireccion.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!ValidateEmail(vistaControlada.txtEmail))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void ValidateLength(TextBox textBox, int maxLength)
+        {
+            if (textBox.Text.Length > maxLength)
+            {
+                textBox.Text = textBox.Text.Substring(0, maxLength);
+                textBox.SelectionStart = textBox.Text.Length;
+                MessageBox.Show($"El campo no puede exceder {maxLength} caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ValidateNumericInput(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool ValidateEmail(TextBox emailTextBox)
+        {
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            if (!Regex.IsMatch(emailTextBox.Text, emailPattern))
+            {
+                MessageBox.Show("El formato del correo electrónico no es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }
