@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace SistemaJoyería.View.Suppliers
 {
-    public partial class FrmAddSuppliers : Form
+    public partial class FrmUpdateSuppliersView : Form
     {
-        public FrmAddSuppliers()
+        public FrmUpdateSuppliersView(string idBuena)
         {
             InitializeComponent();
-            new ControllerFrmAddSuppliers(this);
+            new ControllerFrmUpdateSuppliers(idBuena, this);
         }
     }
 }

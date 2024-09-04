@@ -1,4 +1,5 @@
-﻿using SistemaJoyería.Model.DAO;
+﻿// Necessary imports for the class
+using SistemaJoyería.Model.DAO;
 using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
@@ -11,18 +12,24 @@ using System.Windows.Forms;
 
 namespace SistemaJoyería.Controller.Suppliers
 {
+    // Controller class for managing supplier addition
     internal class ControllerFrmAddSuppliers
     {
+        // Data Access Object for supplier operations
         private AddSuppliersDAO suppliersDAO = new AddSuppliersDAO();
+        // Data Transfer Object for supplier information
         private SupplierDTO supplier = new SupplierDTO();
-        private FrmAddSuppliers vistaControlada;
+        // Reference to the associated view
+        private FrmAddSuppliersView vistaControlada;
 
-        public ControllerFrmAddSuppliers(FrmAddSuppliers vistaPasada)
+        // Constructor for the controller
+        public ControllerFrmAddSuppliers(FrmAddSuppliersView vistaPasada)
         {
             vistaControlada = vistaPasada;
+            // Event handler for the save button click
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
 
-            // Add event handlers for input validation
+            // Event handlers for input validation
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
             vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
@@ -30,6 +37,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
         }
 
+        // Method to register a new supplier
         public void RegisterSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
@@ -44,6 +52,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Method to create a SupplierDTO from form inputs
         public SupplierDTO CreateSupplierDTO()
         {
             supplier.NombreEmpresa = vistaControlada.txtNombreEmpresa.Text.Trim();
@@ -54,6 +63,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return supplier;
         }
 
+        // Method to clear all input fields
         private void ClearFields()
         {
             vistaControlada.txtId.Clear();
@@ -64,6 +74,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.txtDireccion.Clear();
         }
 
+        // Method to validate all input fields
         private bool ValidateAllFields()
         {
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
@@ -84,6 +95,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
+        // Method to validate input length
         private void ValidateLength(TextBox textBox, int maxLength)
         {
             if (textBox.Text.Length > maxLength)
@@ -94,6 +106,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Method to validate numeric input
         private void ValidateNumericInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -102,6 +115,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Method to validate email format
         private bool ValidateEmail(TextBox emailTextBox)
         {
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";

@@ -14,9 +14,9 @@ namespace SistemaJoyería.Controller.ClientsController
 {
     public class AddClientsController
     {
-        FrmAddClients ObjAddCView;
+        FrmAddClientsView ObjAddCView;
 
-        public AddClientsController(FrmAddClients viewAdd)
+        public AddClientsController(FrmAddClientsView viewAdd)
         {
             ObjAddCView = viewAdd;
 

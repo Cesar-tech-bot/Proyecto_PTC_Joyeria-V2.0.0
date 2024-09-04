@@ -1,6 +1,6 @@
 ﻿namespace SistemaJoyería.View.ClientsView
 {
-    partial class FrmAddClients
+    partial class FrmAddClientsView
     {
         /// <summary>
         /// Required designer variable.

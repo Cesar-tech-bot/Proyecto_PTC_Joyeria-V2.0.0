@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.Suppliers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaJoyería.View.LoginView
+namespace SistemaJoyería.View.Suppliers
 {
-    public partial class FrmLogin : Form
+    public partial class FrmSuppliersView : Form
     {
-        public FrmLogin()
+        public FrmSuppliersView()
         {
             InitializeComponent();
+            new ControllerSuppliers(this);
         }
     }
 }

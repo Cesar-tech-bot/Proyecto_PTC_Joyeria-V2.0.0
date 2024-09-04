@@ -14,7 +14,7 @@ namespace SistemaJoyería.Model.DAO
     {
         private SqlCommand command = new SqlCommand();
 
-        public void Get(FrmUpdateSuppliers vistaPasada, string idBuena) 
+        public void Get(FrmUpdateSuppliersView vistaPasada, string idBuena) 
         {
             try
             {
@@ -44,7 +44,7 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
-        public void Update(string idBuena, FrmUpdateSuppliers vistaControlada) 
+        public void Update(string idBuena, FrmUpdateSuppliersView vistaControlada) 
         {
             try
             {

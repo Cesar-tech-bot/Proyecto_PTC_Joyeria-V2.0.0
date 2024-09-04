@@ -1,6 +1,6 @@
 ﻿namespace SistemaJoyería.View.Suppliers
 {
-    partial class FrmSuppliers
+    partial class FrmSuppliersView
     {
         /// <summary>
         /// Required designer variable.

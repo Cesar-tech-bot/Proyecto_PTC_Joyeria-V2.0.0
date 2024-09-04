@@ -160,7 +160,7 @@ namespace SistemaJoyería.Controller.ClientsController
         //Métodos para eventos
         void ShowAddClients(object sender, EventArgs e)
         {
-            FrmAddClients frmAddClients = new FrmAddClients();
+            FrmAddClientsView frmAddClients = new FrmAddClientsView();
             frmAddClients.Show();
         }
         void OpenCms(object sender, MouseEventArgs e)

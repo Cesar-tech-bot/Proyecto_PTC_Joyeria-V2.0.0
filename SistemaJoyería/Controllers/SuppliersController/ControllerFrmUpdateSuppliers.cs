@@ -8,12 +8,12 @@ namespace SistemaJoyería.Controller.Suppliers
 {
     internal class ControllerFrmUpdateSuppliers
     {
-        FrmUpdateSuppliers vistaControlada;
+        FrmUpdateSuppliersView vistaControlada;
         string idBuena;
         UpdateSuppliersDAO updater = new UpdateSuppliersDAO();
 
         // Constructor del controlador
-        public ControllerFrmUpdateSuppliers(string idPasada, FrmUpdateSuppliers vistaPasada)
+        public ControllerFrmUpdateSuppliers(string idPasada, FrmUpdateSuppliersView vistaPasada)
         {
             vistaControlada = vistaPasada;
             idBuena = idPasada;

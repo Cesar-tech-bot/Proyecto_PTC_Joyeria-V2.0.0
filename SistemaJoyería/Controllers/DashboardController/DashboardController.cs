@@ -41,7 +41,7 @@ namespace SistemaJoyería.Controller.DashboardController
 
         private void OpenSuppliers(Object sender, EventArgs e)
         {
-            AbrirFormulario<FrmSuppliers>();
+            AbrirFormulario<FrmSuppliersView>();
         }
         //metodo para abrir formulario en el panel contenedor
         public void AbrirFormulario<MiForm>() where MiForm : Form, new()

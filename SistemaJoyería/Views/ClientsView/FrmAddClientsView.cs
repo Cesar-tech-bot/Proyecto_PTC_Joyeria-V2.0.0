@@ -11,9 +11,9 @@ using SistemaJoyería.Controller.ClientsController;
 
 namespace SistemaJoyería.View.ClientsView
 {
-    public partial class FrmAddClients : Form
+    public partial class FrmAddClientsView : Form
     {
-        public FrmAddClients()
+        public FrmAddClientsView()
         {
             InitializeComponent();
             AddClientsController addClientsController = new AddClientsController(this);

@@ -1,6 +1,6 @@
 ﻿namespace SistemaJoyería.View.LoginView
 {
-    partial class FrmLogin
+    partial class FrmLoginView
     {
         /// <summary>
         /// Required designer variable.

@@ -10,7 +10,7 @@ namespace SistemaJoyeria.DAO
     public class SupplierDAO : SupplierDTO
     {
         private SqlCommand command = new SqlCommand();
-        public void GetData(FrmSuppliers vistaPasada)
+        public void GetData(FrmSuppliersView vistaPasada)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace SistemaJoyeria.DAO
             }
         }
 
-        public void SearchData(FrmSuppliers vistaPasada)
+        public void SearchData(FrmSuppliersView vistaPasada)
         {
             try
             {
