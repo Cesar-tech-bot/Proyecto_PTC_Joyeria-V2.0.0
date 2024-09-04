@@ -69,7 +69,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(82, 262);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 26);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // pictureBox1
             // 
@@ -121,7 +121,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(104, 239);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(233, 26);
-            this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -130,7 +130,7 @@
             this.txtEmail.Location = new System.Drawing.Point(104, 211);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(233, 26);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtTelefono
             // 
@@ -139,7 +139,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(104, 178);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(118, 26);
-            this.txtTelefono.TabIndex = 1;
+            this.txtTelefono.TabIndex = 4;
             // 
             // txtNombreContacto
             // 
@@ -148,7 +148,7 @@
             this.txtNombreContacto.Location = new System.Drawing.Point(167, 144);
             this.txtNombreContacto.Name = "txtNombreContacto";
             this.txtNombreContacto.Size = new System.Drawing.Size(209, 26);
-            this.txtNombreContacto.TabIndex = 1;
+            this.txtNombreContacto.TabIndex = 3;
             // 
             // txtNombreEmpresa
             // 
@@ -157,7 +157,7 @@
             this.txtNombreEmpresa.Location = new System.Drawing.Point(165, 106);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(209, 26);
-            this.txtNombreEmpresa.TabIndex = 1;
+            this.txtNombreEmpresa.TabIndex = 2;
             // 
             // txtId
             // 
@@ -227,7 +227,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(333, 380);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(131, 52);
-            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
