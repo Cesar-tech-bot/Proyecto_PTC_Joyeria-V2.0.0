@@ -16,7 +16,7 @@ namespace SistemaJoyería.Model
                 try
                 {
                 //Defininmos el server
-                string server = "";
+                string server = "LAPTOP-MU6BRPB9\\SQLEXPRESS";
                 //Ahora la DB
                 string database = "DB_CRUD";
                 //Creamos la conexión 
