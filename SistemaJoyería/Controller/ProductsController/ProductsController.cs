@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,9 +31,21 @@ namespace SistemaJoyería.Controller.ProductsController
             View.txtProductName.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
             View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
             View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtRegister_KeyPress);
+            View.btnUpdate.Click += new EventHandler(UpdateProduct);
+            View.btnRefresh.Click += new EventHandler(ResfreshDGV);
+            View.btnSearchProduct.Click += new EventHandler(SearchProductsEvent);
+            View.txtProductName.TextChanged += new EventHandler(Limitede15);
+            View.txtProductMaterial.TextChanged += new EventHandler(Limitede15);
+            View.txtProductMaterial.TextChanged += new EventHandler(Limitede30);
         }
 
         void CargaInicial(object sender, EventArgs e)
+        {
+            ShowDGVProducts();
+        }
+
+        //Refrescar tabla
+        void ResfreshDGV(object sender, EventArgs e)
         {
             ShowDGVProducts();
         }
@@ -43,7 +56,32 @@ namespace SistemaJoyería.Controller.ProductsController
             DataSet ds = daoPD.ShowDGV();
             ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
-        
+
+        //Limitar a 15 Caracteres
+        private void Limitar15Caracteres(TextBox textBox)
+        {
+            textBox.MaxLength = 15;
+        }
+
+        private void Limitede15(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            Limitar15Caracteres(textBox);
+        }
+
+        //Limitar a 30 Caracteres
+        private void Limitar30Caracteres(TextBox textBox)
+        {
+            textBox.MaxLength = 15;
+        }
+
+        private void Limitede30(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            Limitar30Caracteres(textBox);
+        }
+
+        //solo permite letras
         private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir solo letras y un único espacio
@@ -58,6 +96,22 @@ namespace SistemaJoyería.Controller.ProductsController
                 e.Handled = true;
             }
         }
+
+        //solo permite
+        private bool MskValidation(string text)
+        {
+            // Definimos un patrón para validar el formato del texto
+            // La expresión regular verifica lo siguiente:
+            // ^ : Asegura que la cadena comience en el inicio
+            // \d{2} : Debe tener exactamente 2 dígitos
+            // , : Debe haber una coma
+            // \d{2} : Debe tener exactamente 2 dígitos después de la coma
+            // $ : Asegura que la cadena termine al final
+            string pattern = @"^\d{2},\d{2}$";
+            return Regex.IsMatch(text, pattern);
+        }
+
+        //Borrar producto
         void DeleteProduct(object sender, EventArgs e)
         {
             //capturando el indice de la fila
@@ -76,6 +130,8 @@ namespace SistemaJoyería.Controller.ProductsController
                 ShowDGVProducts();
             }
         }
+
+        //Seleccionar producto
         void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
             int pos = ObjProducts.dgvProduct.CurrentRow.Index;
@@ -83,15 +139,23 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.txtProductName.Text = ObjProducts.dgvProduct[1, pos].Value.ToString();
             ObjProducts.txtProductMaterial.Text = ObjProducts.dgvProduct[2, pos].Value.ToString();
             ObjProducts.cmbSuppliers.Text = ObjProducts.dgvProduct[3, pos].Value.ToString();
-            ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
+            ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
+            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
+            ObjProducts.dtpDate.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
+            ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[7, pos].Value.ToString();
         }
+
+        //Actualizar producto
         void UpdateProduct(object sender, EventArgs e)
         {
             ProductsViewDAO daoUpdate = new ProductsViewDAO();
             daoUpdate.IDProducto1 = int.Parse(ObjProducts.txtIDProducts.Text.Trim());
             daoUpdate.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
             daoUpdate.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
-            daoUpdate.NombreProveedor1 = ObjProducts.cmbSuppliers.Text.Trim();
+            daoUpdate.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.Text.Trim());
+            daoUpdate.Stock1 = int.Parse(ObjProducts.txtStock.Text.Trim());
+            daoUpdate.Price1 = int.Parse(ObjProducts.mktPriceProduct.Text.Trim());
+            daoUpdate.Fecha1 = ObjProducts.dtpDate.Value;
             daoUpdate.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
             int retorno = daoUpdate.UpdateProduct();
             if (retorno == 1)
@@ -105,20 +169,27 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
-
+        //Guardar producto
         void KeepRegistrer(object sender, EventArgs e)
         {
             //Verificar que los campos esten lleno
             if (!string.IsNullOrEmpty(ObjProducts.txtProductName.Text.Trim()) &&
                 !string.IsNullOrEmpty(ObjProducts.cmbSuppliers.Text.Trim()) &&
                 !string.IsNullOrEmpty(ObjProducts.txtProductMaterial.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjProducts.txtStock.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjProducts.mktPriceProduct.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjProducts.dtpDate.Text.Trim()) &&
                 !string.IsNullOrEmpty(ObjProducts.txtProductDescription.Text.Trim()))
             {
                 //Crear un objeto de tipo dao
                 ProductsViewDAO daoInsert = new ProductsViewDAO();
                 daoInsert.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
                 daoInsert.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
-                daoInsert.NombreProveedor1 = ObjProducts.cmbSuppliers.Text.Trim();
+                daoInsert.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.Text.Trim());
+                daoInsert.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
+                daoInsert.Stock1 = int.Parse(ObjProducts.txtStock.Text.Trim());
+                daoInsert.Price1 = int.Parse(ObjProducts.mktPriceProduct.Text.Trim());
+                daoInsert.Fecha1 = ObjProducts.dtpDate.Value;
                 daoInsert.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
                 int retorno = daoInsert.registrerproducts();
                 if (retorno == 1)
@@ -137,13 +208,26 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
+        //Reiniciar campos
         private void RestartRegister(object sender, EventArgs e)
         {
             // Limpiar los TextBox
             ObjProducts.txtProductName.Text = string.Empty;
             ObjProducts.txtProductMaterial.Text = string.Empty;
             ObjProducts.cmbSuppliers.Text = string.Empty;
+            ObjProducts.txtStock.Text = string.Empty;
+            ObjProducts.mktPriceProduct.Text = string.Empty;
+            ObjProducts.dtpDate.Value = DateTime.Now;
             ObjProducts.txtProductDescription.Text = string.Empty;
+        }
+
+        //Buscar productos
+        public void SearchProductsEvent(object sender, EventArgs e) { SearchProductsController() ; }
+        void SearchProductsController()
+        {
+            ProductsViewDAO DAOProducts = new ProductsViewDAO();
+            DataSet ds = DAOProducts.BuscarProducts(ObjProducts.txtSearchProductos.Text.Trim());
+            ObjProducts.dgvProduct.DataSource = ds.Tables["Products"];
         }
     }
 }

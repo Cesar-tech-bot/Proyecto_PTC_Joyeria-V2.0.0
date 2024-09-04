@@ -50,14 +50,14 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
 
                 //Definir instruccion de lo que se quiere hacer
-                string query = "Select Id, NombreContacto From Proveedores";
+                string query = "Select IDSupplier, ContactName From Suppliers";
 
                 //Creando un objeto de tipo comando donde recibe la instruccion y la conexión
                 SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
                 cmdSelect.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "Proveedores");
+                adp.Fill(ds, "Suppliers");
                 return ds;
 
             }
@@ -80,13 +80,16 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexion
                 command.Connection = getConnection();
                 //Definir que accion se desea realizar   (un parametro para cada campo
-                string queryInsert = "INSERT INTO Products Values (@param1, @param2, @param3, @param4)";
+                string queryInsert = "INSERT INTO Products Values (@param1, @param2, @param3, @param4, @param5, @param6, @param7)";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
                 cmdInsert.Parameters.AddWithValue("Param1", NombreProducto1);
                 cmdInsert.Parameters.AddWithValue("Param2", MaterialProducto1);
-                cmdInsert.Parameters.AddWithValue("Param3", NombreProveedor1);
+                cmdInsert.Parameters.AddWithValue("Param3", IDProveedor1);
                 cmdInsert.Parameters.AddWithValue("Param4", DescripcionProducto1);
-                //cmdInsert.Parameters.AddWithValue("Param5", IDProducto1);
+                cmdInsert.Parameters.AddWithValue("Param5", Stock1);
+                cmdInsert.Parameters.AddWithValue("Param6", Price1);
+                cmdInsert.Parameters.AddWithValue("Param7", Fecha1);
+                //cmdInsert.Parameters.AddWithValue("Param8", IDProducto1);
                 return cmdInsert.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -109,7 +112,7 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexion
                 command.Connection = getConnection();
                 //Definir que accion se desea realizar   (un parametro para cada campo
-                string queryInsert = "Delete Products Where IDProducto = @param1";
+                string queryInsert = "Delete Products Where IDProduct = @param1";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
                 cmdInsert.Parameters.AddWithValue("param1", IDProducto1);
                 return cmdInsert.ExecuteNonQuery();
@@ -132,13 +135,16 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string queryUpdate = "UPDATE Products SET NombreProducto = @param1, MaterialProducto = @param2, NombreProveedor = @param3, DescripcionProducto = @param4 WHERE IDProducto = @param5";
+                string queryUpdate = "UPDATE Products SET ProductName = @param1, ProductMaterial = @param2, IDSupplier = @param3, ProductDescription = @param4, Stock = @param5, Price = @param6, Fecha = @param7  WHERE IDProduct = @param8";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
                 cmdUpdate.Parameters.AddWithValue("param1", NombreProducto1);
                 cmdUpdate.Parameters.AddWithValue("param2", MaterialProducto1);
-                cmdUpdate.Parameters.AddWithValue("param3", NombreProveedor1);
+                cmdUpdate.Parameters.AddWithValue("param3", IDProveedor1);
                 cmdUpdate.Parameters.AddWithValue("param4", DescripcionProducto1);
-                cmdUpdate.Parameters.AddWithValue("param5", IDProducto1);
+                cmdUpdate.Parameters.AddWithValue("param5", Stock1);
+                cmdUpdate.Parameters.AddWithValue("param6", Price1);
+                cmdUpdate.Parameters.AddWithValue("param7", Fecha1);
+                cmdUpdate.Parameters.AddWithValue("param8", IDProducto1);
 
                 return cmdUpdate.ExecuteNonQuery();
             }
@@ -146,6 +152,30 @@ namespace SistemaJoyería.Model.DAO
             {
                 MessageBox.Show($"{ex.Message} No se logro actualizar la informacion del producto, verefique su conexión a internet o que los servicios estes activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+
+        public DataSet BuscarProducts(string valor)
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = $"SELECT * FROM vw_Products WHERE ProductName Like '%{valor}'";
+                SqlCommand cmd = new SqlCommand( query, command.Connection);
+                cmd.Parameters.AddWithValue("@Valor", $"%{valor}");
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet, "Products");
+                return dataSet;
+            }
+            catch (Exception)
+            {
+                return null;
             }
             finally
             {
