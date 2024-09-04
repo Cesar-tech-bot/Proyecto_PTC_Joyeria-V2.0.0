@@ -123,6 +123,12 @@
     <Compile Include="View\ProductsView\FrmProductsView.Designer.cs">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SalesDetailsView\FrmSalesDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SalesDetailsView\FrmSalesDetailView.Designer.cs">
+      <DependentUpon>FrmSalesDetailView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Suppliers\FrmAddSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductsView\FrmProductsView.resx">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SalesDetailsView\FrmSalesDetailView.resx">
+      <DependentUpon>FrmSalesDetailView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Suppliers\FrmAddSuppliers.resx">
       <DependentUpon>FrmAddSuppliers.cs</DependentUpon>
