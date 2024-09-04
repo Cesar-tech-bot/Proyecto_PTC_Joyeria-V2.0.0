@@ -12,30 +12,38 @@ namespace SistemaJoyería.Controller.Suppliers
         string idBuena;
         UpdateSuppliersDAO updater = new UpdateSuppliersDAO();
 
-        // Constructor del controlador
         public ControllerFrmUpdateSuppliers(string idPasada, FrmUpdateSuppliersView vistaPasada)
         {
             vistaControlada = vistaPasada;
             idBuena = idPasada;
 
-            // Asigna el evento de clic al botón guardar
             vistaPasada.btnGuardar.Click += (sender, e) => ActualizarSupplier();
 
-            // Agrega validaciones en tiempo real para cada campo
+            // Validaciones en tiempo real para cada campo
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
-            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
-            vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
+            vistaPasada.txtTelefono.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtTelefono, 15);
+            vistaPasada.txtEmail.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtEmail, 100);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
 
-            // Carga los datos del proveedor seleccionado
+            // Validaciones de tipo de carácter
+            vistaPasada.txtNombreEmpresa.KeyPress += (sender, e) => ValidateAlphaNumericInput(sender, e);
+            vistaPasada.txtNombreContacto.KeyPress += (sender, e) => ValidateAlphabeticInput(sender, e);
+            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
+            vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
+
+            // Restricción de copiar, cortar y pegar
+            vistaPasada.txtNombreEmpresa.KeyDown += (sender, e) => RestrictCopyPaste(e);
+            vistaPasada.txtNombreContacto.KeyDown += (sender, e) => RestrictCopyPaste(e);
+            vistaPasada.txtTelefono.KeyDown += (sender, e) => RestrictCopyPaste(e);
+            vistaPasada.txtEmail.KeyDown += (sender, e) => RestrictCopyPaste(e);
+            vistaPasada.txtDireccion.KeyDown += (sender, e) => RestrictCopyPaste(e);
+
             updater.Get(vistaPasada, idPasada);
         }
 
-        // Método para actualizar el proveedor
         public void ActualizarSupplier()
         {
-            // Valida todos los campos antes de actualizar
             if (ValidateAllFields())
             {
                 updater.Update(idBuena, vistaControlada);
@@ -44,10 +52,8 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Método para validar todos los campos
         private bool ValidateAllFields()
         {
-            // Verifica que ningún campo esté vacío
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
                 string.IsNullOrWhiteSpace(vistaControlada.txtNombreContacto.Text) ||
                 string.IsNullOrWhiteSpace(vistaControlada.txtTelefono.Text) ||
@@ -58,7 +64,6 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
 
-            // Valida el formato del email
             if (!ValidateEmail(vistaControlada.txtEmail))
             {
                 return false;
@@ -67,27 +72,42 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
-        // Método para validar la longitud de los campos de texto
+        // Validation 5: Length validation
         private void ValidateLength(TextBox textBox, int maxLength)
         {
             if (textBox.Text.Length > maxLength)
             {
                 textBox.Text = textBox.Text.Substring(0, maxLength);
-                textBox.SelectionStart = textBox.Text.Length; // Coloca el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
                 MessageBox.Show($"El campo no puede exceder {maxLength} caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        // Método para validar que solo se ingresen números en el campo de teléfono
+        // Validation 6: Character type validation
         private void ValidateNumericInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; // Ignora el carácter si no es un número
+                e.Handled = true;
             }
         }
 
-        // Método para validar el formato del email
+        private void ValidateAlphabeticInput(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ValidateAlphaNumericInput(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
         private bool ValidateEmail(TextBox emailTextBox)
         {
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
@@ -97,6 +117,16 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
             return true;
+        }
+
+        // Validation 10: Copy, cut, paste restriction
+        private void RestrictCopyPaste(KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.X || e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+                MessageBox.Show("Las operaciones de copiar, cortar y pegar no están permitidas.", "Acción restringida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
