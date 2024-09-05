@@ -9,11 +9,11 @@ namespace SistemaJoyeria.Model.DTO
 {
     public class SupplierDTO : dbContext
     {
-        public int ID { get; set; }
-        public string NombreEmpresa { get; set; }
-        public string NombreContacto { get; set; }
-        public string Telefono { get; set; }
+        public int IDSupplier { get; set; }
+        public string CompanyName { get; set; }
+        public string ContactName { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
-        public string Direccion { get; set; }
+        public string Direction { get; set; }
     }
 }

@@ -14,13 +14,13 @@ namespace SistemaJoyería.Model.DAO
             {
                 command.Connection = getConnection();
 
-                string queryInsert = "INSERT INTO Proveedores (NombreEmpresa, NombreContacto, Telefono, Email, Direccion) VALUES (@NombreEmpresa, @NombreContacto, @Telefono, @Email, @Direccion)";
+                string queryInsert = "INSERT INTO Suppliers (CompanyName, ContactName, Phone, Email, Direction) VALUES (@CompanyName, @ContactName, @Phone, @Email, @Direction)";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
-                cmdInsert.Parameters.AddWithValue("@NombreEmpresa", supplier.NombreEmpresa);
-                cmdInsert.Parameters.AddWithValue("@NombreContacto", supplier.NombreContacto);
-                cmdInsert.Parameters.AddWithValue("@Telefono", supplier.Telefono);
+                cmdInsert.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
+                cmdInsert.Parameters.AddWithValue("@ContactName", supplier.ContactName);
+                cmdInsert.Parameters.AddWithValue("@Phone", supplier.Phone);
                 cmdInsert.Parameters.AddWithValue("@Email", supplier.Email);
-                cmdInsert.Parameters.AddWithValue("@Direccion", supplier.Direccion);
+                cmdInsert.Parameters.AddWithValue("@Direction", supplier.Direction);
 
 
                 int respuesta = cmdInsert.ExecuteNonQuery();
@@ -40,15 +40,15 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
                 command.Connection.Open();
 
-                string queryUpdate = "UPDATE Proveedores SET NombreEmpresa = @NombreEmpresa, NombreContacto = @NombreContacto, Telefono = @Telefono, Email = @Email, Direccion = @Direccion WHERE Id = @Id";
+                string queryUpdate = "UPDATE Suppliers SET CompanyName = @CompanyName, ContactName = @ContactName, Phone = @Phone, Email = @Email, Direction = @Direction WHERE IDSupplier = @IDSupplier";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
-                cmdUpdate.Parameters.AddWithValue("@Id", supplier.ID);
-                cmdUpdate.Parameters.AddWithValue("@NombreEmpresa", supplier.NombreEmpresa);
-                cmdUpdate.Parameters.AddWithValue("@NombreContacto", supplier.NombreContacto);
-                cmdUpdate.Parameters.AddWithValue("@Telefono", supplier.Telefono);
+                cmdUpdate.Parameters.AddWithValue("@IDSupplier", supplier.IDSupplier);
+                cmdUpdate.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
+                cmdUpdate.Parameters.AddWithValue("@ContactName", supplier.ContactName);
+                cmdUpdate.Parameters.AddWithValue("@Phone", supplier.Phone);
                 cmdUpdate.Parameters.AddWithValue("@Email", supplier.Email);
-                cmdUpdate.Parameters.AddWithValue("@Direccion", supplier.Direccion);
+                cmdUpdate.Parameters.AddWithValue("@Direction", supplier.Direction);
 
                 return cmdUpdate.ExecuteNonQuery();
             }
@@ -70,9 +70,9 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
                 command.Connection.Open();
 
-                string queryDelete = "DELETE FROM Proveedores WHERE Id = @Id";
+                string queryDelete = "DELETE FROM Proveedores WHERE IDSupplier = @IDSupplier";
                 SqlCommand cmdDelete = new SqlCommand(queryDelete, command.Connection);
-                cmdDelete.Parameters.AddWithValue("@Id", id);
+                cmdDelete.Parameters.AddWithValue("@IDSupplier", id);
 
                 return cmdDelete.ExecuteNonQuery();
             }
