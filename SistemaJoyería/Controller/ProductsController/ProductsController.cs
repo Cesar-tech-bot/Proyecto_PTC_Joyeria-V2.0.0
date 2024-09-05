@@ -43,6 +43,7 @@ namespace SistemaJoyería.Controller.ProductsController
         void CargaInicial(object sender, EventArgs e)
         {
             ShowDGVProducts();
+            FillComboSuppliers();
         }
 
         //Refrescar tabla
@@ -56,6 +57,16 @@ namespace SistemaJoyería.Controller.ProductsController
             ProductsViewDAO daoPD = new ProductsViewDAO();
             DataSet ds = daoPD.ShowDGV();
             ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
+        }
+
+        void FillComboSuppliers()
+        {
+            //Creando un objeto de la clase ProductsViewDAO
+            ProductsViewDAO daoSupplier = new ProductsViewDAO();
+            DataSet ds = daoSupplier.GetSuppliers();
+            ObjProducts.cmbSuppliers.DataSource = ds.Tables["Suppliers"];
+            ObjProducts.cmbSuppliers.DisplayMember = "ContactName";
+            ObjProducts.cmbSuppliers.ValueMember = "IDSupplier";
         }
 
         //Limitar a 15 Caracteres
