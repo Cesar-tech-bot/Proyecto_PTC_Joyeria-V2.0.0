@@ -156,6 +156,7 @@
             this.ClientSize = new System.Drawing.Size(926, 375);
             this.Controls.Add(this.listSuppliers);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "FrmSuppliers";
             this.Text = "FrmSuppliers";
             this.panel1.ResumeLayout(false);

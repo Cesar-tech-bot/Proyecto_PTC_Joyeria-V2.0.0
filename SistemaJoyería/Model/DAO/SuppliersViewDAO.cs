@@ -16,19 +16,19 @@ namespace SistemaJoyeria.DAO
             {
                 command.Connection = getConnection();
 
-                string query = "SELECT * FROM Proveedores";
+                string query = "SELECT * FROM Suppliers";
                 using (SqlCommand cmdGet = new SqlCommand(query, command.Connection))
                 {
                     SqlDataReader reader = cmdGet.ExecuteReader();
                     vistaPasada.listSuppliers.Items.Clear();
                     while (reader.Read())
                     {
-                        ListViewItem item = new ListViewItem(reader["Id"].ToString());
-                        item.SubItems.Add(reader["NombreEmpresa"].ToString());
-                        item.SubItems.Add(reader["NombreContacto"].ToString());
-                        item.SubItems.Add(reader["Telefono"].ToString());
+                        ListViewItem item = new ListViewItem(reader["IDSupplier"].ToString());
+                        item.SubItems.Add(reader["CompanyName"].ToString());
+                        item.SubItems.Add(reader["ContactName"].ToString());
+                        item.SubItems.Add(reader["Phone"].ToString());
                         item.SubItems.Add(reader["Email"].ToString());
-                        item.SubItems.Add(reader["Direccion"].ToString());
+                        item.SubItems.Add(reader["Direction"].ToString());
                         vistaPasada.listSuppliers.Items.Add(item);
                     }
                     reader.Close();
@@ -46,7 +46,7 @@ namespace SistemaJoyeria.DAO
             {
                 command.Connection = getConnection();
 
-                string query = "SELECT * FROM Proveedores WHERE NombreEmpresa LIKE @searchingFor";
+                string query = "SELECT * FROM Suppliers WHERE CompanyName LIKE @searchingFor";
                 using (SqlCommand cmdGet = new SqlCommand(query, command.Connection))
                 {
                     cmdGet.Parameters.AddWithValue("@searchingFor", "%" + vistaPasada.txtSearch.Text + "%");
@@ -54,12 +54,12 @@ namespace SistemaJoyeria.DAO
                     vistaPasada.listSuppliers.Items.Clear();
                     while (reader.Read())
                     {
-                        ListViewItem item = new ListViewItem(reader["Id"].ToString());
-                        item.SubItems.Add(reader["NombreEmpresa"].ToString());
-                        item.SubItems.Add(reader["NombreContacto"].ToString());
-                        item.SubItems.Add(reader["Telefono"].ToString());
+                        ListViewItem item = new ListViewItem(reader["IDSupplier"].ToString());
+                        item.SubItems.Add(reader["CompanyName"].ToString());
+                        item.SubItems.Add(reader["ContactName"].ToString());
+                        item.SubItems.Add(reader["Phone"].ToString());
                         item.SubItems.Add(reader["Email"].ToString());
-                        item.SubItems.Add(reader["Direccion"].ToString());
+                        item.SubItems.Add(reader["Direction"].ToString());
                         vistaPasada.listSuppliers.Items.Add(item);
                     }
                     reader.Close();
@@ -76,7 +76,7 @@ namespace SistemaJoyeria.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = "DELETE FROM Proveedores WHERE Id = @idMala";
+                string query = "DELETE FROM Suppliers WHERE IDSupplier = @idMala";
 
                 using (SqlCommand cmdDelete = new SqlCommand(query, command.Connection))
                 {

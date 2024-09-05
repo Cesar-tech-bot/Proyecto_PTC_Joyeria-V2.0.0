@@ -46,11 +46,11 @@ namespace SistemaJoyería.Controller.Suppliers
 
         public SupplierDTO CreateSupplierDTO()
         {
-            supplier.NombreEmpresa = vistaControlada.txtNombreEmpresa.Text.Trim();
-            supplier.NombreContacto = vistaControlada.txtNombreContacto.Text.Trim();
-            supplier.Telefono = vistaControlada.txtTelefono.Text.Trim();
+            supplier.CompanyName = vistaControlada.txtNombreEmpresa.Text.Trim();
+            supplier.ContactName = vistaControlada.txtNombreContacto.Text.Trim();
+            supplier.Phone = vistaControlada.txtTelefono.Text.Trim();
             supplier.Email = vistaControlada.txtEmail.Text.Trim();
-            supplier.Direccion = vistaControlada.txtDireccion.Text.Trim();
+            supplier.Direction = vistaControlada.txtDireccion.Text.Trim();
             return supplier;
         }
 

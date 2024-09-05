@@ -20,20 +20,20 @@ namespace SistemaJoyería.Model.DAO
             {
                 command.Connection = getConnection();
 
-                string query = "SELECT * FROM Proveedores WHERE Id = @Id";
+                string query = "SELECT * FROM Suppliers WHERE IDSupplier = @IDSupplier";
                 using (SqlCommand cmdGet = new SqlCommand(query, command.Connection))
                 {
-                    cmdGet.Parameters.AddWithValue("@Id", idBuena);
+                    cmdGet.Parameters.AddWithValue("@IDSupplier", idBuena);
                     SqlDataReader reader = cmdGet.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        vistaPasada.txtId.Text = (reader["Id"].ToString());
-                        vistaPasada.txtNombreEmpresa.Text = (reader["NombreEmpresa"].ToString());
-                        vistaPasada.txtNombreContacto.Text = (reader["NombreContacto"].ToString());
-                        vistaPasada.txtTelefono.Text = (reader["Telefono"].ToString());
+                        vistaPasada.txtId.Text = (reader["IDSupplier"].ToString());
+                        vistaPasada.txtNombreEmpresa.Text = (reader["CompanyName"].ToString());
+                        vistaPasada.txtNombreContacto.Text = (reader["ContactName"].ToString());
+                        vistaPasada.txtTelefono.Text = (reader["Phone"].ToString());
                         vistaPasada.txtEmail.Text = (reader["Email"].ToString());
-                        vistaPasada.txtDireccion.Text = (reader["Direccion"].ToString());
+                        vistaPasada.txtDireccion.Text = (reader["Direction"].ToString());
                     }
                     reader.Close();
                 }
@@ -50,15 +50,15 @@ namespace SistemaJoyería.Model.DAO
             {
                 command.Connection = getConnection();
                 MessageBox.Show(idBuena);
-                string queryUpdate = "UPDATE Proveedores SET NombreEmpresa = @NombreEmpresa, NombreContacto = @NombreContacto, Telefono = @Telefono, Email = @Email, Direccion = @Direccion WHERE Id = @Id";
+                string queryUpdate = "UPDATE Suppliers SET CompanyName = @CompanyName, ContactName = @ContactName, Phone = @Phone, Email = @Email, Direction = @Direction WHERE IDSupplier = @IDSupplier";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
-                cmdUpdate.Parameters.AddWithValue("@Id", idBuena);
+                cmdUpdate.Parameters.AddWithValue("@IDSupplier", idBuena);
                 MessageBox.Show(idBuena);
-                cmdUpdate.Parameters.AddWithValue("@NombreEmpresa", vistaControlada.txtNombreEmpresa.Text);
-                cmdUpdate.Parameters.AddWithValue("@NombreContacto", vistaControlada.txtNombreContacto.Text);
-                cmdUpdate.Parameters.AddWithValue("@Telefono", vistaControlada.txtTelefono.Text);
+                cmdUpdate.Parameters.AddWithValue("@CompanyName", vistaControlada.txtNombreEmpresa.Text);
+                cmdUpdate.Parameters.AddWithValue("@ContactName", vistaControlada.txtNombreContacto.Text);
+                cmdUpdate.Parameters.AddWithValue("@Phone", vistaControlada.txtTelefono.Text);
                 cmdUpdate.Parameters.AddWithValue("@Email", vistaControlada.txtEmail.Text);
-                cmdUpdate.Parameters.AddWithValue("@Direccion", vistaControlada.txtDireccion.Text);
+                cmdUpdate.Parameters.AddWithValue("@Direction", vistaControlada.txtDireccion.Text);
 
 
                 cmdUpdate.ExecuteNonQuery();
