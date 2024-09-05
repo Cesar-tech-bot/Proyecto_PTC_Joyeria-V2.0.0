@@ -38,7 +38,7 @@ namespace SistemaJoyería.Model.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} No se pudo registrar cliente, verifique su conexión a internet o que los servicios esten activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message} No se pudo registrar el cliente, verifique su conexión a internet o que los servicios esten activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally

@@ -16,7 +16,6 @@ namespace SistemaJoyería.View.InventarioView
         public Inventario()
         {
             InitializeComponent();
-            Inventario obj = new Inventario(this);
         }
     }
 }

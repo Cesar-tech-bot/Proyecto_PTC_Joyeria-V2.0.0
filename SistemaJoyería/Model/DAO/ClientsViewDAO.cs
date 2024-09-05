@@ -44,39 +44,14 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
-        public int EliminarClient()
-        {
-            try
-            {
-                //Establecemos la conexión para el comando
-                command.Connection = getConnection();
-                //Definimos la consulta para eliminar el cliente
-                string queryDelete = "DELETE Clients WHERE idClient = @param1";
-                SqlCommand cmdDelete = new SqlCommand(queryDelete, command.Connection);
-                cmdDelete.Parameters.AddWithValue("param1", IdClient);
-                //Ejecutamos la consulta de eliminación y retornamos el resultado
-                return cmdDelete.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message} No se pudo eliminar la información del cliente, verifique su conexión a internet o que los servicios estén activos", "Error de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return -1;
-            }
-            finally
-            {
-                //Cerramos conexión
-                command.Connection.Close();
-            }
-        }
-
-        public int UpdateClients ()
+        public int UpdateClients()
         {
             try
             {
                 //Establecemos una conexión
                 command.Connection = getConnection();
                 //Definir que acción se desea realizar
-                string queryUpdate = "UPDATE Clients SET  firstName = @param1, lastName = @param2,  phone = @param3, email= @param4, birthDate = @param5,  identityDocument = @param6, addressClient = @param7 WHERE  idClient = @param8";
+                string queryUpdate = "UPDATE Clients SET  FirstName = @param1, LastName = @param2,  Phone = @param3, Email= @param4, BirthDate = @param5,  IdentityDocument = @param6, AddressClient = @param7 WHERE  IDClient = @param8";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
                 cmdUpdate.Parameters.AddWithValue("param1", FirstName);
                 cmdUpdate.Parameters.AddWithValue("param2", LastName);

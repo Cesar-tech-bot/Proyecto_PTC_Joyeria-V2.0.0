@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.mskUDuiDoc = new System.Windows.Forms.MaskedTextBox();
+            this.mskUCellphoneN = new System.Windows.Forms.MaskedTextBox();
             this.tbUAddress = new System.Windows.Forms.TextBox();
             this.btnClearUpdate = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -51,14 +52,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnAddClients = new System.Windows.Forms.Button();
-            this.cmsMenuClient = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsEliminarClient = new System.Windows.Forms.ToolStripMenuItem();
-            this.mskUCellphoneN = new System.Windows.Forms.MaskedTextBox();
-            this.mskUDuiDoc = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).BeginInit();
             this.panel1.SuspendLayout();
-            this.cmsMenuClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -88,6 +84,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1140, 547);
             this.panel2.TabIndex = 7;
+            // 
+            // mskUDuiDoc
+            // 
+            this.mskUDuiDoc.Location = new System.Drawing.Point(97, 171);
+            this.mskUDuiDoc.Mask = "00000000-0";
+            this.mskUDuiDoc.Name = "mskUDuiDoc";
+            this.mskUDuiDoc.Size = new System.Drawing.Size(72, 22);
+            this.mskUDuiDoc.TabIndex = 49;
+            // 
+            // mskUCellphoneN
+            // 
+            this.mskUCellphoneN.Location = new System.Drawing.Point(97, 137);
+            this.mskUCellphoneN.Mask = "0000-0000";
+            this.mskUCellphoneN.Name = "mskUCellphoneN";
+            this.mskUCellphoneN.Size = new System.Drawing.Size(72, 22);
+            this.mskUCellphoneN.TabIndex = 49;
             // 
             // tbUAddress
             // 
@@ -301,36 +313,6 @@
             this.btnAddClients.Text = "Añadir";
             this.btnAddClients.UseVisualStyleBackColor = false;
             // 
-            // cmsMenuClient
-            // 
-            this.cmsMenuClient.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsMenuClient.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsEliminarClient});
-            this.cmsMenuClient.Name = "cmsMenuClient";
-            this.cmsMenuClient.Size = new System.Drawing.Size(133, 28);
-            // 
-            // cmsEliminarClient
-            // 
-            this.cmsEliminarClient.Name = "cmsEliminarClient";
-            this.cmsEliminarClient.Size = new System.Drawing.Size(132, 24);
-            this.cmsEliminarClient.Text = "Eliminar";
-            // 
-            // mskUCellphoneN
-            // 
-            this.mskUCellphoneN.Location = new System.Drawing.Point(97, 137);
-            this.mskUCellphoneN.Mask = "0000-0000";
-            this.mskUCellphoneN.Name = "mskUCellphoneN";
-            this.mskUCellphoneN.Size = new System.Drawing.Size(72, 22);
-            this.mskUCellphoneN.TabIndex = 49;
-            // 
-            // mskUDuiDoc
-            // 
-            this.mskUDuiDoc.Location = new System.Drawing.Point(97, 171);
-            this.mskUDuiDoc.Mask = "00000000-0";
-            this.mskUDuiDoc.Name = "mskUDuiDoc";
-            this.mskUDuiDoc.Size = new System.Drawing.Size(72, 22);
-            this.mskUDuiDoc.TabIndex = 49;
-            // 
             // FrmClientsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -346,7 +328,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.cmsMenuClient.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -357,8 +338,6 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvClientsTable;
         public System.Windows.Forms.Button btnAddClients;
-        public System.Windows.Forms.ToolStripMenuItem cmsEliminarClient;
-        public System.Windows.Forms.ContextMenuStrip cmsMenuClient;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox tbUClientsSurname;
         public System.Windows.Forms.TextBox tbUClientsName;
