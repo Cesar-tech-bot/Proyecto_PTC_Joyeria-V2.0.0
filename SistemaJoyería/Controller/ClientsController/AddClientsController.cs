@@ -40,12 +40,8 @@ namespace SistemaJoyería.Controller.ClientsController
                   string.IsNullOrEmpty(ObjAddCView.tbClientsSurname.Text.Trim()) ||
                   // Validamos si el campo de número de teléfono no está vacío
                   string.IsNullOrEmpty(ObjAddCView.mskCellphoneN.Text.Trim()) ||
-                   //Validamos que esté completos todos los cam´pos de número de teléfono  
-                   !MskPhoneValidation(ObjAddCView.mskDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de DUI no está vacío
                   string.IsNullOrEmpty(ObjAddCView.mskDuiDoc.Text.Trim()) ||
-                  //Validamos que esté completos todos los cam´pos del DUI
-                  !MskValidation(ObjAddCView.mskDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de correo electrónico no está vacío
                   string.IsNullOrEmpty(ObjAddCView.tbEmail.Text.Trim()) ||
                   // Validamos si el campo de dirección no está vacío
@@ -97,32 +93,7 @@ namespace SistemaJoyería.Controller.ClientsController
         }
 
         //Validaciones
-        private bool MskValidation(string text)
-        {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{8} : Debe tener exactamente 8 dígitos
-            // - : Debe haber un guion después de los 8 dígitos
-            // \d : Debe tener un digito después del "-"
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{8}-\d$";
-            return Regex.IsMatch(text, pattern);
-        }
-
-        private bool MskPhoneValidation(string text)
-        {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{8} : Debe tener exactamente 8 dígitos
-            // - : Debe haber un guion después de los 8 dígitos
-            // \d{4} : Debe tener exactamente 4 dígitos después del guion
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{8}-\d{4}$";
-            return Regex.IsMatch(text, pattern);
-        }
-
+     
         //Restricciones del View
         private void TbClientsName_KeyPress(object sender, KeyPressEventArgs e)
         {
