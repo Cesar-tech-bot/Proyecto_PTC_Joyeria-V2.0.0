@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using SistemaJoyería.Model.DAO;
 using SistemaJoyería.Model.DTO;
 using SistemaJoyería.View.ClientsView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemaJoyería.Controller.ClientsController
 {
@@ -101,7 +100,19 @@ namespace SistemaJoyería.Controller.ClientsController
         }
 
         //Validaciones 
-        
+
+        //Limitar a 25 Caracteres
+        private void LimitCharacter25(TextBox textBox)
+        {
+            textBox.MaxLength = 25;
+        }
+
+        private void Limit25(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            LimitCharacter25(textBox);
+        }
+
         //Métodos para eventos
         void ShowAddClients(object sender, EventArgs e)
         {

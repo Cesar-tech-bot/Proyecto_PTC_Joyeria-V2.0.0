@@ -26,11 +26,14 @@ namespace SistemaJoyería.Controller.ClientsController
             viewAdd.btnDelete.Click += new EventHandler(CleanInformation);
             //Sección de validaciones de View
             viewAdd.dtpClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
-            viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(TbClientsName_KeyPress);
-            viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(TbClientsSurname_KeyPress);
+            viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
+            viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             //viewAdd.tbCellphoneN.KeyPress += new KeyPressEventHandler(TbCellphoneN_KeyPress);
             viewAdd.tbEmail.KeyPress += new KeyPressEventHandler(TbEmail_KeyPress);
             viewAdd.tbAddress.KeyPress += new KeyPressEventHandler(TbAddress_KeyPress);
+            viewAdd.tbClientsName.TextChanged += new EventHandler(Limit25);
+            viewAdd.tbClientsSurname.TextChanged += new EventHandler(Limit25);  
+            viewAdd.tbEmail.TextChanged += new EventHandler(Limit50);
         }
 
         void SaveRegister(object sender, EventArgs e)
@@ -93,9 +96,33 @@ namespace SistemaJoyería.Controller.ClientsController
         }
 
         //Validaciones
-     
-        //Restricciones del View
-        private void TbClientsName_KeyPress(object sender, KeyPressEventArgs e)
+
+        //Limitar a 15 Caracteres
+        private void CharacterLimit25(TextBox textBox)
+        {
+            textBox.MaxLength = 25;
+        }
+
+        private void Limit25(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit25(textBox);
+        }
+
+        //Limitar a 50 Caracteres
+        private void CharacterLimit50(TextBox textBox)
+        {
+            textBox.MaxLength = 50;
+        }
+
+        private void Limit50(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit50(textBox);
+        }
+
+        //Límitar s sólo letras y un espacio
+        private void OnlyLettersSpace(object sender, KeyPressEventArgs e)
         {
             // Permitir solo letras y un único espacio
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
@@ -110,21 +137,7 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
-        private void TbClientsSurname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir solo letras y un único espacio
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
-            {
-                e.Handled = true;
-            }
-
-            // Evitar más de un espacio consecutivo
-            if (e.KeyChar == ' ' && (sender as TextBox).Text.EndsWith(" "))
-            {
-                e.Handled = true;
-            }
-        }
-
+        //Límitar a un tener ningún espacio
         private void TbEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Evitar cualquier espacio
@@ -134,6 +147,7 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
+        //Límitar a solamente...
         private void TbAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir letras, números y los caracteres básicos de dirección
