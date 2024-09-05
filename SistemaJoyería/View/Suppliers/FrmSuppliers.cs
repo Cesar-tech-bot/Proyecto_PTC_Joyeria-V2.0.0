@@ -17,6 +17,18 @@ namespace SistemaJoyería.View.Suppliers
         {
             InitializeComponent();
             new ControllerSuppliers(this);
+            this.KeyPreview = true;
+            this.KeyDown += Form_KeyDown;
         }
+
+        //Para copiar y pegar
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
     }
 }
