@@ -145,8 +145,9 @@
             // 
             this.mskCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCellphoneN.Location = new System.Drawing.Point(740, 167);
+            this.mskCellphoneN.Mask = "0000-0000";
             this.mskCellphoneN.Name = "mskCellphoneN";
-            this.mskCellphoneN.Size = new System.Drawing.Size(100, 30);
+            this.mskCellphoneN.Size = new System.Drawing.Size(128, 30);
             this.mskCellphoneN.TabIndex = 46;
             // 
             // tbEmail
@@ -161,8 +162,9 @@
             // 
             this.mskDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDuiDoc.Location = new System.Drawing.Point(740, 238);
+            this.mskDuiDoc.Mask = "00000000-0";
             this.mskDuiDoc.Name = "mskDuiDoc";
-            this.mskDuiDoc.Size = new System.Drawing.Size(100, 30);
+            this.mskDuiDoc.Size = new System.Drawing.Size(128, 30);
             this.mskDuiDoc.TabIndex = 48;
             // 
             // tbAddress

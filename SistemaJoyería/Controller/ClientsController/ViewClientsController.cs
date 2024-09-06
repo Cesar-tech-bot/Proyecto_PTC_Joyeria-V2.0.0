@@ -24,10 +24,21 @@ namespace SistemaJoyería.Controller.ClientsController
             //Eventos del CRUD (Read, Delete, Update)
             view.btnAddClients.Click += new EventHandler(ShowAddClients);
             view.btnUpdate.Click += new EventHandler(UpdateRegister);
-            //Eventos de otro tipo
+            //Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
             view.btnClearUpdate.Click += new EventHandler(ClearUpdateZone);
+            //view.btnSearchClients.Click += new EventHandler(SearchClientsEvent);
+            //Sección de Validaciones
+            view.dtpUClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
+            view.tbUClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
+            view.tbUClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);         
             view.dgvClientsTable.CellClick += new DataGridViewCellEventHandler(SelectClient);
+            view.tbUEmail.KeyPress += new KeyPressEventHandler(TbUEmail_KeyPress);
+            view.tbUAddress.KeyPress += new KeyPressEventHandler(TbUAddress_KeyPress);
+            view.tbUClientsName.TextChanged += new EventHandler(Limit25);
+            view.tbUClientsSurname.TextChanged += new EventHandler(Limit25);
+            view.tbUEmail.TextChanged += new EventHandler(Limit50);
+            view.tbUAddress.TextChanged += new EventHandler(Limit150);
         }
 
         void InitialCharge(object sender, EventArgs e)
@@ -88,31 +99,6 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
-        private bool HaveChanges(ClientsViewDTO oldData, ClientsViewDTO newData)
-        {
-            return oldData.FirstName != newData.FirstName ||
-                   oldData.LastName != newData.LastName ||
-                   oldData.Phone != newData.Phone ||
-                   oldData.BirthDate != newData.BirthDate ||
-                   oldData.IdentityDocument != newData.IdentityDocument ||
-                   oldData.Email != newData.Email ||
-                   oldData.AddressClient != newData.AddressClient;
-        }
-
-        //Validaciones 
-
-        //Limitar a 25 Caracteres
-        private void LimitCharacter25(TextBox textBox)
-        {
-            textBox.MaxLength = 25;
-        }
-
-        private void Limit25(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            LimitCharacter25(textBox);
-        }
-
         //Métodos para eventos
         void ShowAddClients(object sender, EventArgs e)
         {
@@ -145,6 +131,87 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjView.tbUEmail.Clear();
             ObjView.tbUAddress.Clear();
             ObjView.tbID.Clear();
+        }
+        //public void SearchClientsEvent(object sender, EventArgs e) { SearchClientsController(); }
+        ////void SearchClientsController()
+        ////{
+        ////    ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
+        ////    DataSet ds = clientsViewDAO.BuscarProducts(ObjView.tbSearchClients.Text.Trim());
+        ////    ObjView.dgvClientsTable.DataSource = ds.Tables["Clients"];
+        ////}
+
+        //Validaciones 
+
+        //Limitar a 25 Caracteres
+        private void LimitCharacter25(TextBox textBox)
+        {
+            textBox.MaxLength = 25;
+        }
+
+        private void Limit25(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            LimitCharacter25(textBox);
+        }
+
+        //Limitar a 50 Carácteres
+        private void CharacterLimit50(TextBox textBox)
+        {
+            textBox.MaxLength = 50;
+        }
+
+        private void Limit50(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit50(textBox);
+        }
+
+        //Limitar a 150 Carácateres
+        private void CharacterLimit150(TextBox textBox)
+        {
+            textBox.MaxLength = 150;
+        }
+
+        private void Limit150(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit150(textBox);
+        }
+
+        //Límitar s sólo letras y un espacio
+        private void OnlyLettersSpace(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y un único espacio
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+
+            // Evitar más de un espacio consecutivo
+            if (e.KeyChar == ' ' && (sender as TextBox).Text.EndsWith(" "))
+            {
+                e.Handled = true;
+            }
+        }
+
+        //Límitar a un tener ningún espacio
+        private void TbUEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Evitar cualquier espacio
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        //Límitar a solamente...
+        private void TbUAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir letras, números y los caracteres básicos de dirección
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ' && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
         }
 
     }

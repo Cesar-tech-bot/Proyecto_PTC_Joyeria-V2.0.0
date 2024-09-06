@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using SistemaJoyería.Model.DAO;
 using SistemaJoyería.Model.DTO;
 using System.Collections;
+using SistemaJoyería.View.Suppliers;
 
 namespace SistemaJoyería.Model.DAO
 {
@@ -74,6 +75,31 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection.Close();
             }
         }
+
+        public DataSet BuscarProducts(string result)
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = $"SELECT * FROM s WHERE vw_ClientesInfo ProductName Like '%{result}'";
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                cmd.Parameters.AddWithValue("@Result", $"%{result}");
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet, "Clients");
+                return dataSet;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+
 
     }
 }
