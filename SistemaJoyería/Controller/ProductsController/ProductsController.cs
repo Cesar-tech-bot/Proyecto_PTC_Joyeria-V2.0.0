@@ -207,10 +207,10 @@ namespace SistemaJoyería.Controller.ProductsController
                 ProductsViewDAO daoInsert = new ProductsViewDAO();
                 daoInsert.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
                 daoInsert.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
-                daoInsert.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.Text.Trim());
+                daoInsert.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.SelectedValue.ToString());
                 daoInsert.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
                 daoInsert.Stock1 = int.Parse(ObjProducts.txtStock.Text.Trim());
-                daoInsert.Price1 = int.Parse(ObjProducts.mktPriceProduct.Text.Trim());
+                daoInsert.Price1 = float.Parse(ObjProducts.mktPriceProduct.Text.Trim());
                 daoInsert.Fecha1 = ObjProducts.dtpDate.Value;
                 daoInsert.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
                 int retorno = daoInsert.registrerproducts();
