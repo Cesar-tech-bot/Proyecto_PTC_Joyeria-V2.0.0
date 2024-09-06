@@ -82,7 +82,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1140, 547);
+            this.panel2.Size = new System.Drawing.Size(1685, 738);
             this.panel2.TabIndex = 7;
             // 
             // mskUDuiDoc
@@ -116,7 +116,7 @@
             this.btnClearUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btnClearUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnClearUpdate.Location = new System.Drawing.Point(160, 407);
+            this.btnClearUpdate.Location = new System.Drawing.Point(705, 407);
             this.btnClearUpdate.Name = "btnClearUpdate";
             this.btnClearUpdate.Size = new System.Drawing.Size(114, 49);
             this.btnClearUpdate.TabIndex = 0;
@@ -129,7 +129,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(12, 407);
+            this.btnUpdate.Location = new System.Drawing.Point(557, 407);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(114, 49);
             this.btnUpdate.TabIndex = 0;
@@ -169,6 +169,7 @@
             this.tbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbID.Location = new System.Drawing.Point(97, 487);
             this.tbID.Name = "tbID";
+            this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(113, 24);
             this.tbID.TabIndex = 44;
             // 
@@ -277,7 +278,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1140, 100);
+            this.panel1.Size = new System.Drawing.Size(1685, 100);
             this.panel1.TabIndex = 6;
             // 
             // panel3
@@ -293,7 +294,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(790, 23);
+            this.btnRefresh.Location = new System.Drawing.Point(1335, 23);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(191, 49);
             this.btnRefresh.TabIndex = 0;
@@ -306,7 +307,7 @@
             this.btnAddClients.BackColor = System.Drawing.Color.Transparent;
             this.btnAddClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClients.ForeColor = System.Drawing.Color.Black;
-            this.btnAddClients.Location = new System.Drawing.Point(987, 23);
+            this.btnAddClients.Location = new System.Drawing.Point(1532, 23);
             this.btnAddClients.Name = "btnAddClients";
             this.btnAddClients.Size = new System.Drawing.Size(141, 49);
             this.btnAddClients.TabIndex = 0;
@@ -317,11 +318,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 647);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(2554, 1318);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1701, 875);
             this.Name = "FrmClientsView";
             this.Text = "Tabla de clientes";
             this.panel2.ResumeLayout(false);
