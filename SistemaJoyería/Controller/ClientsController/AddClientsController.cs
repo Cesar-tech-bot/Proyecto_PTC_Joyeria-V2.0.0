@@ -28,12 +28,12 @@ namespace SistemaJoyería.Controller.ClientsController
             viewAdd.dtpClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
             viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
-            //viewAdd.tbCellphoneN.KeyPress += new KeyPressEventHandler(TbCellphoneN_KeyPress);
             viewAdd.tbEmail.KeyPress += new KeyPressEventHandler(TbEmail_KeyPress);
             viewAdd.tbAddress.KeyPress += new KeyPressEventHandler(TbAddress_KeyPress);
             viewAdd.tbClientsName.TextChanged += new EventHandler(Limit25);
             viewAdd.tbClientsSurname.TextChanged += new EventHandler(Limit25);  
             viewAdd.tbEmail.TextChanged += new EventHandler(Limit50);
+            viewAdd.tbAddress.TextChanged += new EventHandler(Limit150);
         }
 
         void SaveRegister(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace SistemaJoyería.Controller.ClientsController
 
         //Validaciones
 
-        //Limitar a 15 Caracteres
+        //Limitar a 25 Carácteres
         private void CharacterLimit25(TextBox textBox)
         {
             textBox.MaxLength = 25;
@@ -109,7 +109,7 @@ namespace SistemaJoyería.Controller.ClientsController
             CharacterLimit25(textBox);
         }
 
-        //Limitar a 50 Caracteres
+        //Limitar a 50 Carácteres
         private void CharacterLimit50(TextBox textBox)
         {
             textBox.MaxLength = 50;
@@ -119,6 +119,18 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             TextBox textBox = (TextBox)sender;
             CharacterLimit50(textBox);
+        }
+
+        //Limitar a 150 Carácateres
+        private void CharacterLimit150(TextBox textBox)
+        {
+            textBox.MaxLength = 150;
+        }
+
+        private void Limit150(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit150(textBox);
         }
 
         //Límitar s sólo letras y un espacio
