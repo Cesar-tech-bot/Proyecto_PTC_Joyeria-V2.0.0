@@ -14,7 +14,7 @@ namespace SistemaJoyería.Model.DTO
         private int IDProveedor;
         private string DescripcionProducto;
         private int Stock;
-        private int Price;
+        private float Price;
         private DateTime Fecha;
 
         public int IDProducto1 { get => IDProducto; set => IDProducto = value; }
@@ -23,7 +23,7 @@ namespace SistemaJoyería.Model.DTO
         public int IDProveedor1 { get => IDProveedor; set => IDProveedor = value; }
         public string DescripcionProducto1 { get => DescripcionProducto; set => DescripcionProducto = value; }
         public int Stock1 { get => Stock; set => Stock = value; }
-        public int Price1 { get => Price; set => Price = value; }
+        public float Price1 { get => Price; set => Price = value; }
         public DateTime Fecha1 { get => Fecha; set => Fecha = value; }
     }
 }
