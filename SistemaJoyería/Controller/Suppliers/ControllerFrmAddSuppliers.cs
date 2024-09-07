@@ -25,9 +25,12 @@ namespace SistemaJoyería.Controller.Suppliers
             // Add event handlers for input validation
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
-            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
+            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);  // Validación de solo números
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
+            // Agregar validación de copiar y pegar
+            vistaControlada.KeyPreview = true;
+            vistaControlada.KeyDown += Form_KeyDown;
         }
 
         public void RegisterSupplier(SupplierDTO supplier)
@@ -94,6 +97,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Validación de solo números (conservar aquí)
         private void ValidateNumericInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -111,6 +115,16 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
             return true;
+        }
+
+        // Validación de copiar y pegar
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+                MessageBox.Show("No se permite copiar o pegar en este formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -8,9 +8,9 @@ namespace SistemaJoyería.Controller.Suppliers
 {
     internal class ControllerFrmUpdateSuppliers
     {
-        FrmUpdateSuppliers vistaControlada;
-        string idBuena;
-        UpdateSuppliersDAO updater = new UpdateSuppliersDAO();
+        private FrmUpdateSuppliers vistaControlada;
+        private string idBuena;
+        private UpdateSuppliersDAO updater = new UpdateSuppliersDAO();
 
         // Constructor del controlador.
         public ControllerFrmUpdateSuppliers(string idPasada, FrmUpdateSuppliers vistaPasada)
@@ -18,15 +18,19 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada = vistaPasada;
             idBuena = idPasada;
 
-            // Asigna el evento de clic al botón guardar
+            // Asigna el evento de clic al botón Guardar
             vistaPasada.btnGuardar.Click += (sender, e) => ActualizarSupplier();
 
-            // Agrega validaciones en tiempo real para cada campo
+            // Validaciones de los campos
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
             vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
+
+            // Agregar validación de copiar y pegar
+            vistaControlada.KeyPreview = true;
+            vistaControlada.KeyDown += Form_KeyDown;
 
             // Carga los datos del proveedor seleccionado
             updater.Get(vistaPasada, idPasada);
@@ -67,7 +71,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
-        // Método para validar la longitud de los campos de texto
+        // Validar longitud de los campos de texto
         private void ValidateLength(TextBox textBox, int maxLength)
         {
             if (textBox.Text.Length > maxLength)
@@ -78,16 +82,16 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Método para validar que solo se ingresen números en el campo de teléfono
+        // Validación de solo números
         private void ValidateNumericInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; // Ignora el carácter si no es un número
+                e.Handled = true;
             }
         }
 
-        // Método para validar el formato del email
+        // Validación del formato de correo electrónico
         private bool ValidateEmail(TextBox emailTextBox)
         {
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
@@ -97,6 +101,16 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
             return true;
+        }
+
+        // Validación de copiar y pegar
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+                MessageBox.Show("No se permite copiar o pegar en este formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
