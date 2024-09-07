@@ -15,5 +15,6 @@ namespace SistemaJoyeria.Model.DTO
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Direction { get; set; }
+        public DateTime RegistrationDate { get; set; }
     }
 }

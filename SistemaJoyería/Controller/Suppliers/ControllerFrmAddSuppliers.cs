@@ -25,10 +25,12 @@ namespace SistemaJoyería.Controller.Suppliers
             // Add event handlers for input validation
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
-            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);  // Validación de solo números
+            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
-            // Agregar validación de copiar y pegar
+
+            // Validar la fecha al perder el foco
+            vistaPasada.dtpFechaRegistro.ValueChanged += (sender, e) => ValidateDate(vistaPasada.dtpFechaRegistro.Value);
             vistaControlada.KeyPreview = true;
             vistaControlada.KeyDown += Form_KeyDown;
         }
@@ -54,6 +56,7 @@ namespace SistemaJoyería.Controller.Suppliers
             supplier.Phone = vistaControlada.txtTelefono.Text.Trim();
             supplier.Email = vistaControlada.txtEmail.Text.Trim();
             supplier.Direction = vistaControlada.txtDireccion.Text.Trim();
+            supplier.RegistrationDate = vistaControlada.dtpFechaRegistro.Value;
             return supplier;
         }
 
@@ -84,6 +87,25 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
 
+            if (!ValidateDate(vistaControlada.dtpFechaRegistro.Value))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidateDate(DateTime selectedDate)
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime maxDate = currentDate.AddYears(1);
+
+            if (selectedDate < currentDate.Date || selectedDate > maxDate.Date)
+            {
+                MessageBox.Show($"La fecha debe ser hoy o dentro de un año a partir de hoy.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             return true;
         }
 
@@ -97,7 +119,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Validación de solo números (conservar aquí)
+        // Validación de solo números
         private void ValidateNumericInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
