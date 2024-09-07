@@ -64,11 +64,12 @@
             // 
             // dtpFechaRegistro
             // 
+            this.dtpFechaRegistro.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(100, 245);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(3, 16);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(143, 26);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(327, 26);
             this.dtpFechaRegistro.TabIndex = 0;
             // 
             // pictureBox1
