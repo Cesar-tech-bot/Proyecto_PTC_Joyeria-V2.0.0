@@ -197,7 +197,7 @@
             // 
             // btnRestart
             // 
-            this.btnRestart.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnRestart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRestart.BackColor = System.Drawing.Color.White;
             this.btnRestart.Location = new System.Drawing.Point(824, 24);
             this.btnRestart.Name = "btnRestart";
@@ -323,7 +323,7 @@
             // 
             this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mktPriceProduct.Location = new System.Drawing.Point(28, 222);
-            this.mktPriceProduct.Mask = "00,00";
+            this.mktPriceProduct.Mask = "000.00";
             this.mktPriceProduct.Name = "mktPriceProduct";
             this.mktPriceProduct.Size = new System.Drawing.Size(171, 20);
             this.mktPriceProduct.TabIndex = 4;

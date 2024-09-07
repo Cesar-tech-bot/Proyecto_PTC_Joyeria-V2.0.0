@@ -26,11 +26,14 @@ namespace SistemaJoyería.Controller.ClientsController
             viewAdd.btnDelete.Click += new EventHandler(CleanInformation);
             //Sección de validaciones de View
             viewAdd.dtpClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
-            viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(TbClientsName_KeyPress);
-            viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(TbClientsSurname_KeyPress);
-            //viewAdd.tbCellphoneN.KeyPress += new KeyPressEventHandler(TbCellphoneN_KeyPress);
+            viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
+            viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             viewAdd.tbEmail.KeyPress += new KeyPressEventHandler(TbEmail_KeyPress);
             viewAdd.tbAddress.KeyPress += new KeyPressEventHandler(TbAddress_KeyPress);
+            viewAdd.tbClientsName.TextChanged += new EventHandler(Limit25);
+            viewAdd.tbClientsSurname.TextChanged += new EventHandler(Limit25);  
+            viewAdd.tbEmail.TextChanged += new EventHandler(Limit50);
+            viewAdd.tbAddress.TextChanged += new EventHandler(Limit150);
         }
 
         void SaveRegister(object sender, EventArgs e)
@@ -40,12 +43,8 @@ namespace SistemaJoyería.Controller.ClientsController
                   string.IsNullOrEmpty(ObjAddCView.tbClientsSurname.Text.Trim()) ||
                   // Validamos si el campo de número de teléfono no está vacío
                   string.IsNullOrEmpty(ObjAddCView.mskCellphoneN.Text.Trim()) ||
-                   //Validamos que esté completos todos los cam´pos de número de teléfono  
-                   !MskPhoneValidation(ObjAddCView.mskDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de DUI no está vacío
                   string.IsNullOrEmpty(ObjAddCView.mskDuiDoc.Text.Trim()) ||
-                  //Validamos que esté completos todos los cam´pos del DUI
-                  !MskValidation(ObjAddCView.mskDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de correo electrónico no está vacío
                   string.IsNullOrEmpty(ObjAddCView.tbEmail.Text.Trim()) ||
                   // Validamos si el campo de dirección no está vacío
@@ -97,49 +96,45 @@ namespace SistemaJoyería.Controller.ClientsController
         }
 
         //Validaciones
-        private bool MskValidation(string text)
+
+        //Limitar a 25 Carácteres
+        private void CharacterLimit25(TextBox textBox)
         {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{8} : Debe tener exactamente 8 dígitos
-            // - : Debe haber un guion después de los 8 dígitos
-            // \d : Debe tener un digito después del "-"
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{8}-\d$";
-            return Regex.IsMatch(text, pattern);
+            textBox.MaxLength = 25;
         }
 
-        private bool MskPhoneValidation(string text)
+        private void Limit25(object sender, EventArgs e)
         {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{8} : Debe tener exactamente 8 dígitos
-            // - : Debe haber un guion después de los 8 dígitos
-            // \d{4} : Debe tener exactamente 4 dígitos después del guion
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{8}-\d{4}$";
-            return Regex.IsMatch(text, pattern);
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit25(textBox);
         }
 
-        //Restricciones del View
-        private void TbClientsName_KeyPress(object sender, KeyPressEventArgs e)
+        //Limitar a 50 Carácteres
+        private void CharacterLimit50(TextBox textBox)
         {
-            // Permitir solo letras y un único espacio
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
-            {
-                e.Handled = true;
-            }
-
-            // Evitar más de un espacio consecutivo
-            if (e.KeyChar == ' ' && (sender as TextBox).Text.EndsWith(" "))
-            {
-                e.Handled = true;
-            }
+            textBox.MaxLength = 50;
         }
 
-        private void TbClientsSurname_KeyPress(object sender, KeyPressEventArgs e)
+        private void Limit50(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit50(textBox);
+        }
+
+        //Limitar a 150 Carácateres
+        private void CharacterLimit150(TextBox textBox)
+        {
+            textBox.MaxLength = 150;
+        }
+
+        private void Limit150(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit150(textBox);
+        }
+
+        //Límitar s sólo letras y un espacio
+        private void OnlyLettersSpace(object sender, KeyPressEventArgs e)
         {
             // Permitir solo letras y un único espacio
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
@@ -154,6 +149,7 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
+        //Límitar a un tener ningún espacio
         private void TbEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Evitar cualquier espacio
@@ -163,6 +159,7 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
+        //Límitar a solamente...
         private void TbAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir letras, números y los caracteres básicos de dirección

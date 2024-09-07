@@ -16,9 +16,9 @@ namespace SistemaJoyería.Model
                 try
                 {
                 //Defininmos el server
-                string server = "DESKTOP-9KMTQB1\\SQLEXPRESS";
+                string server = "";
                 //Ahora la DB
-                string database = "DB_CRUD";
+                string database = "";
                 //Creamos la conexión 
                 SqlConnection conexion = new SqlConnection("Server =" + server + "; DataBase = " + database + "; Integrated Security = true");
                 conexion.Open();

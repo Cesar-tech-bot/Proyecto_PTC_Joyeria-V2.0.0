@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using SistemaJoyería.Model.DAO;
 using SistemaJoyería.Model.DTO;
 using SistemaJoyería.View.ClientsView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemaJoyería.Controller.ClientsController
 {
@@ -24,13 +23,22 @@ namespace SistemaJoyería.Controller.ClientsController
             view.Load += new EventHandler(InitialCharge);
             //Eventos del CRUD (Read, Delete, Update)
             view.btnAddClients.Click += new EventHandler(ShowAddClients);
-            view.cmsEliminarClient.Click += new EventHandler(EliminarCliente);
             view.btnUpdate.Click += new EventHandler(UpdateRegister);
-            //Eventos de otro tipo
+            //Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
             view.btnClearUpdate.Click += new EventHandler(ClearUpdateZone);
+            //view.btnSearchClients.Click += new EventHandler(SearchClientsEvent);
+            //Sección de Validaciones
+            view.dtpUClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
+            view.tbUClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
+            view.tbUClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);         
             view.dgvClientsTable.CellClick += new DataGridViewCellEventHandler(SelectClient);
-            view.dgvClientsTable.MouseDown += new MouseEventHandler(OpenCms);
+            view.tbUEmail.KeyPress += new KeyPressEventHandler(TbUEmail_KeyPress);
+            view.tbUAddress.KeyPress += new KeyPressEventHandler(TbUAddress_KeyPress);
+            view.tbUClientsName.TextChanged += new EventHandler(Limit25);
+            view.tbUClientsSurname.TextChanged += new EventHandler(Limit25);
+            view.tbUEmail.TextChanged += new EventHandler(Limit50);
+            view.tbUAddress.TextChanged += new EventHandler(Limit150);
         }
 
         void InitialCharge(object sender, EventArgs e)
@@ -55,12 +63,8 @@ namespace SistemaJoyería.Controller.ClientsController
                   string.IsNullOrEmpty(ObjView.tbUClientsSurname.Text.Trim()) ||
                   // Validamos si el campo de número de teléfono no está vacío
                   string.IsNullOrEmpty(ObjView.mskUCellphoneN.Text.Trim()) ||
-                   //Validamos que esté completos todos los cam´pos de número de teléfono  
-                   !MskPhoneValidation(ObjView.mskUDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de DUI no está vacío
                   string.IsNullOrEmpty(ObjView.mskUDuiDoc.Text.Trim()) ||
-                  //Validamos que esté completos todos los cam´pos del DUI
-                  !MskValidation(ObjView.mskUDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de correo electrónico no está vacío
                   string.IsNullOrEmpty(ObjView.tbUEmail.Text.Trim()) ||
                   // Validamos si el campo de dirección no está vacío
@@ -95,96 +99,11 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
-        private bool HaveChanges(ClientsViewDTO oldData, ClientsViewDTO newData)
-        {
-            return oldData.FirstName != newData.FirstName ||
-                   oldData.LastName != newData.LastName ||
-                   oldData.Phone != newData.Phone ||
-                   oldData.BirthDate != newData.BirthDate ||
-                   oldData.IdentityDocument != newData.IdentityDocument ||
-                   oldData.Email != newData.Email ||
-                   oldData.AddressClient != newData.AddressClient;
-        }
-
-        void EliminarCliente(object sender, EventArgs e)
-        {
-            //Capturamos el índice de la fila seleccionada en el DataGridView
-            int pos = ObjView.dgvClientsTable.CurrentRow.Index;
-            //Creamos una instancia del DAO para eliminar el cliente
-            ClientsViewDAO daoDelete = new ClientsViewDAO();
-            //Establecemos el ID del cliente a eliminar basado en el valor en la primera columna de la fila seleccionada
-            daoDelete.IdClient = int.Parse(ObjView.dgvClientsTable[0, pos].Value.ToString());
-            //Ejecutamos el método para eliminar el cliente y capturamos el resultado
-            int retorno = daoDelete.EliminarClient();
-
-            if (retorno == 1)
-            {
-                MessageBox.Show("El cliente seleccionado fue eliminado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Refrescamos el DataGridView para mostrar los cambios
-                ShowDGVlients();
-            }
-            else
-            {
-                MessageBox.Show("El cliente seleccionado no pudo ser eliminado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        //Validaciones 
-
-        private bool MskValidation(string text)
-        {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{8} : Debe tener exactamente 8 dígitos
-            // - : Debe haber un guion después de los 8 dígitos
-            // \d : Debe tener un digito después del "-"
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{8}-\d$";
-            return Regex.IsMatch(text, pattern);
-        }
-
-        private bool MskPhoneValidation(string text)
-        {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{8} : Debe tener exactamente 8 dígitos
-            // - : Debe haber un guion después de los 8 dígitos
-            // \d{4} : Debe tener exactamente 4 dígitos después del guion
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{8}-\d{4}$";
-            return Regex.IsMatch(text, pattern);
-        }
-
         //Métodos para eventos
         void ShowAddClients(object sender, EventArgs e)
         {
             FrmAddClients frmAddClients = new FrmAddClients();
             frmAddClients.Show();
-        }
-        void OpenCms(object sender, MouseEventArgs e)
-        {
-            //Verifica si el botón del mouse presionado es el derecho
-            if (e.Button == MouseButtons.Right)
-            {
-                //Obtiene la información del punto donde se hizo clic
-                DataGridView.HitTestInfo hit = ObjView.dgvClientsTable.HitTest(e.X, e.Y);
-
-                //Verifica si el clic fue en una celda o en el encabezado
-                if (hit.Type == DataGridViewHitTestType.Cell || hit.Type == DataGridViewHitTestType.RowHeader)
-                {
-                    //Selecciona la fila donde se hizo clic derecho (opcional)
-                    if (hit.RowIndex >= 0)
-                    {
-                        ObjView.dgvClientsTable.ClearSelection();
-                        ObjView.dgvClientsTable.Rows[hit.RowIndex].Selected = true;
-                    }
-
-                    //Muestra el ContextMenuStrip en la posición del clic
-                    ObjView.cmsMenuClient.Show(ObjView.dgvClientsTable, e.Location);
-                }
-            }
         }
         void SelectClient(object sender, DataGridViewCellEventArgs e)
         {
@@ -202,7 +121,6 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             ShowDGVlients();
         }
-
         void ClearUpdateZone(object sender, EventArgs e)
         {
             ObjView.tbUClientsName.Clear();
@@ -213,6 +131,87 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjView.tbUEmail.Clear();
             ObjView.tbUAddress.Clear();
             ObjView.tbID.Clear();
+        }
+        //public void SearchClientsEvent(object sender, EventArgs e) { SearchClientsController(); }
+        ////void SearchClientsController()
+        ////{
+        ////    ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
+        ////    DataSet ds = clientsViewDAO.BuscarProducts(ObjView.tbSearchClients.Text.Trim());
+        ////    ObjView.dgvClientsTable.DataSource = ds.Tables["Clients"];
+        ////}
+
+        //Validaciones 
+
+        //Limitar a 25 Caracteres
+        private void LimitCharacter25(TextBox textBox)
+        {
+            textBox.MaxLength = 25;
+        }
+
+        private void Limit25(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            LimitCharacter25(textBox);
+        }
+
+        //Limitar a 50 Carácteres
+        private void CharacterLimit50(TextBox textBox)
+        {
+            textBox.MaxLength = 50;
+        }
+
+        private void Limit50(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit50(textBox);
+        }
+
+        //Limitar a 150 Carácateres
+        private void CharacterLimit150(TextBox textBox)
+        {
+            textBox.MaxLength = 150;
+        }
+
+        private void Limit150(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit150(textBox);
+        }
+
+        //Límitar s sólo letras y un espacio
+        private void OnlyLettersSpace(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y un único espacio
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+
+            // Evitar más de un espacio consecutivo
+            if (e.KeyChar == ' ' && (sender as TextBox).Text.EndsWith(" "))
+            {
+                e.Handled = true;
+            }
+        }
+
+        //Límitar a un tener ningún espacio
+        private void TbUEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Evitar cualquier espacio
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        //Límitar a solamente...
+        private void TbUAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir letras, números y los caracteres básicos de dirección
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ' && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
         }
 
     }
