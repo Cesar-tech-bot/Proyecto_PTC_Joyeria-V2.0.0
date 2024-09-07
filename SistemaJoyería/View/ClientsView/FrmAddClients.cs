@@ -18,6 +18,11 @@ namespace SistemaJoyería.View.ClientsView
             InitializeComponent();
             AddClientsController addClientsController = new AddClientsController(this);
             
-        }   
+        }
+
+        private void tbAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,7 +69,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(100, 245);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 26);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -121,7 +121,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(102, 241);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(233, 26);
-            this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.TabIndex = 5;
             // 
             // txtEmail
             // 
@@ -130,7 +130,7 @@
             this.txtEmail.Location = new System.Drawing.Point(74, 198);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(233, 26);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtTelefono
             // 
@@ -139,7 +139,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(103, 156);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(118, 26);
-            this.txtTelefono.TabIndex = 1;
+            this.txtTelefono.TabIndex = 3;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionSoloNumeros);
             // 
             // txtNombreContacto
@@ -149,7 +149,7 @@
             this.txtNombreContacto.Location = new System.Drawing.Point(167, 115);
             this.txtNombreContacto.Name = "txtNombreContacto";
             this.txtNombreContacto.Size = new System.Drawing.Size(209, 26);
-            this.txtNombreContacto.TabIndex = 1;
+            this.txtNombreContacto.TabIndex = 2;
             // 
             // txtNombreEmpresa
             // 
@@ -167,7 +167,7 @@
             this.txtId.Location = new System.Drawing.Point(58, 40);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(57, 26);
-            this.txtId.TabIndex = 1;
+            this.txtId.TabIndex = 0;
             // 
             // Direccion
             // 
@@ -228,7 +228,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(330, 367);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(138, 51);
-            this.btnGuardar.TabIndex = 25;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
