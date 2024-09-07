@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddSuppliers));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Id = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtpFechaRegistro);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Location = new System.Drawing.Point(451, 25);
             this.groupBox2.Name = "groupBox2";
@@ -62,14 +62,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil";
             // 
-            // dateTimePicker1
+            // dtpFechaRegistro
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(82, 262);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(143, 26);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(82, 262);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(143, 26);
+            this.dtpFechaRegistro.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -253,7 +253,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Direccion;
@@ -269,5 +268,6 @@
         public System.Windows.Forms.TextBox txtNombreEmpresa;
         private System.Windows.Forms.Label Id;
         public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.DateTimePicker dtpFechaRegistro;
     }
 }

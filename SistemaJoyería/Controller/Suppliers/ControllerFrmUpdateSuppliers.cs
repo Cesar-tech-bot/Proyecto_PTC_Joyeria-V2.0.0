@@ -42,6 +42,12 @@ namespace SistemaJoyería.Controller.Suppliers
             // Valida todos los campos antes de actualizar
             if (ValidateAllFields())
             {
+                if (!ValidateDate(vistaControlada.dtpFechaRegistro.Value))
+                {
+                    MessageBox.Show("La fecha debe ser la actual o no mayor a 1 año en el futuro.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 updater.Update(idBuena, vistaControlada);
                 MessageBox.Show("Proveedor actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 vistaControlada.Close();
@@ -69,6 +75,16 @@ namespace SistemaJoyería.Controller.Suppliers
             }
 
             return true;
+        }
+
+        // Método para validar la fecha
+        private bool ValidateDate(DateTime fecha)
+        {
+            DateTime fechaActual = DateTime.Now;
+            DateTime fechaMaxima = fechaActual.AddYears(1); // Un año hacia adelante
+
+            // Verifica si la fecha está en el rango válido (actual o hasta un año más adelante)
+            return fecha.Date >= fechaActual.Date && fecha.Date <= fechaMaxima.Date;
         }
 
         // Validar longitud de los campos de texto
