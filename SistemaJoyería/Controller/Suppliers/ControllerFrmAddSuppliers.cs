@@ -1,4 +1,5 @@
 ﻿using SistemaJoyería.Model.DAO;
+using SistemaJoyería.Model.DTO;
 using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
@@ -13,28 +14,35 @@ namespace SistemaJoyería.Controller.Suppliers
 {
     internal class ControllerFrmAddSuppliers
     {
-        private AddSuppliersDAO suppliersDAO = new AddSuppliersDAO();
-        private SupplierDTO supplier = new SupplierDTO();
-        private FrmAddSuppliers vistaControlada;
+        // Declaración de variables miembro
+        private AddSuppliersDAO suppliersDAO = new AddSuppliersDAO(); // Objeto para acceder a la base de datos
+        private SupplierDTO supplier = new SupplierDTO(); // Objeto para manejar los datos del proveedor
+        private FrmAddSuppliers vistaControlada; // Referencia al formulario de agregar proveedores
 
+        // Constructor del controlador
         public ControllerFrmAddSuppliers(FrmAddSuppliers vistaPasada)
         {
             vistaControlada = vistaPasada;
+
+            // Asignar manejadores de eventos a los controles del formulario
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
 
-            // Add event handlers for input validation
+            // Agregar validaciones para los campos de entrada
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
             vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
 
-            // Validar la fecha al perder el foco
+            // Validar la fecha al cambiar su valor
             vistaPasada.dtpFechaRegistro.ValueChanged += (sender, e) => ValidateDate(vistaPasada.dtpFechaRegistro.Value);
+
+            // Configurar el formulario para manejar eventos de teclado
             vistaControlada.KeyPreview = true;
             vistaControlada.KeyDown += Form_KeyDown;
         }
 
+        // Método para registrar un nuevo proveedor
         public void RegisterSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
@@ -49,6 +57,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Método para crear un objeto SupplierDTO con los datos del formulario
         public SupplierDTO CreateSupplierDTO()
         {
             supplier.CompanyName = vistaControlada.txtNombreEmpresa.Text.Trim();
@@ -60,6 +69,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return supplier;
         }
 
+        // Método para limpiar todos los campos del formulario
         private void ClearFields()
         {
             vistaControlada.txtId.Clear();
@@ -70,6 +80,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.txtDireccion.Clear();
         }
 
+        // Método para validar todos los campos antes de registrar
         private bool ValidateAllFields()
         {
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
@@ -95,6 +106,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
+        // Método para validar la fecha de registro
         private bool ValidateDate(DateTime selectedDate)
         {
             DateTime currentDate = DateTime.Now;
@@ -109,6 +121,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
+        // Método para validar la longitud de los campos de texto
         private void ValidateLength(TextBox textBox, int maxLength)
         {
             if (textBox.Text.Length > maxLength)
@@ -119,7 +132,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Validación de solo números
+        // Método para validar que solo se ingresen números en el campo de teléfono
         private void ValidateNumericInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -128,6 +141,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Método para validar el formato del correo electrónico
         private bool ValidateEmail(TextBox emailTextBox)
         {
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
@@ -139,7 +153,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
-        // Validación de copiar y pegar
+        // Método para prevenir copiar y pegar en el formulario
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
