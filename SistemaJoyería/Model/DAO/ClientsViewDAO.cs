@@ -76,30 +76,39 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
-        public DataSet BuscarProducts(string result)
+        public DataSet SearchClients(string valor)
         {
             try
             {
+                //Accedemos a la conexión que ya se tiene
                 command.Connection = getConnection();
-                string query = $"SELECT * FROM s WHERE vw_ClientesInfo ProductName Like '%{result}'";
+                //Instrucción que se hará hacia la base de datos
+                string query = $"SELECT * FROM vw_ClientesInfo  WHERE FirstName LIKE '%{valor}%' OR  IdentityDocument LIKE '%{valor}%' OR LastName LIKE '%{valor}%'";
+                //Comando sql en el cual se pasa la instrucción y la conexión
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
-                cmd.Parameters.AddWithValue("@Result", $"%{result}");
+                //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
+                //ExecuteNonQuery devuelve un valor entero.
                 cmd.ExecuteNonQuery();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet, "Clients");
-                return dataSet;
+                //Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                //Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+                //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
+                adp.Fill(ds, "vw_ClientesInfo");
+                //Devolvemos el Dataset
+                return ds;
             }
             catch (Exception)
             {
+                //Retornamos null si existiera algún error durante la ejecución
                 return null;
             }
             finally
             {
-                command.Connection.Close();
+                //Independientemente se haga o no el proceso cerramos la conexión
+                getConnection().Close();
             }
         }
-
 
     }
 }

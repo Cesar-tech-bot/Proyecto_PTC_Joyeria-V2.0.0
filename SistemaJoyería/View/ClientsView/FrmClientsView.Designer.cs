@@ -103,7 +103,7 @@
             this.dgvClientsTable.RowHeadersWidth = 51;
             this.dgvClientsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientsTable.Size = new System.Drawing.Size(1486, 955);
-            this.dgvClientsTable.TabIndex = 60;
+            this.dgvClientsTable.TabIndex = 15;
             // 
             // tbUAddress
             // 
@@ -112,7 +112,7 @@
             this.tbUAddress.Multiline = true;
             this.tbUAddress.Name = "tbUAddress";
             this.tbUAddress.Size = new System.Drawing.Size(369, 84);
-            this.tbUAddress.TabIndex = 54;
+            this.tbUAddress.TabIndex = 11;
             // 
             // tbUEmail
             // 
@@ -120,7 +120,7 @@
             this.tbUEmail.Location = new System.Drawing.Point(19, 425);
             this.tbUEmail.Name = "tbUEmail";
             this.tbUEmail.Size = new System.Drawing.Size(369, 30);
-            this.tbUEmail.TabIndex = 53;
+            this.tbUEmail.TabIndex = 10;
             // 
             // mskUDuiDoc
             // 
@@ -129,7 +129,7 @@
             this.mskUDuiDoc.Mask = "00000000-0";
             this.mskUDuiDoc.Name = "mskUDuiDoc";
             this.mskUDuiDoc.Size = new System.Drawing.Size(134, 30);
-            this.mskUDuiDoc.TabIndex = 52;
+            this.mskUDuiDoc.TabIndex = 9;
             // 
             // mskUCellphoneN
             // 
@@ -138,7 +138,7 @@
             this.mskUCellphoneN.Mask = "0000-0000";
             this.mskUCellphoneN.Name = "mskUCellphoneN";
             this.mskUCellphoneN.Size = new System.Drawing.Size(115, 30);
-            this.mskUCellphoneN.TabIndex = 51;
+            this.mskUCellphoneN.TabIndex = 8;
             // 
             // dtpUClientsBirthday
             // 
@@ -146,7 +146,7 @@
             this.dtpUClientsBirthday.Location = new System.Drawing.Point(17, 186);
             this.dtpUClientsBirthday.Name = "dtpUClientsBirthday";
             this.dtpUClientsBirthday.Size = new System.Drawing.Size(371, 30);
-            this.dtpUClientsBirthday.TabIndex = 50;
+            this.dtpUClientsBirthday.TabIndex = 7;
             // 
             // tbUClientsSurname
             // 
@@ -154,7 +154,7 @@
             this.tbUClientsSurname.Location = new System.Drawing.Point(128, 69);
             this.tbUClientsSurname.Name = "tbUClientsSurname";
             this.tbUClientsSurname.Size = new System.Drawing.Size(279, 30);
-            this.tbUClientsSurname.TabIndex = 49;
+            this.tbUClientsSurname.TabIndex = 6;
             // 
             // tbUClientsName
             // 
@@ -162,7 +162,7 @@
             this.tbUClientsName.Location = new System.Drawing.Point(128, 16);
             this.tbUClientsName.Name = "tbUClientsName";
             this.tbUClientsName.Size = new System.Drawing.Size(279, 30);
-            this.tbUClientsName.TabIndex = 48;
+            this.tbUClientsName.TabIndex = 5;
             // 
             // txtUAddress
             // 
@@ -254,7 +254,7 @@
             this.btnClearUpdate.Location = new System.Drawing.Point(29, 699);
             this.btnClearUpdate.Name = "btnClearUpdate";
             this.btnClearUpdate.Size = new System.Drawing.Size(166, 83);
-            this.btnClearUpdate.TabIndex = 55;
+            this.btnClearUpdate.TabIndex = 12;
             this.btnClearUpdate.Text = "Limpiar";
             this.btnClearUpdate.UseVisualStyleBackColor = true;
             // 
@@ -265,7 +265,7 @@
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(100, 38);
-            this.tbID.TabIndex = 57;
+            this.tbID.TabIndex = 14;
             // 
             // btnUpdate
             // 
@@ -273,7 +273,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(241, 699);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(166, 83);
-            this.btnUpdate.TabIndex = 56;
+            this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
@@ -315,7 +315,7 @@
             this.btnRefresh.Location = new System.Drawing.Point(1574, 23);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(191, 49);
-            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refrescar ";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
@@ -328,7 +328,7 @@
             this.btnAddClients.Location = new System.Drawing.Point(1771, 23);
             this.btnAddClients.Name = "btnAddClients";
             this.btnAddClients.Size = new System.Drawing.Size(141, 49);
-            this.btnAddClients.TabIndex = 0;
+            this.btnAddClients.TabIndex = 4;
             this.btnAddClients.Text = "Añadir";
             this.btnAddClients.UseVisualStyleBackColor = false;
             // 
@@ -352,7 +352,7 @@
             this.tbSearchClients.Multiline = true;
             this.tbSearchClients.Name = "tbSearchClients";
             this.tbSearchClients.Size = new System.Drawing.Size(583, 37);
-            this.tbSearchClients.TabIndex = 11;
+            this.tbSearchClients.TabIndex = 1;
             // 
             // btnSearchClients
             // 
@@ -363,7 +363,7 @@
             this.btnSearchClients.Location = new System.Drawing.Point(1327, 18);
             this.btnSearchClients.Name = "btnSearchClients";
             this.btnSearchClients.Size = new System.Drawing.Size(192, 58);
-            this.btnSearchClients.TabIndex = 0;
+            this.btnSearchClients.TabIndex = 2;
             this.btnSearchClients.Text = "Buscar";
             this.btnSearchClients.UseVisualStyleBackColor = false;
             // 
