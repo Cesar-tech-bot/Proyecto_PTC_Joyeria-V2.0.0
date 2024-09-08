@@ -57,7 +57,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(926, 62);
+            this.panel1.Size = new System.Drawing.Size(1046, 62);
             this.panel1.TabIndex = 5;
             // 
             // btnActualizar
@@ -66,7 +66,7 @@
             this.btnActualizar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnActualizar.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(790, 19);
+            this.btnActualizar.Location = new System.Drawing.Point(910, 18);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(108, 28);
             this.btnActualizar.TabIndex = 5;
@@ -79,7 +79,7 @@
             this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEliminar.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(583, 21);
+            this.btnEliminar.Location = new System.Drawing.Point(785, 18);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(108, 28);
             this.btnEliminar.TabIndex = 3;
@@ -92,7 +92,7 @@
             this.btnAgregar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAgregar.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(469, 20);
+            this.btnAgregar.Location = new System.Drawing.Point(656, 19);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(108, 28);
             this.btnAgregar.TabIndex = 2;
@@ -102,9 +102,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(697, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(459, 19);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(87, 26);
+            this.btnBuscar.Size = new System.Drawing.Size(96, 29);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             this.proveedorDireccion});
             this.listSuppliers.FullRowSelect = true;
             this.listSuppliers.HideSelection = false;
-            this.listSuppliers.Location = new System.Drawing.Point(0, 68);
+            this.listSuppliers.Location = new System.Drawing.Point(0, 62);
             this.listSuppliers.Name = "listSuppliers";
-            this.listSuppliers.Size = new System.Drawing.Size(926, 295);
+            this.listSuppliers.Size = new System.Drawing.Size(1046, 578);
             this.listSuppliers.TabIndex = 6;
             this.listSuppliers.UseCompatibleStateImageBehavior = false;
             this.listSuppliers.View = System.Windows.Forms.View.Details;
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 375);
+            this.ClientSize = new System.Drawing.Size(1046, 642);
             this.Controls.Add(this.listSuppliers);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
