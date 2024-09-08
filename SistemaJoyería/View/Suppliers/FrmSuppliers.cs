@@ -29,6 +29,5 @@ namespace SistemaJoyería.View.Suppliers
                 e.SuppressKeyPress = true;
             }
         }
-
     }
 }
