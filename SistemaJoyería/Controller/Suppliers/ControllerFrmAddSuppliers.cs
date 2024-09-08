@@ -24,6 +24,12 @@ namespace SistemaJoyería.Controller.Suppliers
         {
             vistaControlada = vistaPasada;
 
+            // Deshabilitar el campo ID para que no sea editable
+            vistaControlada.txtId.Enabled = false;
+
+            // Enfocar el campo NombreEmpresa al cargar el formulario
+            vistaControlada.Load += (sender, e) => vistaControlada.txtNombreEmpresa.Focus();
+
             // Asignar manejadores de eventos a los controles del formulario
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
 

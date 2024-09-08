@@ -140,11 +140,12 @@
             this.proveedorTelefono,
             this.proveedorEmail,
             this.proveedorDireccion});
+            this.listSuppliers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listSuppliers.FullRowSelect = true;
             this.listSuppliers.HideSelection = false;
             this.listSuppliers.Location = new System.Drawing.Point(0, 62);
             this.listSuppliers.Name = "listSuppliers";
-            this.listSuppliers.Size = new System.Drawing.Size(1046, 578);
+            this.listSuppliers.Size = new System.Drawing.Size(1046, 580);
             this.listSuppliers.TabIndex = 6;
             this.listSuppliers.UseCompatibleStateImageBehavior = false;
             this.listSuppliers.View = System.Windows.Forms.View.Details;
