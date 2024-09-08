@@ -9,6 +9,7 @@ using SistemaJoyería.View.ClientsView;
 using SistemaJoyería.Model.DAO;
 using System.Text.RegularExpressions;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 
 namespace SistemaJoyería.Controller.ClientsController
 {
@@ -25,6 +26,7 @@ namespace SistemaJoyería.Controller.ClientsController
             //Eventos de Click
             viewAdd.btnDelete.Click += new EventHandler(CleanInformation);
             //Sección de validaciones de View
+            viewAdd.dtpClientsBirthday.MaxDate = DateTime.Today.AddYears(-18);
             viewAdd.dtpClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
             viewAdd.tbClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             viewAdd.tbClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
@@ -34,6 +36,12 @@ namespace SistemaJoyería.Controller.ClientsController
             viewAdd.tbClientsSurname.TextChanged += new EventHandler(Limit25);  
             viewAdd.tbEmail.TextChanged += new EventHandler(Limit50);
             viewAdd.tbAddress.TextChanged += new EventHandler(Limit150);
+            DisableCopyCutPaste(viewAdd.tbClientsName);
+            DisableCopyCutPaste(viewAdd.tbClientsSurname);
+            DisableCopyCutPasteMasked(viewAdd.mskCellphoneN);
+            DisableCopyCutPasteMasked(viewAdd.mskDuiDoc);
+            DisableCopyCutPaste(viewAdd.tbEmail);
+            DisableCopyCutPaste(viewAdd.tbAddress);
         }
 
         void SaveRegister(object sender, EventArgs e)
@@ -47,6 +55,8 @@ namespace SistemaJoyería.Controller.ClientsController
                   string.IsNullOrEmpty(ObjAddCView.mskDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de correo electrónico no está vacío
                   string.IsNullOrEmpty(ObjAddCView.tbEmail.Text.Trim()) ||
+                  //Validación con método
+                  !Emailverifaction(ObjAddCView.tbEmail.Text.Trim()) ||
                   // Validamos si el campo de dirección no está vacío
                   string.IsNullOrEmpty(ObjAddCView.tbAddress.Text.Trim()) ||
                   // Validamos que la dirección no sobrepase los 100 dígitos
@@ -82,6 +92,7 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
+        
         //Eventos del View
         public void CleanInformation(object sender, EventArgs e)
         {
@@ -92,7 +103,6 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjAddCView.mskDuiDoc.Clear();
             ObjAddCView.tbEmail.Clear();
             ObjAddCView.tbAddress.Clear();
-            ObjAddCView.dtpClientsBirthday.Value = DateTime.Now;
         }
 
         //Validaciones
@@ -114,7 +124,6 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             textBox.MaxLength = 50;
         }
-
         private void Limit50(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -126,13 +135,63 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             textBox.MaxLength = 150;
         }
-
         private void Limit150(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             CharacterLimit150(textBox);
         }
 
+        //Limitar copiar, pegar y cortar para TB
+        private void DisableCopyCutPaste(TextBox textBox)
+        {
+            // Deshabilitamos el menú contextual del TextBox
+            textBox.ContextMenu = new ContextMenu();
+
+            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
+            textBox.KeyDown += (sender, e) =>
+            {
+                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
+                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                {
+                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
+                }
+            };
+        }
+
+        //Limitar copiar, pegar y cortar para MSK
+        private void DisableCopyCutPasteMasked(MaskedTextBox maskedTextBox)
+        {
+            // Deshabilitamos el menú contextual del MaskedTextBox
+            maskedTextBox.ContextMenu = new ContextMenu();
+
+            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
+            maskedTextBox.KeyDown += (sender, e) =>
+            {
+                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
+                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                {
+                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
+                }
+            };
+        }
+
+        //Validación para el correo electrónico
+        private bool Emailverifaction(string email)
+
+        {
+            // Definimos el patrón para validar el formato de correo electrónico.
+            // - El correo comience con uno o más caracteres que no sean @ ni espacios.
+            // - Siga con el símbolo @.
+            // - Continúe con uno o más caracteres que no sean @ ni espacios, representando el dominio.
+            // - Contenga un punto (.) separando el dominio de la extensión.
+            // - Termine con uno o más caracteres que no sean @ ni espacios, representando la extensión del dominio (por ejemplo, com, org).
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            // Utilizamos Regex.IsMatch para verificar si el correo electrónico coincide con el patrón definido.
+            // Si el correo electrónico tiene el formato correcto, IsMatch devuelve true.
+            // Si el correo electrónico no coincide con el patrón, devuelve false.
+            return Regex.IsMatch(email, emailPattern);
+        }    
         //Límitar s sólo letras y un espacio
         private void OnlyLettersSpace(object sender, KeyPressEventArgs e)
         {
