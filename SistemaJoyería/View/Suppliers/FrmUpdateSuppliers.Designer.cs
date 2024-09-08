@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdateSuppliers));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Id = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.NombreContacto = new System.Windows.Forms.Label();
             this.NombreEmpresa = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,16 +61,6 @@
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil";
-            // 
-            // dtpFechaRegistro
-            // 
-            this.dtpFechaRegistro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(3, 16);
-            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(327, 26);
-            this.dtpFechaRegistro.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -232,6 +222,15 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // dtpFechaRegistro
+            // 
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(98, 240);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(143, 26);
+            this.dtpFechaRegistro.TabIndex = 1;
             // 
             // FrmUpdateSuppliers
             // 
