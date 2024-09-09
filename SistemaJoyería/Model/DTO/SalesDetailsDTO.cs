@@ -11,19 +11,18 @@ namespace SistemaJoyería.Model.DTO
        
             private int IDSaleDetail;
 
-            private int IDSale;
-
             private int IDProduct;
+
+            private DateTime DayToSale;
 
             private int Quantity;
 
             private decimal Price;
 
-            public int IDSaleDetail1 { get => IDSaleDetail; set => IDSaleDetail = value; }
-            public int IDSale1 { get => IDSale; set => IDSale = value; }
-            public int IDProduct1 { get => IDProduct; set => IDProduct = value; }
-            public int Quantity1 { get => Quantity; set => Quantity = value; }
-            public decimal Price1 { get => Price; set => Price = value; }
-        
+        public int IDSaleDetail1 { get => IDSaleDetail; set => IDSaleDetail = value; }
+        public int IDProduct1 { get => IDProduct; set => IDProduct = value; }
+        public DateTime DayToSale1 { get => DayToSale; set => DayToSale = value; }
+        public int Quantity1 { get => Quantity; set => Quantity = value; }
+        public decimal Price1 { get => Price; set => Price = value; }
     }
 } 
