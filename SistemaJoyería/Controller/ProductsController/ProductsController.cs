@@ -50,6 +50,37 @@ namespace SistemaJoyería.Controller.ProductsController
             View.dtpDate.MaxDate = DateTime.Today;
             // Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
             View.dtpDate.Value = DateTime.Today;
+            // Deshabilitar copiar, cortar y pegar en TextBox y MaskedTextBox
+            View.txtProductName.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtProductMaterial.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtProductDescription.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtStock.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.mktPriceProduct.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtSearchProductos.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+
+            // Deshabilitar el menú contextual de copiar, cortar y pegar
+            DisableContextMenu(View.txtProductName);
+            DisableContextMenu(View.txtProductMaterial);
+            DisableContextMenu(View.txtProductDescription);
+            DisableContextMenu(View.txtStock);
+            DisableContextMenu(View.mktPriceProduct);
+            DisableContextMenu(View.txtSearchProductos);
+        }
+
+        // Método para deshabilitar copiar, cortar y pegar con el teclado
+        private void DisableCopyPaste_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Verifica si se presionan Ctrl+C, Ctrl+V, Ctrl+X o Shift+Insert
+            if ((e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X)) || (e.Shift && e.KeyCode == Keys.Insert))
+            {
+                e.SuppressKeyPress = true; // Bloquea la acción
+            }
+        }
+
+        // Método para deshabilitar el menú contextual de copiar, cortar y pegar
+        private void DisableContextMenu(Control control)
+        {
+            control.ContextMenuStrip = new ContextMenuStrip(); // Asigna un menú vacío
         }
         void CargaInicial(object sender, EventArgs e)
         {
@@ -186,7 +217,7 @@ namespace SistemaJoyería.Controller.ProductsController
             daoUpdate.IDProducto1 = int.Parse(ObjProducts.txtIDProducts.Text.Trim());
             daoUpdate.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
             daoUpdate.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
-            daoUpdate.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.Text.Trim());
+            daoUpdate.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.SelectedValue.ToString());
             daoUpdate.Stock1 = int.Parse(ObjProducts.txtStock.Text.Trim());
             daoUpdate.Price1 = float.Parse(ObjProducts.mktPriceProduct.Text.Trim());
             daoUpdate.Fecha1 = ObjProducts.dtpDate.Value;
