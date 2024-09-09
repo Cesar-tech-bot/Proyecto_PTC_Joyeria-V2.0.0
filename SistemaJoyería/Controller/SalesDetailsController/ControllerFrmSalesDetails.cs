@@ -19,7 +19,7 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             // Eventos que se ejecutan con click
             View.btnInsertSell.Click += new EventHandler(AddSalesDetail);
             View.btnRefresh.Click += new EventHandler(RefreshDGV);
-            View.btnSearch.Click += new EventHandler(SearchSalesDetails);
+            //View.btnSearch.Click += new EventHandler(SearchSalesDetails);
             View.txtQuantity.KeyPress += new KeyPressEventHandler(OnlyNumber);
             View.btnClear.Click += new EventHandler(ClearZone);
             //Otro tipo de método
@@ -92,12 +92,12 @@ namespace SistemaJoyería.Controller.SalesDetailsController
         }
 
         // Buscar detalles de ventas
-        void SearchSalesDetails(object sender, EventArgs e)
-        {
-            SalesDetailsViewDAO daoSearch = new SalesDetailsViewDAO();
-            DataSet ds = daoSearch.SearchSalesDetails(ObjSalesDetails.txtSearchSell.Text.Trim());
-            ObjSalesDetails.dgvSellInfo.DataSource = ds.Tables["SalesDetails"];
-        }
+        //void SearchSalesDetails(object sender, EventArgs e)
+        //{
+        //    SalesDetailsViewDAO daoSearch = new SalesDetailsViewDAO();
+        //    DataSet ds = daoSearch.SearchSalesDetails(ObjSalesDetails.txtSearchSell.Text.Trim());
+        //    ObjSalesDetails.dgvSellInfo.DataSource = ds.Tables["SalesDetails"];
+        //}
 
         void ClearZone(object sender, EventArgs e)
         {

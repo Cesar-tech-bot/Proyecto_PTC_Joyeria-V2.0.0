@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaJoyería.View.LoginView;
+using SistemaJoyería.View.DashboardView;
 
 namespace SistemaJoyería
 {
@@ -17,7 +17,7 @@ namespace SistemaJoyería
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmDashboardView());
 
         }
     }
