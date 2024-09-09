@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpDateSell = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.Label();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
@@ -46,6 +45,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSearchSell = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellInfo)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -71,9 +72,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.mskPrice);
             this.groupBox1.Controls.Add(this.dtpDateSell);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Controls.Add(this.cmbProduct);
@@ -104,14 +106,6 @@
             this.label6.Size = new System.Drawing.Size(329, 28);
             this.label6.TabIndex = 6;
             this.label6.Text = "Precio del producto:";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(732, 108);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(99, 22);
-            this.txtPrice.TabIndex = 2;
             // 
             // txtQuantity
             // 
@@ -223,7 +217,7 @@
             // 
             // txtSearchSell
             // 
-            this.txtSearchSell.Location = new System.Drawing.Point(0, 27);
+            this.txtSearchSell.Location = new System.Drawing.Point(6, 27);
             this.txtSearchSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchSell.Name = "txtSearchSell";
             this.txtSearchSell.Size = new System.Drawing.Size(637, 22);
@@ -240,6 +234,24 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // mskPrice
+            // 
+            this.mskPrice.Location = new System.Drawing.Point(747, 107);
+            this.mskPrice.Mask = "00.00";
+            this.mskPrice.Name = "mskPrice";
+            this.mskPrice.Size = new System.Drawing.Size(62, 22);
+            this.mskPrice.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(718, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "$";
             // 
             // FrmSalesDetailView
             // 
@@ -268,23 +280,24 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label txtDate;
-        private System.Windows.Forms.ComboBox cmbProduct;
-        private System.Windows.Forms.Label txtProductsSell;
-        private System.Windows.Forms.Label txtTotal;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.DateTimePicker dtpDateSell;
+        public System.Windows.Forms.Label txtDate;
+        public System.Windows.Forms.ComboBox cmbProduct;
+        public System.Windows.Forms.Label txtProductsSell;
+        public System.Windows.Forms.Label txtTotal;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtQuantity;
+        public System.Windows.Forms.DateTimePicker dtpDateSell;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.Button btnClear;
         public System.Windows.Forms.Button btnInsertSell;
         public System.Windows.Forms.Button btnImprent;
         public System.Windows.Forms.DataGridView dgvSellInfo;
-        private System.Windows.Forms.TextBox txtPrice;
         public System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.TextBox txtSearchSell;
+        public System.Windows.Forms.TextBox txtSearchSell;
         public System.Windows.Forms.Button btnSearch;
         public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.MaskedTextBox mskPrice;
+        private System.Windows.Forms.Label label2;
     }
 }
