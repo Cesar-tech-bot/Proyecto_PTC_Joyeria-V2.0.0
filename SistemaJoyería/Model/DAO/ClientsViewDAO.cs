@@ -9,7 +9,6 @@ using System.Windows.Forms;
 using SistemaJoyería.Model.DAO;
 using SistemaJoyería.Model.DTO;
 using System.Collections;
-using SistemaJoyería.View.Suppliers;
 
 namespace SistemaJoyería.Model.DAO
 {
