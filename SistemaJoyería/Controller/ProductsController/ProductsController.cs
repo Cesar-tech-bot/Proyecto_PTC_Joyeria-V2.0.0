@@ -44,11 +44,27 @@ namespace SistemaJoyería.Controller.ProductsController
             View.txtProductName.TextChanged += new EventHandler(Limitede15);
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede15);
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede100);
+            //Evento de solo fecha actual
+            View.dtpDate.ValueChanged += new EventHandler(ValidateDateEvent);
+
         }
         void CargaInicial(object sender, EventArgs e)
         {
             ShowDGVProducts();
             FillComboSuppliers();
+            //Colocar fecha actual
+            ObjProducts.dtpDate.Value = DateTime.Now;
+            //Deshabilitar el cambio manual de fecha
+            ObjProducts.dtpDate.ValueChanged += new EventHandler(ValidateDateEvent);
+            // Deshabilitar copiar y pegar en TextBox y MaskedTextBox
+            DisableCopyPaste(ObjProducts.txtProductName);
+            DisableCopyPaste(ObjProducts.txtProductMaterial);
+            DisableCopyPaste(ObjProducts.txtProductDescription);
+            DisableCopyPaste(ObjProducts.cmbSuppliers);
+            DisableCopyPaste(ObjProducts.txtStock);
+            DisableCopyPaste(ObjProducts.txtSearchProductos);
+            DisableCopyPaste(ObjProducts.txtIDProducts);
+            DisableCopyPaste(ObjProducts.mktPriceProduct);
         }
 
         //Refrescar tabla
@@ -61,9 +77,80 @@ namespace SistemaJoyería.Controller.ProductsController
         {
             ProductsViewDAO daoPD = new ProductsViewDAO();
             DataSet ds = daoPD.ShowDGV();
+            DataSet copyDs = ds.Copy();
             ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
+        private void DisableCopyPaste(Control control)
+        {
+            // Deshabilitar el menú contextual y los atajos de teclado para TextBox
+            if (control is TextBox)
+            {
+                var textBox = control as TextBox;
 
+                textBox.ContextMenuStrip = new ContextMenuStrip();
+                textBox.ContextMenuStrip.Opening += (s, e) => e.Cancel = true;
+
+                // Deshabilitar los atajos de teclado Ctrl+C y Ctrl+V
+                textBox.KeyDown += (s, e) =>
+                {
+                    if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+                    {
+                        e.SuppressKeyPress = true; // Evitar que se procese el atajo de teclado
+                    }
+                };
+            }
+            // Deshabilitar el menú contextual y los atajos de teclado para MaskedTextBox
+            else if (control is MaskedTextBox)
+            {
+                var maskedTextBox = control as MaskedTextBox;
+
+                maskedTextBox.ContextMenuStrip = new ContextMenuStrip();
+                maskedTextBox.ContextMenuStrip.Opening += (s, e) => e.Cancel = true;
+
+                // Deshabilitar los atajos de teclado Ctrl+C y Ctrl+V
+                maskedTextBox.KeyDown += (s, e) =>
+                {
+                    if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+                    {
+                        e.SuppressKeyPress = true; // Evitar que se procese el atajo de teclado
+                    }
+                };
+            }
+            // Deshabilitar el menú contextual y los atajos de teclado para ComboBox
+            else if (control is ComboBox)
+            {
+                var comboBox = control as ComboBox;
+
+                comboBox.ContextMenuStrip = new ContextMenuStrip();
+                comboBox.ContextMenuStrip.Opening += (s, e) => e.Cancel = true;
+
+                // Deshabilitar los atajos de teclado Ctrl+C y Ctrl+V
+                comboBox.KeyDown += (s, e) =>
+                {
+                    if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+                    {
+                        e.SuppressKeyPress = true; // Evitar que se procese el atajo de teclado
+                    }
+                };
+            }
+        }
+
+
+        //Solo fecha actual
+        private void ValidateDateEvent(object sender, EventArgs e)
+        {
+            // Verificar si la fecha seleccionada es diferente de la fecha actual
+            if (ObjProducts.dtpDate.Value.Date != DateTime.Now.Date)
+            {
+                // Mostrar un mensaje de error
+                MessageBox.Show("Solo se permite la fecha actual. La fecha ha sido restablecida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Establecer siempre la fecha actual en el DateTimePicker
+                ObjProducts.dtpDate.Value = DateTime.Now;
+            }
+        }
+
+        //Llenar combobox
         void FillComboSuppliers()
         {
             //Creando un objeto de la clase ProductsViewDAO
@@ -86,7 +173,7 @@ namespace SistemaJoyería.Controller.ProductsController
             Limitar15Caracteres(textBox);
         }
 
-        //Limitar a 30 Caracteres
+        //Limitar a 100 Caracteres
         private void Limitar100Caracteres(TextBox textBox)
         {
             textBox.MaxLength = 15;
@@ -124,19 +211,25 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
-        //solo permite 4 numeros y coma
-        private bool MskValidation(string text)
+
+
+        private void ValidateDate(DateTime fecha)
         {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{2} : Debe tener exactamente 2 dígitos
-            // , : Debe haber una coma
-            // \d{2} : Debe tener exactamente 2 dígitos después de la coma
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{2},\d{2}$";
-            return Regex.IsMatch(text, pattern);
+            DateTime fechaActual = DateTime.Now.Date; // Fecha actual sin la hora
+
+            // Verifica si la fecha es exactamente la fecha actual
+            if (fecha.Date != fechaActual)
+            {
+                // Muestra un mensaje de error si la fecha no es la actual
+                MessageBox.Show("Solo se permite seleccionar la fecha actual.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Si la fecha es correcta, puedes continuar con la lógica que necesites
+                // Por ejemplo, continuar con la ejecución o alguna otra operación
+            }
         }
+
 
         //Borrar producto
         void DeleteProduct(object sender, EventArgs e)
@@ -175,7 +268,7 @@ namespace SistemaJoyería.Controller.ProductsController
         //Actualizar producto
         void UpdateProduct(object sender, EventArgs e)
         {
-            ProductsViewDAO daoUpdate = new ProductsViewDAO();
+            ProductsViewDAO daoUpdate = new ProductsViewDAO();  
             daoUpdate.IDProducto1 = int.Parse(ObjProducts.txtIDProducts.Text.Trim());
             daoUpdate.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
             daoUpdate.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
@@ -248,7 +341,6 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.txtProductDescription.Text = string.Empty;
         }
 
-        DataSet ds = new DataSet();
         //Mando a llamar el DAO
         public void SearchProduct(object sender, KeyPressEventArgs e)
         {
