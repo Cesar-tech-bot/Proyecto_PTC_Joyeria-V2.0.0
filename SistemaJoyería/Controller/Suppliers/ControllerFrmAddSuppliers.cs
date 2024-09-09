@@ -152,7 +152,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
 
             // Permitir solo dígitos y limitar a 12 caracteres
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' || txtTelefono.Text.Length >= 13)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' || txtTelefono.Text.Length >= 12)
             {
                 e.Handled = true;
             }
