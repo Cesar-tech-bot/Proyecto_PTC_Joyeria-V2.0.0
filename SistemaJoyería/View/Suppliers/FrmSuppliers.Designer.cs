@@ -35,13 +35,13 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscarRegistro = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.listSuppliers = new System.Windows.Forms.ListView();
             this.proveedorId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.proveedorEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.proveedorContacto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.proveedorTelefono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.proveedorEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.proveedorDireccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listSuppliers = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +130,30 @@
             this.txtSearch.Size = new System.Drawing.Size(270, 23);
             this.txtSearch.TabIndex = 1;
             // 
+            // proveedorId
+            // 
+            this.proveedorId.Text = "IDSuppliers";
+            // 
+            // proveedorEmpresa
+            // 
+            this.proveedorEmpresa.Text = "CompanyName";
+            // 
+            // proveedorContacto
+            // 
+            this.proveedorContacto.Text = "ContactName";
+            // 
+            // proveedorTelefono
+            // 
+            this.proveedorTelefono.Text = "Phone";
+            // 
+            // proveedorEmail
+            // 
+            this.proveedorEmail.Text = "Email";
+            // 
+            // proveedorDireccion
+            // 
+            this.proveedorDireccion.Text = "Direction";
+            // 
             // listSuppliers
             // 
             this.listSuppliers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -172,14 +196,14 @@
         public System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.Label txtBuscarRegistro;
-        public System.Windows.Forms.ListView listSuppliers;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ColumnHeader proveedorId;
         private System.Windows.Forms.ColumnHeader proveedorEmpresa;
         private System.Windows.Forms.ColumnHeader proveedorContacto;
         private System.Windows.Forms.ColumnHeader proveedorTelefono;
         private System.Windows.Forms.ColumnHeader proveedorEmail;
         private System.Windows.Forms.ColumnHeader proveedorDireccion;
-        public System.Windows.Forms.Button btnEliminar;
-        public System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.ListView listSuppliers;
     }
 }
