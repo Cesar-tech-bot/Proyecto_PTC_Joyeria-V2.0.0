@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
             this.dtpDateSell = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -45,8 +47,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSearchSell = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellInfo)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -66,9 +66,9 @@
             this.txtDate.AutoSize = true;
             this.txtDate.Location = new System.Drawing.Point(15, 114);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(155, 16);
+            this.txtDate.Size = new System.Drawing.Size(48, 16);
             this.txtDate.TabIndex = 1;
-            this.txtDate.Text = "Fecha Actual: 03/09/2024";
+            this.txtDate.Text = "Fecha ";
             // 
             // groupBox1
             // 
@@ -89,6 +89,24 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area de Ventas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(718, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "$";
+            // 
+            // mskPrice
+            // 
+            this.mskPrice.Location = new System.Drawing.Point(747, 107);
+            this.mskPrice.Mask = "00.00";
+            this.mskPrice.Name = "mskPrice";
+            this.mskPrice.Size = new System.Drawing.Size(62, 22);
+            this.mskPrice.TabIndex = 8;
             // 
             // dtpDateSell
             // 
@@ -234,24 +252,6 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // mskPrice
-            // 
-            this.mskPrice.Location = new System.Drawing.Point(747, 107);
-            this.mskPrice.Mask = "00.00";
-            this.mskPrice.Name = "mskPrice";
-            this.mskPrice.Size = new System.Drawing.Size(62, 22);
-            this.mskPrice.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(718, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "$";
             // 
             // FrmSalesDetailView
             // 
