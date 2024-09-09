@@ -36,7 +36,8 @@ namespace SistemaJoyería.Controller.Suppliers
             // Agregar validaciones para los campos de entrada
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
-            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
+            vistaPasada.txtTelefono.KeyPress += ValidatePhoneInput;
+            vistaPasada.txtTelefono.TextChanged += ValidatePhoneLength;
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
 
@@ -138,12 +139,33 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Método para validar que solo se ingresen números en el campo de teléfono
-        private void ValidateNumericInput(object sender, KeyPressEventArgs e)
+        // Método modificado para validar la entrada del teléfono (máximo 12 dígitos)
+        private void ValidatePhoneInput(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            TextBox txtTelefono = (TextBox)sender;
+
+            // Permitir la tecla de retroceso (backspace)
+            if (e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            // Permitir solo dígitos y limitar a 12 caracteres
+            if (!char.IsDigit(e.KeyChar) || txtTelefono.Text.Length >= 12)
             {
                 e.Handled = true;
+            }
+        }
+
+        // Método modificado para validar la longitud del número de teléfono (máximo 12 dígitos)
+        private void ValidatePhoneLength(object sender, EventArgs e)
+        {
+            TextBox txtTelefono = (TextBox)sender;
+            if (txtTelefono.Text.Length > 12)
+            {
+                txtTelefono.Text = txtTelefono.Text.Substring(0, 12);
+                txtTelefono.SelectionStart = 12;
             }
         }
 
