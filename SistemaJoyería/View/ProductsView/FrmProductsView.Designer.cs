@@ -91,9 +91,9 @@
             this.lbDescriptionProduct.ForeColor = System.Drawing.Color.Black;
             this.lbDescriptionProduct.Location = new System.Drawing.Point(25, 371);
             this.lbDescriptionProduct.Name = "lbDescriptionProduct";
-            this.lbDescriptionProduct.Size = new System.Drawing.Size(182, 16);
+            this.lbDescriptionProduct.Size = new System.Drawing.Size(181, 16);
             this.lbDescriptionProduct.TabIndex = 5;
-            this.lbDescriptionProduct.Text = "Descripción del Producto";
+            this.lbDescriptionProduct.Text = "Descripción del producto";
             // 
             // lbNameSupplier
             // 
@@ -103,9 +103,9 @@
             this.lbNameSupplier.ForeColor = System.Drawing.Color.Black;
             this.lbNameSupplier.Location = new System.Drawing.Point(24, 147);
             this.lbNameSupplier.Name = "lbNameSupplier";
-            this.lbNameSupplier.Size = new System.Drawing.Size(165, 16);
+            this.lbNameSupplier.Size = new System.Drawing.Size(164, 16);
             this.lbNameSupplier.TabIndex = 3;
-            this.lbNameSupplier.Text = "Nombre del Proveedor";
+            this.lbNameSupplier.Text = "Nombre del proveedor";
             // 
             // lbMaterialProduct
             // 
@@ -115,9 +115,9 @@
             this.lbMaterialProduct.ForeColor = System.Drawing.Color.Black;
             this.lbMaterialProduct.Location = new System.Drawing.Point(25, 81);
             this.lbMaterialProduct.Name = "lbMaterialProduct";
-            this.lbMaterialProduct.Size = new System.Drawing.Size(155, 16);
+            this.lbMaterialProduct.Size = new System.Drawing.Size(154, 16);
             this.lbMaterialProduct.TabIndex = 2;
-            this.lbMaterialProduct.Text = "Material del Producto";
+            this.lbMaterialProduct.Text = "Material del producto";
             // 
             // lbProducts
             // 
@@ -127,9 +127,9 @@
             this.lbProducts.ForeColor = System.Drawing.Color.Black;
             this.lbProducts.Location = new System.Drawing.Point(25, 13);
             this.lbProducts.Name = "lbProducts";
-            this.lbProducts.Size = new System.Drawing.Size(154, 16);
+            this.lbProducts.Size = new System.Drawing.Size(153, 16);
             this.lbProducts.TabIndex = 0;
-            this.lbProducts.Text = "Nombre del Producto";
+            this.lbProducts.Text = "Nombre del producto";
             // 
             // MenuProductos
             // 
@@ -250,9 +250,9 @@
             this.lbCantidad.ForeColor = System.Drawing.Color.Black;
             this.lbCantidad.Location = new System.Drawing.Point(24, 310);
             this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(46, 16);
+            this.lbCantidad.Size = new System.Drawing.Size(69, 16);
             this.lbCantidad.TabIndex = 24;
-            this.lbCantidad.Text = "Stock";
+            this.lbCantidad.Text = "Cantidad";
             // 
             // lbDate
             // 
@@ -262,9 +262,9 @@
             this.lbDate.ForeColor = System.Drawing.Color.Black;
             this.lbDate.Location = new System.Drawing.Point(25, 256);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(130, 16);
+            this.lbDate.Size = new System.Drawing.Size(129, 16);
             this.lbDate.TabIndex = 18;
-            this.lbDate.Text = "Fecha de Entrada";
+            this.lbDate.Text = "Fecha de entrada";
             // 
             // btnUpdate
             // 
@@ -285,9 +285,9 @@
             this.lbPriceProduct.ForeColor = System.Drawing.Color.Black;
             this.lbPriceProduct.Location = new System.Drawing.Point(24, 203);
             this.lbPriceProduct.Name = "lbPriceProduct";
-            this.lbPriceProduct.Size = new System.Drawing.Size(144, 16);
+            this.lbPriceProduct.Size = new System.Drawing.Size(143, 16);
             this.lbPriceProduct.TabIndex = 16;
-            this.lbPriceProduct.Text = "Precio del Producto";
+            this.lbPriceProduct.Text = "Precio del producto";
             // 
             // btnKeep
             // 
@@ -323,7 +323,7 @@
             // 
             this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mktPriceProduct.Location = new System.Drawing.Point(28, 222);
-            this.mktPriceProduct.Mask = "000.00";
+            this.mktPriceProduct.Mask = "00.00";
             this.mktPriceProduct.Name = "mktPriceProduct";
             this.mktPriceProduct.Size = new System.Drawing.Size(171, 20);
             this.mktPriceProduct.TabIndex = 4;
