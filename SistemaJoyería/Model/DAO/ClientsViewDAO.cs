@@ -93,7 +93,7 @@ namespace SistemaJoyería.Model.DAO
                 //Se crea un objeto Dataset que es donde se devolverán los resultados
                 DataSet ds = new DataSet();
                 //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
-                adp.Fill(ds, "vw_ClientesInfo");
+                adp.Fill(ds, "Clients");
                 //Devolvemos el Dataset
                 return ds;
             }

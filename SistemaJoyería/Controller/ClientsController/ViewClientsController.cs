@@ -27,7 +27,7 @@ namespace SistemaJoyería.Controller.ClientsController
             //Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
             view.btnClearUpdate.Click += new EventHandler(ClearUpdateZone);
-            view.btnSearchClients.Click += new EventHandler(SearchClientsEvents);
+            //view.btnSearchClients.Click += new EventHandler(SearchClientsEvents);
             //view.btnSearchClients.Click += new EventHandler(SearchClientsEvent);
             //Sección de Validaciones
             view.dtpUClientsBirthday.MaxDate = DateTime.Today.AddYears(-18);
@@ -142,20 +142,20 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjView.tbUAddress.Clear();
             ObjView.tbID.Clear();
         }
-        public void Search(object sender, KeyPressEventArgs e)
-        {
-            SearchClientsController();
-        }
-        public void SearchClientsEvents(object sender, EventArgs e) { SearchClientsController(); }
-        void SearchClientsController()
-        {
-            //Objeto de la clase DAOAdminUsuarios
-            ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
-            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
-            DataSet ds = clientsViewDAO.SearchClients(ObjView.tbSearchClients.Text.Trim());
-            //Llenar DataGridView
-            ObjView.dgvClientsTable.DataSource = ds.Tables["vw_ClientesInfo"];
-        }
+        //public void Search(object sender, KeyPressEventArgs e)
+        //{
+        //    SearchClientsController();
+        //}
+        //public void SearchClientsEvents(object sender, EventArgs e) { SearchClientsController(); }
+        //void SearchClientsController()
+        //{
+        //    //Objeto de la clase DAOAdminUsuarios
+        //    ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
+        //    //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+        //    DataSet ds = clientsViewDAO.SearchClients(ObjView.tbSearchClients.Text.Trim());
+        //    //Llenar DataGridView
+        //    ObjView.dgvClientsTable.DataSource = ds.Tables["vw_ClientesInfo"];
+        //}
 
         //Validaciones 
 
