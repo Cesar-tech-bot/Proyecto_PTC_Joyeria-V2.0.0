@@ -27,19 +27,24 @@ namespace SistemaJoyería.Controller.ProductsController
             View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
             View.btnRestart.Click += new EventHandler(RestartRegister);
-            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
-            View.txtProductName.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
-            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
-            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
-            View.txtStock.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
             View.btnUpdate.Click += new EventHandler(UpdateProduct);
             View.btnRefresh.Click += new EventHandler(ResfreshDGV);
             View.btnSearchProduct.Click += new EventHandler(SearchProductsEvent);
+            //Evento para seleccionar fila de producto
+            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
+            //Evento para solo permitir letras
+            View.txtProductName.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtSearchProductos.KeyPress += new KeyPressEventHandler(SearchProduct);
+            //Evento para solo permitir numeros
+            View.txtStock.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
+            View.mktPriceProduct.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
+            //Limite de caracteres
             View.txtProductName.TextChanged += new EventHandler(Limitede15);
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede15);
-            View.txtProductMaterial.TextChanged += new EventHandler(Limitede30);
+            View.txtProductMaterial.TextChanged += new EventHandler(Limitede100);
         }
-
         void CargaInicial(object sender, EventArgs e)
         {
             ShowDGVProducts();
@@ -82,15 +87,15 @@ namespace SistemaJoyería.Controller.ProductsController
         }
 
         //Limitar a 30 Caracteres
-        private void Limitar30Caracteres(TextBox textBox)
+        private void Limitar100Caracteres(TextBox textBox)
         {
             textBox.MaxLength = 15;
         }
 
-        private void Limitede30(object sender, EventArgs e)
+        private void Limitede100(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            Limitar30Caracteres(textBox);
+            Limitar100Caracteres(textBox);
         }
 
         //solo permite letras
@@ -161,9 +166,9 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.txtProductName.Text = ObjProducts.dgvProduct[1, pos].Value.ToString();
             ObjProducts.txtProductMaterial.Text = ObjProducts.dgvProduct[2, pos].Value.ToString();
             ObjProducts.cmbSuppliers.Text = ObjProducts.dgvProduct[3, pos].Value.ToString();
-            ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
-            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
-            ObjProducts.dtpDate.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
+            ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
+            ObjProducts.dtpDate.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
+            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
             ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[7, pos].Value.ToString();
         }
 
@@ -176,7 +181,7 @@ namespace SistemaJoyería.Controller.ProductsController
             daoUpdate.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
             daoUpdate.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.Text.Trim());
             daoUpdate.Stock1 = int.Parse(ObjProducts.txtStock.Text.Trim());
-            daoUpdate.Price1 = int.Parse(ObjProducts.mktPriceProduct.Text.Trim());
+            daoUpdate.Price1 = float.Parse(ObjProducts.mktPriceProduct.Text.Trim());
             daoUpdate.Fecha1 = ObjProducts.dtpDate.Value;
             daoUpdate.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
             int retorno = daoUpdate.UpdateProduct();
@@ -243,6 +248,12 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.txtProductDescription.Text = string.Empty;
         }
 
+        DataSet ds = new DataSet();
+        //Mando a llamar el DAO
+        public void SearchProduct(object sender, KeyPressEventArgs e)
+        {
+            SearchProductsController();
+        }
         //Buscar productos
         public void SearchProductsEvent(object sender, EventArgs e) { SearchProductsController() ; }
         void SearchProductsController()

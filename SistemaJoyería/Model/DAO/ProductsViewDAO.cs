@@ -164,9 +164,9 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = $"SELECT * FROM vw_Products WHERE ProductName Like '%{valor}'";
+                string query = $"SELECT * FROM vw_Products WHERE ProductName Like '%{valor}%'";
                 SqlCommand cmd = new SqlCommand( query, command.Connection);
-                cmd.Parameters.AddWithValue("@Valor", $"%{valor}");
+                cmd.Parameters.AddWithValue("@Valor", $"%{valor}%");
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet dataSet = new DataSet();
