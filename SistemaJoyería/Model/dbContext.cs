@@ -13,14 +13,16 @@ namespace SistemaJoyería.Model
         public static SqlConnection getConnection()
         {
             //Conexion
-                try
-                {
-                //Defininmos el server
-                string server = "";
-                //Ahora la DB
-                string database = "";
+            try
+            {
+                String test = "Server = SQL8020.site4now.net;Database= db_aacc95_dbluxst; User Id= db_aacc95_dbluxst_admin;Password=leoabarca091;";
+
+                //string server = "";
+
+                //string database = "";
+
                 //Creamos la conexión 
-                SqlConnection conexion = new SqlConnection("Server =" + server + "; DataBase = " + database + "; Integrated Security = true");
+                SqlConnection conexion = new SqlConnection(test);
                 conexion.Open();
                     //Retornamos la conexion abierta
                     return conexion;
