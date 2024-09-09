@@ -331,6 +331,7 @@
             // cmbSuppliers
             // 
             this.cmbSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSuppliers.FormattingEnabled = true;
             this.cmbSuppliers.Location = new System.Drawing.Point(28, 166);
             this.cmbSuppliers.Name = "cmbSuppliers";

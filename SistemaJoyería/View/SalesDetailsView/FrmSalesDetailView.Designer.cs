@@ -54,6 +54,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(292, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -74,6 +75,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.mskPrice);
             this.groupBox1.Controls.Add(this.dtpDateSell);
@@ -84,9 +86,9 @@
             this.groupBox1.Controls.Add(this.txtDate);
             this.groupBox1.Controls.Add(this.txtProductsSell);
             this.groupBox1.Location = new System.Drawing.Point(44, 124);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(747, 169);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -106,7 +108,7 @@
             // mskPrice
             // 
             this.mskPrice.Location = new System.Drawing.Point(560, 87);
-            this.mskPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskPrice.Margin = new System.Windows.Forms.Padding(2);
             this.mskPrice.Mask = "00.00";
             this.mskPrice.Name = "mskPrice";
             this.mskPrice.Size = new System.Drawing.Size(48, 20);
@@ -115,7 +117,7 @@
             // dtpDateSell
             // 
             this.dtpDateSell.Location = new System.Drawing.Point(14, 118);
-            this.dtpDateSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateSell.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateSell.Name = "dtpDateSell";
             this.dtpDateSell.Size = new System.Drawing.Size(190, 20);
             this.dtpDateSell.TabIndex = 3;
@@ -134,7 +136,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(191, 58);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(75, 20);
             this.txtQuantity.TabIndex = 2;
@@ -151,13 +153,13 @@
             // 
             // cmbProduct
             // 
+            this.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProduct.FormattingEnabled = true;
             this.cmbProduct.Location = new System.Drawing.Point(13, 57);
-            this.cmbProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(136, 21);
             this.cmbProduct.TabIndex = 1;
-            this.cmbProduct.Text = "Seleccione producto";
             // 
             // txtProductsSell
             // 
@@ -171,10 +173,11 @@
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnClear.ForeColor = System.Drawing.Color.Snow;
             this.btnClear.Location = new System.Drawing.Point(64, 314);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(82, 30);
             this.btnClear.TabIndex = 5;
@@ -183,10 +186,11 @@
             // 
             // btnInsertSell
             // 
+            this.btnInsertSell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInsertSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnInsertSell.ForeColor = System.Drawing.Color.White;
             this.btnInsertSell.Location = new System.Drawing.Point(150, 314);
-            this.btnInsertSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInsertSell.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertSell.Name = "btnInsertSell";
             this.btnInsertSell.Size = new System.Drawing.Size(83, 30);
             this.btnInsertSell.TabIndex = 6;
@@ -195,10 +199,11 @@
             // 
             // btnImprent
             // 
+            this.btnImprent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnImprent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnImprent.ForeColor = System.Drawing.Color.White;
             this.btnImprent.Location = new System.Drawing.Point(689, 314);
-            this.btnImprent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImprent.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprent.Name = "btnImprent";
             this.btnImprent.Size = new System.Drawing.Size(100, 30);
             this.btnImprent.TabIndex = 10;
@@ -208,9 +213,10 @@
             // dgvSellInfo
             // 
             this.dgvSellInfo.AllowUserToDeleteRows = false;
+            this.dgvSellInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSellInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSellInfo.Location = new System.Drawing.Point(44, 355);
-            this.dgvSellInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSellInfo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSellInfo.Name = "dgvSellInfo";
             this.dgvSellInfo.ReadOnly = true;
             this.dgvSellInfo.RowHeadersWidth = 51;
@@ -220,10 +226,11 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(592, 314);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(83, 30);
             this.btnRefresh.TabIndex = 9;
@@ -232,12 +239,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.txtSearchSell);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Location = new System.Drawing.Point(44, 54);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(747, 58);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -246,7 +254,7 @@
             // txtSearchSell
             // 
             this.txtSearchSell.Location = new System.Drawing.Point(4, 22);
-            this.txtSearchSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchSell.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchSell.Name = "txtSearchSell";
             this.txtSearchSell.Size = new System.Drawing.Size(479, 20);
             this.txtSearchSell.TabIndex = 7;
@@ -256,7 +264,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(502, 16);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(83, 30);
             this.btnSearch.TabIndex = 8;
@@ -276,7 +284,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSalesDetailView";
             this.Text = "FrmSalesDetailView";
             this.groupBox1.ResumeLayout(false);

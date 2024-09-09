@@ -44,12 +44,19 @@ namespace SistemaJoyería.Controller.ProductsController
             View.txtProductName.TextChanged += new EventHandler(Limitede15);
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede15);
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede100);
+            //Otro tipo de método
+            // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
+            View.dtpDate.MinDate = DateTime.Today;
+            View.dtpDate.MaxDate = DateTime.Today;
+            // Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
+            View.dtpDate.Value = DateTime.Today;
         }
         void CargaInicial(object sender, EventArgs e)
         {
             ShowDGVProducts();
             FillComboSuppliers();
         }
+
 
         //Refrescar tabla
         void ResfreshDGV(object sender, EventArgs e)
