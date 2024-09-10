@@ -61,9 +61,10 @@
             // txtDate
             // 
             this.txtDate.AutoSize = true;
+            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDate.Location = new System.Drawing.Point(15, 114);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(48, 16);
+            this.txtDate.Size = new System.Drawing.Size(54, 16);
             this.txtDate.TabIndex = 1;
             this.txtDate.Text = "Fecha ";
             // 
@@ -92,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(717, 103);
+            this.label2.Location = new System.Drawing.Point(674, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 25);
             this.label2.TabIndex = 9;
@@ -100,7 +101,7 @@
             // 
             // mskPrice
             // 
-            this.mskPrice.Location = new System.Drawing.Point(747, 107);
+            this.mskPrice.Location = new System.Drawing.Point(703, 74);
             this.mskPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskPrice.Mask = "00.00";
             this.mskPrice.Name = "mskPrice";
@@ -118,7 +119,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(611, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(250, 29);
@@ -136,9 +137,10 @@
             // txtTotal
             // 
             this.txtTotal.AutoSize = true;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.Location = new System.Drawing.Point(252, 52);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(64, 16);
+            this.txtTotal.Size = new System.Drawing.Size(73, 16);
             this.txtTotal.TabIndex = 4;
             this.txtTotal.Text = "Cantidad:";
             // 
@@ -155,9 +157,10 @@
             // txtProductsSell
             // 
             this.txtProductsSell.AutoSize = true;
+            this.txtProductsSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductsSell.Location = new System.Drawing.Point(15, 52);
             this.txtProductsSell.Name = "txtProductsSell";
-            this.txtProductsSell.Size = new System.Drawing.Size(134, 16);
+            this.txtProductsSell.Size = new System.Drawing.Size(154, 16);
             this.txtProductsSell.TabIndex = 0;
             this.txtProductsSell.Text = "Seleccione producto:";
             // 
@@ -203,7 +206,6 @@
             // dgvSellInfo
             // 
             this.dgvSellInfo.AllowUserToDeleteRows = false;
-            this.dgvSellInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSellInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSellInfo.Location = new System.Drawing.Point(59, 397);
             this.dgvSellInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

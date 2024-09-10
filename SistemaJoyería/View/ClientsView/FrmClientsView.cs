@@ -19,5 +19,14 @@ namespace SistemaJoyería.View.ClientsView
             ViewClientsController viewClientsController = new ViewClientsController(this);
         }
 
+        private void txtUClientsName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUClientsSurname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
