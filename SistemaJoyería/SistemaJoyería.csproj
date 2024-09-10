@@ -98,7 +98,7 @@
     <Compile Include="Model\DAO\SalesDetailsDAO.cs" />
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
-    <Compile Include="Model\dbContext.cs" />
+    <Compile Include="View\dbContext.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
     <Compile Include="Model\DTO\LoginDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />

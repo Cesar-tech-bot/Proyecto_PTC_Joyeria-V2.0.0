@@ -28,232 +28,177 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddSuppliers));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Id = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNombreContacto = new System.Windows.Forms.TextBox();
             this.txtNombreEmpresa = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.Direccion = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.Telefono = new System.Windows.Forms.Label();
             this.NombreContacto = new System.Windows.Forms.Label();
             this.NombreEmpresa = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // txtTelefono
             // 
-            this.groupBox2.Controls.Add(this.dtpFechaRegistro);
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(451, 25);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(312, 329);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Perfil";
-            // 
-            // dtpFechaRegistro
-            // 
-            this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(82, 262);
-            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(143, 26);
-            this.dtpFechaRegistro.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 183);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.Id);
-            this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtNombreContacto);
-            this.groupBox1.Controls.Add(this.txtNombreEmpresa);
-            this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.Direccion);
-            this.groupBox1.Controls.Add(this.Email);
-            this.groupBox1.Controls.Add(this.Telefono);
-            this.groupBox1.Controls.Add(this.NombreContacto);
-            this.groupBox1.Controls.Add(this.NombreEmpresa);
-            this.groupBox1.Location = new System.Drawing.Point(22, 25);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 329);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Insertar Datos";
-            // 
-            // Id
-            // 
-            this.Id.AutoSize = true;
-            this.Id.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.Location = new System.Drawing.Point(17, 53);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(24, 18);
-            this.Id.TabIndex = 4;
-            this.Id.Text = "Id";
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(101, 203);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(413, 26);
+            this.txtTelefono.TabIndex = 4;
             // 
             // txtDireccion
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(107, 259);
+            this.txtDireccion.Location = new System.Drawing.Point(101, 305);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(233, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(413, 26);
             this.txtDireccion.TabIndex = 5;
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(85, 213);
+            this.txtEmail.Location = new System.Drawing.Point(79, 256);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(233, 26);
+            this.txtEmail.Size = new System.Drawing.Size(435, 26);
             this.txtEmail.TabIndex = 4;
             // 
             // txtNombreContacto
             // 
             this.txtNombreContacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreContacto.Location = new System.Drawing.Point(165, 127);
+            this.txtNombreContacto.Location = new System.Drawing.Point(156, 102);
             this.txtNombreContacto.Name = "txtNombreContacto";
-            this.txtNombreContacto.Size = new System.Drawing.Size(209, 26);
+            this.txtNombreContacto.Size = new System.Drawing.Size(358, 26);
             this.txtNombreContacto.TabIndex = 2;
             // 
             // txtNombreEmpresa
             // 
             this.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(165, 84);
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(156, 52);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(209, 26);
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(358, 26);
             this.txtNombreEmpresa.TabIndex = 1;
-            // 
-            // txtId
-            // 
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtId.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(58, 47);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(57, 26);
-            this.txtId.TabIndex = 0;
             // 
             // Direccion
             // 
             this.Direccion.AutoSize = true;
-            this.Direccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(17, 261);
+            this.Direccion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Direccion.Location = new System.Drawing.Point(11, 307);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(84, 18);
+            this.Direccion.Size = new System.Drawing.Size(89, 22);
             this.Direccion.TabIndex = 0;
             this.Direccion.Text = "Direccion";
             // 
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(28, 217);
+            this.Email.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Email.Location = new System.Drawing.Point(22, 260);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(51, 18);
+            this.Email.Size = new System.Drawing.Size(58, 22);
             this.Email.TabIndex = 0;
             this.Email.Text = "Email";
             // 
             // Telefono
             // 
             this.Telefono.AutoSize = true;
-            this.Telefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(18, 173);
+            this.Telefono.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Telefono.Location = new System.Drawing.Point(14, 205);
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(80, 18);
+            this.Telefono.Size = new System.Drawing.Size(80, 22);
             this.Telefono.TabIndex = 0;
             this.Telefono.Text = "Telefono";
             // 
             // NombreContacto
             // 
             this.NombreContacto.AutoSize = true;
-            this.NombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreContacto.Location = new System.Drawing.Point(17, 128);
+            this.NombreContacto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.NombreContacto.Location = new System.Drawing.Point(8, 103);
             this.NombreContacto.Name = "NombreContacto";
-            this.NombreContacto.Size = new System.Drawing.Size(148, 18);
+            this.NombreContacto.Size = new System.Drawing.Size(151, 22);
             this.NombreContacto.TabIndex = 0;
             this.NombreContacto.Text = "NombreContacto";
             // 
             // NombreEmpresa
             // 
             this.NombreEmpresa.AutoSize = true;
-            this.NombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreEmpresa.Location = new System.Drawing.Point(17, 86);
+            this.NombreEmpresa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreEmpresa.Location = new System.Drawing.Point(4, 54);
             this.NombreEmpresa.Name = "NombreEmpresa";
-            this.NombreEmpresa.Size = new System.Drawing.Size(142, 18);
+            this.NombreEmpresa.Size = new System.Drawing.Size(149, 22);
             this.NombreEmpresa.TabIndex = 0;
             this.NombreEmpresa.Text = "NombreEmpresa";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Wheat;
+            this.btnGuardar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(333, 380);
+            this.btnGuardar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(297, 379);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(131, 52);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 36);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // txtTelefono
+            // dtpFechaRegistro
             // 
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(107, 171);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(157, 26);
-            this.txtTelefono.TabIndex = 4;
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(11, 154);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(503, 29);
+            this.dtpFechaRegistro.TabIndex = 0;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(114, 379);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(124, 36);
+            this.btnLimpiar.TabIndex = 7;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // FrmAddSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(526, 458);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.dtpFechaRegistro);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.txtNombreContacto);
+            this.Controls.Add(this.NombreEmpresa);
+            this.Controls.Add(this.txtNombreEmpresa);
+            this.Controls.Add(this.NombreContacto);
+            this.Controls.Add(this.Direccion);
+            this.Controls.Add(this.Telefono);
+            this.Controls.Add(this.Email);
             this.Name = "FrmAddSuppliers";
             this.Text = "FrmAddSuplliers";
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label Telefono;
@@ -264,9 +209,8 @@
         public System.Windows.Forms.TextBox txtEmail;
         public System.Windows.Forms.TextBox txtNombreContacto;
         public System.Windows.Forms.TextBox txtNombreEmpresa;
-        private System.Windows.Forms.Label Id;
-        public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.DateTimePicker dtpFechaRegistro;
         public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.DateTimePicker dtpFechaRegistro;
+        public System.Windows.Forms.Button btnLimpiar;
     }
 }

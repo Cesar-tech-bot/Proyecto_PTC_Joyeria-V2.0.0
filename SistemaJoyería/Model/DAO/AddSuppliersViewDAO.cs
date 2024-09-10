@@ -59,7 +59,6 @@ namespace SistemaJoyería.Model.DAO
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
                 // Agrega los parámetros al comando
-                cmdUpdate.Parameters.AddWithValue("@IDSupplier", supplier.IDSupplier);
                 cmdUpdate.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
                 cmdUpdate.Parameters.AddWithValue("@ContactName", supplier.ContactName);
                 cmdUpdate.Parameters.AddWithValue("@Phone", supplier.Phone);

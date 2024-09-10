@@ -121,88 +121,25 @@
             this.tbClientsName.BackColor = System.Drawing.Color.White;
             this.tbClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsName.Location = new System.Drawing.Point(18, 49);
-            this.tbClientsName.Name = "tbClientsName";
-            this.tbClientsName.Size = new System.Drawing.Size(732, 30);
-            this.tbClientsName.TabIndex = 1;
+            this.tbClientsName.Name = "tbCientsName";<main
             // 
             // tbClientsSurname
             // 
             this.tbClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsSurname.Location = new System.Drawing.Point(18, 123);
-            this.tbClientsSurname.Name = "tbClientsSurname";
-            this.tbClientsSurname.Size = new System.Drawing.Size(732, 30);
-            this.tbClientsSurname.TabIndex = 2;
+            this.tbClientsSurname.Name = "tbClientsSurname<main
             // 
             // dtpClientsBirthday
             // 
             this.dtpClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpClientsBirthday.Location = new System.Drawing.Point(18, 197);
             this.dtpClientsBirthday.Name = "dtpClientsBirthday";
-            this.dtpClientsBirthday.Size = new System.Drawing.Size(732, 30);
-            this.dtpClientsBirthday.TabIndex = 3;
-            // 
-            // mskCellphoneN
-            // 
-            this.mskCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCellphoneN.Location = new System.Drawing.Point(18, 275);
-            this.mskCellphoneN.Mask = "0000-0000";
-            this.mskCellphoneN.Name = "mskCellphoneN";
-            this.mskCellphoneN.Size = new System.Drawing.Size(732, 30);
-            this.mskCellphoneN.TabIndex = 4;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(18, 347);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(732, 30);
-            this.tbEmail.TabIndex = 5;
-            // 
-            // mskDuiDoc
-            // 
-            this.mskDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDuiDoc.Location = new System.Drawing.Point(18, 430);
-            this.mskDuiDoc.Mask = "00000000-0";
-            this.mskDuiDoc.Name = "mskDuiDoc";
-            this.mskDuiDoc.Size = new System.Drawing.Size(732, 30);
-            this.mskDuiDoc.TabIndex = 6;
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.Location = new System.Drawing.Point(18, 504);
-            this.tbAddress.Multiline = true;
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(732, 83);
-            this.tbAddress.TabIndex = 7;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(221, 617);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 75);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Limpiar";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnOK
-            // 
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(417, 617);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(127, 75);
-            this.btnOK.TabIndex = 9;
-            this.btnOK.Text = "Ingresar";
-            this.btnOK.UseVisualStyleBackColor = false;
             // 
             // FrmAddClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 708);
+main
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbAddress);
@@ -218,8 +155,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtCellphoneN);
             this.Controls.Add(this.txtClientsSurname);
-            this.Controls.Add(this.txtClientsName);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.txtClientsName);in
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddClients";
