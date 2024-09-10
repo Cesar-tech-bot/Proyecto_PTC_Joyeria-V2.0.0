@@ -29,5 +29,10 @@ namespace SistemaJoyería.View.Suppliers
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void listSuppliers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,7 +46,6 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-
             // txtAddress
             // 
             this.txtAddress.AutoSize = true;
@@ -69,7 +68,6 @@
             this.txtDuiDoc.TabIndex = 40;
             this.txtDuiDoc.Text = "DUI";
             // 
-
             // txtClientsBirthday
             // 
             this.txtClientsBirthday.AutoSize = true;
@@ -81,7 +79,6 @@
             this.txtClientsBirthday.TabIndex = 38;
             this.txtClientsBirthday.Text = "Fecha de nacimiento";
             // 
-
             // txtEmail
             // 
             this.txtEmail.AutoSize = true;
@@ -131,7 +128,7 @@
             this.tbClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsName.Location = new System.Drawing.Point(161, 41);
             this.tbClientsName.Name = "tbClientsName";
-            this.tbClientsName.Size = new System.Drawing.Size(522, 30);
+            this.tbClientsName.Size = new System.Drawing.Size(522, 26);
             this.tbClientsName.TabIndex = 43;
             // 
             // tbClientsSurname
@@ -139,7 +136,7 @@
             this.tbClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsSurname.Location = new System.Drawing.Point(161, 107);
             this.tbClientsSurname.Name = "tbClientsSurname";
-            this.tbClientsSurname.Size = new System.Drawing.Size(522, 30);
+            this.tbClientsSurname.Size = new System.Drawing.Size(522, 26);
             this.tbClientsSurname.TabIndex = 44;
             // 
             // dtpClientsBirthday
@@ -148,18 +145,56 @@
             this.dtpClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpClientsBirthday.Location = new System.Drawing.Point(285, 164);
             this.dtpClientsBirthday.Name = "dtpClientsBirthday";
-            this.dtpClientsBirthday.Size = new System.Drawing.Size(296, 30);
+            this.dtpClientsBirthday.Size = new System.Drawing.Size(296, 26);
             this.dtpClientsBirthday.TabIndex = 45;
             // 
             // mskCellphoneN
             // 
-
+            this.mskCellphoneN.Location = new System.Drawing.Point(0, 0);
+            this.mskCellphoneN.Name = "mskCellphoneN";
+            this.mskCellphoneN.Size = new System.Drawing.Size(100, 20);
+            this.mskCellphoneN.TabIndex = 5;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(0, 0);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.TabIndex = 4;
+            // 
+            // mskDuiDoc
+            // 
+            this.mskDuiDoc.Location = new System.Drawing.Point(0, 0);
+            this.mskDuiDoc.Name = "mskDuiDoc";
+            this.mskDuiDoc.Size = new System.Drawing.Size(100, 20);
+            this.mskDuiDoc.TabIndex = 3;
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.Location = new System.Drawing.Point(0, 0);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(100, 20);
+            this.tbAddress.TabIndex = 2;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(0, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 1;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(0, 0);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 0;
             // 
             // FrmAddClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbAddress);
@@ -176,7 +211,7 @@
             this.Controls.Add(this.txtCellphoneN);
             this.Controls.Add(this.txtClientsSurname);
             this.Controls.Add(this.txtClientsName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddClients";

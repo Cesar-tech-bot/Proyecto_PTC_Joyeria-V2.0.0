@@ -24,8 +24,6 @@ namespace SistemaJoyería.Controller.Suppliers
         {
             vistaControlada = vistaPasada;
 
-            // Deshabilitar el campo ID para que no sea editable
-            vistaControlada.txtId.Enabled = false;
 
             // Enfocar el campo NombreEmpresa al cargar el formulario
             vistaControlada.Load += (sender, e) => vistaControlada.txtNombreEmpresa.Focus();
@@ -79,7 +77,6 @@ namespace SistemaJoyería.Controller.Suppliers
         // Método para limpiar todos los campos del formulario
         private void ClearFields()
         {
-            vistaControlada.txtId.Clear();
             vistaControlada.txtNombreEmpresa.Clear();
             vistaControlada.txtNombreContacto.Clear();
             vistaControlada.txtTelefono.Clear();
