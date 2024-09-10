@@ -30,25 +30,25 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvClientsTable = new System.Windows.Forms.DataGridView();
-            this.tbUEmail = new System.Windows.Forms.TextBox();
-            this.mskUDuiDoc = new System.Windows.Forms.MaskedTextBox();
-            this.mskUCellphoneN = new System.Windows.Forms.MaskedTextBox();
-            this.dtpUClientsBirthday = new System.Windows.Forms.DateTimePicker();
-            this.tbUClientsSurname = new System.Windows.Forms.TextBox();
-            this.tbUClientsName = new System.Windows.Forms.TextBox();
-            this.txtUEmail = new System.Windows.Forms.Label();
-            this.txtUDuiDoc = new System.Windows.Forms.Label();
-            this.txtUClientsBirthday = new System.Windows.Forms.Label();
-            this.txtUCellphoneN = new System.Windows.Forms.Label();
-            this.txtUClientsSurname = new System.Windows.Forms.Label();
-            this.txtUClientsName = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClearUpdate = new System.Windows.Forms.Button();
-            this.tbUAddress = new System.Windows.Forms.TextBox();
-            this.tbID = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.Label();
+            this.tbUEmail = new System.Windows.Forms.TextBox();
             this.txtUAddress = new System.Windows.Forms.Label();
+            this.tbUAddress = new System.Windows.Forms.TextBox();
+            this.txtUEmail = new System.Windows.Forms.Label();
+            this.mskUDuiDoc = new System.Windows.Forms.MaskedTextBox();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.mskUCellphoneN = new System.Windows.Forms.MaskedTextBox();
+            this.txtUDuiDoc = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.dtpUClientsBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtID = new System.Windows.Forms.Label();
+            this.txtUCellphoneN = new System.Windows.Forms.Label();
+            this.tbUClientsName = new System.Windows.Forms.TextBox();
+            this.tbUClientsSurname = new System.Windows.Forms.TextBox();
+            this.txtUClientsBirthday = new System.Windows.Forms.Label();
+            this.txtUClientsName = new System.Windows.Forms.Label();
+            this.txtUClientsSurname = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -89,124 +89,6 @@
             this.dgvClientsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientsTable.Size = new System.Drawing.Size(958, 690);
             this.dgvClientsTable.TabIndex = 15;
-            // 
-            // tbUEmail
-            // 
-            this.tbUEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUEmail.Location = new System.Drawing.Point(12, 435);
-            this.tbUEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbUEmail.Name = "tbUEmail";
-            this.tbUEmail.Size = new System.Drawing.Size(393, 30);
-            this.tbUEmail.TabIndex = 10;
-            // 
-            // mskUDuiDoc
-            // 
-            this.mskUDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskUDuiDoc.Location = new System.Drawing.Point(12, 358);
-            this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskUDuiDoc.Mask = "00000000-0";
-            this.mskUDuiDoc.Name = "mskUDuiDoc";
-            this.mskUDuiDoc.Size = new System.Drawing.Size(135, 30);
-            this.mskUDuiDoc.TabIndex = 9;
-            // 
-            // mskUCellphoneN
-            // 
-            this.mskUCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskUCellphoneN.Location = new System.Drawing.Point(12, 283);
-            this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskUCellphoneN.Mask = "0000-0000";
-            this.mskUCellphoneN.Name = "mskUCellphoneN";
-            this.mskUCellphoneN.Size = new System.Drawing.Size(188, 30);
-            this.mskUCellphoneN.TabIndex = 8;
-            // 
-            // dtpUClientsBirthday
-            // 
-            this.dtpUClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpUClientsBirthday.Location = new System.Drawing.Point(12, 201);
-            this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpUClientsBirthday.Name = "dtpUClientsBirthday";
-            this.dtpUClientsBirthday.Size = new System.Drawing.Size(393, 30);
-            this.dtpUClientsBirthday.TabIndex = 7;
-            // 
-            // tbUClientsSurname
-            // 
-            this.tbUClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUClientsSurname.Location = new System.Drawing.Point(12, 122);
-            this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbUClientsSurname.Name = "tbUClientsSurname";
-            this.tbUClientsSurname.Size = new System.Drawing.Size(393, 30);
-            this.tbUClientsSurname.TabIndex = 6;
-            // 
-            // tbUClientsName
-            // 
-            this.tbUClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUClientsName.Location = new System.Drawing.Point(12, 43);
-            this.tbUClientsName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbUClientsName.Name = "tbUClientsName";
-            this.tbUClientsName.Size = new System.Drawing.Size(393, 30);
-            this.tbUClientsName.TabIndex = 5;
-            // 
-            // txtUEmail
-            // 
-            this.txtUEmail.AutoSize = true;
-            this.txtUEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUEmail.Location = new System.Drawing.Point(7, 408);
-            this.txtUEmail.Name = "txtUEmail";
-            this.txtUEmail.Size = new System.Drawing.Size(191, 25);
-            this.txtUEmail.TabIndex = 45;
-            this.txtUEmail.Text = "Correo Electrónico";
-            // 
-            // txtUDuiDoc
-            // 
-            this.txtUDuiDoc.AutoSize = true;
-            this.txtUDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUDuiDoc.Location = new System.Drawing.Point(7, 331);
-            this.txtUDuiDoc.Name = "txtUDuiDoc";
-            this.txtUDuiDoc.Size = new System.Drawing.Size(48, 25);
-            this.txtUDuiDoc.TabIndex = 43;
-            this.txtUDuiDoc.Text = "DUI";
-            // 
-            // txtUClientsBirthday
-            // 
-            this.txtUClientsBirthday.AutoSize = true;
-            this.txtUClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUClientsBirthday.Location = new System.Drawing.Point(7, 174);
-            this.txtUClientsBirthday.Name = "txtUClientsBirthday";
-            this.txtUClientsBirthday.Size = new System.Drawing.Size(212, 25);
-            this.txtUClientsBirthday.TabIndex = 41;
-            this.txtUClientsBirthday.Text = "Fecha de nacimiento";
-            // 
-            // txtUCellphoneN
-            // 
-            this.txtUCellphoneN.AutoSize = true;
-            this.txtUCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUCellphoneN.Location = new System.Drawing.Point(7, 256);
-            this.txtUCellphoneN.Name = "txtUCellphoneN";
-            this.txtUCellphoneN.Size = new System.Drawing.Size(124, 25);
-            this.txtUCellphoneN.TabIndex = 40;
-            this.txtUCellphoneN.Text = "N. Teléfono";
-            // 
-            // txtUClientsSurname
-            // 
-            this.txtUClientsSurname.AutoSize = true;
-            this.txtUClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUClientsSurname.Location = new System.Drawing.Point(7, 95);
-            this.txtUClientsSurname.Name = "txtUClientsSurname";
-            this.txtUClientsSurname.Size = new System.Drawing.Size(101, 25);
-            this.txtUClientsSurname.TabIndex = 36;
-            this.txtUClientsSurname.Text = "Apellidos";
-            this.txtUClientsSurname.Click += new System.EventHandler(this.txtUClientsSurname_Click);
-            // 
-            // txtUClientsName
-            // 
-            this.txtUClientsName.AutoSize = true;
-            this.txtUClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUClientsName.Location = new System.Drawing.Point(7, 16);
-            this.txtUClientsName.Name = "txtUClientsName";
-            this.txtUClientsName.Size = new System.Drawing.Size(98, 25);
-            this.txtUClientsName.TabIndex = 37;
-            this.txtUClientsName.Text = "Nombres";
-            this.txtUClientsName.Click += new System.EventHandler(this.txtUClientsName_Click);
             // 
             // panel5
             // 
@@ -249,6 +131,25 @@
             this.btnClearUpdate.Text = "Limpiar";
             this.btnClearUpdate.UseVisualStyleBackColor = false;
             // 
+            // tbUEmail
+            // 
+            this.tbUEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUEmail.Location = new System.Drawing.Point(12, 435);
+            this.tbUEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUEmail.Name = "tbUEmail";
+            this.tbUEmail.Size = new System.Drawing.Size(393, 30);
+            this.tbUEmail.TabIndex = 10;
+            // 
+            // txtUAddress
+            // 
+            this.txtUAddress.AutoSize = true;
+            this.txtUAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUAddress.Location = new System.Drawing.Point(7, 486);
+            this.txtUAddress.Name = "txtUAddress";
+            this.txtUAddress.Size = new System.Drawing.Size(102, 25);
+            this.txtUAddress.TabIndex = 47;
+            this.txtUAddress.Text = "Dirección";
+            // 
             // tbUAddress
             // 
             this.tbUAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,6 +160,26 @@
             this.tbUAddress.Size = new System.Drawing.Size(393, 84);
             this.tbUAddress.TabIndex = 11;
             // 
+            // txtUEmail
+            // 
+            this.txtUEmail.AutoSize = true;
+            this.txtUEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUEmail.Location = new System.Drawing.Point(7, 408);
+            this.txtUEmail.Name = "txtUEmail";
+            this.txtUEmail.Size = new System.Drawing.Size(191, 25);
+            this.txtUEmail.TabIndex = 45;
+            this.txtUEmail.Text = "Correo Electrónico";
+            // 
+            // mskUDuiDoc
+            // 
+            this.mskUDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskUDuiDoc.Location = new System.Drawing.Point(12, 358);
+            this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mskUDuiDoc.Mask = "00000000-0";
+            this.mskUDuiDoc.Name = "mskUDuiDoc";
+            this.mskUDuiDoc.Size = new System.Drawing.Size(393, 30);
+            this.mskUDuiDoc.TabIndex = 9;
+            // 
             // tbID
             // 
             this.tbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,8 +187,28 @@
             this.tbID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
-            this.tbID.Size = new System.Drawing.Size(100, 30);
+            this.tbID.Size = new System.Drawing.Size(393, 30);
             this.tbID.TabIndex = 12;
+            // 
+            // mskUCellphoneN
+            // 
+            this.mskUCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskUCellphoneN.Location = new System.Drawing.Point(12, 283);
+            this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mskUCellphoneN.Mask = "0000-0000";
+            this.mskUCellphoneN.Name = "mskUCellphoneN";
+            this.mskUCellphoneN.Size = new System.Drawing.Size(393, 30);
+            this.mskUCellphoneN.TabIndex = 8;
+            // 
+            // txtUDuiDoc
+            // 
+            this.txtUDuiDoc.AutoSize = true;
+            this.txtUDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUDuiDoc.Location = new System.Drawing.Point(7, 331);
+            this.txtUDuiDoc.Name = "txtUDuiDoc";
+            this.txtUDuiDoc.Size = new System.Drawing.Size(48, 25);
+            this.txtUDuiDoc.TabIndex = 43;
+            this.txtUDuiDoc.Text = "DUI";
             // 
             // btnUpdate
             // 
@@ -282,6 +223,15 @@
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
+            // dtpUClientsBirthday
+            // 
+            this.dtpUClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpUClientsBirthday.Location = new System.Drawing.Point(12, 201);
+            this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpUClientsBirthday.Name = "dtpUClientsBirthday";
+            this.dtpUClientsBirthday.Size = new System.Drawing.Size(393, 30);
+            this.dtpUClientsBirthday.TabIndex = 7;
+            // 
             // txtID
             // 
             this.txtID.AutoSize = true;
@@ -292,15 +242,65 @@
             this.txtID.TabIndex = 43;
             this.txtID.Text = "ID";
             // 
-            // txtUAddress
+            // txtUCellphoneN
             // 
-            this.txtUAddress.AutoSize = true;
-            this.txtUAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUAddress.Location = new System.Drawing.Point(7, 486);
-            this.txtUAddress.Name = "txtUAddress";
-            this.txtUAddress.Size = new System.Drawing.Size(102, 25);
-            this.txtUAddress.TabIndex = 47;
-            this.txtUAddress.Text = "Dirección";
+            this.txtUCellphoneN.AutoSize = true;
+            this.txtUCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUCellphoneN.Location = new System.Drawing.Point(7, 256);
+            this.txtUCellphoneN.Name = "txtUCellphoneN";
+            this.txtUCellphoneN.Size = new System.Drawing.Size(124, 25);
+            this.txtUCellphoneN.TabIndex = 40;
+            this.txtUCellphoneN.Text = "N. Teléfono";
+            // 
+            // tbUClientsName
+            // 
+            this.tbUClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUClientsName.Location = new System.Drawing.Point(12, 43);
+            this.tbUClientsName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUClientsName.Name = "tbUClientsName";
+            this.tbUClientsName.Size = new System.Drawing.Size(393, 30);
+            this.tbUClientsName.TabIndex = 5;
+            // 
+            // tbUClientsSurname
+            // 
+            this.tbUClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUClientsSurname.Location = new System.Drawing.Point(12, 122);
+            this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUClientsSurname.Name = "tbUClientsSurname";
+            this.tbUClientsSurname.Size = new System.Drawing.Size(393, 30);
+            this.tbUClientsSurname.TabIndex = 6;
+            // 
+            // txtUClientsBirthday
+            // 
+            this.txtUClientsBirthday.AutoSize = true;
+            this.txtUClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUClientsBirthday.Location = new System.Drawing.Point(7, 174);
+            this.txtUClientsBirthday.Name = "txtUClientsBirthday";
+            this.txtUClientsBirthday.Size = new System.Drawing.Size(212, 25);
+            this.txtUClientsBirthday.TabIndex = 41;
+            this.txtUClientsBirthday.Text = "Fecha de nacimiento";
+            // 
+            // txtUClientsName
+            // 
+            this.txtUClientsName.AutoSize = true;
+            this.txtUClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUClientsName.Location = new System.Drawing.Point(7, 16);
+            this.txtUClientsName.Name = "txtUClientsName";
+            this.txtUClientsName.Size = new System.Drawing.Size(98, 25);
+            this.txtUClientsName.TabIndex = 37;
+            this.txtUClientsName.Text = "Nombres";
+            this.txtUClientsName.Click += new System.EventHandler(this.txtUClientsName_Click);
+            // 
+            // txtUClientsSurname
+            // 
+            this.txtUClientsSurname.AutoSize = true;
+            this.txtUClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUClientsSurname.Location = new System.Drawing.Point(7, 95);
+            this.txtUClientsSurname.Name = "txtUClientsSurname";
+            this.txtUClientsSurname.Size = new System.Drawing.Size(101, 25);
+            this.txtUClientsSurname.TabIndex = 36;
+            this.txtUClientsSurname.Text = "Apellidos";
+            this.txtUClientsSurname.Click += new System.EventHandler(this.txtUClientsSurname_Click);
             // 
             // panel1
             // 
