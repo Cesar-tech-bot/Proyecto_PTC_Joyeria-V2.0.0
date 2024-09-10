@@ -2,6 +2,7 @@
 using SistemaJoyería.View.SalesDetailsView;
 using System;
 using System.Data;
+using System.Web.UI.WebControls.WebParts;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
 
@@ -28,6 +29,8 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             View.dtpDateSell.MaxDate = DateTime.Today;
             // Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
             View.dtpDateSell.Value = DateTime.Today;
+            //Se hace ReadOnly el DTP
+            View.dtpDateSell.Enabled = false;
         }
 
         void CargaInicial(object sender, EventArgs e)
