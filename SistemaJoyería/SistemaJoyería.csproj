@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.Licensing.6.0.4\lib\net472\Bunifu.Licensing.dll</HintPath>
@@ -78,7 +82,7 @@
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\DashboardController\DashboardController.cs" />
     <Compile Include="Controller\LoginController\ChangeOriginalPasswordController.cs" />
-    <Compile Include="Controller\LoginController\ChangePasswordController.cs" />
+    <Compile Include="Controller\LoginController\RecoverPasswordController.cs" />
     <Compile Include="Controller\LoginController\CommonClassesController.cs" />
     <Compile Include="Controller\LoginController\LoginController.cs" />
     <Compile Include="Controller\ProductsController\ProductsController.cs" />
@@ -131,6 +135,12 @@
     </Compile>
     <Compile Include="View\LoginView\FrmChangePassword.Designer.cs">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView\FrmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmEmail.Designer.cs">
+      <DependentUpon>FrmEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -198,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmEmail.resx">
+      <DependentUpon>FrmEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

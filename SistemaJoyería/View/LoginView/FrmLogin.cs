@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaJoyería.Controller.LoginController;
 
 namespace SistemaJoyería.View.LoginView
 {
@@ -15,6 +16,8 @@ namespace SistemaJoyería.View.LoginView
         public FrmLogin()
         {
             InitializeComponent();
+            LoginController addClientsController = new LoginController(this);
+
         }
     }
 }

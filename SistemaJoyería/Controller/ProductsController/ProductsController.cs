@@ -27,24 +27,67 @@ namespace SistemaJoyería.Controller.ProductsController
             View.cmsUpdateProduct.Click += new EventHandler(UpdateProduct);
             View.btnKeep.Click += new EventHandler(KeepRegistrer);
             View.btnRestart.Click += new EventHandler(RestartRegister);
-            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
-            View.txtProductName.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
-            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
-            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
-            View.txtStock.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
             View.btnUpdate.Click += new EventHandler(UpdateProduct);
             View.btnRefresh.Click += new EventHandler(ResfreshDGV);
             View.btnSearchProduct.Click += new EventHandler(SearchProductsEvent);
+            //Evento para seleccionar fila de producto
+            View.dgvProduct.CellClick += new DataGridViewCellEventHandler(SelectProduct);
+            //Evento para solo permitir letras
+            View.txtProductName.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtProductMaterial.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtProductDescription.KeyPress += new KeyPressEventHandler(txtLetters_KeyPress);
+            View.txtSearchProductos.KeyPress += new KeyPressEventHandler(SearchProduct);
+            //Evento para solo permitir numeros
+            View.txtStock.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
+            View.mktPriceProduct.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
+            //Limite de caracteres
             View.txtProductName.TextChanged += new EventHandler(Limitede15);
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede15);
-            View.txtProductMaterial.TextChanged += new EventHandler(Limitede30);
+            View.txtProductMaterial.TextChanged += new EventHandler(Limitede100);
+            //Otro tipo de método
+            // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
+            View.dtpDate.MinDate = DateTime.Today;
+            View.dtpDate.MaxDate = DateTime.Today;
+            // Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
+            View.dtpDate.Value = DateTime.Today;
+            // Deshabilitar copiar, cortar y pegar en TextBox y MaskedTextBox
+            View.txtProductName.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtProductMaterial.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtProductDescription.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtStock.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.mktPriceProduct.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+            View.txtSearchProductos.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
+
+            // Deshabilitar el menú contextual de copiar, cortar y pegar
+            DisableContextMenu(View.txtProductName);
+            DisableContextMenu(View.txtProductMaterial);
+            DisableContextMenu(View.txtProductDescription);
+            DisableContextMenu(View.txtStock);
+            DisableContextMenu(View.mktPriceProduct);
+            DisableContextMenu(View.txtSearchProductos);
         }
 
+        // Método para deshabilitar copiar, cortar y pegar con el teclado
+        private void DisableCopyPaste_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Verifica si se presionan Ctrl+C, Ctrl+V, Ctrl+X o Shift+Insert
+            if ((e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X)) || (e.Shift && e.KeyCode == Keys.Insert))
+            {
+                e.SuppressKeyPress = true; // Bloquea la acción
+            }
+        }
+
+        // Método para deshabilitar el menú contextual de copiar, cortar y pegar
+        private void DisableContextMenu(Control control)
+        {
+            control.ContextMenuStrip = new ContextMenuStrip(); // Asigna un menú vacío
+        }
         void CargaInicial(object sender, EventArgs e)
         {
             ShowDGVProducts();
             FillComboSuppliers();
         }
+
 
         //Refrescar tabla
         void ResfreshDGV(object sender, EventArgs e)
@@ -82,15 +125,15 @@ namespace SistemaJoyería.Controller.ProductsController
         }
 
         //Limitar a 30 Caracteres
-        private void Limitar30Caracteres(TextBox textBox)
+        private void Limitar100Caracteres(TextBox textBox)
         {
             textBox.MaxLength = 15;
         }
 
-        private void Limitede30(object sender, EventArgs e)
+        private void Limitede100(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            Limitar30Caracteres(textBox);
+            Limitar100Caracteres(textBox);
         }
 
         //solo permite letras
@@ -161,9 +204,9 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.txtProductName.Text = ObjProducts.dgvProduct[1, pos].Value.ToString();
             ObjProducts.txtProductMaterial.Text = ObjProducts.dgvProduct[2, pos].Value.ToString();
             ObjProducts.cmbSuppliers.Text = ObjProducts.dgvProduct[3, pos].Value.ToString();
-            ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
-            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
-            ObjProducts.dtpDate.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
+            ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
+            ObjProducts.dtpDate.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
+            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
             ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[7, pos].Value.ToString();
         }
 
@@ -174,9 +217,9 @@ namespace SistemaJoyería.Controller.ProductsController
             daoUpdate.IDProducto1 = int.Parse(ObjProducts.txtIDProducts.Text.Trim());
             daoUpdate.NombreProducto1 = ObjProducts.txtProductName.Text.Trim();
             daoUpdate.MaterialProducto1 = ObjProducts.txtProductMaterial.Text.Trim();
-            daoUpdate.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.Text.Trim());
+            daoUpdate.IDProveedor1 = int.Parse(ObjProducts.cmbSuppliers.SelectedValue.ToString());
             daoUpdate.Stock1 = int.Parse(ObjProducts.txtStock.Text.Trim());
-            daoUpdate.Price1 = int.Parse(ObjProducts.mktPriceProduct.Text.Trim());
+            daoUpdate.Price1 = float.Parse(ObjProducts.mktPriceProduct.Text.Trim());
             daoUpdate.Fecha1 = ObjProducts.dtpDate.Value;
             daoUpdate.DescripcionProducto1 = ObjProducts.txtProductDescription.Text.Trim();
             int retorno = daoUpdate.UpdateProduct();
@@ -239,10 +282,16 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.cmbSuppliers.Text = string.Empty;
             ObjProducts.txtStock.Text = string.Empty;
             ObjProducts.mktPriceProduct.Text = string.Empty;
-            ObjProducts.dtpDate.Value = DateTime.Now;
+            ObjProducts.dtpDate.MaxDate = DateTime.Now;
             ObjProducts.txtProductDescription.Text = string.Empty;
         }
 
+        DataSet ds = new DataSet();
+        //Mando a llamar el DAO
+        public void SearchProduct(object sender, KeyPressEventArgs e)
+        {
+            SearchProductsController();
+        }
         //Buscar productos
         public void SearchProductsEvent(object sender, EventArgs e) { SearchProductsController() ; }
         void SearchProductsController()

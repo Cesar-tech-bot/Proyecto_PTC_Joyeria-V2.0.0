@@ -1,5 +1,4 @@
-﻿using SistemaJoyería.Controller.LoginController;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaJoyería.View.LoginView
 {
-    public partial class FrmRecoverPassword : Form
+    public partial class FrmEmail : Form
     {
-        public FrmRecoverPassword()
+        public FrmEmail()
         {
             InitializeComponent();
-            RecoverPasswordController recoverPasswordController = new RecoverPasswordController(this);
         }
     }
 }

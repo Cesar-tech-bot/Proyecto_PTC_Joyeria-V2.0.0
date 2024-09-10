@@ -27,11 +27,13 @@ namespace SistemaJoyería.Controller.ClientsController
             //Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
             view.btnClearUpdate.Click += new EventHandler(ClearUpdateZone);
+            //view.btnSearchClients.Click += new EventHandler(SearchClientsEvents);
             //view.btnSearchClients.Click += new EventHandler(SearchClientsEvent);
             //Sección de Validaciones
+            view.dtpUClientsBirthday.MaxDate = DateTime.Today.AddYears(-18);
             view.dtpUClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
             view.tbUClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
-            view.tbUClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);         
+            view.tbUClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             view.dgvClientsTable.CellClick += new DataGridViewCellEventHandler(SelectClient);
             view.tbUEmail.KeyPress += new KeyPressEventHandler(TbUEmail_KeyPress);
             view.tbUAddress.KeyPress += new KeyPressEventHandler(TbUAddress_KeyPress);
@@ -39,6 +41,12 @@ namespace SistemaJoyería.Controller.ClientsController
             view.tbUClientsSurname.TextChanged += new EventHandler(Limit25);
             view.tbUEmail.TextChanged += new EventHandler(Limit50);
             view.tbUAddress.TextChanged += new EventHandler(Limit150);
+            DisableCopyCutPaste(view.tbUClientsName);
+            DisableCopyCutPaste(view.tbUClientsSurname);
+            DisableCopyCutPasteMasked(view.mskUCellphoneN);
+            DisableCopyCutPasteMasked(view.mskUDuiDoc);
+            DisableCopyCutPaste(view.tbUEmail);
+            DisableCopyCutPaste(view.tbUAddress);
         }
 
         void InitialCharge(object sender, EventArgs e)
@@ -67,6 +75,8 @@ namespace SistemaJoyería.Controller.ClientsController
                   string.IsNullOrEmpty(ObjView.mskUDuiDoc.Text.Trim()) ||
                   // Validamos si el campo de correo electrónico no está vacío
                   string.IsNullOrEmpty(ObjView.tbUEmail.Text.Trim()) ||
+                  //Validación con método
+                  !Emailverifaction(ObjView.tbUEmail.Text.Trim()) ||
                   // Validamos si el campo de dirección no está vacío
                   string.IsNullOrEmpty(ObjView.tbUAddress.Text.Trim()) ||
                   // Validamos que la dirección no sobrepase los 100 dígitos
@@ -125,20 +135,26 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             ObjView.tbUClientsName.Clear();
             ObjView.tbUClientsSurname.Clear();
-            ObjView.dtpUClientsBirthday.Value = DateTime.Now;
             ObjView.mskUCellphoneN.Clear();
             ObjView.mskUDuiDoc.Clear();
             ObjView.tbUEmail.Clear();
             ObjView.tbUAddress.Clear();
             ObjView.tbID.Clear();
         }
-        //public void SearchClientsEvent(object sender, EventArgs e) { SearchClientsController(); }
-        ////void SearchClientsController()
-        ////{
-        ////    ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
-        ////    DataSet ds = clientsViewDAO.BuscarProducts(ObjView.tbSearchClients.Text.Trim());
-        ////    ObjView.dgvClientsTable.DataSource = ds.Tables["Clients"];
-        ////}
+        //public void Search(object sender, KeyPressEventArgs e)
+        //{
+        //    SearchClientsController();
+        //}
+        //public void SearchClientsEvents(object sender, EventArgs e) { SearchClientsController(); }
+        //void SearchClientsController()
+        //{
+        //    //Objeto de la clase DAOAdminUsuarios
+        //    ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
+        //    //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+        //    DataSet ds = clientsViewDAO.SearchClients(ObjView.tbSearchClients.Text.Trim());
+        //    //Llenar DataGridView
+        //    ObjView.dgvClientsTable.DataSource = ds.Tables["vw_ClientesInfo"];
+        //}
 
         //Validaciones 
 
@@ -147,7 +163,6 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             textBox.MaxLength = 25;
         }
-
         private void Limit25(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -159,7 +174,6 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             textBox.MaxLength = 50;
         }
-
         private void Limit50(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -171,11 +185,62 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             textBox.MaxLength = 150;
         }
-
         private void Limit150(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             CharacterLimit150(textBox);
+        }
+
+        //Limitar copiar, pegar y cortar en los TB
+        private void DisableCopyCutPaste(TextBox textBox)
+        {
+            // Deshabilitamos el menú contextual del TextBox
+            textBox.ContextMenu = new ContextMenu();
+
+            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
+            textBox.KeyDown += (sender, e) =>
+            {
+                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
+                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                {
+                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
+                }
+            };
+        }
+
+        //Límitar copiar, pegar y cortar en los msk
+        private void DisableCopyCutPasteMasked(MaskedTextBox maskedTextBox)
+        {
+            // Deshabilitamos el menú contextual del MaskedTextBox
+            maskedTextBox.ContextMenu = new ContextMenu();
+
+            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
+            maskedTextBox.KeyDown += (sender, e) =>
+            {
+                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
+                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                {
+                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
+                }
+            };
+        }
+
+        //Validar el patrón del correo
+        private bool Emailverifaction(string email)
+
+        {
+            // Definimos el patrón para validar el formato de correo electrónico.
+            // - El correo comience con uno o más caracteres que no sean @ ni espacios.
+            // - Siga con el símbolo @.
+            // - Continúe con uno o más caracteres que no sean @ ni espacios, representando el dominio.
+            // - Contenga un punto (.) separando el dominio de la extensión.
+            // - Termine con uno o más caracteres que no sean @ ni espacios, representando la extensión del dominio (por ejemplo, com, org).
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            // Utilizamos Regex.IsMatch para verificar si el correo electrónico coincide con el patrón definido.
+            // Si el correo electrónico tiene el formato correcto, IsMatch devuelve true.
+            // Si el correo electrónico no coincide con el patrón, devuelve false.
+            return Regex.IsMatch(email, emailPattern);
         }
 
         //Límitar s sólo letras y un espacio
