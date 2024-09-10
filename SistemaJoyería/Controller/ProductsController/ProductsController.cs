@@ -282,7 +282,7 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.cmbSuppliers.Text = string.Empty;
             ObjProducts.txtStock.Text = string.Empty;
             ObjProducts.mktPriceProduct.Text = string.Empty;
-            ObjProducts.dtpDate.Value = DateTime.Now;
+            ObjProducts.dtpDate.MaxDate = DateTime.Now;
             ObjProducts.txtProductDescription.Text = string.Empty;
         }
 
