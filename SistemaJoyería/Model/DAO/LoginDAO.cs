@@ -19,7 +19,7 @@ namespace SistemaJoyería.Model.DAO
             {
                 Command.Connection = getConnection();
                 //busca en la tabla "Users" los datos de los usuarios cuyo nombre de login y contraseña coincidan con los valores proporcionados en los parámetros "@user" y "@pass".
-                string query = "SELECT * FROM Users WHERE nombreLogin = @user and Password = @pass";
+                string query = "SELECT * FROM Users WHERE LoginName = @user and Password = @pass";
                 //mandando la consulta a la base
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 //admitiendo parametros a la base
