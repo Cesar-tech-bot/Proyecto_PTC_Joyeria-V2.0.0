@@ -135,7 +135,6 @@ namespace SistemaJoyería.Controller.ClientsController
         {
             ObjView.tbUClientsName.Clear();
             ObjView.tbUClientsSurname.Clear();
-            ObjView.dtpUClientsBirthday.Value = DateTime.Now;
             ObjView.mskUCellphoneN.Clear();
             ObjView.mskUDuiDoc.Clear();
             ObjView.tbUEmail.Clear();

@@ -92,7 +92,8 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
-        
+
+
         //Eventos del View
         public void CleanInformation(object sender, EventArgs e)
         {

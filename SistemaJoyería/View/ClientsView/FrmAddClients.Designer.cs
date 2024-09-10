@@ -138,7 +138,7 @@
             this.dtpClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpClientsBirthday.Location = new System.Drawing.Point(18, 197);
             this.dtpClientsBirthday.Name = "dtpClientsBirthday";
-            this.dtpClientsBirthday.Size = new System.Drawing.Size(387, 30);
+            this.dtpClientsBirthday.Size = new System.Drawing.Size(732, 30);
             this.dtpClientsBirthday.TabIndex = 3;
             // 
             // mskCellphoneN
@@ -147,7 +147,7 @@
             this.mskCellphoneN.Location = new System.Drawing.Point(18, 275);
             this.mskCellphoneN.Mask = "0000-0000";
             this.mskCellphoneN.Name = "mskCellphoneN";
-            this.mskCellphoneN.Size = new System.Drawing.Size(172, 30);
+            this.mskCellphoneN.Size = new System.Drawing.Size(732, 30);
             this.mskCellphoneN.TabIndex = 4;
             // 
             // tbEmail
@@ -164,22 +164,23 @@
             this.mskDuiDoc.Location = new System.Drawing.Point(18, 430);
             this.mskDuiDoc.Mask = "00000000-0";
             this.mskDuiDoc.Name = "mskDuiDoc";
-            this.mskDuiDoc.Size = new System.Drawing.Size(168, 30);
+            this.mskDuiDoc.Size = new System.Drawing.Size(732, 30);
             this.mskDuiDoc.TabIndex = 6;
             // 
             // tbAddress
             // 
+            this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddress.Location = new System.Drawing.Point(18, 504);
             this.tbAddress.Multiline = true;
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(399, 88);
+            this.tbAddress.Size = new System.Drawing.Size(732, 83);
             this.tbAddress.TabIndex = 7;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(450, 517);
+            this.btnDelete.Location = new System.Drawing.Point(221, 617);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 75);
             this.btnDelete.TabIndex = 8;
@@ -190,7 +191,7 @@
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(623, 517);
+            this.btnOK.Location = new System.Drawing.Point(417, 617);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(127, 75);
             this.btnOK.TabIndex = 9;
@@ -201,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 614);
+            this.ClientSize = new System.Drawing.Size(772, 708);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbAddress);
