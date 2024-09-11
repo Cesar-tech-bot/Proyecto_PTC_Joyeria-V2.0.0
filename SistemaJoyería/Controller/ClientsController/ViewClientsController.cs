@@ -27,6 +27,7 @@ namespace SistemaJoyería.Controller.ClientsController
             //Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
             view.btnClearUpdate.Click += new EventHandler(ClearUpdateZone);
+            view.btnSearchClient.Click += new EventHandler(SearchClientsEvent);
             //view.btnSearchClients.Click += new EventHandler(SearchClientsEvents);
             //view.btnSearchClients.Click += new EventHandler(SearchClientsEvent);
             //Sección de Validaciones
@@ -113,7 +114,7 @@ namespace SistemaJoyería.Controller.ClientsController
         void ShowAddClients(object sender, EventArgs e)
         {
             FrmAddClients frmAddClients = new FrmAddClients();
-            frmAddClients.Show();
+            frmAddClients.ShowDialog();
         }
         void SelectClient(object sender, DataGridViewCellEventArgs e)
         {
@@ -141,20 +142,20 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjView.tbUAddress.Clear();
             ObjView.tbID.Clear();
         }
-        //public void Search(object sender, KeyPressEventArgs e)
-        //{
-        //    SearchClientsController();
-        //}
-        //public void SearchClientsEvents(object sender, EventArgs e) { SearchClientsController(); }
-        //void SearchClientsController()
-        //{
-        //    //Objeto de la clase DAOAdminUsuarios
-        //    ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
-        //    //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
-        //    DataSet ds = clientsViewDAO.SearchClients(ObjView.tbSearchClients.Text.Trim());
-        //    //Llenar DataGridView
-        //    ObjView.dgvClientsTable.DataSource = ds.Tables["vw_ClientesInfo"];
-        //}
+
+        public void SearchProduct(object sender, KeyPressEventArgs e)
+        {
+            SearchClientsController();
+        }
+        //Buscar productos
+        public void SearchClientsEvent(object sender, EventArgs e) { SearchClientsController(); }
+        void SearchClientsController()
+        {
+            ProductsViewDAO DAOProducts = new ProductsViewDAO();
+            DataSet ds = DAOProducts.BuscarProducts(ObjView.tbSearchClient.Text.Trim());
+            ObjView.dgvClientsTable.DataSource = ds.Tables["vw_ClientesInfo"];
+        }
+
 
         //Validaciones 
 
