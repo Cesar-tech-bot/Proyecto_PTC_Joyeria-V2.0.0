@@ -55,6 +55,8 @@
             this.btnAddClients = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbSearchClient = new System.Windows.Forms.TextBox();
+            this.btnSearchClient = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).BeginInit();
             this.panel5.SuspendLayout();
@@ -354,6 +356,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.btnSearchClient);
+            this.panel4.Controls.Add(this.tbSearchClient);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -371,6 +375,28 @@
             this.label1.Size = new System.Drawing.Size(206, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "CONTROL DE CLIENTES";
+            // 
+            // tbSearchClient
+            // 
+            this.tbSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.tbSearchClient.Location = new System.Drawing.Point(360, 36);
+            this.tbSearchClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbSearchClient.Name = "tbSearchClient";
+            this.tbSearchClient.Size = new System.Drawing.Size(393, 31);
+            this.tbSearchClient.TabIndex = 5;
+            // 
+            // btnSearchClient
+            // 
+            this.btnSearchClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearchClient.ForeColor = System.Drawing.Color.White;
+            this.btnSearchClient.Location = new System.Drawing.Point(779, 26);
+            this.btnSearchClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearchClient.Name = "btnSearchClient";
+            this.btnSearchClient.Size = new System.Drawing.Size(191, 49);
+            this.btnSearchClient.TabIndex = 3;
+            this.btnSearchClient.Text = "Buscar";
+            this.btnSearchClient.UseVisualStyleBackColor = false;
             // 
             // FrmClientsView
             // 
@@ -424,5 +450,7 @@
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.DataGridView dgvClientsTable;
         public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnSearchClient;
+        public System.Windows.Forms.TextBox tbSearchClient;
     }
 }
