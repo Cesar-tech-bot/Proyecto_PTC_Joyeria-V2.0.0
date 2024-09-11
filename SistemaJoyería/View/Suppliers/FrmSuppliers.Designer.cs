@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnRefresacar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.proveedorEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.proveedorDireccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listSuppliers = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,12 +62,28 @@
             this.panel1.Size = new System.Drawing.Size(1046, 62);
             this.panel1.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.button1.Location = new System.Drawing.Point(569, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 28);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnRefresacar
             // 
             this.btnRefresacar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresacar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnRefresacar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnRefresacar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRefresacar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresacar.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.btnRefresacar.Location = new System.Drawing.Point(923, 17);
             this.btnRefresacar.Name = "btnRefresacar";
@@ -82,6 +98,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.btnEliminar.Location = new System.Drawing.Point(806, 18);
             this.btnEliminar.Name = "btnEliminar";
@@ -96,6 +113,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnAgregar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.btnAgregar.Location = new System.Drawing.Point(688, 18);
             this.btnAgregar.Name = "btnAgregar";
@@ -179,20 +197,6 @@
             this.listSuppliers.UseCompatibleStateImageBehavior = false;
             this.listSuppliers.View = System.Windows.Forms.View.Details;
             this.listSuppliers.SelectedIndexChanged += new System.EventHandler(this.listSuppliers_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.button1.Location = new System.Drawing.Point(569, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmSuppliers
             // 

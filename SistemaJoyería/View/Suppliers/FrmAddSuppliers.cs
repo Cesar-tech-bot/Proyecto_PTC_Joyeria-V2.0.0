@@ -37,5 +37,10 @@ namespace SistemaJoyería.View.Suppliers
                 e.Handled = true;
             }
         }
+
+        private void FrmAddSuppliers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
