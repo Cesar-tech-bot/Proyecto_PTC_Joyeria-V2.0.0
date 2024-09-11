@@ -41,9 +41,9 @@
             this.mskCellphoneN = new System.Windows.Forms.MaskedTextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.mskDuiDoc = new System.Windows.Forms.MaskedTextBox();
-            this.tbAddress = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
+            this.tbAddress = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAddress
@@ -123,7 +123,7 @@
             this.tbClientsName.Location = new System.Drawing.Point(17, 42);
             this.tbClientsName.Name = "tbClientsName";
             this.tbClientsName.Size = new System.Drawing.Size(509, 31);
-            this.tbClientsName.TabIndex = 8;
+            this.tbClientsName.TabIndex = 1;
             // 
             // tbClientsSurname
             // 
@@ -131,7 +131,7 @@
             this.tbClientsSurname.Location = new System.Drawing.Point(17, 114);
             this.tbClientsSurname.Name = "tbClientsSurname";
             this.tbClientsSurname.Size = new System.Drawing.Size(509, 31);
-            this.tbClientsSurname.TabIndex = 7;
+            this.tbClientsSurname.TabIndex = 2;
             // 
             // dtpClientsBirthday
             // 
@@ -139,7 +139,7 @@
             this.dtpClientsBirthday.Location = new System.Drawing.Point(17, 206);
             this.dtpClientsBirthday.Name = "dtpClientsBirthday";
             this.dtpClientsBirthday.Size = new System.Drawing.Size(509, 31);
-            this.dtpClientsBirthday.TabIndex = 6;
+            this.dtpClientsBirthday.TabIndex = 3;
             // 
             // mskCellphoneN
             // 
@@ -148,16 +148,15 @@
             this.mskCellphoneN.Mask = "0000-0000";
             this.mskCellphoneN.Name = "mskCellphoneN";
             this.mskCellphoneN.Size = new System.Drawing.Size(509, 31);
-            this.mskCellphoneN.TabIndex = 5;
+            this.mskCellphoneN.TabIndex = 4;
             // 
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.tbEmail.Location = new System.Drawing.Point(16, 547);
-            this.tbEmail.Multiline = true;
+            this.tbEmail.Location = new System.Drawing.Point(17, 371);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(509, 70);
-            this.tbEmail.TabIndex = 4;
+            this.tbEmail.Size = new System.Drawing.Size(509, 31);
+            this.tbEmail.TabIndex = 5;
             // 
             // mskDuiDoc
             // 
@@ -166,15 +165,7 @@
             this.mskDuiDoc.Mask = "0000000-0";
             this.mskDuiDoc.Name = "mskDuiDoc";
             this.mskDuiDoc.Size = new System.Drawing.Size(508, 31);
-            this.mskDuiDoc.TabIndex = 3;
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.tbAddress.Location = new System.Drawing.Point(16, 374);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(509, 31);
-            this.tbAddress.TabIndex = 2;
+            this.mskDuiDoc.TabIndex = 6;
             // 
             // btnDelete
             // 
@@ -184,7 +175,7 @@
             this.btnDelete.Location = new System.Drawing.Point(104, 636);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(135, 46);
-            this.btnDelete.TabIndex = 1;
+            this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Limpiar";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -196,9 +187,18 @@
             this.btnOK.Location = new System.Drawing.Point(307, 636);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(135, 46);
-            this.btnOK.TabIndex = 0;
+            this.btnOK.TabIndex = 9;
             this.btnOK.Text = "Guardar";
             this.btnOK.UseVisualStyleBackColor = false;
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.tbAddress.Location = new System.Drawing.Point(16, 532);
+            this.tbAddress.Multiline = true;
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(509, 84);
+            this.tbAddress.TabIndex = 7;
             // 
             // FrmAddClients
             // 
@@ -207,11 +207,11 @@
             this.ClientSize = new System.Drawing.Size(559, 694);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.mskDuiDoc);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.mskCellphoneN);
             this.Controls.Add(this.dtpClientsBirthday);
+            this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.tbClientsSurname);
             this.Controls.Add(this.tbClientsName);
             this.Controls.Add(this.txtAddress);
@@ -244,8 +244,8 @@
         public System.Windows.Forms.MaskedTextBox mskCellphoneN;
         public System.Windows.Forms.TextBox tbEmail;
         public System.Windows.Forms.MaskedTextBox mskDuiDoc;
-        public System.Windows.Forms.TextBox tbAddress;
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnOK;
+        public System.Windows.Forms.TextBox tbAddress;
     }
 }
