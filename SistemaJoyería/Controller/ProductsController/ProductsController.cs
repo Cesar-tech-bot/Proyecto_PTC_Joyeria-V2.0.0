@@ -46,10 +46,15 @@ namespace SistemaJoyería.Controller.ProductsController
             View.txtProductMaterial.TextChanged += new EventHandler(Limitede100);
             //Otro tipo de método
             // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
-            View.dtpDate.MinDate = DateTime.Today;
-            View.dtpDate.MaxDate = DateTime.Today;
-            // Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
+            //View.dtpDate.MinDate = DateTime.Today;
+            //View.dtpDate.MaxDate = DateTime.Today;
+            //// Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
             View.dtpDate.Value = DateTime.Today;
+            //Read Only
+            View.dtpDate.Enabled = false;
+            // Configurar el formato del DateTimePicker
+            View.dtpDate.Format = DateTimePickerFormat.Custom;
+            View.dtpDate.CustomFormat = "dd/MM/yyyy";
             // Deshabilitar copiar, cortar y pegar en TextBox y MaskedTextBox
             View.txtProductName.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
             View.txtProductMaterial.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
@@ -205,9 +210,12 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.txtProductMaterial.Text = ObjProducts.dgvProduct[2, pos].Value.ToString();
             ObjProducts.cmbSuppliers.Text = ObjProducts.dgvProduct[3, pos].Value.ToString();
             ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
-            ObjProducts.dtpDate.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
+            ObjProducts.dtpDate.Value = DateTime.Parse(ObjProducts.dgvProduct[5, pos].Value.ToString());
             ObjProducts.txtStock.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
             ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[7, pos].Value.ToString();
+
+            //Deshabilitar el btn keep
+            ObjProducts.btnKeep.Enabled = false;
         }
 
         //Actualizar producto
@@ -227,11 +235,17 @@ namespace SistemaJoyería.Controller.ProductsController
             {
                 MessageBox.Show("El producto seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ShowDGVProducts();
+
+
+                //reiniciar los campos
+                RestartRegister(sender, e);
             }
             else
             {
                 MessageBox.Show("El producto seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            //Habilitar el btn keep
+            ObjProducts.btnKeep.Enabled = true;
         }
 
         //Guardar producto
@@ -260,6 +274,10 @@ namespace SistemaJoyería.Controller.ProductsController
                 if (retorno == 1)
                 {
                     MessageBox.Show("El Producto fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowDGVProducts();
+
+                    //reiniciar los campos
+                    RestartRegister(sender, e);
                 }
                 else if (retorno == 0)
                 {
@@ -282,23 +300,23 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.cmbSuppliers.Text = string.Empty;
             ObjProducts.txtStock.Text = string.Empty;
             ObjProducts.mktPriceProduct.Text = string.Empty;
-            ObjProducts.dtpDate.MaxDate = DateTime.Now;
+            ObjProducts.dtpDate.Value = DateTime.Now;
             ObjProducts.txtProductDescription.Text = string.Empty;
+            ObjProducts.txtIDProducts.Text = string.Empty;
         }
 
-        DataSet ds = new DataSet();
         //Mando a llamar el DAO
         public void SearchProduct(object sender, KeyPressEventArgs e)
         {
             SearchProductsController();
         }
         //Buscar productos
-        public void SearchProductsEvent(object sender, EventArgs e) { SearchProductsController() ; }
+        public void SearchProductsEvent(object sender, EventArgs e) { SearchProductsController(); }
         void SearchProductsController()
         {
             ProductsViewDAO DAOProducts = new ProductsViewDAO();
             DataSet ds = DAOProducts.BuscarProducts(ObjProducts.txtSearchProductos.Text.Trim());
-            ObjProducts.dgvProduct.DataSource = ds.Tables["Products"];
+            ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
     }
 }

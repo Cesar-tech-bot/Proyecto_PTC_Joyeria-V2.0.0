@@ -164,13 +164,13 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = $"SELECT * FROM vw_Products WHERE ProductName Like '%{valor}%'";
-                SqlCommand cmd = new SqlCommand( query, command.Connection);
-                cmd.Parameters.AddWithValue("@Valor", $"%{valor}%");
-                cmd.ExecuteNonQuery();
+                string query = $"SELECT * FROM vw_Products WHERE [Nombre del Producto] Like '%{valor}%'";
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                //cmd.Parameters.AddWithValue("@Valor", valor);
+                cmd.ExecuteScalar();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet, "Products");
+                adapter.Fill(dataSet, "vw_Products");
                 return dataSet;
             }
             catch (Exception)
