@@ -80,7 +80,7 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = $"SELECT * FROM vw_ClientesInfo WHERE [First Name] Like '%{valor}%'";
+                string query = $"SELECT * FROM vw_ClientesInfo WHERE [Nombre] Like '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
                 //cmd.Parameters.AddWithValue("@Valor", valor);
                 cmd.ExecuteScalar();
