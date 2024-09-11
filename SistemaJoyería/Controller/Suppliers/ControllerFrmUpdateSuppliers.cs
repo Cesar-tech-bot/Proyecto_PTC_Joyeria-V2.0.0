@@ -35,6 +35,10 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.KeyDown += Form_KeyDown;
         }
 
+        public ControllerFrmUpdateSuppliers(string idBuena, FrmUpdateSuppliers frmUpdateSuppliers)
+        {
+        }
+
         public void UpdateSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
