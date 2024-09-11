@@ -1,5 +1,4 @@
 ﻿using SistemaJoyeria.Model.DTO;
-using SistemaJoyería.View.Suppliers;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -10,44 +9,16 @@ namespace SistemaJoyería.Model.DAO
     {
         private SqlCommand command = new SqlCommand();
 
-        public void Get(FrmUpdateSuppliers vista, string companyName)
-        {
-            try
-            {
-                command.Connection = getConnection();
-                command.Connection.Open();
-                string query = "SELECT * FROM Suppliers WHERE CompanyName = @CompanyName";
-                command.CommandText = query;
-                command.Parameters.AddWithValue("@CompanyName", companyName);
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        vista.txtNombreEmpresa.Text = reader["CompanyName"].ToString();
-                        vista.txtNombreContacto.Text = reader["ContactName"].ToString();
-                        vista.txtTelefono.Text = reader["Phone"].ToString();
-                        vista.txtEmail.Text = reader["Email"].ToString();
-                        vista.txtDireccion.Text = reader["Direction"].ToString();
-                        vista.dtpFechaRegistro.Value = Convert.ToDateTime(reader["DayAdded"]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al obtener los datos del proveedor: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                command.Connection.Close();
-            }
-        }
-
+        // Método para actualizar un proveedor
         public int UpdateSupplier(SupplierDTO supplier)
         {
             try
             {
+                // Conexión a la base de datos
                 command.Connection = getConnection();
                 command.Connection.Open();
+
+                // Consulta SQL para actualizar un proveedor
                 string queryUpdate = @"UPDATE Suppliers 
                                        SET ContactName = @ContactName, 
                                            Phone = @Phone, 
@@ -55,20 +26,24 @@ namespace SistemaJoyería.Model.DAO
                                            Direction = @Direction, 
                                            DayAdded = @DayAdded 
                                        WHERE CompanyName = @CompanyName";
-                command.CommandText = queryUpdate;
-                command.Parameters.Clear();
-                command.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
-                command.Parameters.AddWithValue("@ContactName", supplier.ContactName);
-                command.Parameters.AddWithValue("@Phone", supplier.Phone);
-                command.Parameters.AddWithValue("@Email", supplier.Email);
-                command.Parameters.AddWithValue("@Direction", supplier.Direction);
-                command.Parameters.AddWithValue("@DayAdded", supplier.DayAdded);
-                int result = command.ExecuteNonQuery();
+
+                SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
+
+                // Asignación de parámetros
+                cmdUpdate.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
+                cmdUpdate.Parameters.AddWithValue("@ContactName", supplier.ContactName);
+                cmdUpdate.Parameters.AddWithValue("@Phone", supplier.Phone);
+                cmdUpdate.Parameters.AddWithValue("@Email", supplier.Email);
+                cmdUpdate.Parameters.AddWithValue("@Direction", supplier.Direction);
+                cmdUpdate.Parameters.AddWithValue("@DayAdded", supplier.DayAdded);
+
+                // Ejecuta la actualización y retorna el número de filas afectadas
+                int result = cmdUpdate.ExecuteNonQuery();
                 return result;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al actualizar el proveedor: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al actualizar proveedor: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.Direccion = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.Telefono = new System.Windows.Forms.Label();
@@ -43,19 +43,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnGuardar
+            // btnActualizar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(169, 292);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(138, 51);
-            this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "Actualizar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(169, 292);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(138, 51);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // Direccion
             // 
@@ -160,7 +160,7 @@
             this.dtpFechaRegistro.Location = new System.Drawing.Point(169, 127);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(305, 26);
-            this.dtpFechaRegistro.TabIndex = 1;
+            this.dtpFechaRegistro.TabIndex = 0;
             // 
             // label1
             // 
@@ -181,7 +181,7 @@
             this.Controls.Add(this.dtpFechaRegistro);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtNombreEmpresa);
             this.Controls.Add(this.txtNombreContacto);
@@ -199,7 +199,7 @@
         }
 
         #endregion
-        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.TextBox txtNombreEmpresa;
         public System.Windows.Forms.TextBox txtNombreContacto;
         public System.Windows.Forms.TextBox txtTelefono;

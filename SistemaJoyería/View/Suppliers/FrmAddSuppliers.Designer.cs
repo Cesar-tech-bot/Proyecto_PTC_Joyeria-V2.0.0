@@ -60,7 +60,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(98, 255);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(377, 26);
-            this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -69,7 +69,7 @@
             this.txtEmail.Location = new System.Drawing.Point(177, 206);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(377, 26);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtNombreContacto
             // 
@@ -154,7 +154,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(320, 323);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(124, 36);
-            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -165,7 +165,7 @@
             this.dtpFechaRegistro.Location = new System.Drawing.Point(176, 106);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(378, 26);
-            this.dtpFechaRegistro.TabIndex = 0;
+            this.dtpFechaRegistro.TabIndex = 3;
             // 
             // btnLimpiar
             // 
