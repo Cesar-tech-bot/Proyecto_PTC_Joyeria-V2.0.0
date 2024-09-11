@@ -15,7 +15,7 @@ namespace SistemaJoyería.Model
             //Conexion
             try
             {
-                String test = "Server = SQL8020.site4now.net;Database= db_aacc95_dbluxst; User Id= db_aacc95_dbluxst_admin;Password=leoabarca091;";
+                String test = "Server = SQL8020.site4now.net; Database = db_aacc95_dbluxst; User Id = db_aacc95_dbluxst_admin; Password = leoabarca091;";
 
                 //string server = "";
 
