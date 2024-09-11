@@ -22,11 +22,11 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaPasada.btnGuardar.Click += (sender, e) => ActualizarSupplier();
 
             // Validaciones de los campos
-            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 100);
-            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 100);
+            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreEmpresa, 20);
+            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtNombreContacto, 15);
             vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidateNumericInput(sender, e);
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
-            vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 200);
+            vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 150);
 
             // Agregar validación de copiar y pegar
             vistaControlada.KeyPreview = true;

@@ -121,13 +121,13 @@
             this.tbClientsName.BackColor = System.Drawing.Color.White;
             this.tbClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsName.Location = new System.Drawing.Point(18, 49);
-            this.tbClientsName.Name = "tbCientsName";<main
+            this.tbClientsName.Name = "tbCientsName";
             // 
             // tbClientsSurname
             // 
             this.tbClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientsSurname.Location = new System.Drawing.Point(18, 123);
-            this.tbClientsSurname.Name = "tbClientsSurname<main
+            this.tbClientsSurname.Name = "tbClientsSurname";
             // 
             // dtpClientsBirthday
             // 
@@ -139,7 +139,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-main
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbAddress);
@@ -155,7 +154,7 @@ main
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtCellphoneN);
             this.Controls.Add(this.txtClientsSurname);
-            this.Controls.Add(this.txtClientsName);in
+            this.Controls.Add(this.txtClientsName);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddClients";

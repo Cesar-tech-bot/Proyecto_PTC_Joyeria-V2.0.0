@@ -193,6 +193,7 @@
             this.Controls.Add(this.Email);
             this.Name = "FrmAddSuppliers";
             this.Text = "FrmAddSuplliers";
+            this.Load += new System.EventHandler(this.FrmAddSuppliers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
