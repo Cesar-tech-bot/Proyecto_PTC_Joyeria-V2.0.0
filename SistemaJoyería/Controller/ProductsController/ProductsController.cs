@@ -205,18 +205,33 @@ namespace SistemaJoyería.Controller.ProductsController
         void SelectProduct(object sender, DataGridViewCellEventArgs e)
         {
             int pos = ObjProducts.dgvProduct.CurrentRow.Index;
+
             ObjProducts.txtIDProducts.Text = ObjProducts.dgvProduct[0, pos].Value.ToString();
             ObjProducts.txtProductName.Text = ObjProducts.dgvProduct[1, pos].Value.ToString();
             ObjProducts.txtProductMaterial.Text = ObjProducts.dgvProduct[2, pos].Value.ToString();
             ObjProducts.cmbSuppliers.Text = ObjProducts.dgvProduct[3, pos].Value.ToString();
             ObjProducts.mktPriceProduct.Text = ObjProducts.dgvProduct[6, pos].Value.ToString();
-            ObjProducts.dtpDate.Value = DateTime.Parse(ObjProducts.dgvProduct[5, pos].Value.ToString());
-            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[4, pos].Value.ToString();
+
+            // Validar si la fecha es correcta antes de parsearla
+            string dateValue = ObjProducts.dgvProduct[4, pos].Value.ToString();
+            DateTime parsedDate;
+
+            if (DateTime.TryParse(dateValue, out parsedDate))
+            {
+                ObjProducts.dtpDate.Value = parsedDate;
+            }
+            else
+            {
+
+            }
+
+            ObjProducts.txtStock.Text = ObjProducts.dgvProduct[5, pos].Value.ToString();
             ObjProducts.txtProductDescription.Text = ObjProducts.dgvProduct[7, pos].Value.ToString();
 
-            //Deshabilitar el btn keep
+            // Deshabilitar el btn keep
             ObjProducts.btnKeep.Enabled = false;
         }
+
 
         //Actualizar producto
         void UpdateProduct(object sender, EventArgs e)
