@@ -35,6 +35,7 @@ namespace SistemaJoyería.Controller.ClientsController
             view.dtpUClientsBirthday.MinDate = DateTime.Now.AddYears(-60);
             view.tbUClientsName.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             view.tbUClientsSurname.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
+            view.tbSearchClient.KeyPress += new KeyPressEventHandler(OnlyLettersSpace);
             view.dgvClientsTable.CellClick += new DataGridViewCellEventHandler(SelectClient);
             view.tbUEmail.KeyPress += new KeyPressEventHandler(TbUEmail_KeyPress);
             view.tbUAddress.KeyPress += new KeyPressEventHandler(TbUAddress_KeyPress);
@@ -48,6 +49,7 @@ namespace SistemaJoyería.Controller.ClientsController
             DisableCopyCutPasteMasked(view.mskUDuiDoc);
             DisableCopyCutPaste(view.tbUEmail);
             DisableCopyCutPaste(view.tbUAddress);
+            DisableCopyCutPaste(view.tbSearchClient);
         }
 
         void InitialCharge(object sender, EventArgs e)
@@ -143,7 +145,7 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjView.tbID.Clear();
         }
 
-        public void SearchProduct(object sender, KeyPressEventArgs e)
+        public void SearchClients(object sender, KeyPressEventArgs e)
         {
             SearchClientsController();
         }
@@ -151,8 +153,8 @@ namespace SistemaJoyería.Controller.ClientsController
         public void SearchClientsEvent(object sender, EventArgs e) { SearchClientsController(); }
         void SearchClientsController()
         {
-            ProductsViewDAO DAOProducts = new ProductsViewDAO();
-            DataSet ds = DAOProducts.BuscarProducts(ObjView.tbSearchClient.Text.Trim());
+           ClientsViewDAO clientsViewDAO = new ClientsViewDAO();
+            DataSet ds = clientsViewDAO.SearchClients(ObjView.tbSearchClient.Text.Trim());
             ObjView.dgvClientsTable.DataSource = ds.Tables["vw_ClientesInfo"];
         }
 

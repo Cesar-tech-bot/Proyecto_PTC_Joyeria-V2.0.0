@@ -383,18 +383,18 @@
             this.tbSearchClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSearchClient.Name = "tbSearchClient";
             this.tbSearchClient.Size = new System.Drawing.Size(393, 31);
-            this.tbSearchClient.TabIndex = 5;
+            this.tbSearchClient.TabIndex = 1;
             // 
             // btnSearchClient
             // 
             this.btnSearchClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearchClient.ForeColor = System.Drawing.Color.White;
-            this.btnSearchClient.Location = new System.Drawing.Point(779, 26);
+            this.btnSearchClient.Location = new System.Drawing.Point(774, 23);
             this.btnSearchClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchClient.Name = "btnSearchClient";
             this.btnSearchClient.Size = new System.Drawing.Size(191, 49);
-            this.btnSearchClient.TabIndex = 3;
+            this.btnSearchClient.TabIndex = 2;
             this.btnSearchClient.Text = "Buscar";
             this.btnSearchClient.UseVisualStyleBackColor = false;
             // 
