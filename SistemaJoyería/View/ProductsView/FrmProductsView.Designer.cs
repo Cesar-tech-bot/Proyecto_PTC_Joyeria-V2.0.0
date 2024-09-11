@@ -39,6 +39,7 @@
             this.cmsDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtSearchProductos = new System.Windows.Forms.TextBox();
@@ -57,7 +58,6 @@
             this.txtProductMaterial = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.lb = new System.Windows.Forms.Label();
             this.MenuProductos.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,7 +70,7 @@
             this.lbIDProduct.AutoSize = true;
             this.lbIDProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIDProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbIDProduct.Location = new System.Drawing.Point(19, 527);
+            this.lbIDProduct.Location = new System.Drawing.Point(26, 524);
             this.lbIDProduct.Name = "lbIDProduct";
             this.lbIDProduct.Size = new System.Drawing.Size(82, 15);
             this.lbIDProduct.TabIndex = 9;
@@ -79,20 +79,20 @@
             // txtIDProducts
             // 
             this.txtIDProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIDProducts.Location = new System.Drawing.Point(104, 526);
+            this.txtIDProducts.Location = new System.Drawing.Point(111, 523);
             this.txtIDProducts.Name = "txtIDProducts";
-            this.txtIDProducts.Size = new System.Drawing.Size(100, 20);
+            this.txtIDProducts.Size = new System.Drawing.Size(109, 20);
             this.txtIDProducts.TabIndex = 8;
             // 
             // lbDescriptionProduct
             // 
             this.lbDescriptionProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDescriptionProduct.AutoSize = true;
-            this.lbDescriptionProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDescriptionProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbDescriptionProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbDescriptionProduct.Location = new System.Drawing.Point(25, 371);
+            this.lbDescriptionProduct.Location = new System.Drawing.Point(19, 387);
             this.lbDescriptionProduct.Name = "lbDescriptionProduct";
-            this.lbDescriptionProduct.Size = new System.Drawing.Size(90, 16);
+            this.lbDescriptionProduct.Size = new System.Drawing.Size(103, 20);
             this.lbDescriptionProduct.TabIndex = 5;
             this.lbDescriptionProduct.Text = "Descripción";
             // 
@@ -100,11 +100,11 @@
             // 
             this.lbNameSupplier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNameSupplier.AutoSize = true;
-            this.lbNameSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbNameSupplier.ForeColor = System.Drawing.Color.Black;
-            this.lbNameSupplier.Location = new System.Drawing.Point(24, 147);
+            this.lbNameSupplier.Location = new System.Drawing.Point(19, 146);
             this.lbNameSupplier.Name = "lbNameSupplier";
-            this.lbNameSupplier.Size = new System.Drawing.Size(164, 16);
+            this.lbNameSupplier.Size = new System.Drawing.Size(185, 20);
             this.lbNameSupplier.TabIndex = 3;
             this.lbNameSupplier.Text = "Nombre del proveedor";
             // 
@@ -112,11 +112,11 @@
             // 
             this.lbMaterialProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbMaterialProduct.AutoSize = true;
-            this.lbMaterialProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaterialProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbMaterialProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbMaterialProduct.Location = new System.Drawing.Point(25, 81);
+            this.lbMaterialProduct.Location = new System.Drawing.Point(19, 79);
             this.lbMaterialProduct.Name = "lbMaterialProduct";
-            this.lbMaterialProduct.Size = new System.Drawing.Size(63, 16);
+            this.lbMaterialProduct.Size = new System.Drawing.Size(73, 20);
             this.lbMaterialProduct.TabIndex = 2;
             this.lbMaterialProduct.Text = "Material";
             // 
@@ -124,11 +124,11 @@
             // 
             this.lbProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbProducts.AutoSize = true;
-            this.lbProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProducts.ForeColor = System.Drawing.Color.Black;
-            this.lbProducts.Location = new System.Drawing.Point(25, 13);
+            this.lbProducts.Location = new System.Drawing.Point(19, 13);
             this.lbProducts.Name = "lbProducts";
-            this.lbProducts.Size = new System.Drawing.Size(62, 16);
+            this.lbProducts.Size = new System.Drawing.Size(71, 20);
             this.lbProducts.TabIndex = 0;
             this.lbProducts.Text = "Nombre";
             // 
@@ -165,6 +165,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1046, 83);
             this.panel1.TabIndex = 12;
+            // 
+            // lb
+            // 
+            this.lb.AutoSize = true;
+            this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.ForeColor = System.Drawing.Color.Black;
+            this.lb.Location = new System.Drawing.Point(29, 31);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(176, 29);
+            this.lb.TabIndex = 14;
+            this.lb.Text = "PRODUCTOS";
             // 
             // btnRefresh
             // 
@@ -231,27 +242,28 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 559);
+            this.panel2.Size = new System.Drawing.Size(245, 559);
             this.panel2.TabIndex = 13;
             // 
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(27, 329);
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtStock.Location = new System.Drawing.Point(23, 345);
             this.txtStock.Multiline = true;
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(177, 26);
+            this.txtStock.Size = new System.Drawing.Size(197, 33);
             this.txtStock.TabIndex = 6;
             // 
             // lbCantidad
             // 
             this.lbCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbCantidad.ForeColor = System.Drawing.Color.Black;
-            this.lbCantidad.Location = new System.Drawing.Point(24, 310);
+            this.lbCantidad.Location = new System.Drawing.Point(19, 322);
             this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(69, 16);
+            this.lbCantidad.Size = new System.Drawing.Size(81, 20);
             this.lbCantidad.TabIndex = 24;
             this.lbCantidad.Text = "Cantidad";
             // 
@@ -259,11 +271,11 @@
             // 
             this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbDate.ForeColor = System.Drawing.Color.Black;
-            this.lbDate.Location = new System.Drawing.Point(25, 256);
+            this.lbDate.Location = new System.Drawing.Point(19, 265);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(129, 16);
+            this.lbDate.Size = new System.Drawing.Size(151, 20);
             this.lbDate.TabIndex = 18;
             this.lbDate.Text = "Fecha de entrada";
             // 
@@ -272,7 +284,7 @@
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(141, 473);
+            this.btnUpdate.Location = new System.Drawing.Point(136, 474);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(84, 33);
             this.btnUpdate.TabIndex = 9;
@@ -283,11 +295,11 @@
             // 
             this.lbPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPriceProduct.AutoSize = true;
-            this.lbPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbPriceProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbPriceProduct.Location = new System.Drawing.Point(24, 203);
+            this.lbPriceProduct.Location = new System.Drawing.Point(19, 207);
             this.lbPriceProduct.Name = "lbPriceProduct";
-            this.lbPriceProduct.Size = new System.Drawing.Size(52, 16);
+            this.lbPriceProduct.Size = new System.Drawing.Size(59, 20);
             this.lbPriceProduct.TabIndex = 16;
             this.lbPriceProduct.Text = "Precio";
             // 
@@ -296,7 +308,7 @@
             this.btnKeep.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnKeep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnKeep.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKeep.Location = new System.Drawing.Point(12, 473);
+            this.btnKeep.Location = new System.Drawing.Point(23, 474);
             this.btnKeep.Name = "btnKeep";
             this.btnKeep.Size = new System.Drawing.Size(84, 33);
             this.btnKeep.TabIndex = 8;
@@ -306,59 +318,65 @@
             // txtProductDescription
             // 
             this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductDescription.Location = new System.Drawing.Point(27, 390);
+            this.txtProductDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtProductDescription.Location = new System.Drawing.Point(23, 410);
             this.txtProductDescription.MaxLength = 100;
             this.txtProductDescription.Multiline = true;
             this.txtProductDescription.Name = "txtProductDescription";
-            this.txtProductDescription.Size = new System.Drawing.Size(177, 60);
+            this.txtProductDescription.Size = new System.Drawing.Size(197, 50);
             this.txtProductDescription.TabIndex = 7;
             // 
             // dtpDate
             // 
             this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDate.Location = new System.Drawing.Point(28, 275);
+            this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtpDate.Location = new System.Drawing.Point(23, 288);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(197, 20);
+            this.dtpDate.Size = new System.Drawing.Size(197, 26);
             this.dtpDate.TabIndex = 5;
             this.dtpDate.Value = new System.DateTime(2024, 9, 3, 18, 50, 5, 0);
             // 
             // mktPriceProduct
             // 
             this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mktPriceProduct.Location = new System.Drawing.Point(28, 222);
+            this.mktPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.mktPriceProduct.Location = new System.Drawing.Point(23, 230);
             this.mktPriceProduct.Mask = "00.00";
             this.mktPriceProduct.Name = "mktPriceProduct";
-            this.mktPriceProduct.Size = new System.Drawing.Size(171, 20);
+            this.mktPriceProduct.Size = new System.Drawing.Size(197, 26);
             this.mktPriceProduct.TabIndex = 4;
             // 
             // cmbSuppliers
             // 
             this.cmbSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbSuppliers.FormattingEnabled = true;
-            this.cmbSuppliers.Location = new System.Drawing.Point(28, 166);
+            this.cmbSuppliers.Location = new System.Drawing.Point(23, 169);
             this.cmbSuppliers.Name = "cmbSuppliers";
-            this.cmbSuppliers.Size = new System.Drawing.Size(171, 21);
+            this.cmbSuppliers.Size = new System.Drawing.Size(197, 28);
             this.cmbSuppliers.TabIndex = 3;
             // 
             // txtProductMaterial
             // 
             this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductMaterial.Location = new System.Drawing.Point(28, 100);
+            this.txtProductMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtProductMaterial.Location = new System.Drawing.Point(23, 102);
             this.txtProductMaterial.MaxLength = 15;
             this.txtProductMaterial.Multiline = true;
             this.txtProductMaterial.Name = "txtProductMaterial";
-            this.txtProductMaterial.Size = new System.Drawing.Size(177, 34);
+            this.txtProductMaterial.Size = new System.Drawing.Size(197, 34);
             this.txtProductMaterial.TabIndex = 2;
             // 
             // txtProductName
             // 
             this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductName.Location = new System.Drawing.Point(28, 35);
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtProductName.Location = new System.Drawing.Point(23, 36);
             this.txtProductName.MaxLength = 15;
             this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(177, 34);
+            this.txtProductName.Size = new System.Drawing.Size(197, 34);
             this.txtProductName.TabIndex = 1;
             // 
             // dgvProduct
@@ -369,24 +387,13 @@
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.ContextMenuStrip = this.MenuProductos;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProduct.Location = new System.Drawing.Point(233, 83);
+            this.dgvProduct.Location = new System.Drawing.Point(245, 83);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(813, 559);
+            this.dgvProduct.Size = new System.Drawing.Size(801, 559);
             this.dgvProduct.TabIndex = 14;
-            // 
-            // lb
-            // 
-            this.lb.AutoSize = true;
-            this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.ForeColor = System.Drawing.Color.Black;
-            this.lb.Location = new System.Drawing.Point(29, 31);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(176, 29);
-            this.lb.TabIndex = 14;
-            this.lb.Text = "PRODUCTOS";
             // 
             // FrmProductsView
             // 
