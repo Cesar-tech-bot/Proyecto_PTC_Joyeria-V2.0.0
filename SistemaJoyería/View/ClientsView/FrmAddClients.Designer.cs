@@ -145,6 +145,7 @@
             // 
             this.mskCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.mskCellphoneN.Location = new System.Drawing.Point(17, 298);
+            this.mskCellphoneN.Mask = "0000-0000";
             this.mskCellphoneN.Name = "mskCellphoneN";
             this.mskCellphoneN.Size = new System.Drawing.Size(509, 31);
             this.mskCellphoneN.TabIndex = 5;
@@ -162,6 +163,7 @@
             // 
             this.mskDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.mskDuiDoc.Location = new System.Drawing.Point(17, 458);
+            this.mskDuiDoc.Mask = "0000000-0";
             this.mskDuiDoc.Name = "mskDuiDoc";
             this.mskDuiDoc.Size = new System.Drawing.Size(508, 31);
             this.mskDuiDoc.TabIndex = 3;
