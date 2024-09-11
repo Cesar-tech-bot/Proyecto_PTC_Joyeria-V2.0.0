@@ -37,6 +37,13 @@
             this.txtBuscarRegistro = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.listSuppliers = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,6 +170,14 @@
             // listSuppliers
             // 
             this.listSuppliers.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.listSuppliers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
             this.listSuppliers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listSuppliers.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.listSuppliers.FullRowSelect = true;
@@ -175,6 +190,34 @@
             this.listSuppliers.UseCompatibleStateImageBehavior = false;
             this.listSuppliers.View = System.Windows.Forms.View.Details;
             this.listSuppliers.SelectedIndexChanged += new System.EventHandler(this.listSuppliers_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nombre de Empresa";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Nombre de Contacto";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Fecha de Registro";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Teléfono";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Correo Electrónico";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Dirección";
             // 
             // FrmSuppliers
             // 
@@ -204,5 +247,12 @@
         public System.Windows.Forms.Button btnRefresacar;
         public System.Windows.Forms.ListView listSuppliers;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ColumnHeader columnHeader1;
+        public System.Windows.Forms.ColumnHeader columnHeader2;
+        public System.Windows.Forms.ColumnHeader columnHeader3;
+        public System.Windows.Forms.ColumnHeader columnHeader4;
+        public System.Windows.Forms.ColumnHeader columnHeader5;
+        public System.Windows.Forms.ColumnHeader columnHeader6;
+        public System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }
