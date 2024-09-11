@@ -3,12 +3,8 @@ using SistemaJoyería.Model.DTO;
 using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaJoyería.Controller.Suppliers
@@ -98,7 +94,7 @@ namespace SistemaJoyería.Controller.Suppliers
             supplier.Phone = vistaControlada.txtTelefono.Text.Trim();
             supplier.Email = vistaControlada.txtEmail.Text.Trim();
             supplier.Direction = vistaControlada.txtDireccion.Text.Trim();
-            supplier.RegistrationDate = vistaControlada.dtpFechaRegistro.Value;
+            supplier.DayAdded = vistaControlada.dtpFechaRegistro.Value;
             return supplier;
         }
 
@@ -109,6 +105,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.txtTelefono.Clear();
             vistaControlada.txtEmail.Clear();
             vistaControlada.txtDireccion.Clear();
+            vistaControlada.dtpFechaRegistro.Value = DateTime.Now;
         }
 
         private bool ValidateAllFields()
