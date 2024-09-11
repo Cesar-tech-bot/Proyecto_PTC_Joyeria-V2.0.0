@@ -22,14 +22,15 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.Load += (sender, e) => vistaControlada.txtNombreEmpresa.Focus();
 
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
+            vistaPasada.btnLimpiar.Click += (sender, e) => ClearFields();
 
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreEmpresa, 20);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreContacto, 15);
+            vistaPasada.dtpFechaRegistro.ValueChanged += (sender, e) => ValidateDate(vistaPasada.dtpFechaRegistro.Value);
             vistaPasada.txtTelefono.KeyPress += ValidatePhoneInput;
             vistaPasada.txtTelefono.TextChanged += ValidatePhoneLength;
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 150);
-            vistaPasada.dtpFechaRegistro.ValueChanged += (sender, e) => ValidateDate(vistaPasada.dtpFechaRegistro.Value);
 
             vistaControlada.KeyPreview = true;
             vistaControlada.KeyDown += Form_KeyDown;
@@ -91,10 +92,10 @@ namespace SistemaJoyería.Controller.Suppliers
         {
             supplier.CompanyName = vistaControlada.txtNombreEmpresa.Text.Trim();
             supplier.ContactName = vistaControlada.txtNombreContacto.Text.Trim();
+            supplier.DayAdded = vistaControlada.dtpFechaRegistro.Value;
             supplier.Phone = vistaControlada.txtTelefono.Text.Trim();
             supplier.Email = vistaControlada.txtEmail.Text.Trim();
             supplier.Direction = vistaControlada.txtDireccion.Text.Trim();
-            supplier.DayAdded = vistaControlada.dtpFechaRegistro.Value;
             return supplier;
         }
 

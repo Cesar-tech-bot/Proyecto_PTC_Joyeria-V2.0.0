@@ -40,6 +40,7 @@ namespace SistemaJoyeria.DAO
                         // Agrega los demás datos del proveedor como subitems
                         item.SubItems.Add(reader["CompanyName"].ToString());
                         item.SubItems.Add(reader["ContactName"].ToString());
+                        item.SubItems.Add(reader["DayAdded"].ToString());
                         item.SubItems.Add(reader["Phone"].ToString());
                         item.SubItems.Add(reader["Email"].ToString());
                         item.SubItems.Add(reader["Direction"].ToString());
@@ -89,6 +90,7 @@ namespace SistemaJoyeria.DAO
                         // Agrega los demás datos del proveedor como subitems
                         item.SubItems.Add(reader["CompanyName"].ToString());
                         item.SubItems.Add(reader["ContactName"].ToString());
+                        item.SubItems.Add(reader["DayAdded"].ToString());
                         item.SubItems.Add(reader["Phone"].ToString());
                         item.SubItems.Add(reader["Email"].ToString());
                         item.SubItems.Add(reader["Direction"].ToString());

@@ -21,10 +21,10 @@ namespace SistemaJoyería.Model.DAO
 
                 cmdInsert.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
                 cmdInsert.Parameters.AddWithValue("@ContactName", supplier.ContactName);
+                cmdInsert.Parameters.AddWithValue("@DayAdded", supplier.DayAdded);
                 cmdInsert.Parameters.AddWithValue("@Phone", supplier.Phone);
                 cmdInsert.Parameters.AddWithValue("@Email", supplier.Email);
                 cmdInsert.Parameters.AddWithValue("@Direction", supplier.Direction);
-                cmdInsert.Parameters.AddWithValue("@DayAdded", supplier.DayAdded);
 
                 int respuesta = cmdInsert.ExecuteNonQuery();
                 return respuesta;
@@ -47,13 +47,12 @@ namespace SistemaJoyería.Model.DAO
 
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
-                cmdUpdate.Parameters.AddWithValue("@IDSupplier", supplier.IDSupplier);
                 cmdUpdate.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
                 cmdUpdate.Parameters.AddWithValue("@ContactName", supplier.ContactName);
+                cmdUpdate.Parameters.AddWithValue("@DayAdded", supplier.DayAdded);
                 cmdUpdate.Parameters.AddWithValue("@Phone", supplier.Phone);
                 cmdUpdate.Parameters.AddWithValue("@Email", supplier.Email);
                 cmdUpdate.Parameters.AddWithValue("@Direction", supplier.Direction);
-                cmdUpdate.Parameters.AddWithValue("@DayAdded", supplier.DayAdded);
 
                 return cmdUpdate.ExecuteNonQuery();
             }
