@@ -33,7 +33,6 @@ namespace SistemaJoyería.Controller.Suppliers
         {
         }
 
-        // Método para actualizar un proveedor
         public void UpdateSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
