@@ -42,5 +42,40 @@ namespace SistemaJoyería.View.Suppliers
         {
 
         }
+
+        private void NombreEmpresa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreContacto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Telefono_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Email_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Direccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

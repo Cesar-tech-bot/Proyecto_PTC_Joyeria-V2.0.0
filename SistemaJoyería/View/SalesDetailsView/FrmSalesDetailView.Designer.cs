@@ -61,10 +61,10 @@
             // txtDate
             // 
             this.txtDate.AutoSize = true;
-            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.txtDate.Location = new System.Drawing.Point(15, 114);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(54, 16);
+            this.txtDate.Size = new System.Drawing.Size(47, 13);
             this.txtDate.TabIndex = 1;
             this.txtDate.Text = "Fecha ";
             // 
@@ -92,75 +92,79 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(674, 71);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(678, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 25);
+            this.label2.Size = new System.Drawing.Size(23, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "$";
             // 
             // mskPrice
             // 
-            this.mskPrice.Location = new System.Drawing.Point(703, 74);
+            this.mskPrice.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
+            this.mskPrice.Location = new System.Drawing.Point(707, 93);
             this.mskPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskPrice.Mask = "00.00";
             this.mskPrice.Name = "mskPrice";
-            this.mskPrice.Size = new System.Drawing.Size(63, 22);
+            this.mskPrice.Size = new System.Drawing.Size(63, 21);
             this.mskPrice.TabIndex = 4;
             // 
             // dtpDateSell
             // 
+            this.dtpDateSell.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.dtpDateSell.Location = new System.Drawing.Point(19, 145);
             this.dtpDateSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateSell.Name = "dtpDateSell";
-            this.dtpDateSell.Size = new System.Drawing.Size(252, 22);
+            this.dtpDateSell.Size = new System.Drawing.Size(252, 21);
             this.dtpDateSell.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(611, 39);
+            this.label6.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(609, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(250, 29);
+            this.label6.Size = new System.Drawing.Size(262, 28);
             this.label6.TabIndex = 6;
             this.label6.Text = "Precio del producto:";
             // 
             // txtQuantity
             // 
+            this.txtQuantity.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.txtQuantity.Location = new System.Drawing.Point(255, 71);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(99, 22);
+            this.txtQuantity.Size = new System.Drawing.Size(99, 21);
             this.txtQuantity.TabIndex = 2;
             // 
             // txtTotal
             // 
             this.txtTotal.AutoSize = true;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.txtTotal.Location = new System.Drawing.Point(252, 52);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(73, 16);
+            this.txtTotal.Size = new System.Drawing.Size(69, 13);
             this.txtTotal.TabIndex = 4;
             this.txtTotal.Text = "Cantidad:";
             // 
             // cmbProduct
             // 
             this.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProduct.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.cmbProduct.FormattingEnabled = true;
             this.cmbProduct.Location = new System.Drawing.Point(17, 70);
             this.cmbProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(180, 24);
+            this.cmbProduct.Size = new System.Drawing.Size(180, 21);
             this.cmbProduct.TabIndex = 1;
             // 
             // txtProductsSell
             // 
             this.txtProductsSell.AutoSize = true;
-            this.txtProductsSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductsSell.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.txtProductsSell.Location = new System.Drawing.Point(15, 52);
             this.txtProductsSell.Name = "txtProductsSell";
-            this.txtProductsSell.Size = new System.Drawing.Size(154, 16);
+            this.txtProductsSell.Size = new System.Drawing.Size(147, 13);
             this.txtProductsSell.TabIndex = 0;
             this.txtProductsSell.Text = "Seleccione producto:";
             // 
@@ -168,6 +172,7 @@
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnClear.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Snow;
             this.btnClear.Location = new System.Drawing.Point(68, 340);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -181,6 +186,7 @@
             // 
             this.btnInsertSell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInsertSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnInsertSell.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.btnInsertSell.ForeColor = System.Drawing.Color.White;
             this.btnInsertSell.Location = new System.Drawing.Point(183, 340);
             this.btnInsertSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -194,6 +200,7 @@
             // 
             this.btnImprent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnImprent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnImprent.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.btnImprent.ForeColor = System.Drawing.Color.White;
             this.btnImprent.Location = new System.Drawing.Point(922, 340);
             this.btnImprent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -220,6 +227,7 @@
             // 
             this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 7F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(792, 340);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

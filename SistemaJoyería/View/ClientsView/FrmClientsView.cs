@@ -28,5 +28,10 @@ namespace SistemaJoyería.View.ClientsView
         {
 
         }
+
+        private void btnAddClients_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
