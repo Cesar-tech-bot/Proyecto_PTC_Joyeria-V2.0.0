@@ -89,7 +89,7 @@ namespace SistemaJoyería.Controller.ClientsController
             else
             {
                 MessageBox.Show("Datos faltantes o incorrectos, complete el formulario con la información requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }        
         }
 
 
