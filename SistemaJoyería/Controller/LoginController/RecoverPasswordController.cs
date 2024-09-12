@@ -1,4 +1,5 @@
-﻿using SistemaJoyería.View.LoginView;
+﻿using SistemaJoyería.View;
+using SistemaJoyería.View.LoginView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,15 @@ namespace SistemaJoyería.Controller.LoginController
         public RecoverPasswordController(FrmRecoverPassword Vista)
         {
             objLogin = Vista;
-            
+            objLogin.btnPreguntas.Click += new EventHandler(AbrirPreguntas);
         }
+
+        public void AbrirPreguntas(object sender, EventArgs e)
+        {
+            FrmQuestionsLogin opneFrom = new FrmQuestionsLogin();
+            opneFrom.Show();
+            objLogin.Hide();
+        }
+
     }
 }
