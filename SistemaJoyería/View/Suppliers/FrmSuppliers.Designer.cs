@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 81);
+            this.panel1.Size = new System.Drawing.Size(1264, 81);
             this.panel1.TabIndex = 5;
             // 
             // btnActualizar
@@ -73,10 +73,10 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(1218, 28);
+            this.btnActualizar.Location = new System.Drawing.Point(1138, 28);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(126, 29);
+            this.btnActualizar.Size = new System.Drawing.Size(106, 29);
             this.btnActualizar.TabIndex = 6;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -90,10 +90,10 @@
             this.btnRefresacar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresacar.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.btnRefresacar.ForeColor = System.Drawing.Color.White;
-            this.btnRefresacar.Location = new System.Drawing.Point(806, 27);
+            this.btnRefresacar.Location = new System.Drawing.Point(758, 28);
             this.btnRefresacar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnRefresacar.Name = "btnRefresacar";
-            this.btnRefresacar.Size = new System.Drawing.Size(123, 31);
+            this.btnRefresacar.Size = new System.Drawing.Size(103, 30);
             this.btnRefresacar.TabIndex = 3;
             this.btnRefresacar.Text = "Refrescar";
             this.btnRefresacar.UseVisualStyleBackColor = false;
@@ -107,10 +107,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1081, 28);
+            this.btnEliminar.Location = new System.Drawing.Point(1012, 28);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(127, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(106, 29);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -124,10 +124,10 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(942, 27);
+            this.btnAgregar.Location = new System.Drawing.Point(882, 28);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(129, 31);
+            this.btnAgregar.Size = new System.Drawing.Size(111, 30);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnBuscar.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(612, 27);
+            this.btnBuscar.Location = new System.Drawing.Point(612, 28);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(144, 38);
+            this.btnBuscar.Size = new System.Drawing.Size(108, 32);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             this.listSuppliers.Location = new System.Drawing.Point(0, 81);
             this.listSuppliers.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listSuppliers.Name = "listSuppliers";
-            this.listSuppliers.Size = new System.Drawing.Size(1370, 668);
+            this.listSuppliers.Size = new System.Drawing.Size(1264, 600);
             this.listSuppliers.TabIndex = 6;
             this.listSuppliers.UseCompatibleStateImageBehavior = false;
             this.listSuppliers.View = System.Windows.Forms.View.Details;
@@ -229,12 +229,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.listSuppliers);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(1280, 718);
             this.Name = "FrmSuppliers";
             this.Text = "FrmSuppliers";
             this.panel1.ResumeLayout(false);
