@@ -26,7 +26,8 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaPasada.btnAgregar.Click += (sender, e) => AddSupplier(supplier);
             vistaPasada.btnBuscar.Click += (sender, e) => _supplierDAO.SearchData(vistaPasada);
             vistaPasada.btnEliminar.Click += (sender, e) => EliminarSupplier();
-            vistaPasada.btnRefresacar.Click += (sender, e) => ActualizarSupplier();
+            vistaPasada.btnActualizar.Click += (sender, e) => ActualizarSupplier();
+            vistaPasada.btnRefresacar.Click += (sender, e) => _supplierDAO.GetData(vistaPasada);
 
             _supplierDAO.GetData(vistaPasada); // Carga inicial de datos en el formulario
         }

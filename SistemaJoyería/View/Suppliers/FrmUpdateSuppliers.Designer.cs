@@ -53,7 +53,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(169, 292);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(138, 51);
-            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
@@ -132,7 +132,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(169, 166);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(304, 26);
-            this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.TabIndex = 4;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionSoloNumeros);
             // 
             // txtEmail
@@ -142,7 +142,7 @@
             this.txtEmail.Location = new System.Drawing.Point(169, 206);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(304, 26);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtDireccion
             // 
@@ -151,7 +151,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(169, 249);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(304, 26);
-            this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.TabIndex = 6;
             // 
             // dtpFechaRegistro
             // 
@@ -160,7 +160,7 @@
             this.dtpFechaRegistro.Location = new System.Drawing.Point(169, 127);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(305, 26);
-            this.dtpFechaRegistro.TabIndex = 0;
+            this.dtpFechaRegistro.TabIndex = 3;
             // 
             // label1
             // 
