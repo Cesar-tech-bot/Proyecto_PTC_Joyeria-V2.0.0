@@ -82,6 +82,8 @@
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\DashboardController\DashboardController.cs" />
     <Compile Include="Controller\LoginController\ChangeOriginalPasswordController.cs" />
+    <Compile Include="Controller\LoginController\ControllerCambiarContraFromQuestions.cs" />
+    <Compile Include="Controller\LoginController\ControllerQuestionVerification.cs" />
     <Compile Include="Controller\LoginController\RecoverPasswordController.cs" />
     <Compile Include="Controller\LoginController\CommonClassesController.cs" />
     <Compile Include="Controller\LoginController\LoginController.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
+    <Compile Include="Model\DAO\DAOCambiarClave.cs" />
+    <Compile Include="Model\DAO\DAOSecurityQuestions.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
@@ -100,6 +104,7 @@
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
+    <Compile Include="Model\DTO\DTOSecurityQuestions.cs" />
     <Compile Include="Model\DTO\LoginDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />
     <Compile Include="Model\DTO\SalesDetailsDTO.cs" />
@@ -124,6 +129,12 @@
     <Compile Include="View\DashboardView\FrmDashboardView.Designer.cs">
       <DependentUpon>FrmDashboardView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\LoginView\FrmCambiarContraForQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmCambiarContraForQuestions.Designer.cs">
+      <DependentUpon>FrmCambiarContraForQuestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView\FrmChangeOriginalPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +158,12 @@
     </Compile>
     <Compile Include="View\LoginView\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView\FrmQuestionsLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmQuestionsLogin.Designer.cs">
+      <DependentUpon>FrmQuestionsLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView\FrmRecoverPassword.cs">
       <SubType>Form</SubType>
@@ -203,6 +220,9 @@
     <EmbeddedResource Include="View\DashboardView\FrmDashboardView.resx">
       <DependentUpon>FrmDashboardView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmCambiarContraForQuestions.resx">
+      <DependentUpon>FrmCambiarContraForQuestions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangeOriginalPassword.resx">
       <DependentUpon>FrmChangeOriginalPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmQuestionsLogin.resx">
+      <DependentUpon>FrmQuestionsLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmRecoverPassword.resx">
       <DependentUpon>FrmRecoverPassword.cs</DependentUpon>
