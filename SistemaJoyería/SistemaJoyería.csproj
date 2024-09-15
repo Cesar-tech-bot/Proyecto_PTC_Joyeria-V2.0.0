@@ -270,8 +270,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\Recuperar contraseña.png" />
+    <None Include="Resources\ADmin intervención.png" />
+    <None Include="Resources\Preguntaa.png" />
+    <None Include="Resources\Pregunta.png" />
+    <None Include="Resources\Gmail.png" />
+    <Content Include="Resources\Imagen del Logo.jpg" />
+    <None Include="Resources\User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
