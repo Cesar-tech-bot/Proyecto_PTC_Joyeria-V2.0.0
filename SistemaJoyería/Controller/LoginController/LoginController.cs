@@ -47,12 +47,12 @@ namespace SistemaJoyería.Controller.LoginController
             bool answer = DAOData.LoginValidation();
 
             if (answer == true)
-            {
-                objLogin.Hide();
+            {               
                 //FrmHomePage frmHomePage = new FrmHomePage();
                 //frmHomePage.Show();
                 MessageBox.Show("Inicio de sesión correcto", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmDashboardView frmDashboardView = new FrmDashboardView();
+                objLogin.Hide();
                 frmDashboardView.Show();
             }
             else
