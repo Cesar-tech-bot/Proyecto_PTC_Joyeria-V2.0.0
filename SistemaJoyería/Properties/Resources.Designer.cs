@@ -83,6 +83,16 @@ namespace SistemaJoyería.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NewPSWRD {
+            get {
+                object obj = ResourceManager.GetObject("NewPSWRD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pregunta {
             get {
                 object obj = ResourceManager.GetObject("Pregunta", resourceCulture);
@@ -106,6 +116,16 @@ namespace SistemaJoyería.Properties {
         internal static System.Drawing.Bitmap Recuperar_contraseña {
             get {
                 object obj = ResourceManager.GetObject("Recuperar contraseña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save {
+            get {
+                object obj = ResourceManager.GetObject("Save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

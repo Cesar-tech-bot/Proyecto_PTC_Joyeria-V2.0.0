@@ -22,6 +22,7 @@ namespace SistemaJoyería.Controller.LoginController
         {
             objVerifications = vista;
             objVerifications.btnVerificarRespuestas.Click += new EventHandler(VerificarRespuestasDS);
+            objVerifications.btnComeBack.Click += new EventHandler(ShowRecover);
         }
 
         public void VerificarRespuestasDS(object sender, EventArgs e)
@@ -57,6 +58,13 @@ namespace SistemaJoyería.Controller.LoginController
                 MessageBox.Show("Necesita llenar los campos para cambiar su contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        }
+
+        void ShowRecover(object sender, EventArgs e) 
+        { 
+         FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword();
+            objVerifications.Hide();
+            frmRecoverPassword.Show();
         }
 
     }

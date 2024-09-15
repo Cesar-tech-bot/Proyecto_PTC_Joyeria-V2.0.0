@@ -73,7 +73,8 @@ namespace SistemaJoyería.Controller.LoginController
 
         void ShowMetods(object sender, EventArgs e)
         {
-            FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword(); 
+            FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword();
+            objLogin.Hide();
             frmRecoverPassword.Show();
         }
     }
