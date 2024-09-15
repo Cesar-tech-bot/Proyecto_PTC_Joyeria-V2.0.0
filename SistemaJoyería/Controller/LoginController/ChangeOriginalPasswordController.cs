@@ -8,5 +8,6 @@ namespace SistemaJoyería.Controller.LoginController
 {
     internal class ChangeOriginalPasswordController
     {
+
     }
 }

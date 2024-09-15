@@ -38,6 +38,7 @@
             this.btnVerificarRespuestas = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnComeBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,10 +125,10 @@
             this.btnVerificarRespuestas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnVerificarRespuestas.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Bold);
             this.btnVerificarRespuestas.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarRespuestas.Location = new System.Drawing.Point(598, 247);
+            this.btnVerificarRespuestas.Location = new System.Drawing.Point(632, 234);
             this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerificarRespuestas.Name = "btnVerificarRespuestas";
-            this.btnVerificarRespuestas.Size = new System.Drawing.Size(186, 85);
+            this.btnVerificarRespuestas.Size = new System.Drawing.Size(186, 55);
             this.btnVerificarRespuestas.TabIndex = 18;
             this.btnVerificarRespuestas.Text = "Confirmar";
             this.btnVerificarRespuestas.UseVisualStyleBackColor = false;
@@ -145,12 +146,25 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.Preguntaa;
-            this.pictureBox1.Location = new System.Drawing.Point(570, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(597, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 184);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnComeBack
+            // 
+            this.btnComeBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnComeBack.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold);
+            this.btnComeBack.ForeColor = System.Drawing.Color.White;
+            this.btnComeBack.Location = new System.Drawing.Point(798, 303);
+            this.btnComeBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnComeBack.Name = "btnComeBack";
+            this.btnComeBack.Size = new System.Drawing.Size(87, 33);
+            this.btnComeBack.TabIndex = 18;
+            this.btnComeBack.Text = "Regresar";
+            this.btnComeBack.UseVisualStyleBackColor = false;
             // 
             // FrmQuestionsLogin
             // 
@@ -160,6 +174,7 @@
             this.ClientSize = new System.Drawing.Size(897, 341);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnComeBack);
             this.Controls.Add(this.btnVerificarRespuestas);
             this.Controls.Add(this.lbPregunta3);
             this.Controls.Add(this.txtRespuesta2);
@@ -169,7 +184,7 @@
             this.Controls.Add(this.txtRespuesta3);
             this.Controls.Add(this.txtUsuario);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmQuestionsLogin";
             this.Text = "FrmQuestionsLogin";
             this.Load += new System.EventHandler(this.FrmQuestionsLogin_Load);
@@ -191,5 +206,6 @@
         public System.Windows.Forms.Button btnVerificarRespuestas;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btnComeBack;
     }
 }

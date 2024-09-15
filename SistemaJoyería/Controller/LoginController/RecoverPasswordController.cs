@@ -19,6 +19,13 @@ namespace SistemaJoyería.Controller.LoginController
             objLogin.btnPreguntas.Click += new EventHandler(AbrirPreguntas);
         }
 
+        void ComeBack(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Hide();
+            frmLogin.Show();
+        }
+
         public void AbrirPreguntas(object sender, EventArgs e)
         {
             FrmQuestionsLogin opneFrom = new FrmQuestionsLogin();
