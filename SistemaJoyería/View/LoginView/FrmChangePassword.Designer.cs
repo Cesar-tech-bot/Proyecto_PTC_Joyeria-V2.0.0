@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnNuevaContraseñaPDS = new System.Windows.Forms.Button();
+            this.txtConfirmarcontraseñaPDS = new System.Windows.Forms.TextBox();
+            this.txtUsernamePDS = new System.Windows.Forms.TextBox();
+            this.txtContraseñanuevaPDS = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,45 +50,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNuevaContraseñaPDS
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(455, 323);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 65);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Cambiar Contraseña";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNuevaContraseñaPDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnNuevaContraseñaPDS.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNuevaContraseñaPDS.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaContraseñaPDS.Location = new System.Drawing.Point(455, 323);
+            this.btnNuevaContraseñaPDS.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevaContraseñaPDS.Name = "btnNuevaContraseñaPDS";
+            this.btnNuevaContraseñaPDS.Size = new System.Drawing.Size(159, 65);
+            this.btnNuevaContraseñaPDS.TabIndex = 19;
+            this.btnNuevaContraseñaPDS.Text = "Cambiar Contraseña";
+            this.btnNuevaContraseñaPDS.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtConfirmarcontraseñaPDS
             // 
-            this.textBox4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(415, 284);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(237, 31);
-            this.textBox4.TabIndex = 18;
+            this.txtConfirmarcontraseñaPDS.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtConfirmarcontraseñaPDS.Location = new System.Drawing.Point(415, 284);
+            this.txtConfirmarcontraseñaPDS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmarcontraseñaPDS.Name = "txtConfirmarcontraseñaPDS";
+            this.txtConfirmarcontraseñaPDS.Size = new System.Drawing.Size(237, 31);
+            this.txtConfirmarcontraseñaPDS.TabIndex = 18;
             // 
-            // textBox3
+            // txtUsernamePDS
             // 
-            this.textBox3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(415, 129);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 31);
-            this.textBox3.TabIndex = 17;
+            this.txtUsernamePDS.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsernamePDS.Location = new System.Drawing.Point(415, 129);
+            this.txtUsernamePDS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsernamePDS.Name = "txtUsernamePDS";
+            this.txtUsernamePDS.Size = new System.Drawing.Size(237, 31);
+            this.txtUsernamePDS.TabIndex = 17;
             // 
-            // textBox2
+            // txtContraseñanuevaPDS
             // 
-            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(415, 204);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 31);
-            this.textBox2.TabIndex = 16;
+            this.txtContraseñanuevaPDS.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtContraseñanuevaPDS.Location = new System.Drawing.Point(415, 204);
+            this.txtContraseñanuevaPDS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseñanuevaPDS.Name = "txtContraseñanuevaPDS";
+            this.txtContraseñanuevaPDS.Size = new System.Drawing.Size(237, 31);
+            this.txtContraseñanuevaPDS.TabIndex = 16;
             // 
             // textBox1
             // 
@@ -265,10 +265,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 450);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnNuevaContraseñaPDS);
+            this.Controls.Add(this.txtConfirmarcontraseñaPDS);
+            this.Controls.Add(this.txtUsernamePDS);
+            this.Controls.Add(this.txtContraseñanuevaPDS);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -287,17 +287,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
@@ -306,5 +295,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btnNuevaContraseñaPDS;
+        public System.Windows.Forms.TextBox txtConfirmarcontraseñaPDS;
+        public System.Windows.Forms.TextBox txtUsernamePDS;
+        public System.Windows.Forms.TextBox txtContraseñanuevaPDS;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Panel panel1;
     }
 }

@@ -12,13 +12,13 @@ namespace SistemaJoyería.Controller.LoginController
 {
     internal class ControllerCambiarContraFromQuestions
     {
-        FrmCambiarContraForQuestions objContraFromQuestions;
+       FrmChangePassword objContraFromQuestions;
 
-        public ControllerCambiarContraFromQuestions(FrmCambiarContraForQuestions vista, string username)
+        public ControllerCambiarContraFromQuestions(FrmChangePassword vista, string username)
         {
             objContraFromQuestions = vista;
             objContraFromQuestions.txtUsernamePDS.Text = username;
-            objContraFromQuestions.btnNuevaContraseñaPDS.Click += new EventHandler(NuevaContraseña);
+            objContraFromQuestions.txtContraseñanuevaPDS.Click += new EventHandler(NuevaContraseña);
         }
 
         public void NuevaContraseña(object sender, EventArgs e)
