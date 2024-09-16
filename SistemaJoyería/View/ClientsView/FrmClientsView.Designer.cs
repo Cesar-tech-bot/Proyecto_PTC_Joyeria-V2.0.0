@@ -291,7 +291,6 @@
             this.txtUClientsName.Size = new System.Drawing.Size(104, 23);
             this.txtUClientsName.TabIndex = 37;
             this.txtUClientsName.Text = "Nombres";
-            this.txtUClientsName.Click += new System.EventHandler(this.txtUClientsName_Click);
             // 
             // txtUClientsSurname
             // 
@@ -302,7 +301,6 @@
             this.txtUClientsSurname.Size = new System.Drawing.Size(109, 23);
             this.txtUClientsSurname.TabIndex = 36;
             this.txtUClientsSurname.Text = "Apellidos";
-            this.txtUClientsSurname.Click += new System.EventHandler(this.txtUClientsSurname_Click);
             // 
             // panel1
             // 
@@ -350,7 +348,6 @@
             this.btnAddClients.TabIndex = 4;
             this.btnAddClients.Text = "Añadir";
             this.btnAddClients.UseVisualStyleBackColor = false;
-            this.btnAddClients.Click += new System.EventHandler(this.btnAddClients_Click);
             // 
             // panel4
             // 

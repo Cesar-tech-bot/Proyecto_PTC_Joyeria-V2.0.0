@@ -20,10 +20,10 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             // Eventos que se ejecutan con click
             View.btnInsertSell.Click += new EventHandler(AddSalesDetail);
             View.btnRefresh.Click += new EventHandler(RefreshDGV);
-            //View.btnSearch.Click += new EventHandler(SearchSalesDetails);
             View.txtQuantity.KeyPress += new KeyPressEventHandler(OnlyNumber);
             View.btnClear.Click += new EventHandler(ClearZone);
             //Otro tipo de método
+            View.txtQuantity.TextChanged += new EventHandler(Limit3);
             // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
             View.dtpDateSell.MinDate = DateTime.Today;
             View.dtpDateSell.MaxDate = DateTime.Today;
@@ -31,6 +31,8 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             View.dtpDateSell.Value = DateTime.Today;
             //Se hace ReadOnly el DTP
             View.dtpDateSell.Enabled = false;
+            DisableCopyCutPaste(View.txtQuantity);
+            DisableCopyCutPasteMasked(View.mskPrice);
         }
 
         void CargaInicial(object sender, EventArgs e)
@@ -94,14 +96,6 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             }
         }
 
-        // Buscar detalles de ventas
-        //void SearchSalesDetails(object sender, EventArgs e)
-        //{
-        //    SalesDetailsViewDAO daoSearch = new SalesDetailsViewDAO();
-        //    DataSet ds = daoSearch.SearchSalesDetails(ObjSalesDetails.txtSearchSell.Text.Trim());
-        //    ObjSalesDetails.dgvSellInfo.DataSource = ds.Tables["SalesDetails"];
-        //}
-
         void ClearZone(object sender, EventArgs e)
         {
             ObjSalesDetails.cmbProduct.SelectedIndex = -1;
@@ -120,6 +114,50 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             {
                 e.Handled = true;
             }
+        }
+
+        private void Limit3(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            CharacterLimit3(textBox);
+        }
+
+        //Limitar a 150 Carácateres
+        private void CharacterLimit3(TextBox textBox)
+        {
+            textBox.MaxLength = 3;
+        }
+
+        private void DisableCopyCutPaste(TextBox textBox)
+        {
+            // Deshabilitamos el menú contextual del TextBox
+            textBox.ContextMenu = new ContextMenu();
+
+            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
+            textBox.KeyDown += (sender, e) =>
+            {
+                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
+                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                {
+                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
+                }
+            };
+        }
+
+        private void DisableCopyCutPasteMasked(MaskedTextBox maskedTextBox)
+        {
+            // Deshabilitamos el menú contextual del MaskedTextBox
+            maskedTextBox.ContextMenu = new ContextMenu();
+
+            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
+            maskedTextBox.KeyDown += (sender, e) =>
+            {
+                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
+                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                {
+                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
+                }
+            };
         }
     }
 }
