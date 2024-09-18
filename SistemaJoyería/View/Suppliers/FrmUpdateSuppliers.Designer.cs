@@ -36,11 +36,11 @@
             this.NombreContacto = new System.Windows.Forms.Label();
             this.txtNombreContacto = new System.Windows.Forms.TextBox();
             this.NombreEmpresa = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnActualizar
@@ -125,16 +125,6 @@
             this.NombreEmpresa.TabIndex = 0;
             this.NombreEmpresa.Text = "NombreEmpresa";
             // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(169, 166);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(304, 26);
-            this.txtTelefono.TabIndex = 4;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacionSoloNumeros);
-            // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -172,17 +162,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha de Registro";
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(169, 166);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(304, 26);
+            this.txtTelefono.TabIndex = 8;
+            // 
             // FrmUpdateSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(493, 365);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.dtpFechaRegistro);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtNombreEmpresa);
             this.Controls.Add(this.txtNombreContacto);
             this.Controls.Add(this.NombreEmpresa);
@@ -202,7 +201,6 @@
         public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.TextBox txtNombreEmpresa;
         public System.Windows.Forms.TextBox txtNombreContacto;
-        public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtEmail;
         public System.Windows.Forms.TextBox txtDireccion;
         public System.Windows.Forms.DateTimePicker dtpFechaRegistro;
@@ -212,5 +210,6 @@
         public System.Windows.Forms.Label NombreContacto;
         public System.Windows.Forms.Label NombreEmpresa;
         public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtTelefono;
     }
 }
