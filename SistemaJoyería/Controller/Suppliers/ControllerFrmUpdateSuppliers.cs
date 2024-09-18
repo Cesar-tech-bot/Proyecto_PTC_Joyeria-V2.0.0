@@ -4,6 +4,7 @@ using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace SistemaJoyería.Controller.Suppliers
@@ -13,16 +14,19 @@ namespace SistemaJoyería.Controller.Suppliers
         private UpdateSuppliersDAO suppliersDAO = new UpdateSuppliersDAO();
         private SupplierDTO supplier = new SupplierDTO();
         private FrmUpdateSuppliers vistaControlada;
+        private int supplierID;
 
-        public ControllerFrmUpdateSuppliers(FrmUpdateSuppliers vistaPasada)
+        public ControllerFrmUpdateSuppliers(int idProveedor, FrmUpdateSuppliers vistaPasada)
         {
+            supplierID = idProveedor;
             vistaControlada = vistaPasada;
 
-            // Eventos asociados a botones y controles del formulario de actualización
-            vistaPasada.btnActualizar.Click += (sender, e) => UpdateSupplier(supplier);
+            LoadSupplierData(idProveedor);
 
-            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreEmpresa, 20);
-            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreContacto, 15);
+            vistaPasada.btnActualizar.Click += (sender, e) => UpdateSupplier(CreateSupplierDTO());
+
+            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreEmpresa, 25);
+            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreContacto, 20);
             vistaPasada.txtTelefono.KeyPress += ValidatePhoneInput;
             vistaPasada.txtTelefono.TextChanged += ValidatePhoneLength;
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
@@ -33,20 +37,37 @@ namespace SistemaJoyería.Controller.Suppliers
         {
         }
 
+        private void LoadSupplierData(int idProveedor)
+        {
+            supplier = suppliersDAO.GetSupplierByID(idProveedor);
+
+            if (supplier != null)
+            {
+                vistaControlada.txtNombreEmpresa.Text = supplier.CompanyName;
+                vistaControlada.txtNombreContacto.Text = supplier.ContactName;
+                vistaControlada.dtpFechaRegistro.Value = supplier.DayAdded;
+                vistaControlada.txtTelefono.Text = supplier.Phone;
+                vistaControlada.txtEmail.Text = supplier.Email;
+                vistaControlada.txtDireccion.Text = supplier.Direction;
+            }
+            else
+            {
+                MessageBox.Show("Proveedor no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                vistaControlada.Close();
+            }
+        }
+
         public void UpdateSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
             {
-                // Crea el objeto SupplierDTO con los datos del formulario
-                CreateSupplierDTO();
-
                 try
                 {
                     int result = suppliersDAO.UpdateSupplier(supplier);
 
                     if (result > 0)
                     {
-                        MessageBox.Show("Proveedor actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Proveedor con ID {supplierID} actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearFields();
                     }
                 }
@@ -57,9 +78,9 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Crea el objeto SupplierDTO a partir de los datos del formulario
         private SupplierDTO CreateSupplierDTO()
         {
+            supplier.IDSupplier = supplierID;
             supplier.CompanyName = vistaControlada.txtNombreEmpresa.Text.Trim();
             supplier.ContactName = vistaControlada.txtNombreContacto.Text.Trim();
             supplier.DayAdded = vistaControlada.dtpFechaRegistro.Value;
@@ -69,13 +90,11 @@ namespace SistemaJoyería.Controller.Suppliers
             return supplier;
         }
 
-        // Manejo de excepciones SQL
         private void HandleSqlException(SqlException ex)
         {
             MessageBox.Show($"Error al actualizar proveedor: {ex.Message}", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        // Limpiar campos del formulario
         private void ClearFields()
         {
             vistaControlada.txtNombreEmpresa.Clear();
@@ -86,7 +105,6 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.dtpFechaRegistro.Value = DateTime.Now;
         }
 
-        // Validaciones para los campos del formulario
         private bool ValidateAllFields()
         {
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
@@ -107,66 +125,53 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
-        // Otras validaciones (similares a las del controlador de añadir)
         private void ValidateLength(TextBox textBox, int maxLength)
         {
             if (textBox.Text.Length > maxLength)
             {
                 textBox.Text = textBox.Text.Substring(0, maxLength);
                 textBox.SelectionStart = textBox.Text.Length;
-                MessageBox.Show($"El campo no puede exceder {maxLength} caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"La longitud máxima es de {maxLength} caracteres.", "Validación de longitud", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void ValidateLettersOnly(TextBox textBox, int maxLength)
         {
-            string input = textBox.Text;
-            string lettersOnly = System.Text.RegularExpressions.Regex.Replace(input, @"[^a-zA-Z\s]", "");
-
-            if (input != lettersOnly)
+            if (!Regex.IsMatch(textBox.Text, @"^[a-zA-Z\s]*$"))
             {
-                MessageBox.Show("Este campo solo permite letras.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox.Text = lettersOnly;
-                textBox.SelectionStart = lettersOnly.Length;
+                MessageBox.Show("Solo se permiten letras.", "Validación de caracteres", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
+                textBox.SelectionStart = textBox.Text.Length;
             }
-
             ValidateLength(textBox, maxLength);
         }
 
         private void ValidatePhoneInput(object sender, KeyPressEventArgs e)
         {
-            TextBox txtTelefono = (TextBox)sender;
-
-            if (e.KeyChar == (char)Keys.Back)
-            {
-                e.Handled = false;
-                return;
-            }
-
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' || txtTelefono.Text.Length >= 12)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Solo se permiten números.", "Validación de caracteres", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void ValidatePhoneLength(object sender, EventArgs e)
         {
-            TextBox txtTelefono = (TextBox)sender;
-            if (txtTelefono.Text.Length > 12)
+            if (vistaControlada.txtTelefono.Text.Length != 8)
             {
-                txtTelefono.Text = txtTelefono.Text.Substring(0, 12);
-                txtTelefono.SelectionStart = 12;
+                MessageBox.Show("El número de teléfono debe tener 8 dígitos.", "Validación de longitud", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private bool ValidateEmail(TextBox emailTextBox)
+        private bool ValidateEmail(TextBox textBox)
         {
-            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            if (!System.Text.RegularExpressions.Regex.IsMatch(emailTextBox.Text, emailPattern))
+            if (!Regex.IsMatch(textBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
-                MessageBox.Show("El formato del correo electrónico no es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Formato de correo no válido.", "Validación de correo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox.Focus();
                 return false;
             }
+
             return true;
         }
     }
