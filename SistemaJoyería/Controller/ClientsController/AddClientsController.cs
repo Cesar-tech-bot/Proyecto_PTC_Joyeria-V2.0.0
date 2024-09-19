@@ -44,39 +44,40 @@ namespace SistemaJoyería.Controller.ClientsController
             DisableCopyCutPaste(viewAdd.tbAddress);
         }
 
+  
+
         void SaveRegister(object sender, EventArgs e)
         {
-            // Se crean variables para los valores de los campos
             string ClientsName = ObjAddCView.tbClientsName.Text.Trim();
             string ClientsSurName = ObjAddCView.tbClientsSurname.Text.Trim();
             string Email = ObjAddCView.tbEmail.Text.Trim();
             DateTime BirthDay = ObjAddCView.dtpClientsBirthday.Value;
             string Address = ObjAddCView.tbAddress.Text.Trim();
+            int AddressLength = ObjAddCView.tbAddress.Text.Length;
 
             // Eliminamos temporalmente los guiones para validar el formato de teléfono y DUI
-            string CellPhone = ObjAddCView.mskCellphoneN.Text.Trim().Replace("-", "");
-            string DUI = ObjAddCView.mskDuiDoc.Text.Trim().Replace("-", "");
+            string CellPhone = ObjAddCView.mskCellphoneN.Text.Trim();
+            string DUI = ObjAddCView.mskDuiDoc.Text.Trim();
 
-            // Validamos si los campos están vacíos o si el formato es incorrecto
-            if (!(string.IsNullOrEmpty(ClientsName) || string.IsNullOrEmpty(ClientsSurName) ||
-                  // Validamos si el teléfono tiene exactamente 8 dígitos sin contar guiones
-                  string.IsNullOrEmpty(CellPhone) || CellPhone.Length != 9 || !CellPhone.All(char.IsDigit) ||
-                  // Validamos si el DUI tiene exactamente 9 dígitos sin contar guiones
-                  string.IsNullOrEmpty(DUI) || DUI.Length != 10 || !DUI.All(char.IsDigit) ||
-                  // Validamos si el correo es válido
+
+            if (!(// Validamos si los campos de nombres y apellidos no están vacíos
+                  string.IsNullOrEmpty(ClientsName) || string.IsNullOrEmpty(ClientsSurName) ||
+                  // Validamos si el teléfono tiene exactamente 8 dígitos sin contar guiones  // Validamos si el DUI tiene exactamente 9 dígitos sin contar guiones
+                  string.IsNullOrEmpty(CellPhone) || string.IsNullOrEmpty(DUI) ||                 
+                  // Validamos si el campo de correo electrónico no está vacío //Validación con método
                   string.IsNullOrEmpty(Email) || !Emailverifaction(Email) ||
-                  // Validamos la dirección (no vacía y no mayor a 100 caracteres)
-                  string.IsNullOrEmpty(Address) || Address.Length > 100))
+                  // Validamos si el campo de dirección no está vacío  // Validamos que la dirección no sobrepase los 100 dígitos
+                  string.IsNullOrEmpty(Address) || AddressLength > 100))
             {
-                // Si todas las validaciones pasan, registramos el cliente en la base de datos
+                // Se crea un objeto de tipo ClientsDAO
                 AddClientsDAO daoClient = new AddClientsDAO();
 
-                // Mandamos los valores tal como están en la vista, incluyendo los guiones
+                // Se mandan valores de la vista hacia el DTO de clientes
                 daoClient.FirstName = ClientsName;
                 daoClient.LastName = ClientsSurName;
                 daoClient.BirthDate = BirthDay;
-                daoClient.Phone = ObjAddCView.mskCellphoneN.Text.Trim(); // Incluye los guiones
-                daoClient.IdentityDocument = ObjAddCView.mskDuiDoc.Text.Trim(); // Incluye los guiones
+                daoClient.Phone = CellPhone;
+                daoClient.IdentityDocument = DUI;
                 daoClient.Email = Email;
                 daoClient.AddressClient = Address;
 
@@ -98,53 +99,6 @@ namespace SistemaJoyería.Controller.ClientsController
             }
         }
 
-        //void SaveRegister(object sender, EventArgs e)
-        //{
-        //    if (!(// Validamos si los campos de nombres y apellidos no están vacíos
-        //          string.IsNullOrEmpty(ObjAddCView.tbClientsName.Text.Trim()) ||
-        //          string.IsNullOrEmpty(ObjAddCView.tbClientsSurname.Text.Trim()) ||
-        //          // Validamos si el campo de número de teléfono no está vacío
-        //          string.IsNullOrEmpty(ObjAddCView.mskCellphoneN.Text.Trim()) ||
-        //          // Validamos si el campo de DUI no está vacío
-        //          string.IsNullOrEmpty(ObjAddCView.mskDuiDoc.Text.Trim()) ||
-        //          // Validamos si el campo de correo electrónico no está vacío
-        //          string.IsNullOrEmpty(ObjAddCView.tbEmail.Text.Trim()) ||
-        //          //Validación con método
-        //          !Emailverifaction(ObjAddCView.tbEmail.Text.Trim()) ||
-        //          // Validamos si el campo de dirección no está vacío
-        //          string.IsNullOrEmpty(ObjAddCView.tbAddress.Text.Trim()) ||
-        //          // Validamos que la dirección no sobrepase los 100 dígitos
-        //          ObjAddCView.tbAddress.Text.Length > 100))
-        //    {
-        //        // Se crea un objeto de tipo ClientsDAO
-        //        AddClientsDAO daoClient = new AddClientsDAO();
-
-        //        // Se mandan valores de la vista hacia el DTO de clientes
-        //        daoClient.FirstName = ObjAddCView.tbClientsName.Text.Trim();
-        //        daoClient.LastName = ObjAddCView.tbClientsSurname.Text.Trim();
-        //        daoClient.BirthDate = ObjAddCView.dtpClientsBirthday.Value;
-        //        daoClient.Phone = ObjAddCView.mskCellphoneN.Text.Trim();
-        //        daoClient.IdentityDocument = ObjAddCView.mskDuiDoc.Text.Trim();
-        //        daoClient.Email = ObjAddCView.tbEmail.Text.Trim();
-        //        daoClient.AddressClient = ObjAddCView.tbAddress.Text.Trim();
-
-        //        // Registrar cliente en la base de datos
-        //        int resultado = daoClient.RegisterClients();
-        //        if (resultado == 1)
-        //        {
-        //            MessageBox.Show("El cliente fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            ObjAddCView.Close();
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("El cliente no pudo ser registrado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Datos faltantes o incorrectos, complete el formulario con la información requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //    }
-        //}
 
 
 
