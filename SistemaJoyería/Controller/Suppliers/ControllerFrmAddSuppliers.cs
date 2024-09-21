@@ -22,7 +22,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.Load += (sender, e) => vistaControlada.txtNombreEmpresa.Focus();
 
             vistaPasada.btnGuardar.Click += (sender, e) => RegisterSupplier(supplier);
-            vistaPasada.button1.Click += (sender, e) => ClearFields();
+            vistaPasada.btnLimpiar.Click += (sender, e) => ClearFields();
 
             vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreEmpresa, 20);
             vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreContacto, 15);

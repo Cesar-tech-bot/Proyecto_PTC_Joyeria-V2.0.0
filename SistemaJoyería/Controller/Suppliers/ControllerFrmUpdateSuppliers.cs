@@ -21,22 +21,19 @@ namespace SistemaJoyería.Controller.Suppliers
             supplierID = idProveedor;
             vistaControlada = vistaPasada;
 
+            // Cargar los datos del proveedor
             LoadSupplierData(idProveedor);
 
+            // Asignar eventos de los botones y campos
             vistaPasada.btnActualizar.Click += (sender, e) => UpdateSupplier(CreateSupplierDTO());
 
-            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreEmpresa, 25);
-            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreContacto, 20);
-            vistaPasada.txtTelefono.KeyPress += ValidatePhoneInput;
-            vistaPasada.txtTelefono.TextChanged += ValidatePhoneLength;
+            vistaPasada.txtNombreEmpresa.KeyPress += (sender, e) => ValidateLettersAndSpace(e);
+            vistaPasada.txtTelefono.KeyPress += (sender, e) => ValidatePhoneInput(e);
             vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
-            vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 150);
+            vistaPasada.txtTelefono.Leave += (sender, e) => ValidatePhoneLength(vistaPasada.txtTelefono);
         }
 
-        public ControllerFrmUpdateSuppliers(string idBuena, FrmUpdateSuppliers frmUpdateSuppliers)
-        {
-        }
-
+        // Método para cargar los datos de un proveedor existente
         private void LoadSupplierData(int idProveedor)
         {
             supplier = suppliersDAO.GetSupplierByID(idProveedor);
@@ -57,6 +54,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Método para actualizar el proveedor
         public void UpdateSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
@@ -68,7 +66,7 @@ namespace SistemaJoyería.Controller.Suppliers
                     if (result > 0)
                     {
                         MessageBox.Show($"Proveedor con ID {supplierID} actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields();
+                        vistaControlada.Close();
                     }
                 }
                 catch (SqlException ex)
@@ -78,6 +76,7 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
+        // Crear SupplierDTO con datos actualizados
         private SupplierDTO CreateSupplierDTO()
         {
             supplier.IDSupplier = supplierID;
@@ -90,21 +89,13 @@ namespace SistemaJoyería.Controller.Suppliers
             return supplier;
         }
 
+        // Manejo de excepciones SQL
         private void HandleSqlException(SqlException ex)
         {
             MessageBox.Show($"Error al actualizar proveedor: {ex.Message}", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void ClearFields()
-        {
-            vistaControlada.txtNombreEmpresa.Clear();
-            vistaControlada.txtNombreContacto.Clear();
-            vistaControlada.txtTelefono.Clear();
-            vistaControlada.txtEmail.Clear();
-            vistaControlada.txtDireccion.Clear();
-            vistaControlada.dtpFechaRegistro.Value = DateTime.Now;
-        }
-
+        // Validar todos los campos
         private bool ValidateAllFields()
         {
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
@@ -122,56 +113,54 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
 
+            if (vistaControlada.txtTelefono.Text.Length != 8)
+            {
+                MessageBox.Show("El número de teléfono debe tener exactamente 8 dígitos.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             return true;
         }
 
-        private void ValidateLength(TextBox textBox, int maxLength)
+        // Validar solo letras y espacios para nombres de empresa y contacto
+        private void ValidateLettersAndSpace(KeyPressEventArgs e)
         {
-            if (textBox.Text.Length > maxLength)
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                textBox.Text = textBox.Text.Substring(0, maxLength);
-                textBox.SelectionStart = textBox.Text.Length;
-                MessageBox.Show($"La longitud máxima es de {maxLength} caracteres.", "Validación de longitud", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true; // Bloquear cualquier tecla que no sea letra o espacio
+                MessageBox.Show("Este campo solo permite letras y espacios.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void ValidateLettersOnly(TextBox textBox, int maxLength)
-        {
-            if (!Regex.IsMatch(textBox.Text, @"^[a-zA-Z\s]*$"))
-            {
-                MessageBox.Show("Solo se permiten letras.", "Validación de caracteres", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox.Text = textBox.Text.Substring(0, textBox.Text.Length - 1);
-                textBox.SelectionStart = textBox.Text.Length;
-            }
-            ValidateLength(textBox, maxLength);
-        }
-
-        private void ValidatePhoneInput(object sender, KeyPressEventArgs e)
+        // Validar entrada del teléfono: solo números
+        private void ValidatePhoneInput(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se permiten números.", "Validación de caracteres", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Este campo solo permite números.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void ValidatePhoneLength(object sender, EventArgs e)
+        // Validar que el teléfono tenga exactamente 8 dígitos
+        private void ValidatePhoneLength(TextBox txtTelefono)
         {
-            if (vistaControlada.txtTelefono.Text.Length != 8)
+            if (txtTelefono.Text.Length != 8)
             {
                 MessageBox.Show("El número de teléfono debe tener 8 dígitos.", "Validación de longitud", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private bool ValidateEmail(TextBox textBox)
+        // Validar correo electrónico
+        private bool ValidateEmail(TextBox emailTextBox)
         {
-            if (!Regex.IsMatch(textBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(emailTextBox.Text, emailPattern))
             {
-                MessageBox.Show("Formato de correo no válido.", "Validación de correo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox.Focus();
+                MessageBox.Show("El formato del correo electrónico no es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                emailTextBox.Focus();
                 return false;
             }
-
             return true;
         }
     }
