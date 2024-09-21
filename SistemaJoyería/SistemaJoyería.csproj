@@ -243,6 +243,9 @@
     <EmbeddedResource Include="View\EmployeesView\FrmEmployeesView.resx">
       <DependentUpon>FrmEmployeesView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FirstUseView\FrmFirstUse.resx">
+      <DependentUpon>FrmFirstUse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangeOriginalPassword.resx">
       <DependentUpon>FrmChangeOriginalPassword.cs</DependentUpon>
     </EmbeddedResource>
