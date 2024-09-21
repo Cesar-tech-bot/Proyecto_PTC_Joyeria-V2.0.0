@@ -36,6 +36,7 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.btnEmployee);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSupplier);
             this.panel1.Controls.Add(this.btnClients);
@@ -118,6 +120,17 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1062, 681);
             this.PanelContenedor.TabIndex = 1;
             // 
+            // btnEmployee
+            // 
+            this.btnEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmployee.BackColor = System.Drawing.Color.White;
+            this.btnEmployee.Location = new System.Drawing.Point(19, 561);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(162, 39);
+            this.btnEmployee.TabIndex = 5;
+            this.btnEmployee.Text = "Empleados";
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            // 
             // FrmDashboardView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,5 +157,6 @@
         public System.Windows.Forms.Button btnProducts;
         public System.Windows.Forms.Button btnSales;
         public System.Windows.Forms.Panel PanelContenedor;
+        public System.Windows.Forms.Button btnEmployee;
     }
 }

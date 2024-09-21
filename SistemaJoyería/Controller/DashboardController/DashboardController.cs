@@ -1,5 +1,6 @@
 ﻿using SistemaJoyería.View.ClientsView;
 using SistemaJoyería.View.DashboardView;
+using SistemaJoyería.View.EmployeesView;
 using SistemaJoyería.View.ProductsView;
 using SistemaJoyería.View.SalesDetailsView;
 using SistemaJoyería.View.Suppliers;
@@ -27,6 +28,7 @@ namespace SistemaJoyería.Controller.DashboardController
             ObjDashboard.btnSales.Click += new EventHandler(OpenSales);
             ObjDashboard.btnSupplier.Click += new EventHandler(OpenSuppliers);
             ObjDashboard.btnClients.Click += new EventHandler(OpenClients);
+            ObjDashboard.btnEmployee.Click += new EventHandler(OpenEmployee);
         }
 
         //Eventos
@@ -43,6 +45,11 @@ namespace SistemaJoyería.Controller.DashboardController
         private void OpenSuppliers(Object sender, EventArgs e)
         {
             AbrirFormulario<FrmSuppliers>();
+        }
+        
+        private void OpenEmployee(Object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEmployeesView>();
         }
 
         private void OpenSales(Object sender, EventArgs e)
