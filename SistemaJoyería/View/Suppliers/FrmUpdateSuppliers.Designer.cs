@@ -168,7 +168,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(164, 48);
             this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "ACTUALIZAR";
-            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // FrmUpdateSuppliers
             // 
