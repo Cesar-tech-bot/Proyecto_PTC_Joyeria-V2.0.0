@@ -47,7 +47,7 @@
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(97, 162);
+            this.txtTelefono.Location = new System.Drawing.Point(93, 161);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(328, 26);
             this.txtTelefono.TabIndex = 4;
@@ -55,7 +55,7 @@
             // dtpFechaRegistro
             // 
             this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(179, 111);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(162, 108);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(378, 26);
             this.dtpFechaRegistro.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(180, 211);
+            this.txtEmail.Location = new System.Drawing.Point(164, 213);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(377, 26);
             this.txtEmail.TabIndex = 5;
@@ -83,7 +83,7 @@
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnActualizar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Location = new System.Drawing.Point(193, 314);
             this.btnActualizar.Name = "btnActualizar";
@@ -104,10 +104,10 @@
             // NombreEmpresa
             // 
             this.NombreEmpresa.AutoSize = true;
-            this.NombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.NombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.NombreEmpresa.Location = new System.Drawing.Point(11, 22);
             this.NombreEmpresa.Name = "NombreEmpresa";
-            this.NombreEmpresa.Size = new System.Drawing.Size(172, 18);
+            this.NombreEmpresa.Size = new System.Drawing.Size(159, 18);
             this.NombreEmpresa.TabIndex = 9;
             this.NombreEmpresa.Text = "Nombre de Empresa";
             // 
@@ -123,50 +123,50 @@
             // NombreContacto
             // 
             this.NombreContacto.AutoSize = true;
-            this.NombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.NombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.NombreContacto.Location = new System.Drawing.Point(11, 64);
             this.NombreContacto.Name = "NombreContacto";
-            this.NombreContacto.Size = new System.Drawing.Size(178, 18);
+            this.NombreContacto.Size = new System.Drawing.Size(161, 18);
             this.NombreContacto.TabIndex = 10;
             this.NombreContacto.Text = "Nombre de Contacto";
             // 
             // Direccion
             // 
             this.Direccion.AutoSize = true;
-            this.Direccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.Direccion.Location = new System.Drawing.Point(11, 260);
+            this.Direccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
+            this.Direccion.Location = new System.Drawing.Point(12, 262);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(84, 18);
+            this.Direccion.Size = new System.Drawing.Size(77, 18);
             this.Direccion.TabIndex = 11;
             this.Direccion.Text = "Dirección";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.label1.Location = new System.Drawing.Point(11, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 18);
+            this.label1.Size = new System.Drawing.Size(139, 18);
             this.label1.TabIndex = 12;
             this.label1.Text = "Fecha de Registro";
             // 
             // Telefono
             // 
             this.Telefono.AutoSize = true;
-            this.Telefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.Telefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.Telefono.Location = new System.Drawing.Point(11, 164);
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(80, 18);
+            this.Telefono.Size = new System.Drawing.Size(70, 18);
             this.Telefono.TabIndex = 13;
             this.Telefono.Text = "Teléfono";
             // 
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.Email.Location = new System.Drawing.Point(11, 211);
+            this.Email.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
+            this.Email.Location = new System.Drawing.Point(13, 215);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(160, 18);
+            this.Email.Size = new System.Drawing.Size(145, 18);
             this.Email.TabIndex = 14;
             this.Email.Text = "Correo Electrónico";
             // 
