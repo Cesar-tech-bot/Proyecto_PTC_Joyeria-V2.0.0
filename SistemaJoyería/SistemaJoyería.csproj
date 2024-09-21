@@ -90,6 +90,7 @@
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
+    <Compile Include="Model\DAO\FirstUseViewDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
+    <Compile Include="Model\DTO\FirstUseViewDTO.cs" />
     <Compile Include="Model\DTO\LoginDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />
     <Compile Include="Model\DTO\SalesDetailsDTO.cs" />
@@ -123,6 +125,12 @@
     </Compile>
     <Compile Include="View\DashboardView\FrmDashboardView.Designer.cs">
       <DependentUpon>FrmDashboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FirstUseView\FrmFirstUseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FirstUseView\FrmFirstUseView.Designer.cs">
+      <DependentUpon>FrmFirstUseView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView\FrmChangeOriginalPassword.cs">
       <SubType>Form</SubType>
@@ -203,6 +211,9 @@
     <EmbeddedResource Include="View\DashboardView\FrmDashboardView.resx">
       <DependentUpon>FrmDashboardView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FirstUseView\FrmFirstUseView.resx">
+      <DependentUpon>FrmFirstUseView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangeOriginalPassword.resx">
       <DependentUpon>FrmChangeOriginalPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +259,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controller\FirstUse\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
