@@ -130,6 +130,18 @@
     <Compile Include="View\DashboardView\FrmDashboardView.Designer.cs">
       <DependentUpon>FrmDashboardView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EmployeesView\FrmAddEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeesView\FrmAddEmployees.Designer.cs">
+      <DependentUpon>FrmAddEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployeesView\FrmEmployeesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeesView\FrmEmployeesView.Designer.cs">
+      <DependentUpon>FrmEmployeesView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView\FrmChangeOriginalPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +227,12 @@
     <EmbeddedResource Include="View\DashboardView\FrmDashboardView.resx">
       <DependentUpon>FrmDashboardView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\EmployeesView\FrmAddEmployees.resx">
+      <DependentUpon>FrmAddEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmployeesView\FrmEmployeesView.resx">
+      <DependentUpon>FrmEmployeesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangeOriginalPassword.resx">
       <DependentUpon>FrmChangeOriginalPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,7 +280,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controller\EmployeesController\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save.png" />
     <None Include="Resources\NewPSWRD.png" />
