@@ -16,7 +16,7 @@ namespace SistemaJoyería.View.Suppliers
         public FrmUpdateSuppliers(string idBuena)
         {
             InitializeComponent();
-            new ControllerFrmUpdateSuppliers(idBuena, this);
+            int idProveedor = int.Parse(idBuena);
             this.KeyPreview = true;
             this.KeyDown += Form_KeyDown;
         }
