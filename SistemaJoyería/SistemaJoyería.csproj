@@ -81,6 +81,8 @@
     <Compile Include="Controller\ClientsController\AddClientsController.cs" />
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\DashboardController\DashboardController.cs" />
+    <Compile Include="Controller\EmployeesController\EmployeesController.cs" />
+    <Compile Include="Controller\FirstUseController\FirstUseController.cs" />
     <Compile Include="Controller\LoginController\ChangeOriginalPasswordController.cs" />
     <Compile Include="Controller\LoginController\ChangePasswordController.cs" />
     <Compile Include="Controller\LoginController\ControllerCambiarContraFromQuestions.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
     <Compile Include="Model\DAO\DAOCambiarClave.cs" />
     <Compile Include="Model\DAO\DAOSecurityQuestions.cs" />
+    <Compile Include="Model\DAO\FirstUseDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
@@ -106,6 +109,7 @@
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
     <Compile Include="Model\DTO\DTOSecurityQuestions.cs" />
+    <Compile Include="Model\DTO\FirstUseDTO.cs" />
     <Compile Include="Model\DTO\LoginDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />
     <Compile Include="Model\DTO\SalesDetailsDTO.cs" />
@@ -141,6 +145,12 @@
     </Compile>
     <Compile Include="View\EmployeesView\FrmEmployeesView.Designer.cs">
       <DependentUpon>FrmEmployeesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FirstUseView\FrmFirstUse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FirstUseView\FrmFirstUse.Designer.cs">
+      <DependentUpon>FrmFirstUse.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView\FrmChangeOriginalPassword.cs">
       <SubType>Form</SubType>
@@ -280,9 +290,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\EmployeesController\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Save.png" />
     <None Include="Resources\NewPSWRD.png" />
