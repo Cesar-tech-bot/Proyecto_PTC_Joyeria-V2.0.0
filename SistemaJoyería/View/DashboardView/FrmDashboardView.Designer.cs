@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboardView));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.btnEmployee = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(202, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmployee.BackColor = System.Drawing.Color.White;
+            this.btnEmployee.Location = new System.Drawing.Point(19, 561);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(162, 39);
+            this.btnEmployee.TabIndex = 5;
+            this.btnEmployee.Text = "Empleados";
+            this.btnEmployee.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -120,17 +131,6 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1062, 681);
             this.PanelContenedor.TabIndex = 1;
             // 
-            // btnEmployee
-            // 
-            this.btnEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmployee.BackColor = System.Drawing.Color.White;
-            this.btnEmployee.Location = new System.Drawing.Point(19, 561);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(162, 39);
-            this.btnEmployee.TabIndex = 5;
-            this.btnEmployee.Text = "Empleados";
-            this.btnEmployee.UseVisualStyleBackColor = false;
-            // 
             // FrmDashboardView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +138,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "FrmDashboardView";

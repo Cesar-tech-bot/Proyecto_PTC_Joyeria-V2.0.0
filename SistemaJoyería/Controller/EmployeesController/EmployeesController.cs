@@ -25,6 +25,7 @@ namespace SistemaJoyería.Controller.EmployeesController
             //Eventos del CRUD (Read, Delete, Update)
             view.btnAddEmployee.Click += new EventHandler(ShowAddCEmployee);
             view.btnUpdate.Click += new EventHandler(UpdateRegister);
+            //view.cmbDelete.Click += new EventHandler(DeleteEmployee);
 
             //Eventos
             view.btnRestart.Click += new EventHandler(RefreshPage);
@@ -90,7 +91,7 @@ namespace SistemaJoyería.Controller.EmployeesController
             frmAddEmployee.ShowDialog();
         }
 
-        //void EliminarRegistro(object sender, EventArgs e)
+        //void DeleteEmployee(object sender, EventArgs e)
         //{
         //    //Capturando el indice de la fila
         //    int pos = ObjView.dgvEmployees.CurrentRow.Index;
