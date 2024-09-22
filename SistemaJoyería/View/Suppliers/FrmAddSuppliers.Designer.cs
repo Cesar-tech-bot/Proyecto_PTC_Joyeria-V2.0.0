@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddSuppliers));
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -47,55 +48,55 @@
             // txtTelefono
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(94, 157);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(328, 25);
+            this.txtTelefono.Size = new System.Drawing.Size(328, 24);
             this.txtTelefono.TabIndex = 4;
             // 
             // txtDireccion
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDireccion.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(98, 255);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(377, 25);
+            this.txtDireccion.Size = new System.Drawing.Size(377, 24);
             this.txtDireccion.TabIndex = 6;
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(172, 206);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(377, 25);
+            this.txtEmail.Size = new System.Drawing.Size(377, 24);
             this.txtEmail.TabIndex = 5;
             // 
             // txtNombreContacto
             // 
             this.txtNombreContacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreContacto.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreContacto.Location = new System.Drawing.Point(190, 56);
             this.txtNombreContacto.Name = "txtNombreContacto";
-            this.txtNombreContacto.Size = new System.Drawing.Size(377, 25);
+            this.txtNombreContacto.Size = new System.Drawing.Size(377, 24);
             this.txtNombreContacto.TabIndex = 2;
             // 
             // txtNombreEmpresa
             // 
             this.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEmpresa.Location = new System.Drawing.Point(189, 13);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(377, 25);
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(377, 24);
             this.txtNombreEmpresa.TabIndex = 1;
             // 
             // Direccion
             // 
             this.Direccion.AutoSize = true;
-            this.Direccion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Direccion.Location = new System.Drawing.Point(11, 257);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(77, 18);
+            this.Direccion.Size = new System.Drawing.Size(75, 20);
             this.Direccion.TabIndex = 0;
             this.Direccion.Text = "Dirección";
             this.Direccion.Click += new System.EventHandler(this.Direccion_Click);
@@ -103,10 +104,10 @@
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(11, 208);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(145, 18);
+            this.Email.Size = new System.Drawing.Size(140, 20);
             this.Email.TabIndex = 0;
             this.Email.Text = "Correo Electrónico";
             this.Email.Click += new System.EventHandler(this.Email_Click);
@@ -114,10 +115,10 @@
             // Telefono
             // 
             this.Telefono.AutoSize = true;
-            this.Telefono.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Telefono.Location = new System.Drawing.Point(11, 161);
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(70, 18);
+            this.Telefono.Size = new System.Drawing.Size(71, 20);
             this.Telefono.TabIndex = 0;
             this.Telefono.Text = "Teléfono";
             this.Telefono.Click += new System.EventHandler(this.Telefono_Click);
@@ -125,10 +126,10 @@
             // NombreContacto
             // 
             this.NombreContacto.AutoSize = true;
-            this.NombreContacto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreContacto.Location = new System.Drawing.Point(11, 61);
             this.NombreContacto.Name = "NombreContacto";
-            this.NombreContacto.Size = new System.Drawing.Size(161, 18);
+            this.NombreContacto.Size = new System.Drawing.Size(156, 20);
             this.NombreContacto.TabIndex = 0;
             this.NombreContacto.Text = "Nombre de Contacto";
             this.NombreContacto.Click += new System.EventHandler(this.NombreContacto_Click);
@@ -136,10 +137,10 @@
             // NombreEmpresa
             // 
             this.NombreEmpresa.AutoSize = true;
-            this.NombreEmpresa.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreEmpresa.Location = new System.Drawing.Point(11, 19);
             this.NombreEmpresa.Name = "NombreEmpresa";
-            this.NombreEmpresa.Size = new System.Drawing.Size(159, 18);
+            this.NombreEmpresa.Size = new System.Drawing.Size(155, 20);
             this.NombreEmpresa.TabIndex = 0;
             this.NombreEmpresa.Text = "Nombre de Empresa";
             this.NombreEmpresa.Click += new System.EventHandler(this.NombreEmpresa_Click);
@@ -149,7 +150,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(320, 323);
             this.btnGuardar.Name = "btnGuardar";
@@ -161,19 +162,19 @@
             // 
             // dtpFechaRegistro
             // 
-            this.dtpFechaRegistro.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaRegistro.Location = new System.Drawing.Point(158, 103);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(378, 25);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(378, 24);
             this.dtpFechaRegistro.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 18);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha de Registro";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -183,7 +184,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Location = new System.Drawing.Point(134, 323);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -212,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Telefono);
             this.Controls.Add(this.Email);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAddSuppliers";
             this.Text = "FrmAddSuplliers";
             this.Load += new System.EventHandler(this.FrmAddSuppliers_Load);

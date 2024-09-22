@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductsView));
             this.lbIDProduct = new System.Windows.Forms.Label();
             this.txtIDProducts = new System.Windows.Forms.TextBox();
             this.lbDescriptionProduct = new System.Windows.Forms.Label();
@@ -420,6 +421,7 @@
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductsView";
             this.Text = "FrmProductsView";
             this.MenuProductos.ResumeLayout(false);
