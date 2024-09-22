@@ -1,4 +1,6 @@
 ﻿using SistemaJoyería.Controller.Suppliers;
+using SistemaJoyería.Model.DAO;
+using SistemaJoyeria.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,25 +18,23 @@ namespace SistemaJoyería.View.Suppliers
         public FrmUpdateSuppliers(string idBuena)
         {
             InitializeComponent();
-            int idProveedor = int.Parse(idBuena);
+
+            // Instanciar el controlador y pasar el formulario actual como referencia
+            new ControllerFrmUpdateSuppliers(idBuena, this);
+
+            // Habilitar el manejo de eventos KeyDown
             this.KeyPreview = true;
             this.KeyDown += Form_KeyDown;
         }
 
-        private void ValidacionSoloNumeros(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
+        // Este método captura los eventos de teclado
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+            if (e.KeyCode == Keys.Escape)
             {
-                e.SuppressKeyPress = true;
+                this.Close();  // Cerrar el formulario si se presiona ESC
             }
         }
     }
+
 }
