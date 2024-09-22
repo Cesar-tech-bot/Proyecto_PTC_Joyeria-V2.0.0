@@ -83,11 +83,17 @@
     <Compile Include="Controller\DashboardController\DashboardController.cs" />
     <Compile Include="Controller\EmployeesController\AddEmployeesController.cs" />
     <Compile Include="Controller\EmployeesController\EmployeesController.cs" />
+    <Compile Include="Controller\FirstUseController\ControllerDetermination.cs" />
     <Compile Include="Controller\FirstUseController\FirstUseController.cs" />
     <Compile Include="Controller\LoginController\ChangeOriginalPasswordController.cs" />
     <Compile Include="Controller\LoginController\ChangePasswordController.cs" />
     <Compile Include="Controller\LoginController\ControllerCambiarContraFromQuestions.cs" />
+    <Compile Include="Controller\LoginController\ControllerInterFromAdmin.cs" />
+    <Compile Include="Controller\LoginController\ControllerNewPasswordFromAdmin.cs" />
     <Compile Include="Controller\LoginController\ControllerQuestionVerification.cs" />
+    <Compile Include="Controller\LoginController\ControllerRecuperarPorCorreo.cs" />
+    <Compile Include="Controller\LoginController\ControllerRegisterNewUser.cs" />
+    <Compile Include="Controller\LoginController\ControllerRegisterQuestions.cs" />
     <Compile Include="Controller\LoginController\RecoverPasswordController.cs" />
     <Compile Include="Controller\LoginController\CommonClassesController.cs" />
     <Compile Include="Controller\LoginController\LoginController.cs" />
@@ -101,6 +107,7 @@
     <Compile Include="Model\DAO\DAOSecurityQuestions.cs" />
     <Compile Include="Model\DAO\EmployeesViewDAO.cs" />
     <Compile Include="Model\DAO\FirstUseDAO.cs" />
+    <Compile Include="Model\DAO\VerificarAdminDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\DAO\AddClientsDAO.cs" />
     <Compile Include="Model\DAO\ClientsViewDAO.cs" />
@@ -156,6 +163,12 @@
     <Compile Include="View\FirstUseView\FrmFirstUse.Designer.cs">
       <DependentUpon>FrmFirstUse.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FirstUseView\FrmNewPasswordFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FirstUseView\FrmNewPasswordFormAdmin.Designer.cs">
+      <DependentUpon>FrmNewPasswordFormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView\FrmChangeOriginalPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +187,12 @@
     <Compile Include="View\LoginView\FrmEmail.Designer.cs">
       <DependentUpon>FrmEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\LoginView\FrmInterFromAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmInterFromAdmin.Designer.cs">
+      <DependentUpon>FrmInterFromAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +210,24 @@
     </Compile>
     <Compile Include="View\LoginView\FrmRecoverPassword.Designer.cs">
       <DependentUpon>FrmRecoverPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView\FrmRegisterNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmRegisterNewUser.Designer.cs">
+      <DependentUpon>FrmRegisterNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView\FrmRegisterQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmRegisterQuestions.Designer.cs">
+      <DependentUpon>FrmRegisterQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView\RecuperarCorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\RecuperarCorreo.Designer.cs">
+      <DependentUpon>RecuperarCorreo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ProductsView\FrmProductsView.cs">
       <SubType>Form</SubType>
@@ -250,6 +287,9 @@
     <EmbeddedResource Include="View\FirstUseView\FrmFirstUse.resx">
       <DependentUpon>FrmFirstUse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FirstUseView\FrmNewPasswordFormAdmin.resx">
+      <DependentUpon>FrmNewPasswordFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangeOriginalPassword.resx">
       <DependentUpon>FrmChangeOriginalPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +299,9 @@
     <EmbeddedResource Include="View\LoginView\FrmEmail.resx">
       <DependentUpon>FrmEmail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmInterFromAdmin.resx">
+      <DependentUpon>FrmInterFromAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +310,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmRecoverPassword.resx">
       <DependentUpon>FrmRecoverPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmRegisterNewUser.resx">
+      <DependentUpon>FrmRegisterNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmRegisterQuestions.resx">
+      <DependentUpon>FrmRegisterQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\RecuperarCorreo.resx">
+      <DependentUpon>RecuperarCorreo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductsView\FrmProductsView.resx">
       <DependentUpon>FrmProductsView.cs</DependentUpon>

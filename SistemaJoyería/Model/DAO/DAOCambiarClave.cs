@@ -38,7 +38,7 @@ namespace SistemaJoyería.Model.DAO
             SqlDataReader reader = cmd.ExecuteReader();
             return reader.HasRows;
         }
-        
+
 
         public bool DAOCambiarclave()
         {
