@@ -74,16 +74,17 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexión
                 command.Connection = getConnection();
                 //Definir que acción se desea realizar
-                string queryUpdate = "UPDATE Employees SET  FirstNameEmployees = @param1, LastNameEmployees = @param2,  PhoneEmployees = @param3, EmailEmployees = @param4, BirthDateEmployees = @param5,  IdentityDocumentEmployees = @param6, AddressClientEmployees = @param7 WHERE  IDEmployees = @param8";
+                string queryUpdate = "UPDATE Employees SET   FirstNameEmployee = @param1, LastNameEmployees = @param2,  PhoneEmployees = @param3," +
+                                     " EmailEmployees = @param4, BirthDateEmployees = @param5,  IdentityDocumentEmployees = @param6, AddressEmployees = @param7 WHERE  IDEmployees = @param8";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
-                cmdUpdate.Parameters.AddWithValue("param1", EmployeeFirstName);
-                cmdUpdate.Parameters.AddWithValue("param2", EmployeelastName);
-                cmdUpdate.Parameters.AddWithValue("param3", EmployeePhone);
-                cmdUpdate.Parameters.AddWithValue("param4", EmployeeEmail);
-                cmdUpdate.Parameters.AddWithValue("param5", EmployeeBirthDate);
-                cmdUpdate.Parameters.AddWithValue("param6", EmployeeDUI);
-                cmdUpdate.Parameters.AddWithValue("param7", EmployeeAddress);
-                cmdUpdate.Parameters.AddWithValue("param8", IdEmployee);
+                cmdUpdate.Parameters.AddWithValue("param1", FirstNameEmployees);
+                cmdUpdate.Parameters.AddWithValue("param2", LastNameEmployees1);
+                cmdUpdate.Parameters.AddWithValue("param3", PhoneEmployees1);
+                cmdUpdate.Parameters.AddWithValue("param4", EmailEmployees1);
+                cmdUpdate.Parameters.AddWithValue("param5", BirthDateEmployees1);
+                cmdUpdate.Parameters.AddWithValue("param6", IdentityDocumentEmployees1);
+                cmdUpdate.Parameters.AddWithValue("param7", AddressEmployees1);
+                cmdUpdate.Parameters.AddWithValue("param8", IdEmployees);
                 //Retornamos la consulta
                 return cmdUpdate.ExecuteNonQuery();
             }
