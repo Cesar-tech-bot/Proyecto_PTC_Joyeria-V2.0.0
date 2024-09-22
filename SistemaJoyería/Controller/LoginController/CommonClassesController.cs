@@ -9,24 +9,24 @@ namespace SistemaJoyería.Controller.LoginController
 {
     public class CommonClassesController
     {
-            public string ComputeSha256Hash(string rawData)
+        public string ComputeSha256Hash(string rawData)
+        {
+            // Crear una instancia de SHA256
+            using (SHA256 sha256Hash = SHA256.Create())
             {
-                // Crear una instancia de SHA256
-                using (SHA256 sha256Hash = SHA256.Create())
+
+                // Computar el hash - Esta retorna un arreglo de bytes
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convertir byte array a string
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
                 {
-
-                    // Computar el hash - Esta retorna un arreglo de bytes
-                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
-
-                    // Convertir byte array a string
-                    StringBuilder builder = new StringBuilder();
-                    for (int i = 0; i < bytes.Length; i++)
-                    {
-                        builder.Append(bytes[i].ToString("x2"));
-                    }
-                    return builder.ToString();
-                    Console.WriteLine(builder);
+                    builder.Append(bytes[i].ToString("x2"));
                 }
+                return builder.ToString();
+                Console.WriteLine(builder);
             }
         }
+    }
 }

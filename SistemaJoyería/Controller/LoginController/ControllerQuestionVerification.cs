@@ -60,9 +60,9 @@ namespace SistemaJoyería.Controller.LoginController
 
         //}
 
-        void ShowRecover(object sender, EventArgs e) 
-        { 
-         FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword();
+        void ShowRecover(object sender, EventArgs e)
+        {
+            FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword();
             objVerifications.Hide();
             frmRecoverPassword.Show();
         }

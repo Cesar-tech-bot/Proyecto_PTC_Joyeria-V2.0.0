@@ -31,9 +31,17 @@ namespace SistemaJoyería.Controller.LoginController
 
             objLogin.btnIngresar.Click += new EventHandler(DatosAcceso);
             objLogin.LinklblRecuperar.Click += new EventHandler(ShowMetods);
+            objLogin.LinklblRegister.Click += new EventHandler(NewUser);
         }
 
         int intentos = 0;
+
+        public void NewUser(object sender, EventArgs e)
+        {
+            objLogin.Hide();
+            FrmRegisterNewUser openForm = new FrmRegisterNewUser();
+            openForm.Show();
+        }
         private void DatosAcceso(object sender, EventArgs e)
         {
             //Creando objeto de clase daologin
@@ -47,7 +55,7 @@ namespace SistemaJoyería.Controller.LoginController
             bool answer = DAOData.LoginValidation();
 
             if (answer == true)
-            {               
+            {
                 //FrmHomePage frmHomePage = new FrmHomePage();
                 //frmHomePage.Show();
                 MessageBox.Show("Inicio de sesión correcto", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
