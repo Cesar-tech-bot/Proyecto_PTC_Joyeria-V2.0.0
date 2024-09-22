@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 81);
+            this.panel1.Size = new System.Drawing.Size(1046, 81);
             this.panel1.TabIndex = 5;
             // 
             // btnActualizar
@@ -73,7 +73,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(1138, 27);
+            this.btnActualizar.Location = new System.Drawing.Point(796, 30);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(106, 29);
@@ -90,7 +90,7 @@
             this.btnRefresacar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresacar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresacar.ForeColor = System.Drawing.Color.White;
-            this.btnRefresacar.Location = new System.Drawing.Point(758, 27);
+            this.btnRefresacar.Location = new System.Drawing.Point(567, 29);
             this.btnRefresacar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnRefresacar.Name = "btnRefresacar";
             this.btnRefresacar.Size = new System.Drawing.Size(103, 30);
@@ -107,13 +107,14 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1012, 27);
+            this.btnEliminar.Location = new System.Drawing.Point(680, 30);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(106, 29);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -124,7 +125,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(882, 27);
+            this.btnAgregar.Location = new System.Drawing.Point(912, 29);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(111, 30);
@@ -138,7 +139,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.Location = new System.Drawing.Point(624, 27);
+            this.btnBuscar.Location = new System.Drawing.Point(453, 29);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 30);
@@ -150,7 +151,7 @@
             // 
             this.txtBuscarRegistro.AutoSize = true;
             this.txtBuscarRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
-            this.txtBuscarRegistro.Location = new System.Drawing.Point(30, 32);
+            this.txtBuscarRegistro.Location = new System.Drawing.Point(14, 32);
             this.txtBuscarRegistro.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.txtBuscarRegistro.Name = "txtBuscarRegistro";
             this.txtBuscarRegistro.Size = new System.Drawing.Size(127, 18);
@@ -162,10 +163,10 @@
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Italic);
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.Location = new System.Drawing.Point(170, 31);
+            this.txtSearch.Location = new System.Drawing.Point(151, 30);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(23, 8, 9, 8);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(428, 23);
+            this.txtSearch.Size = new System.Drawing.Size(288, 23);
             this.txtSearch.TabIndex = 1;
             // 
             // listSuppliers
@@ -186,7 +187,7 @@
             this.listSuppliers.Location = new System.Drawing.Point(0, 81);
             this.listSuppliers.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listSuppliers.Name = "listSuppliers";
-            this.listSuppliers.Size = new System.Drawing.Size(1264, 600);
+            this.listSuppliers.Size = new System.Drawing.Size(1046, 561);
             this.listSuppliers.TabIndex = 6;
             this.listSuppliers.UseCompatibleStateImageBehavior = false;
             this.listSuppliers.View = System.Windows.Forms.View.Details;
@@ -230,14 +231,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1046, 642);
             this.Controls.Add(this.listSuppliers);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1280, 718);
             this.Name = "FrmSuppliers";
             this.Text = "FrmSuppliers";
             this.panel1.ResumeLayout(false);
