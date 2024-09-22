@@ -81,6 +81,7 @@
     <Compile Include="Controller\ClientsController\AddClientsController.cs" />
     <Compile Include="Controller\ClientsController\ViewClientsController.cs" />
     <Compile Include="Controller\DashboardController\DashboardController.cs" />
+    <Compile Include="Controller\EmployeesController\AddEmployeesController.cs" />
     <Compile Include="Controller\EmployeesController\EmployeesController.cs" />
     <Compile Include="Controller\FirstUseController\ControllerDetermination.cs" />
     <Compile Include="Controller\FirstUseController\FirstUseController.cs" />
@@ -101,8 +102,10 @@
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
+    <Compile Include="Model\DAO\AddEmployeesDAO.cs" />
     <Compile Include="Model\DAO\DAOCambiarClave.cs" />
     <Compile Include="Model\DAO\DAOSecurityQuestions.cs" />
+    <Compile Include="Model\DAO\EmployeesViewDAO.cs" />
     <Compile Include="Model\DAO\FirstUseDAO.cs" />
     <Compile Include="Model\DAO\VerificarAdminDAO.cs" />
     <Compile Include="Model\dbContext.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
     <Compile Include="Model\DTO\DTOSecurityQuestions.cs" />
+    <Compile Include="Model\DTO\EmployeesViewDTO.cs" />
     <Compile Include="Model\DTO\FirstUseDTO.cs" />
     <Compile Include="Model\DTO\LoginDTO.cs" />
     <Compile Include="Model\DTO\ProductsViewDTO.cs" />

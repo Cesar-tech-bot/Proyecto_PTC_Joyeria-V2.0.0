@@ -50,6 +50,12 @@
             this.LinklblRecuperar.Location = new System.Drawing.Point(316, 255);
             this.LinklblRecuperar.Name = "LinklblRecuperar";
             this.LinklblRecuperar.Size = new System.Drawing.Size(146, 16);
+
+            this.LinklblRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinklblRecuperar.Location = new System.Drawing.Point(316, 255);
+            this.LinklblRecuperar.Name = "LinklblRecuperar";
+            this.LinklblRecuperar.Size = new System.Drawing.Size(182, 16);
+
             this.LinklblRecuperar.TabIndex = 15;
             this.LinklblRecuperar.TabStop = true;
             this.LinklblRecuperar.Text = "¿Ha olvidado su contraseña?";
@@ -57,7 +63,7 @@
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnIngresar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
             this.btnIngresar.Location = new System.Drawing.Point(440, 196);
             this.btnIngresar.Name = "btnIngresar";
@@ -67,8 +73,9 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             // 
             // txtContraseña
-            // 
+            // o
             this.txtContraseña.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtContraseña.Location = new System.Drawing.Point(319, 156);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(248, 26);
@@ -81,12 +88,19 @@
             this.label3.Location = new System.Drawing.Point(314, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 18);
+
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(314, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Contraseña";
             // 
             // txtUsuario
             // 
+
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.Location = new System.Drawing.Point(319, 85);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(248, 26);
@@ -99,6 +113,10 @@
             this.label2.Location = new System.Drawing.Point(314, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 18);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(314, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Usuario";
             // 
@@ -109,6 +127,10 @@
             this.label1.Location = new System.Drawing.Point(377, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 18);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(377, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Inicio de Sesion";
             // 
@@ -155,7 +177,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

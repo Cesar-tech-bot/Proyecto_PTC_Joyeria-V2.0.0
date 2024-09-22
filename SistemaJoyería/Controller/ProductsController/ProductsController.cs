@@ -40,14 +40,6 @@ namespace SistemaJoyería.Controller.ProductsController
             //Evento para solo permitir numeros
             View.txtStock.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
             View.mktPriceProduct.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
-            //Limite de caracteres
-            View.txtProductName.TextChanged += new EventHandler(Limitede15);
-            View.txtProductMaterial.TextChanged += new EventHandler(Limitede15);
-            View.txtProductMaterial.TextChanged += new EventHandler(Limitede100);
-            //Otro tipo de método
-            // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
-            //View.dtpDate.MinDate = DateTime.Today;
-            //View.dtpDate.MaxDate = DateTime.Today;
             //// Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
             View.dtpDate.Value = DateTime.Today;
             //Read Only
@@ -117,29 +109,6 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.cmbSuppliers.ValueMember = "IDSupplier";
         }
 
-        //Limitar a 15 Caracteres
-        private void Limitar15Caracteres(TextBox textBox)
-        {
-            textBox.MaxLength = 15;
-        }
-
-        private void Limitede15(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            Limitar15Caracteres(textBox);
-        }
-
-        //Limitar a 30 Caracteres
-        private void Limitar100Caracteres(TextBox textBox)
-        {
-            textBox.MaxLength = 15;
-        }
-
-        private void Limitede100(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            Limitar100Caracteres(textBox);
-        }
 
         //solo permite letras
         private void txtLetters_KeyPress(object sender, KeyPressEventArgs e)
@@ -167,19 +136,7 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
-        //solo permite 4 numeros y coma
-        private bool MskValidation(string text)
-        {
-            // Definimos un patrón para validar el formato del texto
-            // La expresión regular verifica lo siguiente:
-            // ^ : Asegura que la cadena comience en el inicio
-            // \d{2} : Debe tener exactamente 2 dígitos
-            // , : Debe haber una coma
-            // \d{2} : Debe tener exactamente 2 dígitos después de la coma
-            // $ : Asegura que la cadena termine al final
-            string pattern = @"^\d{2},\d{2}$";
-            return Regex.IsMatch(text, pattern);
-        }
+
 
         //Borrar producto
         void DeleteProduct(object sender, EventArgs e)
@@ -318,6 +275,8 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.dtpDate.Value = DateTime.Now;
             ObjProducts.txtProductDescription.Text = string.Empty;
             ObjProducts.txtIDProducts.Text = string.Empty;
+            // Deshabilitar el btn keep
+            ObjProducts.btnKeep.Enabled = false;
         }
 
         //Mando a llamar el DAO

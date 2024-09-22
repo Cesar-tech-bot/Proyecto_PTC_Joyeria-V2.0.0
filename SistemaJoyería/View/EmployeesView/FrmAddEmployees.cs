@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.EmployeesController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace SistemaJoyería.View.EmployeesView
         public FrmAddEmployees()
         {
             InitializeComponent();
+           AddEmployeesController addEmployeesController = new AddEmployeesController(this);
         }
     }
 }
