@@ -71,13 +71,13 @@ namespace SistemaJoyería.Controller.EmployeesController
                 AddEmployeesDAO daoEmployee = new AddEmployeesDAO();
 
                 // Se mandan valores de la vista hacia el DTO de empleados
-                daoEmployee.EmployeelastName = EmployeesName;
-                daoEmployee.EmployeelastName = EmployeesSurName;
-                daoEmployee.EmployeeBirthDate = BirthDay;
-                daoEmployee.EmployeePhone = CellPhone;
-                daoEmployee.EmployeeDUI = DUI;
-                daoEmployee.EmployeeEmail = Email;
-                daoEmployee.EmployeeAddress = Address;
+                daoEmployee.FirstNameEmployees= EmployeesName;
+                daoEmployee.LastNameEmployees1= EmployeesSurName;
+                daoEmployee.BirthDateEmployees1 = BirthDay;
+                daoEmployee.PhoneEmployees1 = CellPhone;
+                daoEmployee.IdentityDocumentEmployees1 = DUI;
+                daoEmployee.EmailEmployees1 = Email;
+                daoEmployee.AddressEmployees1 = Address;
 
                 // Registrar empleado en la base de datos
                 int resultado = daoEmployee.RegisterEmployees();

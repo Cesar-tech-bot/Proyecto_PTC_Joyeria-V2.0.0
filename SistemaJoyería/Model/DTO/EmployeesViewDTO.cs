@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 
 namespace SistemaJoyería.Model.DTO
 {
-    internal class EmployeesViewDTO : dbContext
+    public class EmployeesViewDTO : dbContext
     {
-        private int idEmployee;
+        private int idEmployees;
 
-        private string employeeFirstName;
+        private string firstNameEmployees ;
 
-        private string employeelastName;
+        private string LastNameEmployees;
 
-        private string employeePhone;
+        private string PhoneEmployees;
 
-        private string employeeEmail;
+        private string EmailEmployees;
 
-        private DateTime employeeBirthDate;
+        private DateTime BirthDateEmployees;
 
-        private string employeeDUI;
+        private string IdentityDocumentEmployees;
 
-        private string employeeAddress;
+        private string AddressEmployees;
 
-        public int IdEmployee { get => idEmployee; set => idEmployee = value; }
-        public string EmployeeFirstName { get => employeeFirstName; set => employeeFirstName = value; }
-        public string EmployeelastName { get => employeelastName; set => employeelastName = value; }
-        public string EmployeePhone { get => employeePhone; set => employeePhone = value; }
-        public string EmployeeEmail { get => employeeEmail; set => employeeEmail = value; }
-        public DateTime EmployeeBirthDate { get => employeeBirthDate; set => employeeBirthDate = value; }
-        public string EmployeeDUI { get => employeeDUI; set => employeeDUI = value; }
-        public string EmployeeAddress { get => employeeAddress; set => employeeAddress = value; }
+        public int IdEmployees { get => idEmployees; set => idEmployees = value; }
+        public string FirstNameEmployees { get => firstNameEmployees; set => firstNameEmployees = value; }
+        public string LastNameEmployees1 { get => LastNameEmployees; set => LastNameEmployees = value; }
+        public string PhoneEmployees1 { get => PhoneEmployees; set => PhoneEmployees = value; }
+        public string EmailEmployees1 { get => EmailEmployees; set => EmailEmployees = value; }
+        public DateTime BirthDateEmployees1 { get => BirthDateEmployees; set => BirthDateEmployees = value; }
+        public string IdentityDocumentEmployees1 { get => IdentityDocumentEmployees; set => IdentityDocumentEmployees = value; }
+        public string AddressEmployees1 { get => AddressEmployees; set => AddressEmployees = value; }
     }
 }

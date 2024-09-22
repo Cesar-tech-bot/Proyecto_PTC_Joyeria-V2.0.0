@@ -162,14 +162,14 @@ namespace SistemaJoyería.Controller.EmployeesController
             {
                 // Si todas las validaciones pasan, actualizamos el registro
                 EmployeesViewDAO daoUpdate = new EmployeesViewDAO();
-                daoUpdate.IdEmployee = int.Parse(ID);
-                daoUpdate.EmployeeFirstName = EmployeesFirstName;
-                daoUpdate.EmployeelastName = EmployeesLastName;
-                daoUpdate.EmployeePhone = PhoneNumber;
-                daoUpdate.EmployeeEmail = Email;
-                daoUpdate.EmployeeBirthDate = BirthDay;
-                daoUpdate.EmployeeDUI = DUI;
-                daoUpdate.EmployeeAddress = Address;
+                daoUpdate.IdEmployees = int.Parse(ID);
+                daoUpdate.FirstNameEmployees = EmployeesFirstName;
+                daoUpdate.LastNameEmployees1 = EmployeesLastName;
+                daoUpdate.PhoneEmployees1 = PhoneNumber;
+                daoUpdate.EmailEmployees1 = Email;
+                daoUpdate.BirthDateEmployees1 = BirthDay;
+                daoUpdate.IdentityDocumentEmployees1= DUI;
+                daoUpdate.AddressEmployees1 = Address;
 
                 int retorno = daoUpdate.UpdateEmployees();
                 if (retorno == 1)
