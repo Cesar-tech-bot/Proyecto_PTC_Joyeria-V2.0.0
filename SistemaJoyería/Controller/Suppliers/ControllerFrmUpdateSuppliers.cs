@@ -17,6 +17,9 @@ namespace SistemaJoyería.Controller.Suppliers
         {
             this.vistaControlada = vistaPasada;
 
+            // Deshabilitar el campo de fecha de registro
+            vistaPasada.dtpFechaRegistro.Enabled = false;
+
             // Convertir idBuena (string) a int y manejar la lógica de actualización
             if (int.TryParse(idBuena, out int idProveedor))
             {
