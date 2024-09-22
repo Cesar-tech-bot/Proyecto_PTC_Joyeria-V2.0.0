@@ -139,20 +139,20 @@ namespace SistemaJoyería.Controller.EmployeesController
 
         void UpdateRegister(object sender, EventArgs e)
         {
-            // Se crea variable para cada TB y MSK
-            string ID = ObjView.txtID.Text.Trim();
-            string EmployeesFirstName = ObjView.txtUpdateEmployeeName.Text.Trim();
-            string EmployeesLastName = ObjView.txtUpdateEmployeeLastName.Text.Trim();
+            //Se crea variable para cada TB y MSK
+            string ID = ObjView.txtIDEmployee.Text.Trim();
+            string EmploName = ObjView.txtUpdateEmployeeName.Text.Trim();
+            string EmploSurName = ObjView.txtUpdateEmployeeLastName.Text.Trim();
             string Email = ObjView.txtUpdateEmployeeEmail.Text.Trim();
             DateTime BirthDay = ObjView.dtpUpdateBirthDay.Value;
             string Address = ObjView.txtUAddress.Text.Trim();
-            string PhoneNumber = ObjView.mskUpdateEmployeePhoneNumber.Text.Trim().Replace("-", "");
+            string telefono = ObjView.mskUpdateEmployeePhoneNumber.Text.Trim().Replace("-", "");
             string DUI = ObjView.mskUpdateEmployeeDUI.Text.Trim().Replace("-", "");
 
             // Validamos si los campos de nombres y apellidos no están vacíos
-            if (!(string.IsNullOrEmpty(EmployeesFirstName) || string.IsNullOrEmpty(EmployeesLastName) ||
+            if (!(string.IsNullOrEmpty(EmploName) || string.IsNullOrEmpty(EmploSurName) ||
                   // Validamos si el campo de número de teléfono no está vacío y tiene exactamente 8 dígitos
-                  string.IsNullOrEmpty(PhoneNumber) || PhoneNumber.Length != 8 || !PhoneNumber.All(char.IsDigit) ||
+                  string.IsNullOrEmpty(telefono) || telefono.Length != 8 || !telefono.All(char.IsDigit) ||
                   // Validamos si el campo de DUI no está vacío
                   string.IsNullOrEmpty(DUI) || DUI.Length != 9 || !DUI.All(char.IsDigit) ||
                   // Validamos si el campo de correo electrónico no está vacío y el formato del correo es correcto
@@ -161,26 +161,26 @@ namespace SistemaJoyería.Controller.EmployeesController
                   string.IsNullOrEmpty(Address) || Address.Length > 100))
             {
                 // Si todas las validaciones pasan, actualizamos el registro
-                EmployeesViewDAO daoUpdate = new EmployeesViewDAO();
+               EmployeesViewDAO daoUpdate = new EmployeesViewDAO();
                 daoUpdate.IdEmployees = int.Parse(ID);
-                daoUpdate.FirstNameEmployees = EmployeesFirstName;
-                daoUpdate.LastNameEmployees1 = EmployeesLastName;
-                daoUpdate.PhoneEmployees1 = PhoneNumber;
+                daoUpdate.FirstNameEmployees = EmploName;
+                daoUpdate.LastNameEmployees1 = EmploSurName;
+                daoUpdate.PhoneEmployees1 = telefono;
                 daoUpdate.EmailEmployees1 = Email;
                 daoUpdate.BirthDateEmployees1 = BirthDay;
-                daoUpdate.IdentityDocumentEmployees1= DUI;
+                daoUpdate.IdentityDocumentEmployees1 = DUI;
                 daoUpdate.AddressEmployees1 = Address;
 
                 int retorno = daoUpdate.UpdateEmployees();
                 if (retorno == 1)
                 {
-                    MessageBox.Show("El empleado seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El cliente seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowDGVEmployees();
                     ClearUpdateZone(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("El empleado seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El cliente seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
