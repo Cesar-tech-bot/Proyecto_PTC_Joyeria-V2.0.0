@@ -54,7 +54,7 @@ namespace SistemaJoyería.Controller.ClientsController
         void InitialCharge(object sender, EventArgs e)
         {
             ShowDGVlients();
-            string ClientsName = ObjView.tbUClientsName.Text.Trim();
+            ObjView.tbUClientsName.Text.Trim();
             ObjView.tbUClientsName.ReadOnly = true;
             ObjView.tbUClientsSurname.ReadOnly = true;
             ObjView.mskUCellphoneN.ReadOnly = true;
