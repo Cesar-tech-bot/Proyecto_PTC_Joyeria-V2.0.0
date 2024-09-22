@@ -9,18 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaJoyería.View.LoginView
+namespace SistemaJoyería.View
 {
-    public partial class FrmChangePassword : Form
+    public partial class FrmNewPasswordFormAdmin : Form
     {
-        public FrmChangePassword(string user)
+        public FrmNewPasswordFormAdmin()
         {
             InitializeComponent();
-            ChangePasswordController control = new ChangePasswordController(this, user);
-
+            ControllerNewPasswordFromAdmin conntrol = new ControllerNewPasswordFromAdmin(this);
         }
 
-        private void FrmChangePassword_Load(object sender, EventArgs e)
+        private void FrmNewPasswordFormAdmin_Load(object sender, EventArgs e)
         {
 
         }

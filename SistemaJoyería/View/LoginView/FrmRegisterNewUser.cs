@@ -11,16 +11,15 @@ using System.Windows.Forms;
 
 namespace SistemaJoyería.View.LoginView
 {
-    public partial class FrmChangePassword : Form
+    public partial class FrmRegisterNewUser : Form
     {
-        public FrmChangePassword(string user)
+        public FrmRegisterNewUser()
         {
             InitializeComponent();
-            ChangePasswordController control = new ChangePasswordController(this, user);
-
+            ControllerRegisterNewUser control = new ControllerRegisterNewUser(this);
         }
 
-        private void FrmChangePassword_Load(object sender, EventArgs e)
+        private void FrmRegisterNewUser_Load(object sender, EventArgs e)
         {
 
         }

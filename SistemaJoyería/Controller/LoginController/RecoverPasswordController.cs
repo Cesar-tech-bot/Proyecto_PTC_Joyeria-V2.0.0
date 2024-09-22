@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 
 namespace SistemaJoyería.Controller.LoginController
 {
@@ -17,6 +18,8 @@ namespace SistemaJoyería.Controller.LoginController
         {
             objLogin = Vista;
             objLogin.btnPreguntas.Click += new EventHandler(AbrirPreguntas);
+            objLogin.btnInterAdmin.Click += new EventHandler(interAdmin);
+            objLogin.btnCorreo.Click += new EventHandler(EnviarCorreo);
         }
 
         void ComeBack(object sender, EventArgs e)
@@ -24,6 +27,20 @@ namespace SistemaJoyería.Controller.LoginController
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.Hide();
             frmLogin.Show();
+        }
+
+        public void EnviarCorreo(object sender, EventArgs e)
+        {
+            objLogin.Hide();
+            RecuperarCorreo openForm = new RecuperarCorreo();
+            openForm.Show();
+        }
+
+        public void interAdmin(object sender, EventArgs e)
+        {
+            objLogin.Hide();
+            FrmInterFromAdmin openForm = new FrmInterFromAdmin();
+            openForm.Show();
         }
 
         public void AbrirPreguntas(object sender, EventArgs e)

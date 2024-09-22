@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaJoyería.Model.DTO;
 using System.Windows.Forms;
+using System.Data;
 
 namespace SistemaJoyería.Model.DAO
 {
@@ -45,6 +46,122 @@ namespace SistemaJoyería.Model.DAO
                 getConnection().Close();
             }
         }
+
+        public int ValidarPrimerUsuario()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "SELECT COUNT(*) FROM Users";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                int TotalUsuarios = (int)cmd.ExecuteScalar();
+                return TotalUsuarios;
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
+        public int RegistrarPrimerUsuario()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "INSERT INTO Users (LoginName, Password,  UserEmail, Estado, idRoles) VALUES (@LoginName, @Password, @UserEmail, @Estado, 1 )";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("LoginName", LoginName1);
+                cmd.Parameters.AddWithValue("Password", Password1);
+                cmd.Parameters.AddWithValue("UserEmail", UserEmail1);
+                cmd.Parameters.AddWithValue("Estado", true); 
+                int valor = cmd.ExecuteNonQuery();
+                if (valor == 1)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show($"Error EC-001 {ex.Message}", "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return -1;
+
+            }
+
+        }
+
+        public int RegistrarUsuario()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "INSERT INTO Users (LoginName, Password,  UserEmail, Estado, idRoles) VALUES (@LoginName, @Password, @UserEmail, @Estado, idRoles)";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("LoginName", LoginName1);
+                cmd.Parameters.AddWithValue("Password", Password1);
+                cmd.Parameters.AddWithValue("UserEmail", UserEmail1);
+                cmd.Parameters.AddWithValue("Estado", true);
+                cmd.Parameters.AddWithValue("idRoles", IdRol);
+                int valor = cmd.ExecuteNonQuery();
+                if (valor == 1)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show($"Error EC-001 {ex.Message}", "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return -1;
+                
+            }
+            
+            
+        }
+
+        public DataSet LlenarCombo(string table)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = $"SELECT * FROM {table}";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, $"{table}");
+                return ds;
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show($"EC_004 {ex.Message}", "Error Critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
     }
 
 }

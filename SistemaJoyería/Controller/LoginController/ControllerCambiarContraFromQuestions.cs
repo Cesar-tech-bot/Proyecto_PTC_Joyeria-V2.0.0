@@ -17,25 +17,25 @@ namespace SistemaJoyería.Controller.LoginController
         public ControllerCambiarContraFromQuestions(FrmChangePassword vista, string username)
         {
             objContraFromQuestions = vista;
-            objContraFromQuestions.txtUsernamePDS.Text = username;
-            objContraFromQuestions.txtContraseñanuevaPDS.Click += new EventHandler(NuevaContraseña);
+            objContraFromQuestions.txtconfirmarusuario.Text = username;
+            objContraFromQuestions.txtNuevaContra.Click += new EventHandler(NuevaContraseña);
         }
 
         public void NuevaContraseña(object sender, EventArgs e)
         {
             DAOCambiarClave daoCambiarClavePDS = new DAOCambiarClave();
             CommonClassesController commonClasses = new CommonClassesController();
-            daoCambiarClavePDS.Password1 = objContraFromQuestions.txtContraseñanuevaPDS.Text.Trim();
-            daoCambiarClavePDS.LoginName1 = objContraFromQuestions.txtUsernamePDS.Text.Trim();
-            string cadenaencriptada = commonClasses.ComputeSha256Hash(objContraFromQuestions.txtContraseñanuevaPDS.Text.Trim());
-            string cadenaencriptada2 = commonClasses.ComputeSha256Hash(objContraFromQuestions.txtConfirmarcontraseñaPDS.Text.Trim());
+            daoCambiarClavePDS.Password1 = objContraFromQuestions.txtNuevaContra.Text.Trim();
+            daoCambiarClavePDS.LoginName1 = objContraFromQuestions.txtconfirmarusuario.Text.Trim();
+            string cadenaencriptada = commonClasses.ComputeSha256Hash(objContraFromQuestions.txtNuevaContra.Text.Trim());
+            string cadenaencriptada2 = commonClasses.ComputeSha256Hash(objContraFromQuestions.txtConfirmarContra.Text.Trim());
 
-            daoCambiarClavePDS.Password1 = commonClasses.ComputeSha256Hash(objContraFromQuestions.txtContraseñanuevaPDS.Text.Trim());
+            daoCambiarClavePDS.Password1 = commonClasses.ComputeSha256Hash(objContraFromQuestions.txtNuevaContra.Text.Trim());
 
             bool respuesta = daoCambiarClavePDS.ComprobarusuarioPorAdmin();
 
-            if (!(string.IsNullOrEmpty(objContraFromQuestions.txtContraseñanuevaPDS.Text.Trim()) ||
-            string.IsNullOrEmpty(objContraFromQuestions.txtConfirmarcontraseñaPDS.Text.Trim())))
+            if (!(string.IsNullOrEmpty(objContraFromQuestions.txtNuevaContra.Text.Trim()) ||
+            string.IsNullOrEmpty(objContraFromQuestions.txtConfirmarContra.Text.Trim())))
             {
                 if (cadenaencriptada == cadenaencriptada2 && respuesta == true)
                 {
