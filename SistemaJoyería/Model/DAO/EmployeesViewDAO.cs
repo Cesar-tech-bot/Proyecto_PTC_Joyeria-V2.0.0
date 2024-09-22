@@ -74,7 +74,7 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexión
                 command.Connection = getConnection();
                 //Definir que acción se desea realizar
-                string queryUpdate = "UPDATE Employees SET   FirstNameEmployee = @param1, LastNameEmployees = @param2,  PhoneEmployees = @param3," +
+                string queryUpdate = "UPDATE Employees SET   FirstNameEmployees = @param1, LastNameEmployees = @param2,  PhoneEmployees = @param3," +
                                      " EmailEmployees = @param4, BirthDateEmployees = @param5,  IdentityDocumentEmployees = @param6, AddressEmployees = @param7 WHERE  IDEmployees = @param8";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
                 cmdUpdate.Parameters.AddWithValue("param1", FirstNameEmployees);
