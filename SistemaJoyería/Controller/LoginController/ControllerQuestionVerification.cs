@@ -21,7 +21,7 @@ namespace SistemaJoyería.Controller.LoginController
         public ControllerQuestionVerification(FrmQuestionsLogin vista)
         {
             objVerifications = vista;
-            //objVerifications.btnVerificarRespuestas.Click += new EventHandler(VerificarRespuestasDS);
+            objVerifications.btnVerificarRespuestas.Click += new EventHandler(VerificarRespuestasDS);
             objVerifications.btnComeBack.Click += new EventHandler(ShowRecover);
             objVerifications.btnVerificarRespuestas.Click += new EventHandler(VerificarRespuestasDS);
         }
@@ -31,8 +31,8 @@ namespace SistemaJoyería.Controller.LoginController
             SqlCommand command = new SqlCommand();
             DAOSecurityQuestions SecurityResults = new DAOSecurityQuestions();
             SecurityResults.Usuario = objVerifications.txtUsuario.Text.Trim();
-            SecurityResults.Pregunta1 = objVerifications.txtRespuesta3.Text.Trim();
-            SecurityResults.Pregunta2 = objVerifications.txtRespuesta2.Text.Trim();
+            SecurityResults.Pregunta1 = objVerifications.txtRespuesta1.Text.Trim();
+            SecurityResults.Pregunta2 = objVerifications.txtRespuesta1.Text.Trim();
             SecurityResults.Pregunta3 = objVerifications.txtRespuesta3.Text.Trim();
             username = objVerifications.txtUsuario.Text.Trim();
 
@@ -40,7 +40,7 @@ namespace SistemaJoyería.Controller.LoginController
 
 
             if (!(string.IsNullOrEmpty(objVerifications.txtUsuario.Text.Trim()) ||
-             string.IsNullOrEmpty(objVerifications.txtRespuesta3.Text.Trim()) || string.IsNullOrEmpty(objVerifications.txtRespuesta2.Text.Trim()) || string.IsNullOrEmpty(objVerifications.txtRespuesta3.Text.Trim())))
+             string.IsNullOrEmpty(objVerifications.txtRespuesta3.Text.Trim()) || string.IsNullOrEmpty(objVerifications.txtRespuesta1.Text.Trim()) || string.IsNullOrEmpty(objVerifications.txtRespuesta3.Text.Trim())))
             {
                 if (respuesta == true)
                 {
