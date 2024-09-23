@@ -104,6 +104,7 @@
             this.txtRespuesta1.Location = new System.Drawing.Point(12, 108);
             this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta1.MaxLength = 2;
+            this.txtRespuesta1.MaxLength = 100;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(477, 31);
             this.txtRespuesta1.TabIndex = 16;
@@ -139,6 +140,7 @@
             this.txtRespuesta2.Location = new System.Drawing.Point(12, 189);
             this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta2.MaxLength = 3;
+            this.txtRespuesta2.MaxLength = 100;
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(477, 31);
             this.txtRespuesta2.TabIndex = 19;
