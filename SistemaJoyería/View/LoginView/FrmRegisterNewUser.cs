@@ -18,5 +18,15 @@ namespace SistemaJoyería.View.LoginView
             InitializeComponent();
             ControllerRegisterNewUser control = new ControllerRegisterNewUser(this);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegisterNewUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

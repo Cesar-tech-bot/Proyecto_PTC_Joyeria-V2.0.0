@@ -47,7 +47,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.Location = new System.Drawing.Point(12, 34);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsuario.MaxLength = 25;
+            this.txtUsuario.MaxLength = 1;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(477, 31);
             this.txtUsuario.TabIndex = 2;
@@ -57,7 +57,7 @@
             this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtRespuesta3.Location = new System.Drawing.Point(12, 276);
             this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRespuesta3.MaxLength = 100;
+            this.txtRespuesta3.MaxLength = 4;
             this.txtRespuesta3.Name = "txtRespuesta3";
             this.txtRespuesta3.Size = new System.Drawing.Size(477, 31);
             this.txtRespuesta3.TabIndex = 3;
@@ -103,6 +103,7 @@
             this.txtRespuesta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtRespuesta1.Location = new System.Drawing.Point(12, 108);
             this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta1.MaxLength = 2;
             this.txtRespuesta1.MaxLength = 100;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(477, 31);
@@ -129,7 +130,7 @@
             this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerificarRespuestas.Name = "btnVerificarRespuestas";
             this.btnVerificarRespuestas.Size = new System.Drawing.Size(186, 55);
-            this.btnVerificarRespuestas.TabIndex = 18;
+            this.btnVerificarRespuestas.TabIndex = 5;
             this.btnVerificarRespuestas.Text = "Confirmar";
             this.btnVerificarRespuestas.UseVisualStyleBackColor = false;
             // 
@@ -138,6 +139,7 @@
             this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtRespuesta2.Location = new System.Drawing.Point(12, 189);
             this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta2.MaxLength = 3;
             this.txtRespuesta2.MaxLength = 100;
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(477, 31);
@@ -162,7 +164,7 @@
             this.btnComeBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComeBack.Name = "btnComeBack";
             this.btnComeBack.Size = new System.Drawing.Size(87, 33);
-            this.btnComeBack.TabIndex = 18;
+            this.btnComeBack.TabIndex = 6;
             this.btnComeBack.Text = "Regresar";
             this.btnComeBack.UseVisualStyleBackColor = false;
             // 

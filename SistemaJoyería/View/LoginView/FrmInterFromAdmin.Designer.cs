@@ -40,23 +40,23 @@
             this.BtnContraAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.BtnContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnContraAdmin.ForeColor = System.Drawing.Color.White;
-            this.BtnContraAdmin.Location = new System.Drawing.Point(290, 319);
+            this.BtnContraAdmin.Location = new System.Drawing.Point(147, 320);
             this.BtnContraAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnContraAdmin.Name = "BtnContraAdmin";
-            this.BtnContraAdmin.Size = new System.Drawing.Size(148, 55);
-            this.BtnContraAdmin.TabIndex = 8;
+            this.BtnContraAdmin.Size = new System.Drawing.Size(159, 64);
+            this.BtnContraAdmin.TabIndex = 2;
             this.BtnContraAdmin.Text = "Confirmar";
             this.BtnContraAdmin.UseVisualStyleBackColor = false;
             // 
             // txtContraseñaAdmin
             // 
             this.txtContraseñaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtContraseñaAdmin.Location = new System.Drawing.Point(215, 269);
+            this.txtContraseñaAdmin.Location = new System.Drawing.Point(72, 270);
             this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseñaAdmin.MaxLength = 50;
             this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
-            this.txtContraseñaAdmin.Size = new System.Drawing.Size(300, 31);
-            this.txtContraseñaAdmin.TabIndex = 7;
+            this.txtContraseñaAdmin.Size = new System.Drawing.Size(311, 31);
+            this.txtContraseñaAdmin.TabIndex = 1;
             // 
             // label1
             // 
@@ -64,7 +64,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(211, 228);
+            this.label1.Location = new System.Drawing.Point(68, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(304, 23);
             this.label1.TabIndex = 6;
@@ -74,9 +74,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.User1;
-            this.pictureBox1.Location = new System.Drawing.Point(215, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 181);
+            this.pictureBox1.Size = new System.Drawing.Size(311, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -86,12 +86,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(741, 410);
+            this.ClientSize = new System.Drawing.Size(463, 436);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnContraAdmin);
             this.Controls.Add(this.txtContraseñaAdmin);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmInterFromAdmin";
             this.Text = "FrmInterFromAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
