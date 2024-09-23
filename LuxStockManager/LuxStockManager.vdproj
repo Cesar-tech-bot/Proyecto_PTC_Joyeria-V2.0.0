@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_03A6FE2FB5F44325AB28B72ADF1FCFAC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_151EB1136ABEDE00C0F990D97B2C9984"
         "OwnerKey" = "8:_16E9F3F60CB5F20CEF29825DFA8321B3"
         "MsmSig" = "8:_UNDEFINED"
@@ -75,12 +81,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_321A4A5177824B9A8143DBA68752D71D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_35F4C2260983DFF42C483669359B98CD"
         "OwnerKey" = "8:_16E9F3F60CB5F20CEF29825DFA8321B3"
         "MsmSig" = "8:_UNDEFINED"
@@ -106,7 +106,7 @@
         "Entry"
         {
         "MsmKey" = "8:_4A239ADEA3D9EF50A8885BD3432BAE1C"
-        "OwnerKey" = "8:_F62EEA7B0960871FEF87CAAABF09D6C8"
+        "OwnerKey" = "8:_B781556AC0CB4C969EAFC0C874BE2E33"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -125,18 +125,6 @@
         {
         "MsmKey" = "8:_4A239ADEA3D9EF50A8885BD3432BAE1C"
         "OwnerKey" = "8:_16E9F3F60CB5F20CEF29825DFA8321B3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4A239ADEA3D9EF50A8885BD3432BAE1C"
-        "OwnerKey" = "8:_8EB9ABD32782AFE04B10B4C3456F2556"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4A239ADEA3D9EF50A8885BD3432BAE1C"
-        "OwnerKey" = "8:_B781556AC0CB4C969EAFC0C874BE2E33"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -250,12 +238,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_39D08343BB921DD1275D54FD85B180F8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B781556AC0CB4C969EAFC0C874BE2E33"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -316,13 +298,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F62EEA7B0960871FEF87CAAABF09D6C8"
+        "OwnerKey" = "8:_4A239ADEA3D9EF50A8885BD3432BAE1C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4A239ADEA3D9EF50A8885BD3432BAE1C"
+        "OwnerKey" = "8:_F62EEA7B0960871FEF87CAAABF09D6C8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -343,6 +325,12 @@
         "OwnerKey" = "8:_8672915A8E4B168B590137C96E712463"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_39D08343BB921DD1275D54FD85B180F8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -361,6 +349,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -377,6 +381,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -435,6 +447,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_03A6FE2FB5F44325AB28B72ADF1FCFAC"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\Downloads\\91d347c1-955f-451e-bf42-c34435be901.ico"
+            "TargetName" = "8:91d347c1-955f-451e-bf42-c34435be901.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D5E654B587954BB19A6F406E517B9674"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_151EB1136ABEDE00C0F990D97B2C9984"
@@ -559,26 +591,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_321A4A5177824B9A8143DBA68752D71D"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\Downloads\\MicrosoftTeams-image.ico"
-            "TargetName" = "8:MicrosoftTeams-image.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_D5E654B587954BB19A6F406E517B9674"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_35F4C2260983DFF42C483669359B98CD"
@@ -976,7 +988,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_321A4A5177824B9A8143DBA68752D71D"
+        "ARPPRODUCTICON" = "8:_03A6FE2FB5F44325AB28B72ADF1FCFAC"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -1090,7 +1102,7 @@
             "Target" = "8:_B781556AC0CB4C969EAFC0C874BE2E33"
             "Folder" = "8:_10CD0DAE3E7D40EC9EF1F226563FA695"
             "WorkingFolder" = "8:_D5E654B587954BB19A6F406E517B9674"
-            "Icon" = "8:_321A4A5177824B9A8143DBA68752D71D"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6A4918134FB249129E745C87E3F1FBE5"
@@ -1104,7 +1116,7 @@
             "Target" = "8:_B781556AC0CB4C969EAFC0C874BE2E33"
             "Folder" = "8:_D940CEF799FC4474B68C6E4B2CF4CABE"
             "WorkingFolder" = "8:_D5E654B587954BB19A6F406E517B9674"
-            "Icon" = "8:_321A4A5177824B9A8143DBA68752D71D"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -1508,7 +1520,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B781556AC0CB4C969EAFC0C874BE2E33"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\SistemaJoyería\\obj\\Release\\SistemaJoyería.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_D5E654B587954BB19A6F406E517B9674"
