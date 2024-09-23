@@ -50,84 +50,84 @@
             // txtAddress
             // 
             this.txtAddress.AutoSize = true;
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtAddress.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtAddress.Location = new System.Drawing.Point(10, 411);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(84, 20);
+            this.txtAddress.Size = new System.Drawing.Size(81, 18);
             this.txtAddress.TabIndex = 42;
             this.txtAddress.Text = "Dirección";
             // 
             // txtDuiDoc
             // 
             this.txtDuiDoc.AutoSize = true;
-            this.txtDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtDuiDoc.Location = new System.Drawing.Point(10, 340);
             this.txtDuiDoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtDuiDoc.Name = "txtDuiDoc";
-            this.txtDuiDoc.Size = new System.Drawing.Size(41, 20);
+            this.txtDuiDoc.Size = new System.Drawing.Size(37, 18);
             this.txtDuiDoc.TabIndex = 40;
             this.txtDuiDoc.Text = "DUI";
             // 
             // txtClientsBirthday
             // 
             this.txtClientsBirthday.AutoSize = true;
-            this.txtClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtClientsBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtClientsBirthday.Location = new System.Drawing.Point(9, 136);
             this.txtClientsBirthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtClientsBirthday.Name = "txtClientsBirthday";
-            this.txtClientsBirthday.Size = new System.Drawing.Size(176, 20);
+            this.txtClientsBirthday.Size = new System.Drawing.Size(166, 18);
             this.txtClientsBirthday.TabIndex = 38;
             this.txtClientsBirthday.Text = "Fecha de nacimiento";
             // 
             // txtEmail
             // 
             this.txtEmail.AutoSize = true;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtEmail.Location = new System.Drawing.Point(9, 280);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(158, 20);
+            this.txtEmail.Size = new System.Drawing.Size(148, 18);
             this.txtEmail.TabIndex = 28;
             this.txtEmail.Text = "Correo Electrónico";
             // 
             // txtCellphoneN
             // 
             this.txtCellphoneN.AutoSize = true;
-            this.txtCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtCellphoneN.Location = new System.Drawing.Point(10, 209);
             this.txtCellphoneN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtCellphoneN.Name = "txtCellphoneN";
-            this.txtCellphoneN.Size = new System.Drawing.Size(101, 20);
+            this.txtCellphoneN.Size = new System.Drawing.Size(96, 18);
             this.txtCellphoneN.TabIndex = 29;
             this.txtCellphoneN.Text = "N. Teléfono";
             // 
             // txtClientsSurname
             // 
             this.txtClientsSurname.AutoSize = true;
-            this.txtClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtClientsSurname.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtClientsSurname.Location = new System.Drawing.Point(10, 72);
             this.txtClientsSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtClientsSurname.Name = "txtClientsSurname";
-            this.txtClientsSurname.Size = new System.Drawing.Size(73, 20);
+            this.txtClientsSurname.Size = new System.Drawing.Size(74, 18);
             this.txtClientsSurname.TabIndex = 30;
             this.txtClientsSurname.Text = "Apellido";
             // 
             // txtClientsName
             // 
             this.txtClientsName.AutoSize = true;
-            this.txtClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtClientsName.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtClientsName.Location = new System.Drawing.Point(9, 11);
             this.txtClientsName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtClientsName.Name = "txtClientsName";
-            this.txtClientsName.Size = new System.Drawing.Size(71, 20);
+            this.txtClientsName.Size = new System.Drawing.Size(68, 18);
             this.txtClientsName.TabIndex = 31;
             this.txtClientsName.Text = "Nombre";
             // 
             // tbClientsName
             // 
             this.tbClientsName.BackColor = System.Drawing.Color.White;
-            this.tbClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tbClientsName.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbClientsName.Location = new System.Drawing.Point(13, 34);
             this.tbClientsName.Margin = new System.Windows.Forms.Padding(2);
             this.tbClientsName.Name = "tbClientsName";
@@ -136,7 +136,7 @@
             // 
             // tbClientsSurname
             // 
-            this.tbClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tbClientsSurname.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbClientsSurname.Location = new System.Drawing.Point(13, 93);
             this.tbClientsSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbClientsSurname.Name = "tbClientsSurname";
@@ -145,7 +145,7 @@
             // 
             // dtpClientsBirthday
             // 
-            this.dtpClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.dtpClientsBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.dtpClientsBirthday.Location = new System.Drawing.Point(13, 167);
             this.dtpClientsBirthday.Margin = new System.Windows.Forms.Padding(2);
             this.dtpClientsBirthday.Name = "dtpClientsBirthday";
@@ -154,7 +154,7 @@
             // 
             // mskCellphoneN
             // 
-            this.mskCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.mskCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskCellphoneN.Location = new System.Drawing.Point(13, 242);
             this.mskCellphoneN.Margin = new System.Windows.Forms.Padding(2);
             this.mskCellphoneN.Mask = "0000-0000";
@@ -164,7 +164,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tbEmail.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbEmail.Location = new System.Drawing.Point(13, 301);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
@@ -173,7 +173,7 @@
             // 
             // mskDuiDoc
             // 
-            this.mskDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.mskDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskDuiDoc.Location = new System.Drawing.Point(13, 372);
             this.mskDuiDoc.Margin = new System.Windows.Forms.Padding(2);
             this.mskDuiDoc.Mask = "0000000-0";
@@ -184,7 +184,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(78, 517);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
@@ -197,7 +197,7 @@
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOK.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(230, 517);
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
@@ -209,7 +209,7 @@
             // 
             // tbAddress
             // 
-            this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tbAddress.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbAddress.Location = new System.Drawing.Point(12, 432);
             this.tbAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbAddress.Multiline = true;

@@ -79,7 +79,7 @@
             // btnAdmin
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnAdmin.ForeColor = System.Drawing.Color.White;
             this.btnAdmin.Location = new System.Drawing.Point(0, 318);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -116,7 +116,7 @@
             // btnPreguntas
             // 
             this.btnPreguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnPreguntas.ForeColor = System.Drawing.Color.White;
             this.btnPreguntas.Location = new System.Drawing.Point(0, 318);
             this.btnPreguntas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -153,7 +153,7 @@
             // btnCorreo
             // 
             this.btnCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnCorreo.ForeColor = System.Drawing.Color.White;
             this.btnCorreo.Location = new System.Drawing.Point(0, 318);
             this.btnCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -192,7 +192,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -205,7 +205,7 @@
             // btnInterAdmin
             // 
             this.btnInterAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnInterAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnInterAdmin.ForeColor = System.Drawing.Color.White;
             this.btnInterAdmin.Location = new System.Drawing.Point(0, 316);
             this.btnInterAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

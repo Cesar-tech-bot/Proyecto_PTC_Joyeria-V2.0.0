@@ -60,6 +60,7 @@
             // 
             this.btnEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEmployee.BackColor = System.Drawing.Color.White;
+            this.btnEmployee.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnEmployee.Location = new System.Drawing.Point(19, 561);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(162, 39);
@@ -81,6 +82,7 @@
             // 
             this.btnSupplier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSupplier.BackColor = System.Drawing.Color.White;
+            this.btnSupplier.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnSupplier.Location = new System.Drawing.Point(19, 497);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(162, 39);
@@ -92,6 +94,7 @@
             // 
             this.btnClients.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClients.BackColor = System.Drawing.Color.White;
+            this.btnClients.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnClients.Location = new System.Drawing.Point(19, 433);
             this.btnClients.Name = "btnClients";
             this.btnClients.Size = new System.Drawing.Size(162, 39);
@@ -103,6 +106,7 @@
             // 
             this.btnProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProducts.BackColor = System.Drawing.Color.White;
+            this.btnProducts.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnProducts.Location = new System.Drawing.Point(19, 368);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(162, 39);
@@ -114,6 +118,7 @@
             // 
             this.btnSales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSales.BackColor = System.Drawing.Color.White;
+            this.btnSales.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnSales.Location = new System.Drawing.Point(19, 303);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(162, 39);

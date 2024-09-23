@@ -69,33 +69,33 @@
             // 
             this.lbIDProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbIDProduct.AutoSize = true;
-            this.lbIDProduct.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIDProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbIDProduct.ForeColor = System.Drawing.Color.Black;
             this.lbIDProduct.Location = new System.Drawing.Point(19, 529);
             this.lbIDProduct.Name = "lbIDProduct";
-            this.lbIDProduct.Size = new System.Drawing.Size(92, 16);
+            this.lbIDProduct.Size = new System.Drawing.Size(98, 18);
             this.lbIDProduct.TabIndex = 9;
             this.lbIDProduct.Text = "ID Producto";
             // 
             // txtIDProducts
             // 
             this.txtIDProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIDProducts.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.txtIDProducts.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtIDProducts.Location = new System.Drawing.Point(114, 523);
             this.txtIDProducts.Name = "txtIDProducts";
             this.txtIDProducts.ReadOnly = true;
-            this.txtIDProducts.Size = new System.Drawing.Size(109, 27);
+            this.txtIDProducts.Size = new System.Drawing.Size(109, 26);
             this.txtIDProducts.TabIndex = 0;
             // 
             // lbDescriptionProduct
             // 
             this.lbDescriptionProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDescriptionProduct.AutoSize = true;
-            this.lbDescriptionProduct.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbDescriptionProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbDescriptionProduct.ForeColor = System.Drawing.Color.Black;
             this.lbDescriptionProduct.Location = new System.Drawing.Point(19, 387);
             this.lbDescriptionProduct.Name = "lbDescriptionProduct";
-            this.lbDescriptionProduct.Size = new System.Drawing.Size(82, 16);
+            this.lbDescriptionProduct.Size = new System.Drawing.Size(99, 18);
             this.lbDescriptionProduct.TabIndex = 5;
             this.lbDescriptionProduct.Text = "Descripción";
             // 
@@ -103,11 +103,11 @@
             // 
             this.lbNameSupplier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNameSupplier.AutoSize = true;
-            this.lbNameSupplier.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbNameSupplier.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbNameSupplier.ForeColor = System.Drawing.Color.Black;
             this.lbNameSupplier.Location = new System.Drawing.Point(19, 146);
             this.lbNameSupplier.Name = "lbNameSupplier";
-            this.lbNameSupplier.Size = new System.Drawing.Size(147, 16);
+            this.lbNameSupplier.Size = new System.Drawing.Size(181, 18);
             this.lbNameSupplier.TabIndex = 3;
             this.lbNameSupplier.Text = "Nombre del proveedor";
             // 
@@ -115,11 +115,11 @@
             // 
             this.lbMaterialProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbMaterialProduct.AutoSize = true;
-            this.lbMaterialProduct.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbMaterialProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbMaterialProduct.ForeColor = System.Drawing.Color.Black;
             this.lbMaterialProduct.Location = new System.Drawing.Point(19, 79);
             this.lbMaterialProduct.Name = "lbMaterialProduct";
-            this.lbMaterialProduct.Size = new System.Drawing.Size(57, 16);
+            this.lbMaterialProduct.Size = new System.Drawing.Size(68, 18);
             this.lbMaterialProduct.TabIndex = 2;
             this.lbMaterialProduct.Text = "Material";
             // 
@@ -127,11 +127,11 @@
             // 
             this.lbProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbProducts.AutoSize = true;
-            this.lbProducts.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbProducts.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbProducts.ForeColor = System.Drawing.Color.Black;
             this.lbProducts.Location = new System.Drawing.Point(19, 13);
             this.lbProducts.Name = "lbProducts";
-            this.lbProducts.Size = new System.Drawing.Size(57, 16);
+            this.lbProducts.Size = new System.Drawing.Size(68, 18);
             this.lbProducts.TabIndex = 0;
             this.lbProducts.Text = "Nombre";
             // 
@@ -174,11 +174,11 @@
             // lb
             // 
             this.lb.AutoSize = true;
-            this.lb.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lb.ForeColor = System.Drawing.Color.Black;
             this.lb.Location = new System.Drawing.Point(29, 31);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(184, 17);
+            this.lb.Size = new System.Drawing.Size(187, 18);
             this.lb.TabIndex = 14;
             this.lb.Text = "CONTROL PRODUCTOS";
             // 
@@ -186,7 +186,7 @@
             // 
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(934, 29);
             this.btnRefresh.Name = "btnRefresh";
@@ -199,7 +199,7 @@
             // 
             this.btnSearchProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSearchProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnSearchProduct.ForeColor = System.Drawing.Color.White;
             this.btnSearchProduct.Location = new System.Drawing.Point(714, 29);
             this.btnSearchProduct.Name = "btnSearchProduct";
@@ -212,7 +212,7 @@
             // 
             this.txtSearchProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchProductos.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.txtSearchProductos.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtSearchProductos.Location = new System.Drawing.Point(245, 31);
             this.txtSearchProductos.Multiline = true;
             this.txtSearchProductos.Name = "txtSearchProductos";
@@ -223,7 +223,7 @@
             // 
             this.btnRestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRestart.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRestart.ForeColor = System.Drawing.Color.White;
             this.btnRestart.Location = new System.Drawing.Point(824, 29);
             this.btnRestart.Name = "btnRestart";
@@ -262,7 +262,7 @@
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.txtStock.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtStock.Location = new System.Drawing.Point(23, 345);
             this.txtStock.MaxLength = 4;
             this.txtStock.Multiline = true;
@@ -274,11 +274,11 @@
             // 
             this.lbCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbCantidad.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbCantidad.ForeColor = System.Drawing.Color.Black;
             this.lbCantidad.Location = new System.Drawing.Point(19, 322);
             this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(63, 16);
+            this.lbCantidad.Size = new System.Drawing.Size(78, 18);
             this.lbCantidad.TabIndex = 24;
             this.lbCantidad.Text = "Cantidad";
             // 
@@ -286,11 +286,11 @@
             // 
             this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbDate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbDate.ForeColor = System.Drawing.Color.Black;
             this.lbDate.Location = new System.Drawing.Point(19, 265);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(113, 16);
+            this.lbDate.Size = new System.Drawing.Size(140, 18);
             this.lbDate.TabIndex = 18;
             this.lbDate.Text = "Fecha de entrada";
             // 
@@ -298,7 +298,7 @@
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(130, 474);
             this.btnUpdate.Name = "btnUpdate";
@@ -311,11 +311,11 @@
             // 
             this.lbPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPriceProduct.AutoSize = true;
-            this.lbPriceProduct.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.lbPriceProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbPriceProduct.ForeColor = System.Drawing.Color.Black;
             this.lbPriceProduct.Location = new System.Drawing.Point(19, 207);
             this.lbPriceProduct.Name = "lbPriceProduct";
-            this.lbPriceProduct.Size = new System.Drawing.Size(45, 16);
+            this.lbPriceProduct.Size = new System.Drawing.Size(55, 18);
             this.lbPriceProduct.TabIndex = 16;
             this.lbPriceProduct.Text = "Precio";
             // 
@@ -323,7 +323,7 @@
             // 
             this.btnKeep.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnKeep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnKeep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnKeep.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnKeep.ForeColor = System.Drawing.Color.Transparent;
             this.btnKeep.Location = new System.Drawing.Point(14, 474);
             this.btnKeep.Name = "btnKeep";
@@ -335,7 +335,7 @@
             // txtProductDescription
             // 
             this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductDescription.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.txtProductDescription.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtProductDescription.Location = new System.Drawing.Point(23, 410);
             this.txtProductDescription.MaxLength = 100;
             this.txtProductDescription.Multiline = true;
@@ -346,38 +346,38 @@
             // dtpDate
             // 
             this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDate.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.dtpDate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.dtpDate.Location = new System.Drawing.Point(23, 288);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(197, 27);
+            this.dtpDate.Size = new System.Drawing.Size(197, 26);
             this.dtpDate.TabIndex = 5;
             this.dtpDate.Value = new System.DateTime(2024, 9, 3, 18, 50, 5, 0);
             // 
             // mktPriceProduct
             // 
             this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mktPriceProduct.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.mktPriceProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mktPriceProduct.Location = new System.Drawing.Point(23, 230);
             this.mktPriceProduct.Mask = "00.00";
             this.mktPriceProduct.Name = "mktPriceProduct";
-            this.mktPriceProduct.Size = new System.Drawing.Size(197, 27);
+            this.mktPriceProduct.Size = new System.Drawing.Size(197, 26);
             this.mktPriceProduct.TabIndex = 4;
             // 
             // cmbSuppliers
             // 
             this.cmbSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSuppliers.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.cmbSuppliers.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.cmbSuppliers.FormattingEnabled = true;
             this.cmbSuppliers.Location = new System.Drawing.Point(23, 169);
             this.cmbSuppliers.Name = "cmbSuppliers";
-            this.cmbSuppliers.Size = new System.Drawing.Size(197, 24);
+            this.cmbSuppliers.Size = new System.Drawing.Size(197, 26);
             this.cmbSuppliers.TabIndex = 3;
             // 
             // txtProductMaterial
             // 
             this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductMaterial.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.txtProductMaterial.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtProductMaterial.Location = new System.Drawing.Point(23, 102);
             this.txtProductMaterial.MaxLength = 15;
             this.txtProductMaterial.Multiline = true;
@@ -388,7 +388,7 @@
             // txtProductName
             // 
             this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductName.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Italic);
+            this.txtProductName.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtProductName.Location = new System.Drawing.Point(23, 36);
             this.txtProductName.MaxLength = 15;
             this.txtProductName.Multiline = true;

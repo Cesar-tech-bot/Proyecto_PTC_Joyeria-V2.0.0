@@ -71,7 +71,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(0, 81);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1028, 528);
             this.panel2.TabIndex = 7;
@@ -124,7 +124,7 @@
             this.btnClearUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.btnClearUpdate.ForeColor = System.Drawing.Color.White;
             this.btnClearUpdate.Location = new System.Drawing.Point(25, 555);
-            this.btnClearUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearUpdate.Name = "btnClearUpdate";
             this.btnClearUpdate.Size = new System.Drawing.Size(124, 48);
             this.btnClearUpdate.TabIndex = 13;
@@ -135,7 +135,7 @@
             // 
             this.tbUEmail.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.tbUEmail.Location = new System.Drawing.Point(9, 353);
-            this.tbUEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbUEmail.Name = "tbUEmail";
             this.tbUEmail.Size = new System.Drawing.Size(296, 26);
             this.tbUEmail.TabIndex = 10;
@@ -155,7 +155,7 @@
             // 
             this.tbUAddress.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.tbUAddress.Location = new System.Drawing.Point(9, 417);
-            this.tbUAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbUAddress.Multiline = true;
             this.tbUAddress.Name = "tbUAddress";
             this.tbUAddress.Size = new System.Drawing.Size(296, 69);
@@ -176,7 +176,7 @@
             // 
             this.mskUDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.mskUDuiDoc.Location = new System.Drawing.Point(9, 291);
-            this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(2);
             this.mskUDuiDoc.Mask = "00000000-0";
             this.mskUDuiDoc.Name = "mskUDuiDoc";
             this.mskUDuiDoc.Size = new System.Drawing.Size(296, 26);
@@ -186,7 +186,7 @@
             // 
             this.tbID.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.tbID.Location = new System.Drawing.Point(9, 516);
-            this.tbID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbID.Margin = new System.Windows.Forms.Padding(2);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(296, 26);
@@ -196,7 +196,7 @@
             // 
             this.mskUCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.mskUCellphoneN.Location = new System.Drawing.Point(9, 230);
-            this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(2);
             this.mskUCellphoneN.Mask = "0000-0000";
             this.mskUCellphoneN.Name = "mskUCellphoneN";
             this.mskUCellphoneN.Size = new System.Drawing.Size(296, 26);
@@ -219,7 +219,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(180, 555);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(124, 48);
             this.btnUpdate.TabIndex = 14;
@@ -230,7 +230,7 @@
             // 
             this.dtpUClientsBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.dtpUClientsBirthday.Location = new System.Drawing.Point(9, 163);
-            this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(2);
             this.dtpUClientsBirthday.Name = "dtpUClientsBirthday";
             this.dtpUClientsBirthday.Size = new System.Drawing.Size(296, 26);
             this.dtpUClientsBirthday.TabIndex = 7;
@@ -261,7 +261,7 @@
             // 
             this.tbUClientsName.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.tbUClientsName.Location = new System.Drawing.Point(9, 35);
-            this.tbUClientsName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUClientsName.Margin = new System.Windows.Forms.Padding(2);
             this.tbUClientsName.Name = "tbUClientsName";
             this.tbUClientsName.Size = new System.Drawing.Size(296, 26);
             this.tbUClientsName.TabIndex = 5;
@@ -270,7 +270,7 @@
             // 
             this.tbUClientsSurname.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.tbUClientsSurname.Location = new System.Drawing.Point(9, 99);
-            this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbUClientsSurname.Name = "tbUClientsSurname";
             this.tbUClientsSurname.Size = new System.Drawing.Size(296, 26);
             this.tbUClientsSurname.TabIndex = 6;
@@ -316,7 +316,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 81);
             this.panel1.TabIndex = 6;
@@ -324,7 +324,7 @@
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(0, 81);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 442);
             this.panel3.TabIndex = 2;
@@ -335,7 +335,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(783, 19);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(143, 40);
             this.btnRefresh.TabIndex = 3;
@@ -348,7 +348,7 @@
             this.btnAddClients.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddClients.ForeColor = System.Drawing.Color.White;
             this.btnAddClients.Location = new System.Drawing.Point(931, 19);
-            this.btnAddClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddClients.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddClients.Name = "btnAddClients";
             this.btnAddClients.Size = new System.Drawing.Size(106, 40);
             this.btnAddClients.TabIndex = 4;
@@ -385,7 +385,7 @@
             this.btnSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearchClient.ForeColor = System.Drawing.Color.White;
             this.btnSearchClient.Location = new System.Drawing.Point(580, 19);
-            this.btnSearchClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchClient.Name = "btnSearchClient";
             this.btnSearchClient.Size = new System.Drawing.Size(143, 40);
             this.btnSearchClient.TabIndex = 2;
@@ -396,7 +396,7 @@
             // 
             this.tbSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.tbSearchClient.Location = new System.Drawing.Point(270, 29);
-            this.tbSearchClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSearchClient.Margin = new System.Windows.Forms.Padding(2);
             this.tbSearchClient.Name = "tbSearchClient";
             this.tbSearchClient.Size = new System.Drawing.Size(296, 26);
             this.tbSearchClient.TabIndex = 1;
@@ -408,7 +408,7 @@
             this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmClientsView";

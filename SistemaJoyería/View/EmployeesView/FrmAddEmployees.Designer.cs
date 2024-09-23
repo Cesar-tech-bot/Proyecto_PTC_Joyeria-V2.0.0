@@ -50,7 +50,7 @@
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOK.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(237, 517);
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
@@ -65,7 +65,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(85, 517);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
@@ -79,146 +79,232 @@
             // 
             // mskEmployeeDUI
             // 
-            this.mskEmployeeDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.mskEmployeeDUI.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskEmployeeDUI.Location = new System.Drawing.Point(20, 320);
             this.mskEmployeeDUI.Margin = new System.Windows.Forms.Padding(2);
             this.mskEmployeeDUI.Location = new System.Drawing.Point(27, 394);
             this.mskEmployeeDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskEmployeeDUI.Mask = "0000000-0";
             this.mskEmployeeDUI.Name = "mskEmployeeDUI";
+<<<<<<< HEAD
+            this.mskEmployeeDUI.Size = new System.Drawing.Size(382, 26);
+            this.mskEmployeeDUI.TabIndex = 48;
+=======
             this.mskEmployeeDUI.Size = new System.Drawing.Size(508, 26);
             this.mskEmployeeDUI.TabIndex = 5;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // txtEmployeeEmail
             // 
-            this.txtEmployeeEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEmployeeEmail.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtEmployeeEmail.Location = new System.Drawing.Point(21, 245);
             this.txtEmployeeEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeEmail.Location = new System.Drawing.Point(28, 302);
             this.txtEmployeeEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
+<<<<<<< HEAD
+            this.txtEmployeeEmail.Size = new System.Drawing.Size(383, 26);
+            this.txtEmployeeEmail.TabIndex = 47;
+=======
             this.txtEmployeeEmail.Size = new System.Drawing.Size(509, 26);
             this.txtEmployeeEmail.TabIndex = 4;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // mskEmployeeCellphone
             // 
-            this.mskEmployeeCellphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.mskEmployeeCellphone.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskEmployeeCellphone.Location = new System.Drawing.Point(20, 171);
             this.mskEmployeeCellphone.Margin = new System.Windows.Forms.Padding(2);
             this.mskEmployeeCellphone.Location = new System.Drawing.Point(27, 210);
             this.mskEmployeeCellphone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskEmployeeCellphone.Mask = "0000-0000";
             this.mskEmployeeCellphone.Name = "mskEmployeeCellphone";
+<<<<<<< HEAD
+            this.mskEmployeeCellphone.Size = new System.Drawing.Size(383, 26);
+            this.mskEmployeeCellphone.TabIndex = 46;
+=======
             this.mskEmployeeCellphone.Size = new System.Drawing.Size(509, 26);
             this.mskEmployeeCellphone.TabIndex = 3;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // dtpEmployeeBirthDay
             // 
-            this.dtpEmployeeBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.dtpEmployeeBirthDay.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.dtpEmployeeBirthDay.Location = new System.Drawing.Point(20, 382);
             this.dtpEmployeeBirthDay.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEmployeeBirthDay.Location = new System.Drawing.Point(27, 470);
             this.dtpEmployeeBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEmployeeBirthDay.Name = "dtpEmployeeBirthDay";
+<<<<<<< HEAD
+            this.dtpEmployeeBirthDay.Size = new System.Drawing.Size(383, 26);
+            this.dtpEmployeeBirthDay.TabIndex = 45;
+=======
             this.dtpEmployeeBirthDay.Size = new System.Drawing.Size(509, 26);
             this.dtpEmployeeBirthDay.TabIndex = 6;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // txtEmployeeLastName
             // 
-            this.txtEmployeeLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEmployeeLastName.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtEmployeeLastName.Location = new System.Drawing.Point(20, 93);
             this.txtEmployeeLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeLastName.Location = new System.Drawing.Point(27, 114);
             this.txtEmployeeLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmployeeLastName.Name = "txtEmployeeLastName";
+<<<<<<< HEAD
+            this.txtEmployeeLastName.Size = new System.Drawing.Size(383, 26);
+            this.txtEmployeeLastName.TabIndex = 44;
+=======
             this.txtEmployeeLastName.Size = new System.Drawing.Size(509, 26);
             this.txtEmployeeLastName.TabIndex = 2;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // txtEmployeeName
             // 
             this.txtEmployeeName.BackColor = System.Drawing.Color.White;
-            this.txtEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEmployeeName.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtEmployeeName.Location = new System.Drawing.Point(20, 34);
             this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeName.Location = new System.Drawing.Point(27, 42);
             this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmployeeName.Name = "txtEmployeeName";
+<<<<<<< HEAD
+            this.txtEmployeeName.Size = new System.Drawing.Size(383, 26);
+            this.txtEmployeeName.TabIndex = 43;
+=======
             this.txtEmployeeName.Size = new System.Drawing.Size(509, 26);
             this.txtEmployeeName.TabIndex = 1;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // txtDuiDoc
             // 
             this.txtDuiDoc.AutoSize = true;
+<<<<<<< HEAD
+            this.txtDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtDuiDoc.Location = new System.Drawing.Point(17, 288);
+            this.txtDuiDoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDuiDoc.Name = "txtDuiDoc";
+            this.txtDuiDoc.Size = new System.Drawing.Size(37, 18);
+=======
             this.txtDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtDuiDoc.Location = new System.Drawing.Point(23, 354);
             this.txtDuiDoc.Name = "txtDuiDoc";
             this.txtDuiDoc.Size = new System.Drawing.Size(41, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtDuiDoc.TabIndex = 57;
             this.txtDuiDoc.Text = "DUI";
             // 
             // txtEmployeesBirthday
             // 
             this.txtEmployeesBirthday.AutoSize = true;
+<<<<<<< HEAD
+            this.txtEmployeesBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtEmployeesBirthday.Location = new System.Drawing.Point(18, 357);
+            this.txtEmployeesBirthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEmployeesBirthday.Name = "txtEmployeesBirthday";
+            this.txtEmployeesBirthday.Size = new System.Drawing.Size(166, 18);
+=======
             this.txtEmployeesBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtEmployeesBirthday.Location = new System.Drawing.Point(24, 439);
             this.txtEmployeesBirthday.Name = "txtEmployeesBirthday";
             this.txtEmployeesBirthday.Size = new System.Drawing.Size(183, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtEmployeesBirthday.TabIndex = 56;
             this.txtEmployeesBirthday.Text = "Fecha de nacimiento";
             // 
             // txtEmail
             // 
             this.txtEmail.AutoSize = true;
+<<<<<<< HEAD
+            this.txtEmail.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(17, 224);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(49, 18);
+=======
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtEmail.Location = new System.Drawing.Point(23, 276);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(56, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtEmail.TabIndex = 52;
             this.txtEmail.Text = "Email";
             // 
             // txtCellphoneN
             // 
             this.txtCellphoneN.AutoSize = true;
+<<<<<<< HEAD
+            this.txtCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtCellphoneN.Location = new System.Drawing.Point(17, 138);
+            this.txtCellphoneN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtCellphoneN.Name = "txtCellphoneN";
+            this.txtCellphoneN.Size = new System.Drawing.Size(96, 18);
+=======
             this.txtCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtCellphoneN.Location = new System.Drawing.Point(23, 170);
             this.txtCellphoneN.Name = "txtCellphoneN";
             this.txtCellphoneN.Size = new System.Drawing.Size(105, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtCellphoneN.TabIndex = 53;
             this.txtCellphoneN.Text = "N. Teléfono";
             // 
             // txtEmployeesSurname
             // 
             this.txtEmployeesSurname.AutoSize = true;
+<<<<<<< HEAD
+            this.txtEmployeesSurname.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtEmployeesSurname.Location = new System.Drawing.Point(17, 72);
+            this.txtEmployeesSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEmployeesSurname.Name = "txtEmployeesSurname";
+            this.txtEmployeesSurname.Size = new System.Drawing.Size(74, 18);
+=======
             this.txtEmployeesSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtEmployeesSurname.Location = new System.Drawing.Point(23, 89);
             this.txtEmployeesSurname.Name = "txtEmployeesSurname";
             this.txtEmployeesSurname.Size = new System.Drawing.Size(76, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtEmployeesSurname.TabIndex = 54;
             this.txtEmployeesSurname.Text = "Apellido";
             // 
             // txtEmployeesName
             // 
             this.txtEmployeesName.AutoSize = true;
+<<<<<<< HEAD
+            this.txtEmployeesName.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtEmployeesName.Location = new System.Drawing.Point(16, 11);
+            this.txtEmployeesName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEmployeesName.Name = "txtEmployeesName";
+            this.txtEmployeesName.Size = new System.Drawing.Size(68, 18);
+=======
             this.txtEmployeesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtEmployeesName.Location = new System.Drawing.Point(21, 14);
             this.txtEmployeesName.Name = "txtEmployeesName";
             this.txtEmployeesName.Size = new System.Drawing.Size(74, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtEmployeesName.TabIndex = 55;
             this.txtEmployeesName.Text = "Nombre";
             // 
             // txtAddress
             // 
             this.txtAddress.AutoSize = true;
+<<<<<<< HEAD
+            this.txtAddress.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtAddress.Location = new System.Drawing.Point(17, 418);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(81, 18);
+=======
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.txtAddress.Location = new System.Drawing.Point(23, 514);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(90, 20);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtAddress.TabIndex = 52;
             this.txtAddress.Text = "Dirección";
             // 
             // txtAddressEmployee
             // 
-            this.txtAddressEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtAddressEmployee.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtAddressEmployee.Location = new System.Drawing.Point(21, 439);
             this.txtAddressEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressEmployee.Location = new System.Drawing.Point(28, 540);

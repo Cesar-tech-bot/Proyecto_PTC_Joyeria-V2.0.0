@@ -37,11 +37,18 @@
             // 
             // BtnContraAdmin
             // 
+<<<<<<< HEAD
+            this.BtnContraAdmin.BackColor = System.Drawing.Color.Blue;
+            this.BtnContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.BtnContraAdmin.Location = new System.Drawing.Point(211, 213);
+            this.BtnContraAdmin.Margin = new System.Windows.Forms.Padding(2);
+=======
             this.BtnContraAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.BtnContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnContraAdmin.ForeColor = System.Drawing.Color.White;
             this.BtnContraAdmin.Location = new System.Drawing.Point(147, 320);
             this.BtnContraAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.BtnContraAdmin.Name = "BtnContraAdmin";
             this.BtnContraAdmin.Size = new System.Drawing.Size(159, 64);
             this.BtnContraAdmin.TabIndex = 2;
@@ -51,22 +58,38 @@
             // txtContraseñaAdmin
             // 
             this.txtContraseñaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
+<<<<<<< HEAD
+            this.txtContraseñaAdmin.Location = new System.Drawing.Point(142, 144);
+            this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseñaAdmin.MaxLength = 50;
+            this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
+            this.txtContraseñaAdmin.Size = new System.Drawing.Size(238, 26);
+            this.txtContraseñaAdmin.TabIndex = 7;
+=======
             this.txtContraseñaAdmin.Location = new System.Drawing.Point(72, 270);
             this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseñaAdmin.MaxLength = 50;
             this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
             this.txtContraseñaAdmin.Size = new System.Drawing.Size(311, 31);
             this.txtContraseñaAdmin.TabIndex = 1;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
+<<<<<<< HEAD
+            this.label1.Location = new System.Drawing.Point(155, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 18);
+=======
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(68, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(304, 23);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label1.TabIndex = 6;
             this.label1.Text = "Contraseña del Administrador";
             // 

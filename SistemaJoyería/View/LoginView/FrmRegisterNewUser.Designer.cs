@@ -43,28 +43,53 @@
             // 
             // txtCorreo
             // 
+<<<<<<< HEAD
+            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtCorreo.Location = new System.Drawing.Point(218, 298);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(169, 26);
+            this.txtCorreo.TabIndex = 21;
+=======
             this.txtCorreo.Location = new System.Drawing.Point(218, 295);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(224, 22);
             this.txtCorreo.TabIndex = 5;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
+            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.label5.Location = new System.Drawing.Point(292, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 18);
+=======
             this.label5.Location = new System.Drawing.Point(325, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 16);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label5.TabIndex = 20;
             this.label5.Text = "rol";
             // 
             // cmbRol
             // 
+            this.cmbRol.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(251, 158);
             this.cmbRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRol.Name = "cmbRol";
+<<<<<<< HEAD
+            this.cmbRol.Size = new System.Drawing.Size(121, 26);
+            this.cmbRol.TabIndex = 19;
+            // 
+            // btnRegisterNewUser
+            // 
+            this.btnRegisterNewUser.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.btnRegisterNewUser.Location = new System.Drawing.Point(246, 344);
+=======
             this.cmbRol.Size = new System.Drawing.Size(160, 24);
             this.cmbRol.TabIndex = 2;
             // 
@@ -74,6 +99,7 @@
             this.btnRegisterNewUser.ForeColor = System.Drawing.Color.White;
             this.btnRegisterNewUser.Location = new System.Drawing.Point(294, 339);
             this.btnRegisterNewUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.btnRegisterNewUser.Name = "btnRegisterNewUser";
             this.btnRegisterNewUser.Size = new System.Drawing.Size(100, 30);
             this.btnRegisterNewUser.TabIndex = 6;
@@ -83,6 +109,29 @@
             // 
             // txtConfirmContra
             // 
+<<<<<<< HEAD
+            this.txtConfirmContra.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtConfirmContra.Location = new System.Drawing.Point(405, 243);
+            this.txtConfirmContra.Name = "txtConfirmContra";
+            this.txtConfirmContra.Size = new System.Drawing.Size(123, 26);
+            this.txtConfirmContra.TabIndex = 17;
+            // 
+            // txtContra
+            // 
+            this.txtContra.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtContra.Location = new System.Drawing.Point(87, 243);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Size = new System.Drawing.Size(113, 26);
+            this.txtContra.TabIndex = 16;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtUsuario.Location = new System.Drawing.Point(257, 90);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 26);
+            this.txtUsuario.TabIndex = 15;
+=======
             this.txtConfirmContra.Location = new System.Drawing.Point(463, 248);
             this.txtConfirmContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConfirmContra.Name = "txtConfirmContra";
@@ -104,44 +153,73 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(132, 22);
             this.txtUsuario.TabIndex = 1;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.label4.Location = new System.Drawing.Point(426, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 18);
+=======
             this.label4.Location = new System.Drawing.Point(491, 220);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 16);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label4.TabIndex = 14;
             this.label4.Text = "Confirmar Clave";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.label3.Location = new System.Drawing.Point(132, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 18);
+=======
             this.label3.Location = new System.Drawing.Point(99, 220);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 16);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label3.TabIndex = 13;
             this.label3.Text = "Clave";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.label2.Location = new System.Drawing.Point(289, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 18);
+=======
             this.label2.Location = new System.Drawing.Point(308, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label2.TabIndex = 12;
             this.label2.Text = "Usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.label1.Location = new System.Drawing.Point(264, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 18);
+=======
             this.label1.Location = new System.Drawing.Point(275, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 16);
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label1.TabIndex = 11;
             this.label1.Text = "Crea tu usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
