@@ -70,7 +70,7 @@
             this.BtnEnviarCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEnviarCorreo.Name = "BtnEnviarCorreo";
             this.BtnEnviarCorreo.Size = new System.Drawing.Size(184, 71);
-            this.BtnEnviarCorreo.TabIndex = 6;
+            this.BtnEnviarCorreo.TabIndex = 2;
             this.BtnEnviarCorreo.Text = "Enviar correo";
             this.BtnEnviarCorreo.UseVisualStyleBackColor = false;
             // 
@@ -81,7 +81,7 @@
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(439, 31);
-            this.txtCorreo.TabIndex = 5;
+            this.txtCorreo.TabIndex = 1;
             // 
             // label1
             // 
@@ -103,7 +103,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 42);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
             // 
