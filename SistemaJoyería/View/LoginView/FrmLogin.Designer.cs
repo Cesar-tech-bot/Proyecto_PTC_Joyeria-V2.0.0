@@ -48,6 +48,11 @@
             // LinklblRecuperar
             // 
             this.LinklblRecuperar.AutoSize = true;
+            this.LinklblRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinklblRecuperar.Location = new System.Drawing.Point(316, 255);
+            this.LinklblRecuperar.Name = "LinklblRecuperar";
+            this.LinklblRecuperar.Size = new System.Drawing.Size(182, 16);
+            this.LinklblRecuperar.TabIndex = 15;
             this.LinklblRecuperar.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinklblRecuperar.Location = new System.Drawing.Point(622, 313);
             this.LinklblRecuperar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -72,6 +77,8 @@
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtContraseña.Location = new System.Drawing.Point(319, 156);
             this.txtContraseña.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(445, 178);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
@@ -82,6 +89,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(314, 130);
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(439, 148);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -92,6 +101,8 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsuario.Location = new System.Drawing.Point(319, 85);
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(445, 97);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
@@ -102,6 +113,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(314, 59);
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(439, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -113,6 +126,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(377, 7);
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(523, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -178,6 +193,9 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Italic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

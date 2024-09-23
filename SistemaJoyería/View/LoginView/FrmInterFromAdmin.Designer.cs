@@ -91,6 +91,7 @@
             this.Controls.Add(this.BtnContraAdmin);
             this.Controls.Add(this.txtContraseñaAdmin);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmInterFromAdmin";
             this.Text = "FrmInterFromAdmin";

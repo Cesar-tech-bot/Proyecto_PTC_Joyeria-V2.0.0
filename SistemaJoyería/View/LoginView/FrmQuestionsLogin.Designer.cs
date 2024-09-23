@@ -45,21 +45,27 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsuario.Location = new System.Drawing.Point(9, 28);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Location = new System.Drawing.Point(12, 34);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.MaxLength = 1;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(477, 31);
+            this.txtUsuario.Size = new System.Drawing.Size(359, 26);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtRespuesta3
             // 
             this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtRespuesta3.Location = new System.Drawing.Point(9, 224);
+            this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRespuesta3.MaxLength = 100;
             this.txtRespuesta3.Location = new System.Drawing.Point(12, 276);
             this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta3.MaxLength = 4;
             this.txtRespuesta3.Name = "txtRespuesta3";
-            this.txtRespuesta3.Size = new System.Drawing.Size(477, 31);
+            this.txtRespuesta3.Size = new System.Drawing.Size(359, 26);
             this.txtRespuesta3.TabIndex = 3;
             // 
             // lbpPreguntas
@@ -68,9 +74,10 @@
             this.lbpPreguntas.BackColor = System.Drawing.Color.Transparent;
             this.lbpPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.lbpPreguntas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbpPreguntas.Location = new System.Drawing.Point(8, 9);
+            this.lbpPreguntas.Location = new System.Drawing.Point(6, 7);
+            this.lbpPreguntas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbpPreguntas.Name = "lbpPreguntas";
-            this.lbpPreguntas.Size = new System.Drawing.Size(222, 23);
+            this.lbpPreguntas.Size = new System.Drawing.Size(173, 18);
             this.lbpPreguntas.TabIndex = 11;
             this.lbpPreguntas.Text = "¿Cuál es tu Usuario?";
             // 
@@ -80,9 +87,10 @@
             this.lbPregunta1.BackColor = System.Drawing.Color.Transparent;
             this.lbPregunta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.lbPregunta1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPregunta1.Location = new System.Drawing.Point(8, 83);
+            this.lbPregunta1.Location = new System.Drawing.Point(6, 67);
+            this.lbPregunta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPregunta1.Name = "lbPregunta1";
-            this.lbPregunta1.Size = new System.Drawing.Size(275, 23);
+            this.lbPregunta1.Size = new System.Drawing.Size(213, 18);
             this.lbPregunta1.TabIndex = 14;
             this.lbPregunta1.Text = "¿Cuál es tu joya favorita?";
             // 
@@ -92,14 +100,22 @@
             this.lbPregunta2.BackColor = System.Drawing.Color.Transparent;
             this.lbPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.lbPregunta2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPregunta2.Location = new System.Drawing.Point(8, 164);
+            this.lbPregunta2.Location = new System.Drawing.Point(6, 133);
+            this.lbPregunta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPregunta2.Name = "lbPregunta2";
-            this.lbPregunta2.Size = new System.Drawing.Size(437, 23);
+            this.lbPregunta2.Size = new System.Drawing.Size(341, 18);
             this.lbPregunta2.TabIndex = 15;
             this.lbPregunta2.Text = "¿Qué color te gustan que sean las joyas?";
             // 
             // txtRespuesta1
             // 
+            this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtRespuesta2.Location = new System.Drawing.Point(9, 88);
+            this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRespuesta2.MaxLength = 100;
+            this.txtRespuesta2.Name = "txtRespuesta2";
+            this.txtRespuesta2.Size = new System.Drawing.Size(359, 26);
+            this.txtRespuesta2.TabIndex = 16;
             this.txtRespuesta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtRespuesta1.Location = new System.Drawing.Point(12, 108);
             this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -115,9 +131,10 @@
             this.lbPregunta3.BackColor = System.Drawing.Color.Transparent;
             this.lbPregunta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.lbPregunta3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPregunta3.Location = new System.Drawing.Point(8, 251);
+            this.lbPregunta3.Location = new System.Drawing.Point(6, 204);
+            this.lbPregunta3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPregunta3.Name = "lbPregunta3";
-            this.lbPregunta3.Size = new System.Drawing.Size(481, 23);
+            this.lbPregunta3.Size = new System.Drawing.Size(374, 18);
             this.lbPregunta3.TabIndex = 17;
             this.lbPregunta3.Text = "¿Cuántas veces has visitado nuestra Tienda?";
             // 
@@ -126,9 +143,11 @@
             this.btnVerificarRespuestas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnVerificarRespuestas.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Bold);
             this.btnVerificarRespuestas.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarRespuestas.Location = new System.Drawing.Point(632, 234);
-            this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVerificarRespuestas.Location = new System.Drawing.Point(474, 190);
+            this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerificarRespuestas.Name = "btnVerificarRespuestas";
+            this.btnVerificarRespuestas.Size = new System.Drawing.Size(140, 45);
+            this.btnVerificarRespuestas.TabIndex = 18;
             this.btnVerificarRespuestas.Size = new System.Drawing.Size(186, 55);
             this.btnVerificarRespuestas.TabIndex = 5;
             this.btnVerificarRespuestas.Text = "Confirmar";
@@ -136,6 +155,13 @@
             // 
             // txtRespuesta2
             // 
+            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(9, 154);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.MaxLength = 100;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(359, 26);
+            this.textBox1.TabIndex = 19;
             this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtRespuesta2.Location = new System.Drawing.Point(12, 189);
             this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -148,9 +174,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.Preguntaa;
-            this.pictureBox1.Location = new System.Drawing.Point(597, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(448, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 184);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -160,9 +187,11 @@
             this.btnComeBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnComeBack.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold);
             this.btnComeBack.ForeColor = System.Drawing.Color.White;
-            this.btnComeBack.Location = new System.Drawing.Point(798, 303);
-            this.btnComeBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnComeBack.Location = new System.Drawing.Point(598, 246);
+            this.btnComeBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnComeBack.Name = "btnComeBack";
+            this.btnComeBack.Size = new System.Drawing.Size(65, 27);
+            this.btnComeBack.TabIndex = 18;
             this.btnComeBack.Size = new System.Drawing.Size(87, 33);
             this.btnComeBack.TabIndex = 6;
             this.btnComeBack.Text = "Regresar";
@@ -170,10 +199,10 @@
             // 
             // FrmQuestionsLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(897, 341);
+            this.ClientSize = new System.Drawing.Size(673, 277);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtRespuesta2);
             this.Controls.Add(this.btnComeBack);
@@ -186,7 +215,7 @@
             this.Controls.Add(this.txtRespuesta3);
             this.Controls.Add(this.txtUsuario);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmQuestionsLogin";
             this.Text = "FrmQuestionsLogin";
             this.Load += new System.EventHandler(this.FrmQuestionsLogin_Load);

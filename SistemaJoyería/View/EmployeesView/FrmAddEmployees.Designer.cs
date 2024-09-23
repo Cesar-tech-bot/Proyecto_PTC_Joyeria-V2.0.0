@@ -52,6 +52,8 @@
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(237, 517);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Location = new System.Drawing.Point(316, 636);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
@@ -65,6 +67,8 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(85, 517);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Location = new System.Drawing.Point(113, 636);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
@@ -76,6 +80,8 @@
             // mskEmployeeDUI
             // 
             this.mskEmployeeDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.mskEmployeeDUI.Location = new System.Drawing.Point(20, 320);
+            this.mskEmployeeDUI.Margin = new System.Windows.Forms.Padding(2);
             this.mskEmployeeDUI.Location = new System.Drawing.Point(27, 394);
             this.mskEmployeeDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskEmployeeDUI.Mask = "0000000-0";
@@ -86,6 +92,8 @@
             // txtEmployeeEmail
             // 
             this.txtEmployeeEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEmployeeEmail.Location = new System.Drawing.Point(21, 245);
+            this.txtEmployeeEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeEmail.Location = new System.Drawing.Point(28, 302);
             this.txtEmployeeEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
@@ -95,6 +103,8 @@
             // mskEmployeeCellphone
             // 
             this.mskEmployeeCellphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.mskEmployeeCellphone.Location = new System.Drawing.Point(20, 171);
+            this.mskEmployeeCellphone.Margin = new System.Windows.Forms.Padding(2);
             this.mskEmployeeCellphone.Location = new System.Drawing.Point(27, 210);
             this.mskEmployeeCellphone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskEmployeeCellphone.Mask = "0000-0000";
@@ -105,6 +115,8 @@
             // dtpEmployeeBirthDay
             // 
             this.dtpEmployeeBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.dtpEmployeeBirthDay.Location = new System.Drawing.Point(20, 382);
+            this.dtpEmployeeBirthDay.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEmployeeBirthDay.Location = new System.Drawing.Point(27, 470);
             this.dtpEmployeeBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEmployeeBirthDay.Name = "dtpEmployeeBirthDay";
@@ -114,6 +126,8 @@
             // txtEmployeeLastName
             // 
             this.txtEmployeeLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEmployeeLastName.Location = new System.Drawing.Point(20, 93);
+            this.txtEmployeeLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeLastName.Location = new System.Drawing.Point(27, 114);
             this.txtEmployeeLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmployeeLastName.Name = "txtEmployeeLastName";
@@ -124,6 +138,8 @@
             // 
             this.txtEmployeeName.BackColor = System.Drawing.Color.White;
             this.txtEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEmployeeName.Location = new System.Drawing.Point(20, 34);
+            this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeName.Location = new System.Drawing.Point(27, 42);
             this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmployeeName.Name = "txtEmployeeName";
@@ -203,6 +219,8 @@
             // txtAddressEmployee
             // 
             this.txtAddressEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtAddressEmployee.Location = new System.Drawing.Point(21, 439);
+            this.txtAddressEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressEmployee.Location = new System.Drawing.Point(28, 540);
             this.txtAddressEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressEmployee.Multiline = true;
@@ -231,6 +249,7 @@
             this.Controls.Add(this.txtCellphoneN);
             this.Controls.Add(this.txtEmployeesSurname);
             this.Controls.Add(this.txtEmployeesName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;

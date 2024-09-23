@@ -168,6 +168,7 @@
             this.Controls.Add(this.lbpPreguntas);
             this.Controls.Add(this.txtRespuesta3);
             this.Controls.Add(this.txtUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmRegisterQuestions";
             this.Text = "FrmRegisterQuestions";

@@ -156,6 +156,7 @@
             this.Controls.Add(this.LbConfirmarContraseñanuevForAdmin);
             this.Controls.Add(this.LbContraseñaNuevaForAdmin);
             this.Controls.Add(this.LbUsuarioAfectado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(572, 500);
             this.MinimizeBox = false;

@@ -161,6 +161,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(533, 444);
             this.MinimizeBox = false;

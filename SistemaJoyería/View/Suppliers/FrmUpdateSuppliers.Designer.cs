@@ -190,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Telefono);
             this.Controls.Add(this.Email);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUpdateSuppliers";
             this.Text = "FrmUpdateSuppliers";
