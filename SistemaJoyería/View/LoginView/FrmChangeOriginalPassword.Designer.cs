@@ -36,13 +36,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.btnNewPssword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnNewPssword.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold);
             this.btnNewPssword.ForeColor = System.Drawing.Color.White;
-            this.btnNewPssword.Location = new System.Drawing.Point(339, 206);
+            this.btnNewPssword.Location = new System.Drawing.Point(332, 206);
             this.btnNewPssword.Name = "btnNewPssword";
             this.btnNewPssword.Size = new System.Drawing.Size(139, 64);
             this.btnNewPssword.TabIndex = 15;
@@ -61,52 +61,55 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(321, 152);
+            this.textBox3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
+            this.textBox3.Location = new System.Drawing.Point(313, 152);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 20);
+            this.textBox3.Size = new System.Drawing.Size(179, 26);
             this.textBox3.TabIndex = 14;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(321, 95);
+            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
+            this.textBox2.Location = new System.Drawing.Point(312, 95);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
+            this.textBox2.Size = new System.Drawing.Size(179, 26);
             this.textBox2.TabIndex = 13;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(321, 40);
+            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
+            this.textBox1.Location = new System.Drawing.Point(312, 40);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
+            this.textBox1.Size = new System.Drawing.Size(179, 26);
             this.textBox1.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(318, 130);
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(311, 130);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(185, 18);
+            this.label9.Size = new System.Drawing.Size(174, 18);
             this.label9.TabIndex = 11;
             this.label9.Text = "Confirmar Contraseña";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(318, 73);
+            this.label8.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(311, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 18);
+            this.label8.Size = new System.Drawing.Size(144, 18);
             this.label8.TabIndex = 10;
             this.label8.Text = "Nueva Contraseña";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(318, 18);
+            this.label7.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(311, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 18);
+            this.label7.Size = new System.Drawing.Size(64, 18);
             this.label7.TabIndex = 9;
             this.label7.Text = "Usuario";
             // 
@@ -126,87 +129,88 @@
             this.panel1.Size = new System.Drawing.Size(280, 296);
             this.panel1.TabIndex = 8;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.Save;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(14, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 18);
+            this.label6.Size = new System.Drawing.Size(170, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "- Al menos un numero";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(12, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(243, 18);
+            this.label5.Size = new System.Drawing.Size(226, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "- Al menos una Minuscula A-Z";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(12, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 18);
+            this.label4.Size = new System.Drawing.Size(232, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "- Al menos una Mayuscula A-Z";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(14, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 18);
+            this.label3.Size = new System.Drawing.Size(173, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "- Un signo como $ % #";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 18);
+            this.label2.Size = new System.Drawing.Size(215, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "- 8 caracteres como minimo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 18);
+            this.label1.Size = new System.Drawing.Size(247, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Caracteristicas de la contraseña";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.descarga;
+            this.pictureBox1.Location = new System.Drawing.Point(90, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmChangeOriginalPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 296);
             this.Controls.Add(this.btnNewPssword);
             this.Controls.Add(this.textBox3);
@@ -216,7 +220,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmChangeOriginalPassword";
             this.Text = "FrmChangeOriginalPassword";
             this.panel1.ResumeLayout(false);
