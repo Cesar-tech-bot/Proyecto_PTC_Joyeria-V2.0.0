@@ -155,13 +155,6 @@
             // 
             // txtRespuesta2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.textBox1.Location = new System.Drawing.Point(9, 154);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 26);
-            this.textBox1.TabIndex = 19;
             this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtRespuesta2.Location = new System.Drawing.Point(12, 189);
             this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
