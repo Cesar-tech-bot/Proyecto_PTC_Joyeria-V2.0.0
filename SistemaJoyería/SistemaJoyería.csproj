@@ -351,6 +351,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\Login.jpg" />
+    <None Include="Resources\User1.png" />
     <None Include="Resources\Save.png" />
     <None Include="Resources\NewPSWRD.png" />
     <None Include="Resources\Recuperar contraseña.png" />

@@ -45,7 +45,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 299);
+            this.panel1.Size = new System.Drawing.Size(202, 267);
             this.panel1.TabIndex = 7;
             // 
             // pictureBox1
@@ -56,7 +56,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 299);
+            this.pictureBox1.Size = new System.Drawing.Size(202, 267);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -64,20 +64,20 @@
             // BtnEnviarCorreo
             // 
             this.BtnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnEnviarCorreo.ForeColor = System.Drawing.Color.White;
-            this.BtnEnviarCorreo.Location = new System.Drawing.Point(210, 75);
+            this.BtnEnviarCorreo.Location = new System.Drawing.Point(214, 73);
             this.BtnEnviarCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnEnviarCorreo.Name = "BtnEnviarCorreo";
-            this.BtnEnviarCorreo.Size = new System.Drawing.Size(184, 71);
+            this.BtnEnviarCorreo.Size = new System.Drawing.Size(203, 75);
             this.BtnEnviarCorreo.TabIndex = 6;
             this.BtnEnviarCorreo.Text = "Enviar correo";
             this.BtnEnviarCorreo.UseVisualStyleBackColor = false;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.txtCorreo.Location = new System.Drawing.Point(214, 36);
+            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(214, 34);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(439, 31);
@@ -86,38 +86,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(210, 9);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.label1.Location = new System.Drawing.Point(210, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 23);
+            this.label1.Size = new System.Drawing.Size(293, 23);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ingresa tu correo electronico";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(525, 244);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(525, 216);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 42);
+            this.button1.Size = new System.Drawing.Size(128, 39);
             this.button1.TabIndex = 6;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmEmail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 299);
+            this.ClientSize = new System.Drawing.Size(684, 267);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnEnviarCorreo);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmEmail";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -30,53 +30,73 @@
         {
             this.BtnContraAdmin = new System.Windows.Forms.Button();
             this.txtContraseñaAdmin = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnContraAdmin
             // 
-            this.BtnContraAdmin.BackColor = System.Drawing.Color.Blue;
-            this.BtnContraAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnContraAdmin.Location = new System.Drawing.Point(211, 213);
-            this.BtnContraAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnContraAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.BtnContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.BtnContraAdmin.ForeColor = System.Drawing.Color.White;
+            this.BtnContraAdmin.Location = new System.Drawing.Point(274, 334);
+            this.BtnContraAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnContraAdmin.Name = "BtnContraAdmin";
-            this.BtnContraAdmin.Size = new System.Drawing.Size(87, 41);
+            this.BtnContraAdmin.Size = new System.Drawing.Size(140, 61);
             this.BtnContraAdmin.TabIndex = 8;
             this.BtnContraAdmin.Text = "Confirmar";
             this.BtnContraAdmin.UseVisualStyleBackColor = false;
             // 
             // txtContraseñaAdmin
             // 
-            this.txtContraseñaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaAdmin.Location = new System.Drawing.Point(142, 144);
-            this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseñaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtContraseñaAdmin.Location = new System.Drawing.Point(187, 277);
+            this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseñaAdmin.MaxLength = 50;
             this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
-            this.txtContraseñaAdmin.Size = new System.Drawing.Size(238, 23);
+            this.txtContraseñaAdmin.Size = new System.Drawing.Size(313, 31);
             this.txtContraseñaAdmin.TabIndex = 7;
             // 
-            // label1
+            // txtPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Contraseña del Administrador";
+            this.txtPassword.AutoSize = true;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.Font = new System.Drawing.Font("Lucida Sans", 12.5F);
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(183, 240);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(321, 24);
+            this.txtPassword.TabIndex = 6;
+            this.txtPassword.Text = "Contraseña del Administrador";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.User1;
+            this.pictureBox1.Location = new System.Drawing.Point(187, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 215);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmInterFromAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(699, 430);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnContraAdmin);
             this.Controls.Add(this.txtContraseñaAdmin);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPassword);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmInterFromAdmin";
             this.Text = "FrmInterFromAdmin";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +106,7 @@
 
         public System.Windows.Forms.Button BtnContraAdmin;
         public System.Windows.Forms.TextBox txtContraseñaAdmin;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label txtPassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
