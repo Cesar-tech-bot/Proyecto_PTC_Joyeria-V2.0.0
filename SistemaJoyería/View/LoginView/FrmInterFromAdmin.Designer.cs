@@ -75,6 +75,7 @@
             this.Controls.Add(this.BtnContraAdmin);
             this.Controls.Add(this.txtContraseñaAdmin);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmInterFromAdmin";
             this.Text = "FrmInterFromAdmin";
             this.ResumeLayout(false);

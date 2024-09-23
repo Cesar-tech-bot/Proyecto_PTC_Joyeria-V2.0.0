@@ -46,16 +46,10 @@
             // LinklblRecuperar
             // 
             this.LinklblRecuperar.AutoSize = true;
-            this.LinklblRecuperar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinklblRecuperar.Location = new System.Drawing.Point(316, 255);
-            this.LinklblRecuperar.Name = "LinklblRecuperar";
-            this.LinklblRecuperar.Size = new System.Drawing.Size(146, 16);
-
             this.LinklblRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinklblRecuperar.Location = new System.Drawing.Point(316, 255);
             this.LinklblRecuperar.Name = "LinklblRecuperar";
             this.LinklblRecuperar.Size = new System.Drawing.Size(182, 16);
-
             this.LinklblRecuperar.TabIndex = 15;
             this.LinklblRecuperar.TabStop = true;
             this.LinklblRecuperar.Text = "¿Ha olvidado su contraseña?";
@@ -73,8 +67,7 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             // 
             // txtContraseña
-            // o
-            this.txtContraseña.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtContraseña.Location = new System.Drawing.Point(319, 156);
             this.txtContraseña.Name = "txtContraseña";
@@ -84,11 +77,6 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(314, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 18);
-
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(314, 130);
             this.label3.Name = "label3";
@@ -98,8 +86,6 @@
             // 
             // txtUsuario
             // 
-
-            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.Location = new System.Drawing.Point(319, 85);
             this.txtUsuario.Name = "txtUsuario";
@@ -109,10 +95,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(314, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(314, 59);
             this.label2.Name = "label2";
@@ -123,10 +105,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(377, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(377, 7);
             this.label1.Name = "label1";
@@ -177,8 +155,9 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";

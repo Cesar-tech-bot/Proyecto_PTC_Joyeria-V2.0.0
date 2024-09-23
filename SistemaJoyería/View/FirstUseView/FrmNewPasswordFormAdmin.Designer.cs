@@ -155,6 +155,7 @@
             this.Controls.Add(this.LbConfirmarContraseñanuevForAdmin);
             this.Controls.Add(this.LbContraseñaNuevaForAdmin);
             this.Controls.Add(this.LbUsuarioAfectado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmNewPasswordFormAdmin";
             this.Text = "FrmNewPasswordFormAdmin";
             this.ResumeLayout(false);

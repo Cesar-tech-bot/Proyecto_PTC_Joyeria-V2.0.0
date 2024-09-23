@@ -129,7 +129,7 @@
             this.tbClientsName.BackColor = System.Drawing.Color.White;
             this.tbClientsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tbClientsName.Location = new System.Drawing.Point(13, 34);
-            this.tbClientsName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbClientsName.Margin = new System.Windows.Forms.Padding(2);
             this.tbClientsName.Name = "tbClientsName";
             this.tbClientsName.Size = new System.Drawing.Size(383, 26);
             this.tbClientsName.TabIndex = 1;
@@ -138,7 +138,7 @@
             // 
             this.tbClientsSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tbClientsSurname.Location = new System.Drawing.Point(13, 93);
-            this.tbClientsSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbClientsSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbClientsSurname.Name = "tbClientsSurname";
             this.tbClientsSurname.Size = new System.Drawing.Size(383, 26);
             this.tbClientsSurname.TabIndex = 2;
@@ -147,7 +147,7 @@
             // 
             this.dtpClientsBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.dtpClientsBirthday.Location = new System.Drawing.Point(13, 167);
-            this.dtpClientsBirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpClientsBirthday.Margin = new System.Windows.Forms.Padding(2);
             this.dtpClientsBirthday.Name = "dtpClientsBirthday";
             this.dtpClientsBirthday.Size = new System.Drawing.Size(383, 26);
             this.dtpClientsBirthday.TabIndex = 3;
@@ -156,7 +156,7 @@
             // 
             this.mskCellphoneN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.mskCellphoneN.Location = new System.Drawing.Point(13, 242);
-            this.mskCellphoneN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskCellphoneN.Margin = new System.Windows.Forms.Padding(2);
             this.mskCellphoneN.Mask = "0000-0000";
             this.mskCellphoneN.Name = "mskCellphoneN";
             this.mskCellphoneN.Size = new System.Drawing.Size(383, 26);
@@ -166,7 +166,7 @@
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tbEmail.Location = new System.Drawing.Point(13, 301);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(383, 26);
             this.tbEmail.TabIndex = 5;
@@ -175,7 +175,7 @@
             // 
             this.mskDuiDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.mskDuiDoc.Location = new System.Drawing.Point(13, 372);
-            this.mskDuiDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskDuiDoc.Margin = new System.Windows.Forms.Padding(2);
             this.mskDuiDoc.Mask = "0000000-0";
             this.mskDuiDoc.Name = "mskDuiDoc";
             this.mskDuiDoc.Size = new System.Drawing.Size(382, 26);
@@ -187,7 +187,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(78, 517);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(101, 37);
             this.btnDelete.TabIndex = 8;
@@ -200,7 +200,7 @@
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(230, 517);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(101, 37);
             this.btnOK.TabIndex = 9;
@@ -211,7 +211,7 @@
             // 
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tbAddress.Location = new System.Drawing.Point(12, 432);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbAddress.Multiline = true;
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(383, 69);
@@ -238,8 +238,9 @@
             this.Controls.Add(this.txtCellphoneN);
             this.Controls.Add(this.txtClientsSurname);
             this.Controls.Add(this.txtClientsName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddClients";

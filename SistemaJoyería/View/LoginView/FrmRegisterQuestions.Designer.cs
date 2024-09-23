@@ -172,6 +172,7 @@
             this.Controls.Add(this.lbpPreguntas);
             this.Controls.Add(this.txtRespuesta3);
             this.Controls.Add(this.txtUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRegisterQuestions";
             this.Text = "FrmRegisterQuestions";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

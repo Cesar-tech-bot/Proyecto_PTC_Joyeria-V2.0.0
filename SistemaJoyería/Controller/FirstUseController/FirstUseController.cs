@@ -11,6 +11,7 @@ namespace SistemaJoyería.Controller.FirstUserController
     internal class ControllerFirstUser
     {
         FrmFirstUse objFirstUser;
+        SqlCommand Command = new SqlCommand();
 
         public ControllerFirstUser(FrmFirstUse vista)
         {

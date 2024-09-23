@@ -90,6 +90,7 @@
             this.Controls.Add(this.BtnEnviarCorreo);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RecuperarCorreo";
             this.Text = "RecuperarCorreo";
             this.panel1.ResumeLayout(false);
