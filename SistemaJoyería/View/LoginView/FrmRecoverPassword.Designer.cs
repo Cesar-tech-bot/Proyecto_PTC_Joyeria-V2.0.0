@@ -59,7 +59,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(657, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(220, 334);
+            this.panel4.Size = new System.Drawing.Size(220, 333);
             this.panel4.TabIndex = 7;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -67,7 +67,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox4.Image = global::SistemaJoyería.Properties.Resources.ADmin_intervención;
-            this.pictureBox4.Location = new System.Drawing.Point(34, 40);
+            this.pictureBox4.Location = new System.Drawing.Point(32, 50);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(158, 155);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,9 +77,9 @@
             // btnAdmin
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 242);
+            this.btnAdmin.Location = new System.Drawing.Point(0, 258);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(219, 74);
             this.btnAdmin.TabIndex = 0;
@@ -94,14 +94,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(438, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(219, 334);
+            this.panel3.Size = new System.Drawing.Size(219, 333);
             this.panel3.TabIndex = 6;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox3.Image = global::SistemaJoyería.Properties.Resources.Preguntaa;
-            this.pictureBox3.Location = new System.Drawing.Point(34, 40);
+            this.pictureBox3.Location = new System.Drawing.Point(34, 51);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(158, 155);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,9 +111,9 @@
             // btnPreguntas
             // 
             this.btnPreguntas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreguntas.ForeColor = System.Drawing.Color.White;
-            this.btnPreguntas.Location = new System.Drawing.Point(0, 242);
+            this.btnPreguntas.Location = new System.Drawing.Point(0, 258);
             this.btnPreguntas.Name = "btnPreguntas";
             this.btnPreguntas.Size = new System.Drawing.Size(219, 74);
             this.btnPreguntas.TabIndex = 0;
@@ -128,14 +128,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(219, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 334);
+            this.panel2.Size = new System.Drawing.Size(219, 333);
             this.panel2.TabIndex = 5;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox2.Image = global::SistemaJoyería.Properties.Resources.Gmail;
-            this.pictureBox2.Location = new System.Drawing.Point(34, 40);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 50);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(148, 155);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,9 +145,9 @@
             // btnCorreo
             // 
             this.btnCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCorreo.ForeColor = System.Drawing.Color.White;
-            this.btnCorreo.Location = new System.Drawing.Point(0, 242);
+            this.btnCorreo.Location = new System.Drawing.Point(0, 258);
             this.btnCorreo.Name = "btnCorreo";
             this.btnCorreo.Size = new System.Drawing.Size(219, 74);
             this.btnCorreo.TabIndex = 0;
@@ -163,7 +163,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 334);
+            this.panel1.Size = new System.Drawing.Size(219, 333);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -171,7 +171,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +181,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
@@ -193,9 +193,9 @@
             // btnInterAdmin
             // 
             this.btnInterAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnInterAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInterAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInterAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnInterAdmin.Location = new System.Drawing.Point(0, 242);
+            this.btnInterAdmin.Location = new System.Drawing.Point(0, 257);
             this.btnInterAdmin.Name = "btnInterAdmin";
             this.btnInterAdmin.Size = new System.Drawing.Size(219, 74);
             this.btnInterAdmin.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(878, 334);
+            this.ClientSize = new System.Drawing.Size(877, 333);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
