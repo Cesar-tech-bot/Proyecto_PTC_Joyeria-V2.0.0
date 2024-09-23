@@ -68,11 +68,8 @@
             // BtnEnviarCorreo
             // 
             this.BtnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-<<<<<<< HEAD
             this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
-=======
             this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.BtnEnviarCorreo.ForeColor = System.Drawing.Color.White;
             this.BtnEnviarCorreo.Location = new System.Drawing.Point(158, 61);
             this.BtnEnviarCorreo.Name = "BtnEnviarCorreo";
@@ -107,27 +104,21 @@
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.label1.Location = new System.Drawing.Point(158, 7);
             this.label1.Name = "label1";
-<<<<<<< HEAD
             this.label1.Size = new System.Drawing.Size(225, 18);
-=======
             this.label1.Size = new System.Drawing.Size(245, 18);
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(210, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 23);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.label1.TabIndex = 4;
             this.label1.Text = "Ingresa tu correo electronico";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-<<<<<<< HEAD
             this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F);
-=======
             this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(394, 198);
             this.button1.Name = "button1";

@@ -43,15 +43,12 @@
             // 
             // txtPregunta2
             // 
-<<<<<<< HEAD
             this.txtPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtPregunta2.Location = new System.Drawing.Point(19, 164);
             this.txtPregunta2.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.txtPregunta2.Location = new System.Drawing.Point(25, 202);
             this.txtPregunta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtPregunta2.MaxLength = 100;
             this.txtPregunta2.Name = "txtPregunta2";
             this.txtPregunta2.Size = new System.Drawing.Size(477, 31);
@@ -78,25 +75,19 @@
             this.lbPregunta3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbPregunta3.Location = new System.Drawing.Point(21, 263);
             this.lbPregunta3.Name = "lbPregunta3";
-<<<<<<< HEAD
             this.lbPregunta3.Size = new System.Drawing.Size(344, 18);
-=======
             this.lbPregunta3.Size = new System.Drawing.Size(450, 23);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.lbPregunta3.TabIndex = 37;
             this.lbPregunta3.Text = "¿Cuántas veces has visitado nuestra Tienda?";
             // 
             // txtRespuesta1
             // 
-<<<<<<< HEAD
             this.txtRespuesta1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtRespuesta1.Location = new System.Drawing.Point(19, 98);
             this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtRespuesta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.txtRespuesta1.Location = new System.Drawing.Point(25, 120);
             this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtRespuesta1.MaxLength = 100;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(477, 31);
@@ -110,11 +101,8 @@
             this.lbPregunta2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbPregunta2.Location = new System.Drawing.Point(21, 176);
             this.lbPregunta2.Name = "lbPregunta2";
-<<<<<<< HEAD
             this.lbPregunta2.Size = new System.Drawing.Size(316, 18);
-=======
             this.lbPregunta2.Size = new System.Drawing.Size(402, 23);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.lbPregunta2.TabIndex = 35;
             this.lbPregunta2.Text = "¿Qué color te gustan que sean las joyas?";
             // 
@@ -126,11 +114,8 @@
             this.lbPregunta1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbPregunta1.Location = new System.Drawing.Point(21, 95);
             this.lbPregunta1.Name = "lbPregunta1";
-<<<<<<< HEAD
             this.lbPregunta1.Size = new System.Drawing.Size(196, 18);
-=======
             this.lbPregunta1.Size = new System.Drawing.Size(256, 23);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.lbPregunta1.TabIndex = 34;
             this.lbPregunta1.Text = "¿Cuál es tu joya favorita?";
             // 
@@ -142,25 +127,19 @@
             this.lbpPreguntas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbpPreguntas.Location = new System.Drawing.Point(21, 21);
             this.lbpPreguntas.Name = "lbpPreguntas";
-<<<<<<< HEAD
             this.lbpPreguntas.Size = new System.Drawing.Size(159, 18);
-=======
             this.lbpPreguntas.Size = new System.Drawing.Size(203, 23);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.lbpPreguntas.TabIndex = 33;
             this.lbpPreguntas.Text = "¿Cuál es tu Usuario?";
             // 
             // txtRespuesta3
             // 
-<<<<<<< HEAD
             this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtRespuesta3.Location = new System.Drawing.Point(19, 234);
             this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.txtRespuesta3.Location = new System.Drawing.Point(25, 288);
             this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtRespuesta3.MaxLength = 100;
             this.txtRespuesta3.Name = "txtRespuesta3";
             this.txtRespuesta3.Size = new System.Drawing.Size(477, 31);
@@ -168,15 +147,12 @@
             // 
             // txtUsuario
             // 
-<<<<<<< HEAD
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtUsuario.Location = new System.Drawing.Point(19, 38);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.txtUsuario.Location = new System.Drawing.Point(12, 46);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(477, 31);
