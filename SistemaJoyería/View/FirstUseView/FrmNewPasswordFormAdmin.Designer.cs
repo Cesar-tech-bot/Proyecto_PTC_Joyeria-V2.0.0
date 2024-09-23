@@ -66,12 +66,17 @@
             // BtnConfirmarNuevaContraAdmin
             // 
             this.BtnConfirmarNuevaContraAdmin.BackColor = System.Drawing.Color.Navy;
+<<<<<<< HEAD
             this.BtnConfirmarNuevaContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.BtnConfirmarNuevaContraAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConfirmarNuevaContraAdmin.ForeColor = System.Drawing.Color.White;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.BtnConfirmarNuevaContraAdmin.Location = new System.Drawing.Point(213, 358);
-            this.BtnConfirmarNuevaContraAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnConfirmarNuevaContraAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnConfirmarNuevaContraAdmin.Name = "BtnConfirmarNuevaContraAdmin";
             this.BtnConfirmarNuevaContraAdmin.Size = new System.Drawing.Size(105, 37);
-            this.BtnConfirmarNuevaContraAdmin.TabIndex = 25;
+            this.BtnConfirmarNuevaContraAdmin.TabIndex = 4;
             this.BtnConfirmarNuevaContraAdmin.Text = "Guardar";
             this.BtnConfirmarNuevaContraAdmin.UseVisualStyleBackColor = false;
             // 
@@ -79,8 +84,8 @@
             // 
             this.txtNameUserAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameUserAdmin.Location = new System.Drawing.Point(169, 158);
-            this.txtNameUserAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNameUserAdmin.MaxLength = 25;
+            this.txtNameUserAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameUserAdmin.MaxLength = 1;
             this.txtNameUserAdmin.Name = "txtNameUserAdmin";
             this.txtNameUserAdmin.Size = new System.Drawing.Size(202, 26);
             this.txtNameUserAdmin.TabIndex = 20;
@@ -89,18 +94,25 @@
             // 
             this.txtNuevaContraseñaNuevaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNuevaContraseñaNuevaAdmin.Location = new System.Drawing.Point(186, 234);
-            this.txtNuevaContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNuevaContraseñaNuevaAdmin.MaxLength = 50;
+            this.txtNuevaContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNuevaContraseñaNuevaAdmin.MaxLength = 2;
             this.txtNuevaContraseñaNuevaAdmin.Name = "txtNuevaContraseñaNuevaAdmin";
             this.txtNuevaContraseñaNuevaAdmin.Size = new System.Drawing.Size(171, 26);
             this.txtNuevaContraseñaNuevaAdmin.TabIndex = 22;
             // 
             // txtConfirmarContraseñaNuevaAdmin
             // 
+<<<<<<< HEAD
             this.txtConfirmarContraseñaNuevaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarContraseñaNuevaAdmin.Location = new System.Drawing.Point(186, 310);
             this.txtConfirmarContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmarContraseñaNuevaAdmin.MaxLength = 50;
+=======
+            this.txtConfirmarContraseñaNuevaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarContraseñaNuevaAdmin.Location = new System.Drawing.Point(180, 309);
+            this.txtConfirmarContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmarContraseñaNuevaAdmin.MaxLength = 3;
+>>>>>>> 29f0cb2a41fde4e45bb7870c63b36f94577475bb
             this.txtConfirmarContraseñaNuevaAdmin.Name = "txtConfirmarContraseñaNuevaAdmin";
             this.txtConfirmarContraseñaNuevaAdmin.Size = new System.Drawing.Size(171, 26);
             this.txtConfirmarContraseñaNuevaAdmin.TabIndex = 24;
@@ -156,6 +168,10 @@
             this.Controls.Add(this.LbContraseñaNuevaForAdmin);
             this.Controls.Add(this.LbUsuarioAfectado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(572, 500);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(572, 500);
             this.Name = "FrmNewPasswordFormAdmin";
             this.Text = "FrmNewPasswordFormAdmin";
             this.ResumeLayout(false);

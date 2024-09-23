@@ -33,10 +33,10 @@
             this.lbpPreguntas = new System.Windows.Forms.Label();
             this.lbPregunta1 = new System.Windows.Forms.Label();
             this.lbPregunta2 = new System.Windows.Forms.Label();
-            this.txtRespuesta2 = new System.Windows.Forms.TextBox();
+            this.txtRespuesta1 = new System.Windows.Forms.TextBox();
             this.lbPregunta3 = new System.Windows.Forms.Label();
             this.btnVerificarRespuestas = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRespuesta2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnComeBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,6 +48,9 @@
             this.txtUsuario.Location = new System.Drawing.Point(9, 28);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.MaxLength = 25;
+            this.txtUsuario.Location = new System.Drawing.Point(12, 34);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsuario.MaxLength = 1;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(359, 26);
             this.txtUsuario.TabIndex = 2;
@@ -58,6 +61,9 @@
             this.txtRespuesta3.Location = new System.Drawing.Point(9, 224);
             this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRespuesta3.MaxLength = 100;
+            this.txtRespuesta3.Location = new System.Drawing.Point(12, 276);
+            this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta3.MaxLength = 4;
             this.txtRespuesta3.Name = "txtRespuesta3";
             this.txtRespuesta3.Size = new System.Drawing.Size(359, 26);
             this.txtRespuesta3.TabIndex = 3;
@@ -101,7 +107,7 @@
             this.lbPregunta2.TabIndex = 15;
             this.lbPregunta2.Text = "¿Qué color te gustan que sean las joyas?";
             // 
-            // txtRespuesta2
+            // txtRespuesta1
             // 
             this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtRespuesta2.Location = new System.Drawing.Point(9, 88);
@@ -110,6 +116,14 @@
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(359, 26);
             this.txtRespuesta2.TabIndex = 16;
+            this.txtRespuesta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtRespuesta1.Location = new System.Drawing.Point(12, 108);
+            this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta1.MaxLength = 2;
+            this.txtRespuesta1.MaxLength = 100;
+            this.txtRespuesta1.Name = "txtRespuesta1";
+            this.txtRespuesta1.Size = new System.Drawing.Size(477, 31);
+            this.txtRespuesta1.TabIndex = 16;
             // 
             // lbPregunta3
             // 
@@ -134,10 +148,12 @@
             this.btnVerificarRespuestas.Name = "btnVerificarRespuestas";
             this.btnVerificarRespuestas.Size = new System.Drawing.Size(140, 45);
             this.btnVerificarRespuestas.TabIndex = 18;
+            this.btnVerificarRespuestas.Size = new System.Drawing.Size(186, 55);
+            this.btnVerificarRespuestas.TabIndex = 5;
             this.btnVerificarRespuestas.Text = "Confirmar";
             this.btnVerificarRespuestas.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtRespuesta2
             // 
             this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.textBox1.Location = new System.Drawing.Point(9, 154);
@@ -146,6 +162,14 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(359, 26);
             this.textBox1.TabIndex = 19;
+            this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtRespuesta2.Location = new System.Drawing.Point(12, 189);
+            this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta2.MaxLength = 3;
+            this.txtRespuesta2.MaxLength = 100;
+            this.txtRespuesta2.Name = "txtRespuesta2";
+            this.txtRespuesta2.Size = new System.Drawing.Size(477, 31);
+            this.txtRespuesta2.TabIndex = 19;
             // 
             // pictureBox1
             // 
@@ -168,6 +192,8 @@
             this.btnComeBack.Name = "btnComeBack";
             this.btnComeBack.Size = new System.Drawing.Size(65, 27);
             this.btnComeBack.TabIndex = 18;
+            this.btnComeBack.Size = new System.Drawing.Size(87, 33);
+            this.btnComeBack.TabIndex = 6;
             this.btnComeBack.Text = "Regresar";
             this.btnComeBack.UseVisualStyleBackColor = false;
             // 
@@ -178,11 +204,11 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(673, 277);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRespuesta2);
             this.Controls.Add(this.btnComeBack);
             this.Controls.Add(this.btnVerificarRespuestas);
             this.Controls.Add(this.lbPregunta3);
-            this.Controls.Add(this.txtRespuesta2);
+            this.Controls.Add(this.txtRespuesta1);
             this.Controls.Add(this.lbPregunta2);
             this.Controls.Add(this.lbPregunta1);
             this.Controls.Add(this.lbpPreguntas);
@@ -206,10 +232,10 @@
         public System.Windows.Forms.Label lbpPreguntas;
         public System.Windows.Forms.Label lbPregunta1;
         public System.Windows.Forms.Label lbPregunta2;
-        public System.Windows.Forms.TextBox txtRespuesta2;
+        public System.Windows.Forms.TextBox txtRespuesta1;
         public System.Windows.Forms.Label lbPregunta3;
         public System.Windows.Forms.Button btnVerificarRespuestas;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtRespuesta2;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button btnComeBack;
     }

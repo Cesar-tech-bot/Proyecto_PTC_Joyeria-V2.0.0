@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.LoginController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace SistemaJoyería.View.LoginView
         public FrmRegisterNewUser()
         {
             InitializeComponent();
+            ControllerRegisterNewUser control = new ControllerRegisterNewUser(this);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegisterNewUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

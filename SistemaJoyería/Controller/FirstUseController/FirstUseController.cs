@@ -16,9 +16,10 @@ namespace SistemaJoyería.Controller.FirstUserController
         public ControllerFirstUser(FrmFirstUse vista)
         {
             objFirstUser = vista;
+            objFirstUser.btnRegisterNewUser.Click += new EventHandler(NewUser);
         }
 
-        public void NewUser()
+        public void NewUser(object sender, EventArgs e)
         {
             if (objFirstUser != null)
             {
@@ -53,35 +54,6 @@ namespace SistemaJoyería.Controller.FirstUserController
             {
                 MessageBox.Show("Formulario no disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        public void UpdateFirstTimeLogin(int idUser)
-        {
-            try
-            {
-                Command.Connection = getConnection();
-                string query = "UPDATE Users SET FirstTimeLogin = 0 WHERE IDUser = @idUser";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                cmd.Parameters.AddWithValue("@idUser", idUser);
-                Command.Connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show($"Error al actualizar el estado de FirstTimeLogin: {ex.Message}");
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
-
-        // Assuming getConnection() method is defined elsewhere in the class or accessible
-        private SqlConnection getConnection()
-        {
-            // Implementation of getConnection method
-            // This should return a SqlConnection object
-            throw new NotImplementedException();
         }
     }
 }

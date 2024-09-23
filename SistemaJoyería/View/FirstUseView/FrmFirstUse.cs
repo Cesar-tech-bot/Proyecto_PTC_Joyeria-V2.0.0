@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.FirstUserController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace SistemaJoyería.View.FirstUseView
         public FrmFirstUse()
         {
             InitializeComponent();
+            ControllerFirstUser control = new ControllerFirstUser(this);
         }
     }
 }
