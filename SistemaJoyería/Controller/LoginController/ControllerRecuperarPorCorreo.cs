@@ -51,7 +51,7 @@ namespace SistemaJoyería.Controller.LoginController
                 try
                 {
                     // Configura la información del correo (reemplaza con tus credenciales)
-                    string servidorSMTP = "fjgzelaya07@com";
+                    string servidorSMTP = "smpt.gmail.com";
                     int puertoSMTP = 587;
                     string usuarioSMTP = "luxstockmanagerr2024@gmail.com";
                     string contrasenaSMTP = "feqf lqki cgpb jgxu";

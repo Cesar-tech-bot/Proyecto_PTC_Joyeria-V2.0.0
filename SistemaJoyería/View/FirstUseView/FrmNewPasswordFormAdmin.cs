@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.Controller.LoginController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace SistemaJoyería.View.FirstUseView
         public FrmNewPasswordFormAdmin()
         {
             InitializeComponent();
+            ControllerNewPasswordFromAdmin control = new ControllerNewPasswordFromAdmin(this);
         }
     }
 }

@@ -15,9 +15,10 @@ namespace SistemaJoyería.Controller.FirstUserController
         public ControllerFirstUser(FrmFirstUse vista)
         {
             objFirstUser = vista;
+            objFirstUser.btnRegisterNewUser.Click += new EventHandler(NewUser);
         }
 
-        public void NewUser()
+        public void NewUser(object sender, EventArgs e)
         {
             if (objFirstUser != null)
             {
