@@ -76,8 +76,9 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1046, 83);
+            this.panel4.Size = new System.Drawing.Size(1395, 102);
             this.panel4.TabIndex = 62;
             // 
             // btnAddEmployee
@@ -86,11 +87,11 @@
             this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Location = new System.Drawing.Point(914, 26);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddEmployee.Location = new System.Drawing.Point(1219, 32);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(130, 37);
-            this.btnAddEmployee.TabIndex = 67;
+            this.btnAddEmployee.Size = new System.Drawing.Size(173, 46);
+            this.btnAddEmployee.TabIndex = 4;
             this.btnAddEmployee.Text = "Añadir";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             // 
@@ -100,11 +101,11 @@
             this.btnRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRestart.ForeColor = System.Drawing.Color.White;
-            this.btnRestart.Location = new System.Drawing.Point(783, 26);
-            this.btnRestart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRestart.Location = new System.Drawing.Point(1044, 32);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(130, 37);
-            this.btnRestart.TabIndex = 67;
+            this.btnRestart.Size = new System.Drawing.Size(173, 46);
+            this.btnRestart.TabIndex = 3;
             this.btnRestart.Text = "Reiniciar";
             this.btnRestart.UseVisualStyleBackColor = false;
             // 
@@ -114,10 +115,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(20, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 17);
+            this.label1.Size = new System.Drawing.Size(230, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "CONTROL DE EMPLEADOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,10 +128,10 @@
             this.btnSearchEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnSearchEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearchEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(644, 26);
-            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchEmployee.Location = new System.Drawing.Point(859, 32);
+            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(130, 37);
+            this.btnSearchEmployee.Size = new System.Drawing.Size(173, 46);
             this.btnSearchEmployee.TabIndex = 2;
             this.btnSearchEmployee.Text = "Buscar";
             this.btnSearchEmployee.UseVisualStyleBackColor = false;
@@ -141,10 +141,10 @@
             this.txtSearchEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSearchEmployee.Location = new System.Drawing.Point(227, 32);
-            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchEmployee.Location = new System.Drawing.Point(303, 39);
+            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchEmployee.Name = "txtSearchEmployee";
-            this.txtSearchEmployee.Size = new System.Drawing.Size(413, 26);
+            this.txtSearchEmployee.Size = new System.Drawing.Size(549, 30);
             this.txtSearchEmployee.TabIndex = 1;
             // 
             // btnRefresh
@@ -152,10 +152,10 @@
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(783, 19);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(1044, 23);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(143, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(191, 49);
             this.btnRefresh.TabIndex = 60;
             this.btnRefresh.Text = "Refrescar ";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -165,10 +165,10 @@
             this.btnAddClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnAddClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddClients.ForeColor = System.Drawing.Color.White;
-            this.btnAddClients.Location = new System.Drawing.Point(931, 19);
-            this.btnAddClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddClients.Location = new System.Drawing.Point(1241, 23);
+            this.btnAddClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddClients.Name = "btnAddClients";
-            this.btnAddClients.Size = new System.Drawing.Size(106, 40);
+            this.btnAddClients.Size = new System.Drawing.Size(141, 49);
             this.btnAddClients.TabIndex = 61;
             this.btnAddClients.Text = "Añadir";
             this.btnAddClients.UseVisualStyleBackColor = false;
@@ -195,9 +195,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 83);
+            this.panel1.Location = new System.Drawing.Point(0, 102);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 559);
+            this.panel1.Size = new System.Drawing.Size(323, 688);
             this.panel1.TabIndex = 63;
             // 
             // btnClear
@@ -206,11 +207,11 @@
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(18, 454);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(24, 559);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(94, 37);
-            this.btnClear.TabIndex = 66;
+            this.btnClear.Size = new System.Drawing.Size(125, 46);
+            this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Limpiar";
             this.btnClear.UseVisualStyleBackColor = false;
             // 
@@ -220,11 +221,11 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(124, 456);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(165, 561);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(92, 37);
-            this.btnUpdate.TabIndex = 65;
+            this.btnUpdate.Size = new System.Drawing.Size(123, 46);
+            this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
@@ -232,86 +233,95 @@
             // 
             this.mskUpdateEmployeeDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mskUpdateEmployeeDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.mskUpdateEmployeeDUI.Location = new System.Drawing.Point(18, 228);
+            this.mskUpdateEmployeeDUI.Location = new System.Drawing.Point(24, 281);
+            this.mskUpdateEmployeeDUI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mskUpdateEmployeeDUI.Mask = "00000000-0";
             this.mskUpdateEmployeeDUI.Name = "mskUpdateEmployeeDUI";
-            this.mskUpdateEmployeeDUI.Size = new System.Drawing.Size(200, 23);
-            this.mskUpdateEmployeeDUI.TabIndex = 12;
+            this.mskUpdateEmployeeDUI.Size = new System.Drawing.Size(265, 26);
+            this.mskUpdateEmployeeDUI.TabIndex = 8;
             // 
             // dtpUpdateBirthDay
             // 
             this.dtpUpdateBirthDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpUpdateBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.dtpUpdateBirthDay.Location = new System.Drawing.Point(19, 285);
+            this.dtpUpdateBirthDay.Location = new System.Drawing.Point(25, 351);
+            this.dtpUpdateBirthDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpUpdateBirthDay.Name = "dtpUpdateBirthDay";
-            this.dtpUpdateBirthDay.Size = new System.Drawing.Size(200, 23);
-            this.dtpUpdateBirthDay.TabIndex = 11;
+            this.dtpUpdateBirthDay.Size = new System.Drawing.Size(265, 26);
+            this.dtpUpdateBirthDay.TabIndex = 9;
             // 
             // mskUpdateEmployeePhoneNumber
             // 
             this.mskUpdateEmployeePhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mskUpdateEmployeePhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.mskUpdateEmployeePhoneNumber.Location = new System.Drawing.Point(19, 125);
+            this.mskUpdateEmployeePhoneNumber.Location = new System.Drawing.Point(25, 154);
+            this.mskUpdateEmployeePhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mskUpdateEmployeePhoneNumber.Mask = "0000-0000";
             this.mskUpdateEmployeePhoneNumber.Name = "mskUpdateEmployeePhoneNumber";
-            this.mskUpdateEmployeePhoneNumber.Size = new System.Drawing.Size(200, 23);
-            this.mskUpdateEmployeePhoneNumber.TabIndex = 9;
+            this.mskUpdateEmployeePhoneNumber.Size = new System.Drawing.Size(265, 26);
+            this.mskUpdateEmployeePhoneNumber.TabIndex = 6;
             // 
             // txtIDEmployee
             // 
             this.txtIDEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIDEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtIDEmployee.Location = new System.Drawing.Point(18, 401);
+            this.txtIDEmployee.Location = new System.Drawing.Point(24, 494);
+            this.txtIDEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDEmployee.Name = "txtIDEmployee";
             this.txtIDEmployee.ReadOnly = true;
-            this.txtIDEmployee.Size = new System.Drawing.Size(200, 23);
-            this.txtIDEmployee.TabIndex = 8;
+            this.txtIDEmployee.Size = new System.Drawing.Size(265, 26);
+            this.txtIDEmployee.TabIndex = 11;
             // 
             // txtUAddress
             // 
             this.txtUAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtUAddress.Location = new System.Drawing.Point(19, 335);
+            this.txtUAddress.Location = new System.Drawing.Point(25, 412);
+            this.txtUAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUAddress.Multiline = true;
             this.txtUAddress.Name = "txtUAddress";
-            this.txtUAddress.Size = new System.Drawing.Size(200, 41);
-            this.txtUAddress.TabIndex = 8;
+            this.txtUAddress.Size = new System.Drawing.Size(265, 50);
+            this.txtUAddress.TabIndex = 10;
             // 
             // txtUpdateEmployeeEmail
             // 
             this.txtUpdateEmployeeEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUpdateEmployeeEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtUpdateEmployeeEmail.Location = new System.Drawing.Point(19, 175);
+            this.txtUpdateEmployeeEmail.Location = new System.Drawing.Point(25, 215);
+            this.txtUpdateEmployeeEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUpdateEmployeeEmail.Name = "txtUpdateEmployeeEmail";
-            this.txtUpdateEmployeeEmail.Size = new System.Drawing.Size(200, 23);
-            this.txtUpdateEmployeeEmail.TabIndex = 8;
+            this.txtUpdateEmployeeEmail.Size = new System.Drawing.Size(265, 26);
+            this.txtUpdateEmployeeEmail.TabIndex = 7;
             // 
             // txtUpdateEmployeeLastName
             // 
             this.txtUpdateEmployeeLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUpdateEmployeeLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtUpdateEmployeeLastName.Location = new System.Drawing.Point(19, 76);
+            this.txtUpdateEmployeeLastName.Location = new System.Drawing.Point(25, 94);
+            this.txtUpdateEmployeeLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUpdateEmployeeLastName.Name = "txtUpdateEmployeeLastName";
-            this.txtUpdateEmployeeLastName.Size = new System.Drawing.Size(200, 23);
-            this.txtUpdateEmployeeLastName.TabIndex = 7;
+            this.txtUpdateEmployeeLastName.Size = new System.Drawing.Size(265, 26);
+            this.txtUpdateEmployeeLastName.TabIndex = 5;
             // 
             // txtUpdateEmployeeName
             // 
             this.txtUpdateEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUpdateEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtUpdateEmployeeName.Location = new System.Drawing.Point(19, 29);
+            this.txtUpdateEmployeeName.Location = new System.Drawing.Point(25, 36);
+            this.txtUpdateEmployeeName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUpdateEmployeeName.Name = "txtUpdateEmployeeName";
-            this.txtUpdateEmployeeName.Size = new System.Drawing.Size(200, 23);
-            this.txtUpdateEmployeeName.TabIndex = 6;
+            this.txtUpdateEmployeeName.Size = new System.Drawing.Size(265, 26);
+            this.txtUpdateEmployeeName.TabIndex = 4;
             // 
             // txtID
             // 
             this.txtID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtID.AutoSize = true;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtID.Location = new System.Drawing.Point(15, 382);
+            this.txtID.Location = new System.Drawing.Point(20, 470);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(23, 17);
+            this.txtID.Size = new System.Drawing.Size(28, 20);
             this.txtID.TabIndex = 3;
             this.txtID.Text = "ID";
             // 
@@ -320,9 +330,10 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(16, 266);
+            this.label7.Location = new System.Drawing.Point(21, 327);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 17);
+            this.label7.Size = new System.Drawing.Size(183, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Fecha de nacimiento";
             // 
@@ -331,9 +342,10 @@
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddress.AutoSize = true;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.txtAddress.Location = new System.Drawing.Point(16, 316);
+            this.txtAddress.Location = new System.Drawing.Point(21, 389);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(76, 17);
+            this.txtAddress.Size = new System.Drawing.Size(90, 20);
             this.txtAddress.TabIndex = 3;
             this.txtAddress.Text = "Dirección";
             // 
@@ -342,9 +354,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(15, 209);
+            this.label6.Location = new System.Drawing.Point(20, 257);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 17);
+            this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "DUI";
             // 
@@ -353,9 +366,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(16, 156);
+            this.label5.Location = new System.Drawing.Point(21, 192);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 17);
+            this.label5.Size = new System.Drawing.Size(56, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "Email";
             // 
@@ -364,9 +378,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(16, 106);
+            this.label4.Location = new System.Drawing.Point(21, 130);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 17);
+            this.label4.Size = new System.Drawing.Size(173, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Numero de telefono";
             // 
@@ -375,9 +390,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(16, 57);
+            this.label3.Location = new System.Drawing.Point(21, 70);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Apellido";
             // 
@@ -386,9 +402,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(16, 11);
+            this.label2.Location = new System.Drawing.Point(21, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre";
             // 
@@ -397,35 +414,38 @@
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmployees.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvEmployees.Location = new System.Drawing.Point(242, 83);
+            this.dgvEmployees.Location = new System.Drawing.Point(323, 102);
+            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.RowHeadersWidth = 51;
-            this.dgvEmployees.Size = new System.Drawing.Size(804, 559);
-            this.dgvEmployees.TabIndex = 64;
+            this.dgvEmployees.Size = new System.Drawing.Size(1072, 688);
+            this.dgvEmployees.TabIndex = 14;
             // 
             // cmbEmployee
             // 
+            this.cmbEmployee.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmbEmployee.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmbDelete});
             this.cmbEmployee.Name = "cmbEmployee";
-            this.cmbEmployee.Size = new System.Drawing.Size(181, 48);
+            this.cmbEmployee.Size = new System.Drawing.Size(205, 28);
             // 
             // cmbDelete
             // 
             this.cmbDelete.Name = "cmbDelete";
-            this.cmbDelete.Size = new System.Drawing.Size(180, 22);
+            this.cmbDelete.Size = new System.Drawing.Size(204, 24);
             this.cmbDelete.Text = "Eliminar Empleado";
             // 
             // FrmEmployeesView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 642);
+            this.ClientSize = new System.Drawing.Size(1395, 790);
             this.Controls.Add(this.dgvEmployees);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnAddClients);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmEmployeesView";
             this.Text = "EmployeesView";
             this.panel4.ResumeLayout(false);
