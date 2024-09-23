@@ -102,6 +102,30 @@ namespace SistemaJoyería.Model.DAO
 
         }
 
+
+        public bool IsFirstTimeLogin()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT FirstTimeLogin FROM Users WHERE LoginName = @user";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@user", LoginName1);
+                Command.Connection.Open();
+                bool isFirstTime = (bool)cmd.ExecuteScalar();
+                return isFirstTime;
+            }
+            catch (SqlException sqlex)
+            {
+                MessageBox.Show($"Error al verificar el estado de FirstTimeLogin: {sqlex.Message}");
+                return false;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
         public int RegistrarUsuario()
         {
             try
@@ -135,6 +159,7 @@ namespace SistemaJoyería.Model.DAO
 
 
         }
+
 
         public DataSet LlenarCombo(string table)
         {
