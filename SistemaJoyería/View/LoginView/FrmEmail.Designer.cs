@@ -62,7 +62,7 @@
             // BtnEnviarCorreo
             // 
             this.BtnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnEnviarCorreo.ForeColor = System.Drawing.Color.White;
             this.BtnEnviarCorreo.Location = new System.Drawing.Point(158, 61);
             this.BtnEnviarCorreo.Name = "BtnEnviarCorreo";
@@ -73,7 +73,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtCorreo.Location = new System.Drawing.Point(160, 29);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(330, 26);
@@ -82,17 +82,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.label1.Location = new System.Drawing.Point(158, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 18);
+            this.label1.Size = new System.Drawing.Size(225, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ingresa tu correo electronico";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(394, 198);
             this.button1.Name = "button1";

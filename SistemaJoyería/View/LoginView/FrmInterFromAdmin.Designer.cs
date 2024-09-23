@@ -36,7 +36,7 @@
             // BtnContraAdmin
             // 
             this.BtnContraAdmin.BackColor = System.Drawing.Color.Blue;
-            this.BtnContraAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnContraAdmin.Location = new System.Drawing.Point(211, 213);
             this.BtnContraAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.BtnContraAdmin.Name = "BtnContraAdmin";
@@ -47,23 +47,23 @@
             // 
             // txtContraseñaAdmin
             // 
-            this.txtContraseñaAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtContraseñaAdmin.Location = new System.Drawing.Point(142, 144);
             this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseñaAdmin.MaxLength = 50;
             this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
-            this.txtContraseñaAdmin.Size = new System.Drawing.Size(238, 23);
+            this.txtContraseñaAdmin.Size = new System.Drawing.Size(238, 26);
             this.txtContraseñaAdmin.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.label1.Location = new System.Drawing.Point(155, 85);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 20);
+            this.label1.Size = new System.Drawing.Size(234, 18);
             this.label1.TabIndex = 6;
             this.label1.Text = "Contraseña del Administrador";
             // 

@@ -46,10 +46,10 @@
             // LinklblRecuperar
             // 
             this.LinklblRecuperar.AutoSize = true;
-            this.LinklblRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinklblRecuperar.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinklblRecuperar.Location = new System.Drawing.Point(316, 255);
             this.LinklblRecuperar.Name = "LinklblRecuperar";
-            this.LinklblRecuperar.Size = new System.Drawing.Size(182, 16);
+            this.LinklblRecuperar.Size = new System.Drawing.Size(160, 14);
             this.LinklblRecuperar.TabIndex = 15;
             this.LinklblRecuperar.TabStop = true;
             this.LinklblRecuperar.Text = "¿Ha olvidado su contraseña?";
@@ -57,7 +57,7 @@
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnIngresar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
             this.btnIngresar.Location = new System.Drawing.Point(440, 196);
             this.btnIngresar.Name = "btnIngresar";
@@ -68,7 +68,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtContraseña.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(319, 156);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(248, 26);
@@ -77,16 +77,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(314, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.Size = new System.Drawing.Size(92, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(319, 85);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(248, 26);
@@ -95,20 +95,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(314, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 10;
             this.label2.Text = "Usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(377, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
+            this.label1.Size = new System.Drawing.Size(131, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "Inicio de Sesion";
             // 
@@ -135,9 +135,10 @@
             // LinklblRegister
             // 
             this.LinklblRegister.AutoSize = true;
-            this.LinklblRegister.Location = new System.Drawing.Point(505, 258);
+            this.LinklblRegister.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinklblRegister.Location = new System.Drawing.Point(531, 255);
             this.LinklblRegister.Name = "LinklblRegister";
-            this.LinklblRegister.Size = new System.Drawing.Size(133, 13);
+            this.LinklblRegister.Size = new System.Drawing.Size(146, 14);
             this.LinklblRegister.TabIndex = 17;
             this.LinklblRegister.TabStop = true;
             this.LinklblRegister.Text = "Aun no te has Registrado?";

@@ -44,7 +44,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtUsuario.Location = new System.Drawing.Point(9, 28);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.MaxLength = 25;
@@ -54,7 +54,7 @@
             // 
             // txtRespuesta3
             // 
-            this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtRespuesta3.Location = new System.Drawing.Point(9, 224);
             this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRespuesta3.MaxLength = 100;
@@ -66,12 +66,12 @@
             // 
             this.lbpPreguntas.AutoSize = true;
             this.lbpPreguntas.BackColor = System.Drawing.Color.Transparent;
-            this.lbpPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lbpPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbpPreguntas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbpPreguntas.Location = new System.Drawing.Point(6, 7);
             this.lbpPreguntas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbpPreguntas.Name = "lbpPreguntas";
-            this.lbpPreguntas.Size = new System.Drawing.Size(173, 18);
+            this.lbpPreguntas.Size = new System.Drawing.Size(159, 18);
             this.lbpPreguntas.TabIndex = 11;
             this.lbpPreguntas.Text = "¿Cuál es tu Usuario?";
             // 
@@ -79,12 +79,12 @@
             // 
             this.lbPregunta1.AutoSize = true;
             this.lbPregunta1.BackColor = System.Drawing.Color.Transparent;
-            this.lbPregunta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPregunta1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbPregunta1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbPregunta1.Location = new System.Drawing.Point(6, 67);
             this.lbPregunta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPregunta1.Name = "lbPregunta1";
-            this.lbPregunta1.Size = new System.Drawing.Size(213, 18);
+            this.lbPregunta1.Size = new System.Drawing.Size(196, 18);
             this.lbPregunta1.TabIndex = 14;
             this.lbPregunta1.Text = "¿Cuál es tu joya favorita?";
             // 
@@ -92,18 +92,18 @@
             // 
             this.lbPregunta2.AutoSize = true;
             this.lbPregunta2.BackColor = System.Drawing.Color.Transparent;
-            this.lbPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbPregunta2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbPregunta2.Location = new System.Drawing.Point(6, 133);
             this.lbPregunta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPregunta2.Name = "lbPregunta2";
-            this.lbPregunta2.Size = new System.Drawing.Size(341, 18);
+            this.lbPregunta2.Size = new System.Drawing.Size(316, 18);
             this.lbPregunta2.TabIndex = 15;
             this.lbPregunta2.Text = "¿Qué color te gustan que sean las joyas?";
             // 
             // txtRespuesta2
             // 
-            this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.txtRespuesta2.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtRespuesta2.Location = new System.Drawing.Point(9, 88);
             this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRespuesta2.MaxLength = 100;
@@ -115,19 +115,19 @@
             // 
             this.lbPregunta3.AutoSize = true;
             this.lbPregunta3.BackColor = System.Drawing.Color.Transparent;
-            this.lbPregunta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPregunta3.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbPregunta3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbPregunta3.Location = new System.Drawing.Point(6, 204);
             this.lbPregunta3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPregunta3.Name = "lbPregunta3";
-            this.lbPregunta3.Size = new System.Drawing.Size(374, 18);
+            this.lbPregunta3.Size = new System.Drawing.Size(344, 18);
             this.lbPregunta3.TabIndex = 17;
             this.lbPregunta3.Text = "¿Cuántas veces has visitado nuestra Tienda?";
             // 
             // btnVerificarRespuestas
             // 
             this.btnVerificarRespuestas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnVerificarRespuestas.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Bold);
+            this.btnVerificarRespuestas.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerificarRespuestas.ForeColor = System.Drawing.Color.White;
             this.btnVerificarRespuestas.Location = new System.Drawing.Point(474, 190);
             this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -139,7 +139,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.textBox1.Location = new System.Drawing.Point(9, 154);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.MaxLength = 100;
@@ -161,7 +161,7 @@
             // btnComeBack
             // 
             this.btnComeBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnComeBack.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold);
+            this.btnComeBack.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComeBack.ForeColor = System.Drawing.Color.White;
             this.btnComeBack.Location = new System.Drawing.Point(598, 246);
             this.btnComeBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);

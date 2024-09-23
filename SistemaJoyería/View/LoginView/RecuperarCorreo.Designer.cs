@@ -57,6 +57,7 @@
             // 
             // BtnEnviarCorreo
             // 
+            this.BtnEnviarCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnEnviarCorreo.Location = new System.Drawing.Point(656, 370);
             this.BtnEnviarCorreo.Name = "BtnEnviarCorreo";
             this.BtnEnviarCorreo.Size = new System.Drawing.Size(138, 58);
@@ -66,18 +67,19 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtCorreo.Location = new System.Drawing.Point(373, 145);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(330, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(330, 26);
             this.txtCorreo.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.label1.Location = new System.Drawing.Point(369, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 23);
+            this.label1.Size = new System.Drawing.Size(225, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Ingresa tu correo electronico";
             // 

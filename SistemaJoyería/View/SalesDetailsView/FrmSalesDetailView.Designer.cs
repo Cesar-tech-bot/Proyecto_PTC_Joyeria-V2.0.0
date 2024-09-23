@@ -52,11 +52,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.label1.Location = new System.Drawing.Point(248, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(566, 33);
+            this.label1.Size = new System.Drawing.Size(287, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "CONTROL DE REGISTRO DE VENTAS";
             // 
@@ -84,11 +84,11 @@
             this.groupBox1.Controls.Add(this.cmbProduct);
             this.groupBox1.Controls.Add(this.txtDate);
             this.groupBox1.Controls.Add(this.txtProductsSell);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.groupBox1.Location = new System.Drawing.Point(148, 91);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(747, 202);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -111,7 +111,7 @@
             this.mskPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mskPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskPrice.Location = new System.Drawing.Point(544, 64);
-            this.mskPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskPrice.Margin = new System.Windows.Forms.Padding(2);
             this.mskPrice.Mask = "00.00";
             this.mskPrice.Name = "mskPrice";
             this.mskPrice.Size = new System.Drawing.Size(48, 26);
@@ -122,7 +122,7 @@
             this.dtpDateSell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateSell.Location = new System.Drawing.Point(14, 118);
-            this.dtpDateSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateSell.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateSell.Name = "dtpDateSell";
             this.dtpDateSell.Size = new System.Drawing.Size(279, 22);
             this.dtpDateSell.TabIndex = 3;
@@ -144,7 +144,7 @@
             this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.Location = new System.Drawing.Point(211, 64);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(82, 26);
             this.txtQuantity.TabIndex = 2;
@@ -168,7 +168,7 @@
             this.cmbProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.cmbProduct.FormattingEnabled = true;
             this.cmbProduct.Location = new System.Drawing.Point(14, 67);
-            this.cmbProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(136, 20);
             this.cmbProduct.TabIndex = 1;
@@ -189,10 +189,10 @@
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnClear.ForeColor = System.Drawing.Color.Snow;
             this.btnClear.Location = new System.Drawing.Point(148, 329);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(107, 41);
             this.btnClear.TabIndex = 5;
@@ -203,10 +203,10 @@
             // 
             this.btnInsertSell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInsertSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnInsertSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertSell.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnInsertSell.ForeColor = System.Drawing.Color.White;
             this.btnInsertSell.Location = new System.Drawing.Point(269, 329);
-            this.btnInsertSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInsertSell.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertSell.Name = "btnInsertSell";
             this.btnInsertSell.Size = new System.Drawing.Size(105, 41);
             this.btnInsertSell.TabIndex = 6;
@@ -217,10 +217,10 @@
             // 
             this.btnImprent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnImprent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnImprent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprent.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnImprent.ForeColor = System.Drawing.Color.White;
             this.btnImprent.Location = new System.Drawing.Point(744, 329);
-            this.btnImprent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImprent.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprent.Name = "btnImprent";
             this.btnImprent.Size = new System.Drawing.Size(151, 41);
             this.btnImprent.TabIndex = 10;
@@ -234,7 +234,7 @@
             this.dgvSellInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSellInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSellInfo.Location = new System.Drawing.Point(148, 374);
-            this.dgvSellInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSellInfo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSellInfo.Name = "dgvSellInfo";
             this.dgvSellInfo.ReadOnly = true;
             this.dgvSellInfo.RowHeadersWidth = 51;
@@ -246,10 +246,10 @@
             // 
             this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(623, 328);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(103, 42);
             this.btnRefresh.TabIndex = 9;
@@ -268,7 +268,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSalesDetailView";
             this.Text = "FrmSalesDetailView";
             this.groupBox1.ResumeLayout(false);
