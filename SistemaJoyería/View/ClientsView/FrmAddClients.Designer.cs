@@ -176,7 +176,7 @@
             this.mskDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskDuiDoc.Location = new System.Drawing.Point(13, 372);
             this.mskDuiDoc.Margin = new System.Windows.Forms.Padding(2);
-            this.mskDuiDoc.Mask = "0000000-0";
+            this.mskDuiDoc.Mask = "00000000-0";
             this.mskDuiDoc.Name = "mskDuiDoc";
             this.mskDuiDoc.Size = new System.Drawing.Size(382, 26);
             this.mskDuiDoc.TabIndex = 6;
