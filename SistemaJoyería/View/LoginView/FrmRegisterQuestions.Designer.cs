@@ -44,23 +44,23 @@
             // txtPregunta2
             // 
             this.txtPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
-            this.txtPregunta2.Location = new System.Drawing.Point(19, 164);
-            this.txtPregunta2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPregunta2.Location = new System.Drawing.Point(25, 202);
+            this.txtPregunta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPregunta2.MaxLength = 100;
             this.txtPregunta2.Name = "txtPregunta2";
-            this.txtPregunta2.Size = new System.Drawing.Size(359, 26);
-            this.txtPregunta2.TabIndex = 39;
+            this.txtPregunta2.Size = new System.Drawing.Size(477, 31);
+            this.txtPregunta2.TabIndex = 3;
             // 
             // btnVerificarRespuestas
             // 
             this.btnVerificarRespuestas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnVerificarRespuestas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerificarRespuestas.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarRespuestas.Location = new System.Drawing.Point(456, 201);
-            this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificarRespuestas.Location = new System.Drawing.Point(608, 247);
+            this.btnVerificarRespuestas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerificarRespuestas.Name = "btnVerificarRespuestas";
-            this.btnVerificarRespuestas.Size = new System.Drawing.Size(140, 45);
-            this.btnVerificarRespuestas.TabIndex = 38;
+            this.btnVerificarRespuestas.Size = new System.Drawing.Size(187, 55);
+            this.btnVerificarRespuestas.TabIndex = 5;
             this.btnVerificarRespuestas.Text = "Guardar";
             this.btnVerificarRespuestas.UseVisualStyleBackColor = false;
             // 
@@ -70,22 +70,21 @@
             this.lbPregunta3.BackColor = System.Drawing.Color.Transparent;
             this.lbPregunta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.lbPregunta3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPregunta3.Location = new System.Drawing.Point(16, 214);
-            this.lbPregunta3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPregunta3.Location = new System.Drawing.Point(21, 263);
             this.lbPregunta3.Name = "lbPregunta3";
-            this.lbPregunta3.Size = new System.Drawing.Size(337, 18);
+            this.lbPregunta3.Size = new System.Drawing.Size(450, 23);
             this.lbPregunta3.TabIndex = 37;
             this.lbPregunta3.Text = "¿Cuántas veces has visitado nuestra Tienda?";
             // 
             // txtRespuesta1
             // 
             this.txtRespuesta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
-            this.txtRespuesta1.Location = new System.Drawing.Point(19, 98);
-            this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRespuesta1.Location = new System.Drawing.Point(25, 120);
+            this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta1.MaxLength = 100;
             this.txtRespuesta1.Name = "txtRespuesta1";
-            this.txtRespuesta1.Size = new System.Drawing.Size(359, 26);
-            this.txtRespuesta1.TabIndex = 36;
+            this.txtRespuesta1.Size = new System.Drawing.Size(477, 31);
+            this.txtRespuesta1.TabIndex = 2;
             // 
             // lbPregunta2
             // 
@@ -93,10 +92,9 @@
             this.lbPregunta2.BackColor = System.Drawing.Color.Transparent;
             this.lbPregunta2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.lbPregunta2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPregunta2.Location = new System.Drawing.Point(16, 143);
-            this.lbPregunta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPregunta2.Location = new System.Drawing.Point(21, 176);
             this.lbPregunta2.Name = "lbPregunta2";
-            this.lbPregunta2.Size = new System.Drawing.Size(309, 18);
+            this.lbPregunta2.Size = new System.Drawing.Size(402, 23);
             this.lbPregunta2.TabIndex = 35;
             this.lbPregunta2.Text = "¿Qué color te gustan que sean las joyas?";
             // 
@@ -106,10 +104,9 @@
             this.lbPregunta1.BackColor = System.Drawing.Color.Transparent;
             this.lbPregunta1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.lbPregunta1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPregunta1.Location = new System.Drawing.Point(16, 77);
-            this.lbPregunta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPregunta1.Location = new System.Drawing.Point(21, 95);
             this.lbPregunta1.Name = "lbPregunta1";
-            this.lbPregunta1.Size = new System.Drawing.Size(198, 18);
+            this.lbPregunta1.Size = new System.Drawing.Size(256, 23);
             this.lbPregunta1.TabIndex = 34;
             this.lbPregunta1.Text = "¿Cuál es tu joya favorita?";
             // 
@@ -119,49 +116,48 @@
             this.lbpPreguntas.BackColor = System.Drawing.Color.Transparent;
             this.lbpPreguntas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
             this.lbpPreguntas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbpPreguntas.Location = new System.Drawing.Point(16, 17);
-            this.lbpPreguntas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbpPreguntas.Location = new System.Drawing.Point(21, 21);
             this.lbpPreguntas.Name = "lbpPreguntas";
-            this.lbpPreguntas.Size = new System.Drawing.Size(157, 18);
+            this.lbpPreguntas.Size = new System.Drawing.Size(203, 23);
             this.lbpPreguntas.TabIndex = 33;
             this.lbpPreguntas.Text = "¿Cuál es tu Usuario?";
             // 
             // txtRespuesta3
             // 
             this.txtRespuesta3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
-            this.txtRespuesta3.Location = new System.Drawing.Point(19, 234);
-            this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRespuesta3.Location = new System.Drawing.Point(25, 288);
+            this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRespuesta3.MaxLength = 100;
             this.txtRespuesta3.Name = "txtRespuesta3";
-            this.txtRespuesta3.Size = new System.Drawing.Size(359, 26);
-            this.txtRespuesta3.TabIndex = 32;
+            this.txtRespuesta3.Size = new System.Drawing.Size(477, 31);
+            this.txtRespuesta3.TabIndex = 4;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Italic);
-            this.txtUsuario.Location = new System.Drawing.Point(19, 38);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.Location = new System.Drawing.Point(12, 46);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(359, 26);
-            this.txtUsuario.TabIndex = 31;
+            this.txtUsuario.Size = new System.Drawing.Size(477, 31);
+            this.txtUsuario.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.Preguntaa;
-            this.pictureBox1.Location = new System.Drawing.Point(429, 38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(572, 47);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(245, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
             // FrmRegisterQuestions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 289);
+            this.ClientSize = new System.Drawing.Size(867, 356);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPregunta2);
             this.Controls.Add(this.btnVerificarRespuestas);
@@ -173,6 +169,7 @@
             this.Controls.Add(this.txtRespuesta3);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmRegisterQuestions";
             this.Text = "FrmRegisterQuestions";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

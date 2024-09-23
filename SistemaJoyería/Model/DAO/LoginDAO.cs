@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SistemaJoyería.Model.DTO;
 using System.Windows.Forms;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace SistemaJoyería.Model.DAO
 {
@@ -24,8 +25,33 @@ namespace SistemaJoyería.Model.DAO
                 //mandando la consulta a la base
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 //admitiendo parametros a la base
+
+                string encriptada;
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+
+                    // Computar el hash - Esta retorna un arreglo de bytes
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(Password1));
+
+                    // Convertir byte array a string
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    encriptada = builder.ToString();
+                }
+
+
+
+
+
+
+
+
+
                 cmd.Parameters.AddWithValue("user", LoginName1);
-                cmd.Parameters.AddWithValue("pass", Password1);
+                cmd.Parameters.AddWithValue("pass", encriptada);
                 SqlDataReader reader = cmd.ExecuteReader();
                 //si las credenciales son correctas retornara un 1
                 return reader.HasRows;
