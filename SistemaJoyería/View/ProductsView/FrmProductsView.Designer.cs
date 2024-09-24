@@ -71,9 +71,10 @@
             this.lbIDProduct.AutoSize = true;
             this.lbIDProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lbIDProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbIDProduct.Location = new System.Drawing.Point(19, 529);
+            this.lbIDProduct.Location = new System.Drawing.Point(25, 651);
+            this.lbIDProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIDProduct.Name = "lbIDProduct";
-            this.lbIDProduct.Size = new System.Drawing.Size(98, 18);
+            this.lbIDProduct.Size = new System.Drawing.Size(124, 23);
             this.lbIDProduct.TabIndex = 9;
             this.lbIDProduct.Text = "ID Producto";
             // 
@@ -81,21 +82,23 @@
             // 
             this.txtIDProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIDProducts.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtIDProducts.Location = new System.Drawing.Point(114, 523);
+            this.txtIDProducts.Location = new System.Drawing.Point(152, 644);
+            this.txtIDProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDProducts.Name = "txtIDProducts";
             this.txtIDProducts.ReadOnly = true;
-            this.txtIDProducts.Size = new System.Drawing.Size(109, 26);
+            this.txtIDProducts.Size = new System.Drawing.Size(144, 31);
             this.txtIDProducts.TabIndex = 0;
             // 
             // lbDescriptionProduct
             // 
             this.lbDescriptionProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDescriptionProduct.AutoSize = true;
-            this.lbDescriptionProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbDescriptionProduct.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDescriptionProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbDescriptionProduct.Location = new System.Drawing.Point(19, 387);
+            this.lbDescriptionProduct.Location = new System.Drawing.Point(25, 476);
+            this.lbDescriptionProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDescriptionProduct.Name = "lbDescriptionProduct";
-            this.lbDescriptionProduct.Size = new System.Drawing.Size(99, 18);
+            this.lbDescriptionProduct.Size = new System.Drawing.Size(135, 23);
             this.lbDescriptionProduct.TabIndex = 5;
             this.lbDescriptionProduct.Text = "Descripción";
             // 
@@ -103,11 +106,12 @@
             // 
             this.lbNameSupplier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNameSupplier.AutoSize = true;
-            this.lbNameSupplier.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbNameSupplier.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNameSupplier.ForeColor = System.Drawing.Color.Black;
-            this.lbNameSupplier.Location = new System.Drawing.Point(19, 146);
+            this.lbNameSupplier.Location = new System.Drawing.Point(25, 180);
+            this.lbNameSupplier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNameSupplier.Name = "lbNameSupplier";
-            this.lbNameSupplier.Size = new System.Drawing.Size(181, 18);
+            this.lbNameSupplier.Size = new System.Drawing.Size(247, 23);
             this.lbNameSupplier.TabIndex = 3;
             this.lbNameSupplier.Text = "Nombre del proveedor";
             // 
@@ -115,11 +119,12 @@
             // 
             this.lbMaterialProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbMaterialProduct.AutoSize = true;
-            this.lbMaterialProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbMaterialProduct.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaterialProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbMaterialProduct.Location = new System.Drawing.Point(19, 79);
+            this.lbMaterialProduct.Location = new System.Drawing.Point(25, 97);
+            this.lbMaterialProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMaterialProduct.Name = "lbMaterialProduct";
-            this.lbMaterialProduct.Size = new System.Drawing.Size(68, 18);
+            this.lbMaterialProduct.Size = new System.Drawing.Size(98, 23);
             this.lbMaterialProduct.TabIndex = 2;
             this.lbMaterialProduct.Text = "Material";
             // 
@@ -127,11 +132,12 @@
             // 
             this.lbProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbProducts.AutoSize = true;
-            this.lbProducts.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbProducts.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProducts.ForeColor = System.Drawing.Color.Black;
-            this.lbProducts.Location = new System.Drawing.Point(19, 13);
+            this.lbProducts.Location = new System.Drawing.Point(25, 16);
+            this.lbProducts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbProducts.Name = "lbProducts";
-            this.lbProducts.Size = new System.Drawing.Size(68, 18);
+            this.lbProducts.Size = new System.Drawing.Size(93, 23);
             this.lbProducts.TabIndex = 0;
             this.lbProducts.Text = "Nombre";
             // 
@@ -142,18 +148,18 @@
             this.cmsDeleteProduct,
             this.cmsUpdateProduct});
             this.MenuProductos.Name = "MenuProductos";
-            this.MenuProductos.Size = new System.Drawing.Size(179, 48);
+            this.MenuProductos.Size = new System.Drawing.Size(210, 52);
             // 
             // cmsDeleteProduct
             // 
             this.cmsDeleteProduct.Name = "cmsDeleteProduct";
-            this.cmsDeleteProduct.Size = new System.Drawing.Size(178, 22);
+            this.cmsDeleteProduct.Size = new System.Drawing.Size(209, 24);
             this.cmsDeleteProduct.Text = "Eliminar producto";
             // 
             // cmsUpdateProduct
             // 
             this.cmsUpdateProduct.Name = "cmsUpdateProduct";
-            this.cmsUpdateProduct.Size = new System.Drawing.Size(178, 22);
+            this.cmsUpdateProduct.Size = new System.Drawing.Size(209, 24);
             this.cmsUpdateProduct.Text = "Actualizar producto";
             // 
             // panel1
@@ -167,8 +173,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1046, 83);
+            this.panel1.Size = new System.Drawing.Size(1395, 102);
             this.panel1.TabIndex = 12;
             // 
             // lb
@@ -176,9 +183,10 @@
             this.lb.AutoSize = true;
             this.lb.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.lb.ForeColor = System.Drawing.Color.Black;
-            this.lb.Location = new System.Drawing.Point(29, 31);
+            this.lb.Location = new System.Drawing.Point(39, 38);
+            this.lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(187, 18);
+            this.lb.Size = new System.Drawing.Size(235, 23);
             this.lb.TabIndex = 14;
             this.lb.Text = "CONTROL PRODUCTOS";
             // 
@@ -188,9 +196,10 @@
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(934, 29);
+            this.btnRefresh.Location = new System.Drawing.Point(1245, 36);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(91, 31);
+            this.btnRefresh.Size = new System.Drawing.Size(121, 38);
             this.btnRefresh.TabIndex = 13;
             this.btnRefresh.Text = "Refrescar";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -201,9 +210,10 @@
             this.btnSearchProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnSearchProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnSearchProduct.ForeColor = System.Drawing.Color.White;
-            this.btnSearchProduct.Location = new System.Drawing.Point(714, 29);
+            this.btnSearchProduct.Location = new System.Drawing.Point(952, 36);
+            this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchProduct.Name = "btnSearchProduct";
-            this.btnSearchProduct.Size = new System.Drawing.Size(91, 31);
+            this.btnSearchProduct.Size = new System.Drawing.Size(121, 38);
             this.btnSearchProduct.TabIndex = 11;
             this.btnSearchProduct.Text = "Buscar";
             this.btnSearchProduct.UseVisualStyleBackColor = false;
@@ -213,10 +223,11 @@
             this.txtSearchProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchProductos.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtSearchProductos.Location = new System.Drawing.Point(245, 31);
+            this.txtSearchProductos.Location = new System.Drawing.Point(327, 38);
+            this.txtSearchProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearchProductos.Multiline = true;
             this.txtSearchProductos.Name = "txtSearchProductos";
-            this.txtSearchProductos.Size = new System.Drawing.Size(438, 31);
+            this.txtSearchProductos.Size = new System.Drawing.Size(583, 37);
             this.txtSearchProductos.TabIndex = 10;
             // 
             // btnRestart
@@ -225,9 +236,10 @@
             this.btnRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnRestart.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRestart.ForeColor = System.Drawing.Color.White;
-            this.btnRestart.Location = new System.Drawing.Point(824, 29);
+            this.btnRestart.Location = new System.Drawing.Point(1099, 36);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(91, 31);
+            this.btnRestart.Size = new System.Drawing.Size(121, 38);
             this.btnRestart.TabIndex = 12;
             this.btnRestart.Text = "Reiniciar";
             this.btnRestart.UseVisualStyleBackColor = false;
@@ -254,31 +266,34 @@
             this.panel2.Controls.Add(this.lbDescriptionProduct);
             this.panel2.Controls.Add(this.txtIDProducts);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 83);
+            this.panel2.Location = new System.Drawing.Point(0, 102);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 559);
+            this.panel2.Size = new System.Drawing.Size(327, 688);
             this.panel2.TabIndex = 13;
             // 
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStock.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtStock.Location = new System.Drawing.Point(23, 345);
+            this.txtStock.Location = new System.Drawing.Point(31, 425);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStock.MaxLength = 4;
             this.txtStock.Multiline = true;
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(197, 33);
+            this.txtStock.Size = new System.Drawing.Size(261, 40);
             this.txtStock.TabIndex = 6;
             // 
             // lbCantidad
             // 
             this.lbCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbCantidad.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCantidad.ForeColor = System.Drawing.Color.Black;
-            this.lbCantidad.Location = new System.Drawing.Point(19, 322);
+            this.lbCantidad.Location = new System.Drawing.Point(25, 396);
+            this.lbCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(78, 18);
+            this.lbCantidad.Size = new System.Drawing.Size(106, 23);
             this.lbCantidad.TabIndex = 24;
             this.lbCantidad.Text = "Cantidad";
             // 
@@ -286,11 +301,12 @@
             // 
             this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbDate.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.ForeColor = System.Drawing.Color.Black;
-            this.lbDate.Location = new System.Drawing.Point(19, 265);
+            this.lbDate.Location = new System.Drawing.Point(25, 326);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(140, 18);
+            this.lbDate.Size = new System.Drawing.Size(191, 23);
             this.lbDate.TabIndex = 18;
             this.lbDate.Text = "Fecha de entrada";
             // 
@@ -300,9 +316,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(130, 474);
+            this.btnUpdate.Location = new System.Drawing.Point(173, 583);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(133, 41);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -311,11 +328,12 @@
             // 
             this.lbPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPriceProduct.AutoSize = true;
-            this.lbPriceProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.lbPriceProduct.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPriceProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbPriceProduct.Location = new System.Drawing.Point(19, 207);
+            this.lbPriceProduct.Location = new System.Drawing.Point(25, 255);
+            this.lbPriceProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPriceProduct.Name = "lbPriceProduct";
-            this.lbPriceProduct.Size = new System.Drawing.Size(55, 18);
+            this.lbPriceProduct.Size = new System.Drawing.Size(75, 23);
             this.lbPriceProduct.TabIndex = 16;
             this.lbPriceProduct.Text = "Precio";
             // 
@@ -325,9 +343,10 @@
             this.btnKeep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnKeep.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnKeep.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKeep.Location = new System.Drawing.Point(14, 474);
+            this.btnKeep.Location = new System.Drawing.Point(19, 583);
+            this.btnKeep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKeep.Name = "btnKeep";
-            this.btnKeep.Size = new System.Drawing.Size(100, 33);
+            this.btnKeep.Size = new System.Drawing.Size(133, 41);
             this.btnKeep.TabIndex = 8;
             this.btnKeep.Text = "Guardar";
             this.btnKeep.UseVisualStyleBackColor = false;
@@ -336,20 +355,22 @@
             // 
             this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductDescription.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtProductDescription.Location = new System.Drawing.Point(23, 410);
+            this.txtProductDescription.Location = new System.Drawing.Point(31, 505);
+            this.txtProductDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductDescription.MaxLength = 100;
             this.txtProductDescription.Multiline = true;
             this.txtProductDescription.Name = "txtProductDescription";
-            this.txtProductDescription.Size = new System.Drawing.Size(197, 50);
+            this.txtProductDescription.Size = new System.Drawing.Size(261, 61);
             this.txtProductDescription.TabIndex = 7;
             // 
             // dtpDate
             // 
             this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDate.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.dtpDate.Location = new System.Drawing.Point(23, 288);
+            this.dtpDate.Location = new System.Drawing.Point(31, 354);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(197, 26);
+            this.dtpDate.Size = new System.Drawing.Size(261, 31);
             this.dtpDate.TabIndex = 5;
             this.dtpDate.Value = new System.DateTime(2024, 9, 3, 18, 50, 5, 0);
             // 
@@ -357,10 +378,11 @@
             // 
             this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mktPriceProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.mktPriceProduct.Location = new System.Drawing.Point(23, 230);
+            this.mktPriceProduct.Location = new System.Drawing.Point(31, 283);
+            this.mktPriceProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mktPriceProduct.Mask = "00.00";
             this.mktPriceProduct.Name = "mktPriceProduct";
-            this.mktPriceProduct.Size = new System.Drawing.Size(197, 26);
+            this.mktPriceProduct.Size = new System.Drawing.Size(261, 31);
             this.mktPriceProduct.TabIndex = 4;
             // 
             // cmbSuppliers
@@ -369,31 +391,34 @@
             this.cmbSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSuppliers.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.cmbSuppliers.FormattingEnabled = true;
-            this.cmbSuppliers.Location = new System.Drawing.Point(23, 169);
+            this.cmbSuppliers.Location = new System.Drawing.Point(31, 208);
+            this.cmbSuppliers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbSuppliers.Name = "cmbSuppliers";
-            this.cmbSuppliers.Size = new System.Drawing.Size(197, 26);
+            this.cmbSuppliers.Size = new System.Drawing.Size(261, 31);
             this.cmbSuppliers.TabIndex = 3;
             // 
             // txtProductMaterial
             // 
             this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductMaterial.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtProductMaterial.Location = new System.Drawing.Point(23, 102);
+            this.txtProductMaterial.Location = new System.Drawing.Point(31, 126);
+            this.txtProductMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductMaterial.MaxLength = 15;
             this.txtProductMaterial.Multiline = true;
             this.txtProductMaterial.Name = "txtProductMaterial";
-            this.txtProductMaterial.Size = new System.Drawing.Size(197, 34);
+            this.txtProductMaterial.Size = new System.Drawing.Size(261, 41);
             this.txtProductMaterial.TabIndex = 2;
             // 
             // txtProductName
             // 
             this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductName.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtProductName.Location = new System.Drawing.Point(23, 36);
+            this.txtProductName.Location = new System.Drawing.Point(31, 44);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductName.MaxLength = 15;
             this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(197, 34);
+            this.txtProductName.Size = new System.Drawing.Size(261, 41);
             this.txtProductName.TabIndex = 1;
             // 
             // dgvProduct
@@ -404,25 +429,27 @@
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.ContextMenuStrip = this.MenuProductos;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProduct.Location = new System.Drawing.Point(245, 83);
+            this.dgvProduct.Location = new System.Drawing.Point(327, 102);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(801, 559);
+            this.dgvProduct.Size = new System.Drawing.Size(1068, 688);
             this.dgvProduct.TabIndex = 0;
             // 
             // FrmProductsView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 642);
+            this.ClientSize = new System.Drawing.Size(1395, 790);
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmProductsView";
             this.Text = "FrmProductsView";
             this.MenuProductos.ResumeLayout(false);

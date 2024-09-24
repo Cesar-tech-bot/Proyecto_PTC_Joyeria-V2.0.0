@@ -44,156 +44,123 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(64, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(464, 18);
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 10F);
-            this.label6.Location = new System.Drawing.Point(62, 60);
+            this.label6.Location = new System.Drawing.Point(83, 74);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(398, 16);
+            this.label6.Size = new System.Drawing.Size(514, 19);
             this.label6.TabIndex = 33;
             this.label6.Text = "Necesitamos que configures el primer Usuario de tu sistema";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(137, 292);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(169, 26);
-            this.txtCorreo.TabIndex = 32;
             this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtCorreo.Location = new System.Drawing.Point(10, 356);
+            this.txtCorreo.Location = new System.Drawing.Point(13, 426);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(236, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(313, 31);
             this.txtCorreo.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(201, 263);
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.label5.Location = new System.Drawing.Point(7, 321);
+            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 399);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 18);
+            this.label5.Size = new System.Drawing.Size(80, 23);
             this.label5.TabIndex = 31;
             this.label5.Text = "Correo";
             // 
             // btnRegisterNewUser
             // 
-            this.btnRegisterNewUser.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterNewUser.Location = new System.Drawing.Point(175, 358);
             this.btnRegisterNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnRegisterNewUser.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRegisterNewUser.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterNewUser.Location = new System.Drawing.Point(321, 191);
+            this.btnRegisterNewUser.Location = new System.Drawing.Point(428, 235);
+            this.btnRegisterNewUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegisterNewUser.Name = "btnRegisterNewUser";
-            this.btnRegisterNewUser.Size = new System.Drawing.Size(138, 76);
+            this.btnRegisterNewUser.Size = new System.Drawing.Size(184, 94);
             this.btnRegisterNewUser.TabIndex = 5;
             this.btnRegisterNewUser.Text = "Guardar Nuevo Usuario";
             this.btnRegisterNewUser.UseVisualStyleBackColor = false;
             // 
             // txtConfirmContra
             // 
-            this.txtConfirmContra.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmContra.Location = new System.Drawing.Point(292, 232);
-            this.txtConfirmContra.Name = "txtConfirmContra";
-            this.txtConfirmContra.Size = new System.Drawing.Size(123, 26);
-            this.txtConfirmContra.TabIndex = 29;
-            // 
-            // txtContra
-            // 
-            this.txtContra.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContra.Location = new System.Drawing.Point(29, 232);
-            this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(113, 26);
-            this.txtContra.TabIndex = 28;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(175, 137);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 26);
-            this.txtUsuario.TabIndex = 27;
             this.txtConfirmContra.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtConfirmContra.Location = new System.Drawing.Point(10, 278);
+            this.txtConfirmContra.Location = new System.Drawing.Point(13, 335);
+            this.txtConfirmContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConfirmContra.Name = "txtConfirmContra";
-            this.txtConfirmContra.Size = new System.Drawing.Size(236, 26);
+            this.txtConfirmContra.Size = new System.Drawing.Size(313, 31);
             this.txtConfirmContra.TabIndex = 3;
             // 
             // txtContra
             // 
             this.txtContra.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtContra.Location = new System.Drawing.Point(10, 191);
+            this.txtContra.Location = new System.Drawing.Point(13, 235);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(236, 26);
+            this.txtContra.Size = new System.Drawing.Size(313, 31);
             this.txtContra.TabIndex = 2;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtUsuario.Location = new System.Drawing.Point(10, 116);
+            this.txtUsuario.Location = new System.Drawing.Point(13, 143);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(236, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(313, 31);
             this.txtUsuario.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(311, 198);
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.label4.Location = new System.Drawing.Point(7, 237);
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 308);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 18);
+            this.label4.Size = new System.Drawing.Size(179, 23);
             this.label4.TabIndex = 26;
             this.label4.Text = "Confirmar Clave";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 198);
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.label3.Location = new System.Drawing.Point(7, 163);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 208);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 18);
+            this.label3.Size = new System.Drawing.Size(68, 23);
             this.label3.TabIndex = 25;
             this.label3.Text = "Clave";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 119);
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.label2.Location = new System.Drawing.Point(7, 94);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 18);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 24;
             this.label2.Text = "Usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(342, 18);
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 20F);
-            this.label1.Location = new System.Drawing.Point(58, 15);
+            this.label1.Location = new System.Drawing.Point(77, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(428, 32);
+            this.label1.Size = new System.Drawing.Size(532, 39);
             this.label1.TabIndex = 23;
             this.label1.Text = "Bienvenido a LuxStockManager";
             // 
             // FrmFirstUse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 405);
+            this.ClientSize = new System.Drawing.Size(687, 489);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label5);
@@ -206,12 +173,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(705, 536);
             this.MinimizeBox = false;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(533, 444);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(533, 444);
+            this.MinimumSize = new System.Drawing.Size(705, 536);
             this.Name = "FrmFirstUse";
             this.Text = "FrmFirstUse";
             this.ResumeLayout(false);
