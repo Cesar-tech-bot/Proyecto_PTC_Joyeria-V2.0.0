@@ -42,8 +42,8 @@ namespace SistemaJoyería.Controller.ProductsController
             View.mktPriceProduct.KeyPress += new KeyPressEventHandler(txtNumbers_KeyPress);
             //// Establece la fecha por defecto en el DateTimePicker a la fecha de hoy
             View.dtpDate.Value = DateTime.Today;
-            //Read Only
-            View.dtpDate.Enabled = false;
+            //Read Only--------------------Borrar esta linea
+            //View.dtpDate.Enabled = false;--------------------Borrar esta linea
             // Configurar el formato del DateTimePicker
             View.dtpDate.Format = DateTimePickerFormat.Custom;
             View.dtpDate.CustomFormat = "dd/MM/yyyy";
@@ -54,7 +54,6 @@ namespace SistemaJoyería.Controller.ProductsController
             View.txtStock.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
             View.mktPriceProduct.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
             View.txtSearchProductos.KeyDown += new KeyEventHandler(DisableCopyPaste_KeyDown);
-
             // Deshabilitar el menú contextual de copiar, cortar y pegar
             DisableContextMenu(View.txtProductName);
             DisableContextMenu(View.txtProductMaterial);
@@ -62,8 +61,13 @@ namespace SistemaJoyería.Controller.ProductsController
             DisableContextMenu(View.txtStock);
             DisableContextMenu(View.mktPriceProduct);
             DisableContextMenu(View.txtSearchProductos);
+            // Configurar el DateTimePicker
+            View.dtpDate.MinDate = DateTime.Today.AddDays(-14); // Fecha mínima: hace 2 semanas
+            View.dtpDate.MaxDate = DateTime.Today;              // Fecha máxima: hoy
+            View.dtpDate.Value = DateTime.Today;                // Fecha predeterminada: hoy
+            // Vincular el evento de cambio de valor
+            View.dtpDate.ValueChanged += new EventHandler(dtpDate_ValueChanged);
         }
-
         // Método para deshabilitar copiar, cortar y pegar con el teclado
         private void DisableCopyPaste_KeyDown(object sender, KeyEventArgs e)
         {
@@ -136,7 +140,31 @@ namespace SistemaJoyería.Controller.ProductsController
             }
         }
 
+        //Validacion de fecha
+        // Método que se ejecuta cuando cambia la fecha seleccionada
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedDate = ObjProducts.dtpDate.Value;
+            ValidateDate(selectedDate);
+        }
 
+        // Método para validar que la fecha esté dentro del rango permitido
+        private void ValidateDate(DateTime selectedDate)
+        {
+            DateTime today = DateTime.Today;
+            DateTime twoWeeksAgo = today.AddDays(-14);
+
+            if (selectedDate > today)
+            {
+                MessageBox.Show("No puedes seleccionar una fecha futura.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObjProducts.dtpDate.Value = today; // Restablece a la fecha actual si se elige una fecha futura
+            }
+            else if (selectedDate < twoWeeksAgo)
+            {
+                MessageBox.Show("Solo puedes seleccionar una fecha dentro de las últimas dos semanas.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObjProducts.dtpDate.Value = twoWeeksAgo; // Restablece a la fecha mínima permitida si se selecciona una fecha fuera del rango
+            }
+        }
 
         //Borrar producto
         void DeleteProduct(object sender, EventArgs e)
@@ -292,5 +320,7 @@ namespace SistemaJoyería.Controller.ProductsController
             DataSet ds = DAOProducts.BuscarProducts(ObjProducts.txtSearchProductos.Text.Trim());
             ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
         }
+
+
     }
 }
