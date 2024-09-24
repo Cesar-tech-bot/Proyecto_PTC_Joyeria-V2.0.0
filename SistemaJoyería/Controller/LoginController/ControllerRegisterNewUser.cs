@@ -20,6 +20,14 @@ namespace SistemaJoyería.Controller.LoginController
             objRegister = vista;
             objRegister.Load += new EventHandler(CargarCombos);
             objRegister.btnRegisterNewUser.Click += new EventHandler(RegistrarUsuario);
+            objRegister.btnComeBack.Click += new EventHandler(ComeBack);
+        }
+
+        public void ComeBack(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            objRegister.Hide();
+            frmLogin.Show();
         }
 
         public void CargarCombos(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace SistemaJoyería.Controller.LoginController
         {
             objAdmin = vista;
             objAdmin.BtnContraAdmin.Click += new EventHandler(ConfirmarClave);
+            objAdmin.btnComeBack.Click += new EventHandler(ComeBack);
         }
 
         public void ConfirmarClave(object sender, EventArgs e)
@@ -51,5 +52,11 @@ namespace SistemaJoyería.Controller.LoginController
             }
         }
 
+        public void ComeBack(object sender, EventArgs e)
+        {
+            FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword();
+            objAdmin.Hide();
+            frmRecoverPassword.Show();
+        }
     }
 }

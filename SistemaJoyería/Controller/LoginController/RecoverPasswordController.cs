@@ -20,12 +20,13 @@ namespace SistemaJoyería.Controller.LoginController
             objLogin.btnPreguntas.Click += new EventHandler(AbrirPreguntas);
             objLogin.btnAdmin.Click += new EventHandler(interAdmin);
             objLogin.btnCorreo.Click += new EventHandler(EnviarCorreo);
+            objLogin.btnComeBack.Click += new EventHandler(ComeBack);
         }
 
         void ComeBack(object sender, EventArgs e)
         {
             FrmLogin frmLogin = new FrmLogin();
-            frmLogin.Hide();
+            objLogin.Hide();
             frmLogin.Show();
         }
 

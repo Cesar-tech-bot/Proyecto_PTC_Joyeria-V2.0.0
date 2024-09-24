@@ -181,11 +181,11 @@
     <Compile Include="View\LoginView\FrmChangePassword.Designer.cs">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoginView\FrmEmail.cs">
+    <Compile Include="View\LoginView\RecuperarCorreo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoginView\FrmEmail.Designer.cs">
-      <DependentUpon>FrmEmail.cs</DependentUpon>
+    <Compile Include="View\LoginView\RecuperarCorreo.Designer.cs">
+      <DependentUpon>RecuperarCorreo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView\FrmInterFromAdmin.cs">
       <SubType>Form</SubType>
@@ -222,12 +222,6 @@
     </Compile>
     <Compile Include="View\LoginView\FrmRegisterQuestions.Designer.cs">
       <DependentUpon>FrmRegisterQuestions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\LoginView\RecuperarCorreo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\LoginView\RecuperarCorreo.Designer.cs">
-      <DependentUpon>RecuperarCorreo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ProductsView\FrmProductsView.cs">
       <SubType>Form</SubType>
@@ -296,8 +290,8 @@
     <EmbeddedResource Include="View\LoginView\FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoginView\FrmEmail.resx">
-      <DependentUpon>FrmEmail.cs</DependentUpon>
+    <EmbeddedResource Include="View\LoginView\RecuperarCorreo.resx">
+      <DependentUpon>RecuperarCorreo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmInterFromAdmin.resx">
       <DependentUpon>FrmInterFromAdmin.cs</DependentUpon>
@@ -316,9 +310,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmRegisterQuestions.resx">
       <DependentUpon>FrmRegisterQuestions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\LoginView\RecuperarCorreo.resx">
-      <DependentUpon>RecuperarCorreo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductsView\FrmProductsView.resx">
       <DependentUpon>FrmProductsView.cs</DependentUpon>
