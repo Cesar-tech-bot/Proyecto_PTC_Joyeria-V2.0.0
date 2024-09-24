@@ -19,10 +19,18 @@ namespace SistemaJoyería.Controller.LoginController
         {
             objRecuperarPorCorreo = vista;
             objRecuperarPorCorreo.BtnEnviarCorreo.Click += new EventHandler(EnviarCorreo);
+            objRecuperarPorCorreo.btnComeBack.Click += new EventHandler(ComeBack);
         }
 
         public static string codigoAleatorio;
         public static string correoUsuario;
+
+        public void ComeBack(object sender, EventArgs e)
+        {
+            FrmRecoverPassword frmRecoverPassword = new FrmRecoverPassword();
+            objRecuperarPorCorreo.Hide();
+            frmRecoverPassword.Show();
+        }
 
         public void EnviarCorreo(Object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaJoyería.View.LoginView;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace SistemaJoyería.Controller.LoginController
 {
-    internal class ChangeOriginalPasswordController
+    public class ChangeOriginalPasswordController
     {
+        FrmChangeOriginalPassword ObjVista;
+
+        public ChangeOriginalPasswordController(FrmChangeOriginalPassword Vista)
+        {
+            ObjVista = Vista;           
+
+        }
 
     }
 }

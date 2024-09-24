@@ -18,10 +18,5 @@ namespace SistemaJoyería.View.LoginView
             InitializeComponent();
             ControllerQuestionVerification control = new ControllerQuestionVerification(this);
         }
-
-        private void FrmQuestionsLogin_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

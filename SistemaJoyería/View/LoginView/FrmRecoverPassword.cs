@@ -18,15 +18,5 @@ namespace SistemaJoyería.View.LoginView
             InitializeComponent();
             RecoverPasswordController recoverPasswordController = new RecoverPasswordController(this);
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
