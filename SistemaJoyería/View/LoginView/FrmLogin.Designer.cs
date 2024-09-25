@@ -48,11 +48,11 @@
             // LinklblRecuperar
             // 
             this.LinklblRecuperar.AutoSize = true;
-            this.LinklblRecuperar.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinklblRecuperar.Location = new System.Drawing.Point(622, 313);
+            this.LinklblRecuperar.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinklblRecuperar.Location = new System.Drawing.Point(622, 322);
             this.LinklblRecuperar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinklblRecuperar.Name = "LinklblRecuperar";
-            this.LinklblRecuperar.Size = new System.Drawing.Size(160, 14);
+            this.LinklblRecuperar.Size = new System.Drawing.Size(179, 12);
             this.LinklblRecuperar.TabIndex = 5;
             this.LinklblRecuperar.TabStop = true;
             this.LinklblRecuperar.Text = "¿Ha olvidado su contraseña?";
@@ -82,11 +82,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(439, 148);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(442, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 18);
+            this.label3.Size = new System.Drawing.Size(102, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "Contraseña";
             // 
@@ -102,22 +102,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(439, 67);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(442, 75);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 18);
+            this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 10;
             this.label2.Text = "Usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(539, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 18);
+            this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "Inicio de Sesion";
             // 
@@ -144,11 +144,11 @@
             // LinklblRegister
             // 
             this.LinklblRegister.AutoSize = true;
-            this.LinklblRegister.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinklblRegister.Location = new System.Drawing.Point(429, 313);
+            this.LinklblRegister.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinklblRegister.Location = new System.Drawing.Point(428, 322);
             this.LinklblRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinklblRegister.Name = "LinklblRegister";
-            this.LinklblRegister.Size = new System.Drawing.Size(147, 14);
+            this.LinklblRegister.Size = new System.Drawing.Size(163, 12);
             this.LinklblRegister.TabIndex = 4;
             this.LinklblRegister.TabStop = true;
             this.LinklblRegister.Text = "¿Aún no se ha Registrado?";
