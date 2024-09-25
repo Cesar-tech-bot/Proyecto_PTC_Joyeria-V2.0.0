@@ -41,12 +41,14 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string queryInsert = "INSERT INTO SalesDetails (IDProduct, DayToSale, Quantity, Price) VALUES (@param1, @param2, @param3, @param4)";
+                string queryInsert = "INSERT INTO SalesDetails (IDProduct, IDEmployees, IDClient, DayToSale, Quantity, Price) VALUES (@param1, @param2, @param3, @param4, @param5, @param6)";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
                 cmdInsert.Parameters.AddWithValue("param1", IDProduct1);
-                cmdInsert.Parameters.AddWithValue("Param2", DayToSale1);
-                cmdInsert.Parameters.AddWithValue("param3", Quantity1);
-                cmdInsert.Parameters.AddWithValue("param4", Price1);
+                cmdInsert.Parameters.AddWithValue("Param2", IDEmployee1);
+                cmdInsert.Parameters.AddWithValue("param3", IDClient1);
+                cmdInsert.Parameters.AddWithValue("param4", DayToSale1);
+                cmdInsert.Parameters.AddWithValue("param5", Quantity1);
+                cmdInsert.Parameters.AddWithValue("param6", Price1);
 
                 return cmdInsert.ExecuteNonQuery();
             }
@@ -93,7 +95,7 @@ namespace SistemaJoyería.Model.DAO
             {
                 command.Connection = getConnection();
                 //Definir instrucción de lo que se quiere hacer
-                string query = "SELECT IDProduct,  ProductName FROM Products";
+                string query = "SELECT IDProduct, ProductName FROM Products";
                 //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
                 SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
                 //Se ejecuta el comando cmdSelect con la instrucción y la conexión
@@ -109,7 +111,7 @@ namespace SistemaJoyería.Model.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} Error al obtener los autores, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message} Error al obtener los el producto, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -117,5 +119,99 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection.Close();
             }
         }
+
+        public DataSet GetEmployees()
+        {
+            try
+            {
+                command.Connection = getConnection();
+                //Definir instrucción de lo que se quiere hacer
+                string query = "SELECT IDEmployees,  FirstNameEmployees FROM Employees";
+                //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
+                SqlCommand cmdSelectE= new SqlCommand(query, command.Connection);
+                //Se ejecuta el comando cmdSelect con la instrucción y la conexión
+                cmdSelectE.ExecuteNonQuery();
+                //Se crea un objeto de tipo SqlDataAdapter para facilitar el llenado del dataset
+                SqlDataAdapter adpE = new SqlDataAdapter(cmdSelectE);
+                //Se crea un dataset que contendrá los datos encontrados
+                DataSet dsE = new DataSet();
+                //rellenamos el dataset con el objeto SqlDataAdapter
+                adpE.Fill(dsE, "Employees");
+                //Se retorna el dataset
+                return dsE;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message} Error al obtener el empleado, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+
+        public DataSet GetClients()
+        {
+            try
+            {
+                command.Connection = getConnection();
+                //Definir instrucción de lo que se quiere hacer
+                string query = "SELECT IDClient, FirstName FROM Clients";
+                //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
+                SqlCommand cmdSelectC = new SqlCommand(query, command.Connection);
+                //Se ejecuta el comando cmdSelect con la instrucción y la conexión
+                cmdSelectC.ExecuteNonQuery();
+                //Se crea un objeto de tipo SqlDataAdapter para facilitar el llenado del dataset
+                SqlDataAdapter adpC = new SqlDataAdapter(cmdSelectC);
+                //Se crea un dataset que contendrá los datos encontrados
+                DataSet dsC = new DataSet();
+                //rellenamos el dataset con el objeto SqlDataAdapter
+                adpC.Fill(dsC, "Clients");
+                //Se retorna el dataset
+                return dsC;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message} Error al obtener el cliente, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+
+        //// Obtener precio del producto
+        //public decimal GetProductPrice(int productId)
+        //{
+        //    try
+        //    {
+        //        command.Connection = getConnection();
+        //        string query = "SELECT Price FROM Products WHERE IDProduct = @ProductID";
+        //        SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
+        //        cmdSelect.Parameters.AddWithValue("@ProductID", productId);
+        //        object result = cmdSelect.ExecuteScalar(); // Ejecuta la consulta y obtiene el primer valor de la primera fila
+
+        //        if (result != null && decimal.TryParse(result.ToString(), out decimal price))
+        //        {
+        //            return price;
+        //        }
+        //        else
+        //        {
+        //            return -1; // Si no se encuentra el producto o hay algún error
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"{ex.Message} Error al obtener el precio del producto.", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return -1;
+        //    }
+        //    finally
+        //    {
+        //        command.Connection.Close();
+        //    }
+        //}
+
     }
 }

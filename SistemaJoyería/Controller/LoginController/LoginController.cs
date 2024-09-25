@@ -1,4 +1,12 @@
 ﻿using System;
+
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using SistemaJoyería.Model.DAO;
+using System.Web.UI.WebControls;
+
 using System.Windows.Forms;
 using SistemaJoyería.Model.DAO;
 using SistemaJoyería.View.LoginView;

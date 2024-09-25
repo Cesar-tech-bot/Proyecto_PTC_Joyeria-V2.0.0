@@ -24,6 +24,7 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             View.btnClear.Click += new EventHandler(ClearZone);
             //Otro tipo de método
             View.txtQuantity.TextChanged += new EventHandler(Limit3);
+            //View.cmbProduct.SelectedIndexChanged += new EventHandler(UpdateProductPrice);
             // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
             View.dtpDateSell.MinDate = DateTime.Today;
             View.dtpDateSell.MaxDate = DateTime.Today;
@@ -39,6 +40,8 @@ namespace SistemaJoyería.Controller.SalesDetailsController
         {
             ShowDGVSalesDetails();
             FillProducts();
+            FillEmployees();
+            FillClient();
         }
 
         //LLenarTB
@@ -50,6 +53,26 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             ObjSalesDetails.cmbProduct.DataSource = ds.Tables["Products"];
             ObjSalesDetails.cmbProduct.DisplayMember = "ProductName";
             ObjSalesDetails.cmbProduct.ValueMember = "IDProduct";
+        }
+
+        void FillEmployees()
+        {
+            //Creando un objeto de la clase DAOBooks
+            SalesDetailsViewDAO daoEmployees = new SalesDetailsViewDAO();
+            DataSet dsE = daoEmployees.GetEmployees();
+            ObjSalesDetails.cmbEmployee.DataSource = dsE.Tables["Employees"];
+            ObjSalesDetails.cmbEmployee.DisplayMember = "FirstNameEmployees";
+            ObjSalesDetails.cmbEmployee.ValueMember = "IDEmployees";
+        }
+
+        void FillClient()
+        {
+            //Creando un objeto de la clase DAOBooks
+            SalesDetailsViewDAO daoClient= new SalesDetailsViewDAO();
+            DataSet dsC = daoClient.GetClients();
+            ObjSalesDetails.cmbClient.DataSource = dsC.Tables["Clients"];
+            ObjSalesDetails.cmbClient.DisplayMember = "FirstName";
+            ObjSalesDetails.cmbClient.ValueMember = "IDClient";
         }
 
         // Refrescar tabla
@@ -71,10 +94,14 @@ namespace SistemaJoyería.Controller.SalesDetailsController
         {
             if (!string.IsNullOrEmpty(ObjSalesDetails.txtQuantity.Text.Trim()) &&
                 !string.IsNullOrEmpty(ObjSalesDetails.cmbProduct.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjSalesDetails.cmbEmployee.Text.Trim()) &&
+                !string.IsNullOrEmpty(ObjSalesDetails.cmbClient.Text.Trim()) &&
                 !string.IsNullOrEmpty(ObjSalesDetails.mskPrice.Text.Trim()))
             {
                 SalesDetailsViewDAO daoInsert = new SalesDetailsViewDAO();
                 daoInsert.IDProduct1 = int.Parse(ObjSalesDetails.cmbProduct.SelectedValue.ToString());
+                daoInsert.IDEmployee1 = int.Parse(ObjSalesDetails.cmbEmployee.SelectedValue.ToString());
+                daoInsert.IDClient1 = int.Parse(ObjSalesDetails.cmbClient.SelectedValue.ToString());
                 daoInsert.DayToSale1 = ObjSalesDetails.dtpDateSell.Value;
                 daoInsert.Quantity1 = int.Parse(ObjSalesDetails.txtQuantity.Text.Trim());
                 daoInsert.Price1 = decimal.Parse(ObjSalesDetails.mskPrice.Text.Trim());
@@ -95,6 +122,25 @@ namespace SistemaJoyería.Controller.SalesDetailsController
                 MessageBox.Show("Complete el formulario con la información requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        //void UpdateProductPrice(object sender, EventArgs e)
+        //{
+        //    if (ObjSalesDetails.cmbProduct.SelectedValue != null)
+        //    {
+        //        int selectedProductId = (int)ObjSalesDetails.cmbProduct.SelectedValue;
+        //        SalesDetailsViewDAO dao = new SalesDetailsViewDAO();
+        //        decimal price = dao.GetProductPrice(selectedProductId);
+
+        //        if (price > 0)
+        //        {
+        //            ObjSalesDetails.txtPrice.Text = price.ToString("N2");
+        //        }
+        //        else
+        //        {
+        //            ObjSalesDetails.txtPrice.Clear();
+        //        }
+        //    }
+        //}
 
         void ClearZone(object sender, EventArgs e)
         {
