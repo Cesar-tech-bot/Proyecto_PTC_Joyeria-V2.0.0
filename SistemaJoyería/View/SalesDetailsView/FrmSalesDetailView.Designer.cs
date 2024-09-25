@@ -44,6 +44,10 @@
             this.btnImprent = new System.Windows.Forms.Button();
             this.dgvSellInfo = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellInfo)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +57,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.label1.Location = new System.Drawing.Point(193, 47);
+            this.label1.Location = new System.Drawing.Point(526, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(358, 23);
             this.label1.TabIndex = 0;
@@ -64,7 +68,7 @@
             this.txtDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDate.AutoSize = true;
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.Location = new System.Drawing.Point(14, 155);
+            this.txtDate.Location = new System.Drawing.Point(291, 113);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(78, 25);
             this.txtDate.TabIndex = 1;
@@ -79,15 +83,19 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.txtTotal);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.cmbProduct);
             this.groupBox1.Controls.Add(this.txtDate);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtProductsSell);
             this.groupBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(197, 112);
+            this.groupBox1.Location = new System.Drawing.Point(136, 112);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(996, 249);
+            this.groupBox1.Size = new System.Drawing.Size(1130, 268);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area de Ventas";
@@ -96,10 +104,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(713, 126);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(828, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 29);
+            this.label2.Size = new System.Drawing.Size(32, 32);
             this.label2.TabIndex = 9;
             this.label2.Text = "$";
             // 
@@ -107,9 +115,9 @@
             // 
             this.mskPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mskPrice.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.mskPrice.Location = new System.Drawing.Point(746, 126);
+            this.mskPrice.Location = new System.Drawing.Point(857, 143);
             this.mskPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskPrice.Mask = "00.00";
+            this.mskPrice.Mask = "000.00";
             this.mskPrice.Name = "mskPrice";
             this.mskPrice.Size = new System.Drawing.Size(63, 31);
             this.mskPrice.TabIndex = 4;
@@ -118,10 +126,10 @@
             // 
             this.dtpDateSell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateSell.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.dtpDateSell.Location = new System.Drawing.Point(20, 182);
+            this.dtpDateSell.Location = new System.Drawing.Point(297, 140);
             this.dtpDateSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateSell.Name = "dtpDateSell";
-            this.dtpDateSell.Size = new System.Drawing.Size(371, 31);
+            this.dtpDateSell.Size = new System.Drawing.Size(202, 31);
             this.dtpDateSell.TabIndex = 3;
             // 
             // label6
@@ -129,7 +137,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 15F);
-            this.label6.Location = new System.Drawing.Point(639, 92);
+            this.label6.Location = new System.Drawing.Point(750, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(263, 29);
             this.label6.TabIndex = 6;
@@ -139,10 +147,10 @@
             // 
             this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuantity.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtQuantity.Location = new System.Drawing.Point(281, 97);
+            this.txtQuantity.Location = new System.Drawing.Point(297, 66);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(108, 31);
+            this.txtQuantity.Size = new System.Drawing.Size(202, 31);
             this.txtQuantity.TabIndex = 2;
             // 
             // txtTotal
@@ -150,7 +158,7 @@
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTotal.AutoSize = true;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(276, 70);
+            this.txtTotal.Location = new System.Drawing.Point(292, 36);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(106, 25);
             this.txtTotal.TabIndex = 4;
@@ -162,10 +170,10 @@
             this.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProduct.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.cmbProduct.FormattingEnabled = true;
-            this.cmbProduct.Location = new System.Drawing.Point(19, 100);
+            this.cmbProduct.Location = new System.Drawing.Point(48, 66);
             this.cmbProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(180, 31);
+            this.cmbProduct.Size = new System.Drawing.Size(203, 31);
             this.cmbProduct.TabIndex = 1;
             // 
             // txtProductsSell
@@ -173,7 +181,7 @@
             this.txtProductsSell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductsSell.AutoSize = true;
             this.txtProductsSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductsSell.Location = new System.Drawing.Point(15, 70);
+            this.txtProductsSell.Location = new System.Drawing.Point(44, 36);
             this.txtProductsSell.Name = "txtProductsSell";
             this.txtProductsSell.Size = new System.Drawing.Size(216, 25);
             this.txtProductsSell.TabIndex = 0;
@@ -227,13 +235,13 @@
             this.dgvSellInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSellInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSellInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSellInfo.Location = new System.Drawing.Point(197, 460);
+            this.dgvSellInfo.Location = new System.Drawing.Point(136, 460);
             this.dgvSellInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSellInfo.Name = "dgvSellInfo";
             this.dgvSellInfo.ReadOnly = true;
             this.dgvSellInfo.RowHeadersWidth = 51;
             this.dgvSellInfo.RowTemplate.Height = 24;
-            this.dgvSellInfo.Size = new System.Drawing.Size(996, 290);
+            this.dgvSellInfo.Size = new System.Drawing.Size(1130, 290);
             this.dgvSellInfo.TabIndex = 8;
             // 
             // btnRefresh
@@ -249,6 +257,52 @@
             this.btnRefresh.TabIndex = 9;
             this.btnRefresh.Text = "Refrescar";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Venta realizada por:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(49, 137);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(202, 31);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(44, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "A nombre de:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(49, 214);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(202, 31);
+            this.comboBox2.TabIndex = 1;
             // 
             // FrmSalesDetailView
             // 
@@ -290,5 +344,9 @@
         public System.Windows.Forms.Button btnRefresh;
         public System.Windows.Forms.MaskedTextBox mskPrice;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
     }
 }

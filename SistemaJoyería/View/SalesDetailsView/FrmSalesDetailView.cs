@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaJoyería.Controller.SalesDetailsController; // Importa el namespace del controller
+using SistemaJoyería.Controller.SalesDetailsController; 
 
 namespace SistemaJoyería.View.SalesDetailsView
 {
     public partial class FrmSalesDetailView : Form
     {
-        private SalesDetailsController salesDetailsController; // Instancia del controlador
+        private SalesDetailsController salesDetailsController; 
 
         public FrmSalesDetailView()
         {
