@@ -2,6 +2,7 @@
 using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace SistemaJoyería.Controller.Suppliers
@@ -33,50 +34,106 @@ namespace SistemaJoyería.Controller.Suppliers
                 vistaPasada.Close();
             }
 
-            // Vincular validaciones de campos a los eventos KeyPress y TextChanged
-            vistaPasada.txtNombreEmpresa.KeyPress += ValidateLettersAndSpaces;
-            vistaPasada.txtNombreContacto.KeyPress += ValidateLettersAndSpaces;
-            vistaPasada.txtTelefono.KeyPress += ValidateNumbersOnly;
-            vistaPasada.txtTelefono.TextChanged += (sender, e) => LimitPhoneLength(vistaPasada.txtTelefono);
+            // Validaciones de los campos
+            vistaPasada.txtNombreEmpresa.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreEmpresa, 20);
+            vistaPasada.txtNombreContacto.TextChanged += (sender, e) => ValidateLettersOnly(vistaPasada.txtNombreContacto, 15);
+            vistaPasada.txtTelefono.KeyPress += ValidatePhoneInput;
+            vistaPasada.txtTelefono.TextChanged += ValidatePhoneLength;
+            vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
+            vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 150);
+
+            vistaControlada.KeyPreview = true;
+            vistaControlada.KeyDown += Form_KeyDown;
+
+            // Eliminar el menú contextual y prevenir copiar/pegar
+            DisableContextMenu(vistaPasada.txtNombreEmpresa);
+            DisableContextMenu(vistaPasada.txtNombreContacto);
+            DisableContextMenu(vistaPasada.txtTelefono);
+            DisableContextMenu(vistaPasada.txtEmail);
+            DisableContextMenu(vistaPasada.txtDireccion);
         }
 
-        // Validar que solo se ingresen letras y espacios
-        private void ValidateLettersAndSpaces(object sender, KeyPressEventArgs e)
+        // Validar que solo se ingresen letras y espacios, con longitud máxima
+        private void ValidateLettersOnly(TextBox textBox, int maxLength)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            string input = textBox.Text;
+            string lettersOnly = Regex.Replace(input, @"[^a-zA-Z\s]", "");
+
+            if (input != lettersOnly)
             {
-                e.Handled = true;  // Bloquear la tecla si no es una letra o espacio
+                MessageBox.Show("Este campo solo permite letras.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.Text = lettersOnly;
+                textBox.SelectionStart = lettersOnly.Length;
+            }
+
+            ValidateLength(textBox, maxLength);
+        }
+
+        // Validar que solo se ingresen números y el carácter "-" en el teléfono
+        private void ValidatePhoneInput(object sender, KeyPressEventArgs e)
+        {
+            TextBox txtTelefono = (TextBox)sender;
+
+            if (e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' || txtTelefono.Text.Length >= 12)
+            {
+                e.Handled = true;
             }
         }
 
-        // Validar que solo se ingresen números
-        private void ValidateNumbersOnly(object sender, KeyPressEventArgs e)
+        // Validar la longitud máxima del teléfono
+        private void ValidatePhoneLength(object sender, EventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            TextBox txtTelefono = (TextBox)sender;
+            if (txtTelefono.Text.Length > 12)
             {
-                e.Handled = true;  // Bloquear si no es un número o tecla de control (como backspace)
+                txtTelefono.Text = txtTelefono.Text.Substring(0, 12);
+                txtTelefono.SelectionStart = 12;
             }
         }
 
-        // Limitar el campo de teléfono a 8 caracteres
-        private void LimitPhoneLength(TextBox txtTelefono)
+        // Validar la longitud de cualquier campo de texto
+        private void ValidateLength(TextBox textBox, int maxLength)
         {
-            if (txtTelefono.Text.Length > 8)
+            if (textBox.Text.Length > maxLength)
             {
-                txtTelefono.Text = txtTelefono.Text.Substring(0, 8);  // Limitar a los primeros 8 caracteres
-                txtTelefono.SelectionStart = txtTelefono.Text.Length;  // Colocar el cursor al final del texto
+                textBox.Text = textBox.Text.Substring(0, maxLength);
+                textBox.SelectionStart = textBox.Text.Length;
+                MessageBox.Show($"El campo no puede exceder {maxLength} caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        // Validar formato de correo electrónico
+        private bool ValidateEmail(TextBox emailTextBox)
+        {
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            if (!Regex.IsMatch(emailTextBox.Text, emailPattern))
+            {
+                MessageBox.Show("El formato del correo electrónico no es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        // Eliminar el menú contextual y deshabilitar copiar/pegar
+        private void DisableContextMenu(TextBox textBox)
+        {
+            textBox.ContextMenu = new ContextMenu();  // Eliminar el menú contextual
+            textBox.ShortcutsEnabled = false;  // Deshabilitar atajos como Ctrl+C y Ctrl+V
+        }
+
         // Método para cargar los datos del proveedor en el formulario
         private void LoadSupplierData(int idProveedor)
         {
-            // Obtener el proveedor utilizando el DAO
             SupplierDTO supplier = suppliersDAO.GetSupplierByID(idProveedor);
 
-            // Verificar si el proveedor fue encontrado
             if (supplier != null)
             {
-                // Asignar los valores obtenidos a los controles del formulario
                 vistaControlada.txtNombreEmpresa.Text = supplier.CompanyName;
                 vistaControlada.txtNombreContacto.Text = supplier.ContactName;
                 vistaControlada.dtpFechaRegistro.Value = supplier.DayAdded;
@@ -87,17 +144,15 @@ namespace SistemaJoyería.Controller.Suppliers
             else
             {
                 MessageBox.Show("Proveedor no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                vistaControlada.Close();  // Cerrar el formulario si no se encuentra el proveedor
+                vistaControlada.Close();
             }
         }
 
         // Método para actualizar el proveedor
         private void UpdateSupplier(int idProveedor)
         {
-            // Validar los campos antes de proceder
             if (ValidateAllFields())
             {
-                // Crear un objeto SupplierDTO con los datos actualizados
                 SupplierDTO supplier = new SupplierDTO
                 {
                     IDSupplier = idProveedor,
@@ -109,14 +164,12 @@ namespace SistemaJoyería.Controller.Suppliers
                     Direction = vistaControlada.txtDireccion.Text.Trim()
                 };
 
-                // Llamar al DAO para actualizar el proveedor en la base de datos
                 int result = suppliersDAO.UpdateSupplier(supplier);
 
-                // Verificar si la actualización fue exitosa
                 if (result > 0)
                 {
                     MessageBox.Show("Proveedor actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    vistaControlada.Close();  // Cerrar el formulario si la actualización fue exitosa
+                    vistaControlada.Close();
                 }
                 else
                 {
@@ -128,7 +181,6 @@ namespace SistemaJoyería.Controller.Suppliers
         // Método que valida que todos los campos estén correctamente llenos
         private bool ValidateAllFields()
         {
-            // Verificar que todos los campos estén llenos
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
                 string.IsNullOrWhiteSpace(vistaControlada.txtNombreContacto.Text) ||
                 string.IsNullOrWhiteSpace(vistaControlada.txtTelefono.Text) ||
@@ -139,21 +191,22 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
 
-            // Validar formato de correo electrónico
-            if (!ValidateEmail(vistaControlada.txtEmail.Text))
+            if (!ValidateEmail(vistaControlada.txtEmail))
             {
-                MessageBox.Show("Formato de correo electrónico no válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            return true;  // Si todo está correcto, devolver true
+            return true;
         }
 
-        // Método para validar el correo electrónico
-        private bool ValidateEmail(string email)
+        // Controlar que no se permita copiar y pegar con el teclado
+        private void Form_KeyDown(object sender, KeyEventArgs e)
         {
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            return System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern);
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+                MessageBox.Show("No se permite copiar o pegar en este formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

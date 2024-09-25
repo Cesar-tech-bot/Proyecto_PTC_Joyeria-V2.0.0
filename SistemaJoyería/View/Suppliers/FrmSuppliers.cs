@@ -19,9 +19,15 @@ namespace SistemaJoyería.View.Suppliers
             new ControllerSuppliers(this);
             this.KeyPreview = true;
             this.KeyDown += Form_KeyDown;
+
+            // Hacemos que el ListView se ajuste de forma responsiva
+            this.listSuppliers.Dock = DockStyle.Fill; // Se extiende y ocupa todo el espacio disponible
+
+            // Alternativamente, si quieres usar Anchor, puedes descomentar la siguiente línea:
+            // this.listSuppliers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
-        //Para copiar y pegar
+        // Método para bloquear copiar y pegar
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))

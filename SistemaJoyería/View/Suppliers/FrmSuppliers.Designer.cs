@@ -171,6 +171,7 @@
             // 
             // listSuppliers
             // 
+            this.listSuppliers.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.listSuppliers.BackColor = System.Drawing.SystemColors.Menu;
             this.listSuppliers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
