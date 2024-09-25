@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SistemaJoyería.Model.DAO;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using SistemaJoyería.Model.DAO;
 using SistemaJoyería.View.LoginView;
 using SistemaJoyería.View.ClientsView;
 using SistemaJoyería.View.DashboardView;
-using TextBox = System.Windows.Forms.TextBox;
 
 namespace SistemaJoyería.Controller.LoginController
 {
@@ -31,9 +25,29 @@ namespace SistemaJoyería.Controller.LoginController
             objLogin.txtUsuario.KeyDown += new KeyEventHandler(DisableCopyPaste);
             objLogin.txtContraseña.KeyDown += new KeyEventHandler(DisableCopyPaste);
 
+            // Validar que no se ingresen espacios en usuario y contraseña
+            objLogin.txtUsuario.KeyPress += new KeyPressEventHandler(ValidateNoSpaces);
+            objLogin.txtContraseña.KeyPress += new KeyPressEventHandler(ValidateNoSpaces);
+
             // Eliminar el menú contextual del clic derecho
             objLogin.txtUsuario.ContextMenu = new ContextMenu();
             objLogin.txtContraseña.ContextMenu = new ContextMenu();
+        }
+
+        // Método para validar que no se ingresen espacios
+        private void ValidateNoSpaces(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = true; // Evitar que se ingrese el espacio
+                MessageBox.Show("No se permiten espacios en el nombre de usuario o la contraseña.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Limpiar el campo si contiene un espacio
+                if (sender is TextBox textBox)
+                {
+                    textBox.Clear();
+                }
+            }
         }
 
         // Método para deshabilitar la funcionalidad de copiar/pegar
@@ -72,7 +86,6 @@ namespace SistemaJoyería.Controller.LoginController
 
             // Creando objeto de la clase DAOLogin
             DAOLogin DAOData = new DAOLogin();
-            CommonClassesController common = new CommonClassesController();
 
             // Utilizar objeto DAO para invocar getter y setter del DTO
             DAOData.LoginName1 = objLogin.txtUsuario.Text.Trim();
