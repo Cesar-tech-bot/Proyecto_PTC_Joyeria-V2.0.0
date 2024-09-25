@@ -34,6 +34,13 @@ namespace SistemaJoyería.Controller.Suppliers
 
             vistaControlada.KeyPreview = true;
             vistaControlada.KeyDown += Form_KeyDown;
+
+            // Eliminar el menú contextual del clic derecho para evitar copiar/cortar/pegar
+            vistaPasada.txtNombreEmpresa.ContextMenu = new ContextMenu();
+            vistaPasada.txtNombreContacto.ContextMenu = new ContextMenu();
+            vistaPasada.txtTelefono.ContextMenu = new ContextMenu();
+            vistaPasada.txtEmail.ContextMenu = new ContextMenu();
+            vistaPasada.txtDireccion.ContextMenu = new ContextMenu();
         }
 
         public void RegisterSupplier(SupplierDTO supplier)

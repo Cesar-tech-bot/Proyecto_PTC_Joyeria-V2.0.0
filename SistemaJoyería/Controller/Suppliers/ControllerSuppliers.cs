@@ -30,6 +30,13 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaPasada.btnRefresacar.Click += (sender, e) => _supplierDAO.GetData(vistaPasada);
 
             _supplierDAO.GetData(vistaPasada); // Carga inicial de datos en el formulario
+
+            // Implementación de validación para bloquear copiar y pegar
+            vistaControlada.KeyPreview = true;
+            vistaControlada.KeyDown += Form_KeyDown;
+
+            // Deshabilitar el menú contextual en el formulario
+            DisableContextMenu(vistaControlada);
         }
 
         // Método para actualizar un proveedor
@@ -69,6 +76,33 @@ namespace SistemaJoyería.Controller.Suppliers
                 _supplierDAO.Delete(idMala); // Llama al método de eliminación en la capa DAO
             }
             _supplierDAO.GetData(vistaControlada); // Actualiza la lista de proveedores
+        }
+
+        // Método para bloquear copiar y pegar con Ctrl+C y Ctrl+V
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+                MessageBox.Show("No se permite copiar o pegar en este formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // Método para deshabilitar el menú contextual (clic derecho)
+        private void DisableContextMenu(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl is TextBoxBase || ctrl is ComboBox)
+                {
+                    ctrl.ContextMenu = new ContextMenu(); // Asigna un menú vacío
+                }
+
+                if (ctrl.HasChildren)
+                {
+                    DisableContextMenu(ctrl); // Llama recursivamente para deshabilitar en todos los controles hijos
+                }
+            }
         }
     }
 }
