@@ -2,10 +2,6 @@
 using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaJoyería.Controller.Suppliers
@@ -35,7 +31,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.KeyPreview = true;
             vistaControlada.KeyDown += Form_KeyDown;
 
-            // Deshabilitar el menú contextual en el formulario
+            // Deshabilitar el menú contextual en los campos
             DisableContextMenu(vistaControlada);
         }
 
@@ -83,8 +79,7 @@ namespace SistemaJoyería.Controller.Suppliers
         {
             if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
             {
-                e.SuppressKeyPress = true;
-                MessageBox.Show("No se permite copiar o pegar en este formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.SuppressKeyPress = true; // Bloquear el evento de tecla sin mostrar ningún mensaje
             }
         }
 
@@ -95,7 +90,7 @@ namespace SistemaJoyería.Controller.Suppliers
             {
                 if (ctrl is TextBoxBase || ctrl is ComboBox)
                 {
-                    ctrl.ContextMenu = new ContextMenu(); // Asigna un menú vacío
+                    ctrl.ContextMenu = new ContextMenu(); // Asigna un menú vacío para deshabilitar copiar/pegar
                 }
 
                 if (ctrl.HasChildren)

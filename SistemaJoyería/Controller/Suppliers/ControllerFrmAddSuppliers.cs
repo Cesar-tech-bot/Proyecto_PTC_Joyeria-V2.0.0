@@ -29,20 +29,16 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaPasada.dtpFechaRegistro.ValueChanged += (sender, e) => ValidateDate(vistaPasada.dtpFechaRegistro.Value);
             vistaPasada.txtTelefono.KeyPress += ValidatePhoneInput;
             vistaPasada.txtTelefono.TextChanged += ValidatePhoneLength;
-            vistaPasada.txtEmail.Leave += (sender, e) => ValidateEmail(vistaPasada.txtEmail);
             vistaPasada.txtDireccion.TextChanged += (sender, e) => ValidateLength(vistaPasada.txtDireccion, 150);
 
             vistaControlada.KeyPreview = true;
             vistaControlada.KeyDown += Form_KeyDown;
 
-            // Eliminar el menú contextual del clic derecho para evitar copiar/cortar/pegar
-            vistaPasada.txtNombreEmpresa.ContextMenu = new ContextMenu();
-            vistaPasada.txtNombreContacto.ContextMenu = new ContextMenu();
-            vistaPasada.txtTelefono.ContextMenu = new ContextMenu();
-            vistaPasada.txtEmail.ContextMenu = new ContextMenu();
-            vistaPasada.txtDireccion.ContextMenu = new ContextMenu();
+            // Deshabilitar el menú contextual (clic derecho) para todos los campos de texto
+            DisableContextMenu(vistaPasada);
         }
 
+        // Método para registrar un proveedor
         public void RegisterSupplier(SupplierDTO supplier)
         {
             if (ValidateAllFields())
@@ -66,7 +62,7 @@ namespace SistemaJoyería.Controller.Suppliers
 
         private void HandleSqlException(SqlException ex)
         {
-            if (ex.Number == 2627 || ex.Number == 2601) // Unique constraint violation
+            if (ex.Number == 2627 || ex.Number == 2601) // Violación de clave única
             {
                 if (ex.Message.Contains("CompanyName"))
                 {
@@ -116,6 +112,7 @@ namespace SistemaJoyería.Controller.Suppliers
             vistaControlada.dtpFechaRegistro.Value = DateTime.Now;
         }
 
+        // Validación de todos los campos al presionar el botón de Guardar
         private bool ValidateAllFields()
         {
             if (string.IsNullOrWhiteSpace(vistaControlada.txtNombreEmpresa.Text) ||
@@ -128,8 +125,9 @@ namespace SistemaJoyería.Controller.Suppliers
                 return false;
             }
 
-            if (!ValidateEmail(vistaControlada.txtEmail))
+            if (!ValidateEmail(vistaControlada.txtEmail.Text))
             {
+                MessageBox.Show("El formato del correo electrónico no es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -141,6 +139,7 @@ namespace SistemaJoyería.Controller.Suppliers
             return true;
         }
 
+        // Validación de fecha
         private bool ValidateDate(DateTime selectedDate)
         {
             DateTime currentDate = DateTime.Now;
@@ -206,23 +205,36 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        private bool ValidateEmail(TextBox emailTextBox)
+        // Validación de email solo al presionar el botón de Guardar
+        private bool ValidateEmail(string email)
         {
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            if (!Regex.IsMatch(emailTextBox.Text, emailPattern))
-            {
-                MessageBox.Show("El formato del correo electrónico no es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
+            return Regex.IsMatch(email, emailPattern);
         }
 
+        // Método para bloquear Ctrl+C y Ctrl+V sin mostrar mensajes
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V))
             {
-                e.SuppressKeyPress = true;
-                MessageBox.Show("No se permite copiar o pegar en este formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.SuppressKeyPress = true; // Bloquear la acción sin mostrar mensajes
+            }
+        }
+
+        // Método para deshabilitar el menú contextual de copiar/pegar
+        private void DisableContextMenu(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl is TextBoxBase || ctrl is ComboBox)
+                {
+                    ctrl.ContextMenu = new ContextMenu(); // Asignar un menú vacío para deshabilitar el menú contextual
+                }
+
+                if (ctrl.HasChildren)
+                {
+                    DisableContextMenu(ctrl); // Aplicar recursivamente a todos los controles hijos
+                }
             }
         }
     }
