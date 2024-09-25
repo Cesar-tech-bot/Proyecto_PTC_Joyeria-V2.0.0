@@ -150,11 +150,11 @@
             // txtBuscarRegistro
             // 
             this.txtBuscarRegistro.AutoSize = true;
-            this.txtBuscarRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txtBuscarRegistro.Location = new System.Drawing.Point(14, 32);
+            this.txtBuscarRegistro.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarRegistro.Location = new System.Drawing.Point(14, 33);
             this.txtBuscarRegistro.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.txtBuscarRegistro.Name = "txtBuscarRegistro";
-            this.txtBuscarRegistro.Size = new System.Drawing.Size(125, 18);
+            this.txtBuscarRegistro.Size = new System.Drawing.Size(135, 18);
             this.txtBuscarRegistro.TabIndex = 2;
             this.txtBuscarRegistro.Text = "Buscar registro:";
             // 
