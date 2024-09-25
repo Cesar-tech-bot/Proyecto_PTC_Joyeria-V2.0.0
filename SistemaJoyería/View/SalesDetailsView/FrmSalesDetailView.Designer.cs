@@ -32,22 +32,22 @@
             this.txtDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
             this.dtpDateSell = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.Label();
+            this.cmbClient = new System.Windows.Forms.ComboBox();
+            this.cmbEmployee = new System.Windows.Forms.ComboBox();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtProductsSell = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnInsertSell = new System.Windows.Forms.Button();
             this.btnImprent = new System.Windows.Forms.Button();
             this.dgvSellInfo = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellInfo)).BeginInit();
             this.SuspendLayout();
@@ -77,14 +77,14 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.mskPrice);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpDateSell);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.txtTotal);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbClient);
+            this.groupBox1.Controls.Add(this.cmbEmployee);
             this.groupBox1.Controls.Add(this.cmbProduct);
             this.groupBox1.Controls.Add(this.txtDate);
             this.groupBox1.Controls.Add(this.label4);
@@ -105,22 +105,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(828, 143);
+            this.label2.Location = new System.Drawing.Point(816, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 32);
             this.label2.TabIndex = 9;
             this.label2.Text = "$";
-            // 
-            // mskPrice
-            // 
-            this.mskPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mskPrice.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.mskPrice.Location = new System.Drawing.Point(857, 143);
-            this.mskPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskPrice.Mask = "000.00";
-            this.mskPrice.Name = "mskPrice";
-            this.mskPrice.Size = new System.Drawing.Size(63, 31);
-            this.mskPrice.TabIndex = 4;
             // 
             // dtpDateSell
             // 
@@ -164,6 +153,30 @@
             this.txtTotal.TabIndex = 4;
             this.txtTotal.Text = "Cantidad:";
             // 
+            // cmbClient
+            // 
+            this.cmbClient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClient.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.cmbClient.FormattingEnabled = true;
+            this.cmbClient.Location = new System.Drawing.Point(49, 214);
+            this.cmbClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbClient.Name = "cmbClient";
+            this.cmbClient.Size = new System.Drawing.Size(202, 31);
+            this.cmbClient.TabIndex = 1;
+            // 
+            // cmbEmployee
+            // 
+            this.cmbEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmployee.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.cmbEmployee.FormattingEnabled = true;
+            this.cmbEmployee.Location = new System.Drawing.Point(49, 137);
+            this.cmbEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbEmployee.Name = "cmbEmployee";
+            this.cmbEmployee.Size = new System.Drawing.Size(202, 31);
+            this.cmbEmployee.TabIndex = 1;
+            // 
             // cmbProduct
             // 
             this.cmbProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -175,6 +188,28 @@
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(203, 31);
             this.cmbProduct.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(44, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "A nombre de:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Venta realizada por:";
             // 
             // txtProductsSell
             // 
@@ -258,51 +293,13 @@
             this.btnRefresh.Text = "Refrescar";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // mskPrice
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Venta realizada por:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(49, 137);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 31);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "A nombre de:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(49, 214);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(202, 31);
-            this.comboBox2.TabIndex = 1;
+            this.mskPrice.Location = new System.Drawing.Point(845, 146);
+            this.mskPrice.Mask = "00.00";
+            this.mskPrice.Name = "mskPrice";
+            this.mskPrice.Size = new System.Drawing.Size(100, 31);
+            this.mskPrice.TabIndex = 11;
             // 
             // FrmSalesDetailView
             // 
@@ -342,11 +339,11 @@
         public System.Windows.Forms.Button btnImprent;
         public System.Windows.Forms.DataGridView dgvSellInfo;
         public System.Windows.Forms.Button btnRefresh;
-        public System.Windows.Forms.MaskedTextBox mskPrice;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox comboBox2;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cmbClient;
+        public System.Windows.Forms.ComboBox cmbEmployee;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.MaskedTextBox mskPrice;
     }
 }
