@@ -56,7 +56,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtCorreo.Location = new System.Drawing.Point(13, 426);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(313, 31);
             this.txtCorreo.TabIndex = 4;
@@ -78,7 +78,7 @@
             this.btnRegisterNewUser.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnRegisterNewUser.ForeColor = System.Drawing.Color.White;
             this.btnRegisterNewUser.Location = new System.Drawing.Point(428, 235);
-            this.btnRegisterNewUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegisterNewUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegisterNewUser.Name = "btnRegisterNewUser";
             this.btnRegisterNewUser.Size = new System.Drawing.Size(184, 94);
             this.btnRegisterNewUser.TabIndex = 5;
@@ -89,7 +89,7 @@
             // 
             this.txtConfirmContra.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtConfirmContra.Location = new System.Drawing.Point(13, 335);
-            this.txtConfirmContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConfirmContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmContra.Name = "txtConfirmContra";
             this.txtConfirmContra.Size = new System.Drawing.Size(313, 31);
             this.txtConfirmContra.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             this.txtContra.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtContra.Location = new System.Drawing.Point(13, 235);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(313, 31);
             this.txtContra.TabIndex = 2;
@@ -107,7 +107,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtUsuario.Location = new System.Drawing.Point(13, 143);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(313, 31);
             this.txtUsuario.TabIndex = 1;
@@ -173,13 +173,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(705, 536);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(705, 536);
             this.Name = "FrmFirstUse";
-            this.Text = "FrmFirstUse";
+            this.Text = "Primer Uso";
             this.ResumeLayout(false);
             this.PerformLayout();
 

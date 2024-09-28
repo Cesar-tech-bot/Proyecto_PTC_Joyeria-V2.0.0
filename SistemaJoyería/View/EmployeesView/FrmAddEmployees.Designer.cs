@@ -244,7 +244,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddEmployees";
-            this.Text = "FrmAddEmployees";
+            this.Text = "Añadir Empleado";
             this.ResumeLayout(false);
             this.PerformLayout();
 

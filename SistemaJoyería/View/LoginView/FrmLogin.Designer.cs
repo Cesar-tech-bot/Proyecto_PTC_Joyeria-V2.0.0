@@ -52,7 +52,7 @@
             this.LinklblRecuperar.Location = new System.Drawing.Point(622, 322);
             this.LinklblRecuperar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinklblRecuperar.Name = "LinklblRecuperar";
-            this.LinklblRecuperar.Size = new System.Drawing.Size(179, 12);
+            this.LinklblRecuperar.Size = new System.Drawing.Size(214, 16);
             this.LinklblRecuperar.TabIndex = 5;
             this.LinklblRecuperar.TabStop = true;
             this.LinklblRecuperar.Text = "¿Ha olvidado su contraseña?";
@@ -76,7 +76,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(445, 178);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(329, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(329, 31);
             this.txtContraseña.TabIndex = 2;
             // 
             // label3
@@ -86,7 +86,7 @@
             this.label3.Location = new System.Drawing.Point(442, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 18);
+            this.label3.Size = new System.Drawing.Size(130, 23);
             this.label3.TabIndex = 12;
             this.label3.Text = "Contraseña";
             // 
@@ -96,7 +96,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(445, 97);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(329, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(329, 31);
             this.txtUsuario.TabIndex = 1;
             // 
             // label2
@@ -106,7 +106,7 @@
             this.label2.Location = new System.Drawing.Point(442, 75);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 18);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 10;
             this.label2.Text = "Usuario";
             // 
@@ -117,7 +117,7 @@
             this.label1.Location = new System.Drawing.Point(539, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 18);
+            this.label1.Size = new System.Drawing.Size(176, 23);
             this.label1.TabIndex = 9;
             this.label1.Text = "Inicio de Sesion";
             // 
@@ -148,7 +148,7 @@
             this.LinklblRegister.Location = new System.Drawing.Point(428, 322);
             this.LinklblRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinklblRegister.Name = "LinklblRegister";
-            this.LinklblRegister.Size = new System.Drawing.Size(163, 12);
+            this.LinklblRegister.Size = new System.Drawing.Size(198, 16);
             this.LinklblRegister.TabIndex = 4;
             this.LinklblRegister.TabStop = true;
             this.LinklblRegister.Text = "¿Aún no se ha Registrado?";
@@ -166,7 +166,7 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 348);
             this.Controls.Add(this.pictureBox2);
@@ -185,7 +185,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
-            this.Text = "FrmLogin";
+            this.Text = "Inicio de Sesión";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

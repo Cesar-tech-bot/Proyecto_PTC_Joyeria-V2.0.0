@@ -52,8 +52,9 @@
             this.panel1.Controls.Add(this.btnSales);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 681);
+            this.panel1.Size = new System.Drawing.Size(269, 838);
             this.panel1.TabIndex = 0;
             // 
             // btnEmployee
@@ -61,9 +62,10 @@
             this.btnEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEmployee.BackColor = System.Drawing.Color.White;
             this.btnEmployee.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.btnEmployee.Location = new System.Drawing.Point(19, 561);
+            this.btnEmployee.Location = new System.Drawing.Point(25, 690);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(162, 39);
+            this.btnEmployee.Size = new System.Drawing.Size(216, 48);
             this.btnEmployee.TabIndex = 5;
             this.btnEmployee.Text = "Empleados";
             this.btnEmployee.UseVisualStyleBackColor = false;
@@ -71,9 +73,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-47, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(-63, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 172);
+            this.pictureBox1.Size = new System.Drawing.Size(397, 212);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -83,9 +86,10 @@
             this.btnSupplier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSupplier.BackColor = System.Drawing.Color.White;
             this.btnSupplier.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.btnSupplier.Location = new System.Drawing.Point(19, 497);
+            this.btnSupplier.Location = new System.Drawing.Point(25, 612);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSupplier.Name = "btnSupplier";
-            this.btnSupplier.Size = new System.Drawing.Size(162, 39);
+            this.btnSupplier.Size = new System.Drawing.Size(216, 48);
             this.btnSupplier.TabIndex = 3;
             this.btnSupplier.Text = "Proveedores";
             this.btnSupplier.UseVisualStyleBackColor = false;
@@ -95,9 +99,10 @@
             this.btnClients.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClients.BackColor = System.Drawing.Color.White;
             this.btnClients.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.btnClients.Location = new System.Drawing.Point(19, 433);
+            this.btnClients.Location = new System.Drawing.Point(25, 533);
+            this.btnClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(162, 39);
+            this.btnClients.Size = new System.Drawing.Size(216, 48);
             this.btnClients.TabIndex = 2;
             this.btnClients.Text = "Clientes";
             this.btnClients.UseVisualStyleBackColor = false;
@@ -107,9 +112,10 @@
             this.btnProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProducts.BackColor = System.Drawing.Color.White;
             this.btnProducts.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.btnProducts.Location = new System.Drawing.Point(19, 368);
+            this.btnProducts.Location = new System.Drawing.Point(25, 453);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(162, 39);
+            this.btnProducts.Size = new System.Drawing.Size(216, 48);
             this.btnProducts.TabIndex = 1;
             this.btnProducts.Text = "Productos";
             this.btnProducts.UseVisualStyleBackColor = false;
@@ -119,9 +125,10 @@
             this.btnSales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSales.BackColor = System.Drawing.Color.White;
             this.btnSales.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.btnSales.Location = new System.Drawing.Point(19, 303);
+            this.btnSales.Location = new System.Drawing.Point(25, 373);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(162, 39);
+            this.btnSales.Size = new System.Drawing.Size(216, 48);
             this.btnSales.TabIndex = 0;
             this.btnSales.Text = "Ventas";
             this.btnSales.UseVisualStyleBackColor = false;
@@ -131,23 +138,25 @@
             this.PanelContenedor.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PanelContenedor.Location = new System.Drawing.Point(202, 0);
+            this.PanelContenedor.Location = new System.Drawing.Point(269, 0);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1062, 681);
+            this.PanelContenedor.Size = new System.Drawing.Size(1416, 838);
             this.PanelContenedor.TabIndex = 1;
             // 
             // FrmDashboardView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1280, 720);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(2554, 1318);
+            this.MinimumSize = new System.Drawing.Size(1701, 875);
             this.Name = "FrmDashboardView";
-            this.Text = "FrmDashboardView";
+            this.Text = "Menú Principal";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
