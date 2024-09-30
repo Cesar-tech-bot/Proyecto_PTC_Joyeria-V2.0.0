@@ -140,8 +140,8 @@ namespace SistemaJoyería.Model.DAO
         private SqlConnection getConnection()
         {
             // Asegúrate de tener una cadena de conexión válida en tu archivo de configuración.
-            String test = "Server = SQL8020.site4now.net; Database = db_aacc95_dbluxst; User Id = db_aacc95_dbluxst_admin; Password = leoabarca091;";
-            string connectionString = "Server = SQL8020.site4now.net; Database = db_aacc95_dbluxst; User Id = db_aacc95_dbluxst_admin; Password = leoabarca091;";
+            String test = "Server = SQL8005.site4now.net; Database = db_aacc95_dbluxst; User Id = db_aacc95_dbluxst_admin; Password = leoabarca091;";
+            string connectionString = "Server = SQL8005.site4now.net; Database = db_aacc95_dbluxst; User Id = db_aacc95_dbluxst_admin; Password = leoabarca091;";
             return new SqlConnection(connectionString);
         }
     }
