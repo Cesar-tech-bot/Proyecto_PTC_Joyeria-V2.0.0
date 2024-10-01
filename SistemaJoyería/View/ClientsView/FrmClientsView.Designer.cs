@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvClientsTable = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClearUpdate = new System.Windows.Forms.Button();
             this.tbUEmail = new System.Windows.Forms.TextBox();
@@ -56,12 +57,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearchClient = new System.Windows.Forms.Button();
             this.tbSearchClient = new System.Windows.Forms.TextBox();
-            this.dgvClientsTable = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -73,8 +73,25 @@
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1371, 650);
+            this.panel2.Size = new System.Drawing.Size(1371, 733);
             this.panel2.TabIndex = 7;
+            // 
+            // dgvClientsTable
+            // 
+            this.dgvClientsTable.AllowUserToAddRows = false;
+            this.dgvClientsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
+            this.dgvClientsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvClientsTable.Location = new System.Drawing.Point(354, 0);
+            this.dgvClientsTable.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvClientsTable.Name = "dgvClientsTable";
+            this.dgvClientsTable.ReadOnly = true;
+            this.dgvClientsTable.RowHeadersVisible = false;
+            this.dgvClientsTable.RowHeadersWidth = 51;
+            this.dgvClientsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientsTable.Size = new System.Drawing.Size(1017, 733);
+            this.dgvClientsTable.TabIndex = 60;
             // 
             // panel5
             // 
@@ -102,7 +119,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(437, 650);
+            this.panel5.Size = new System.Drawing.Size(354, 733);
             this.panel5.TabIndex = 59;
             // 
             // btnClearUpdate
@@ -110,10 +127,10 @@
             this.btnClearUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnClearUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnClearUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnClearUpdate.Location = new System.Drawing.Point(33, 683);
+            this.btnClearUpdate.Location = new System.Drawing.Point(12, 685);
             this.btnClearUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearUpdate.Name = "btnClearUpdate";
-            this.btnClearUpdate.Size = new System.Drawing.Size(165, 59);
+            this.btnClearUpdate.Size = new System.Drawing.Size(139, 40);
             this.btnClearUpdate.TabIndex = 13;
             this.btnClearUpdate.Text = "Limpiar";
             this.btnClearUpdate.UseVisualStyleBackColor = false;
@@ -121,17 +138,17 @@
             // tbUEmail
             // 
             this.tbUEmail.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.tbUEmail.Location = new System.Drawing.Point(12, 434);
+            this.tbUEmail.Location = new System.Drawing.Point(30, 436);
             this.tbUEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUEmail.Name = "tbUEmail";
-            this.tbUEmail.Size = new System.Drawing.Size(393, 31);
+            this.tbUEmail.Size = new System.Drawing.Size(291, 31);
             this.tbUEmail.TabIndex = 10;
             // 
             // txtUAddress
             // 
             this.txtUAddress.AutoSize = true;
             this.txtUAddress.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUAddress.Location = new System.Drawing.Point(7, 486);
+            this.txtUAddress.Location = new System.Drawing.Point(26, 486);
             this.txtUAddress.Name = "txtUAddress";
             this.txtUAddress.Size = new System.Drawing.Size(110, 23);
             this.txtUAddress.TabIndex = 47;
@@ -140,18 +157,18 @@
             // tbUAddress
             // 
             this.tbUAddress.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.tbUAddress.Location = new System.Drawing.Point(12, 513);
+            this.tbUAddress.Location = new System.Drawing.Point(30, 511);
             this.tbUAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUAddress.Multiline = true;
             this.tbUAddress.Name = "tbUAddress";
-            this.tbUAddress.Size = new System.Drawing.Size(393, 84);
+            this.tbUAddress.Size = new System.Drawing.Size(291, 84);
             this.tbUAddress.TabIndex = 11;
             // 
             // txtUEmail
             // 
             this.txtUEmail.AutoSize = true;
             this.txtUEmail.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUEmail.Location = new System.Drawing.Point(7, 409);
+            this.txtUEmail.Location = new System.Drawing.Point(25, 411);
             this.txtUEmail.Name = "txtUEmail";
             this.txtUEmail.Size = new System.Drawing.Size(205, 23);
             this.txtUEmail.TabIndex = 45;
@@ -160,38 +177,38 @@
             // mskUDuiDoc
             // 
             this.mskUDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.mskUDuiDoc.Location = new System.Drawing.Point(12, 358);
+            this.mskUDuiDoc.Location = new System.Drawing.Point(30, 360);
             this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskUDuiDoc.Mask = "00000000-0";
             this.mskUDuiDoc.Name = "mskUDuiDoc";
-            this.mskUDuiDoc.Size = new System.Drawing.Size(393, 31);
+            this.mskUDuiDoc.Size = new System.Drawing.Size(291, 31);
             this.mskUDuiDoc.TabIndex = 9;
             // 
             // tbID
             // 
             this.tbID.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.tbID.Location = new System.Drawing.Point(12, 635);
+            this.tbID.Location = new System.Drawing.Point(30, 633);
             this.tbID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
-            this.tbID.Size = new System.Drawing.Size(393, 31);
+            this.tbID.Size = new System.Drawing.Size(291, 31);
             this.tbID.TabIndex = 12;
             // 
             // mskUCellphoneN
             // 
             this.mskUCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.mskUCellphoneN.Location = new System.Drawing.Point(12, 283);
+            this.mskUCellphoneN.Location = new System.Drawing.Point(30, 285);
             this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskUCellphoneN.Mask = "0000-0000";
             this.mskUCellphoneN.Name = "mskUCellphoneN";
-            this.mskUCellphoneN.Size = new System.Drawing.Size(393, 31);
+            this.mskUCellphoneN.Size = new System.Drawing.Size(291, 31);
             this.mskUCellphoneN.TabIndex = 8;
             // 
             // txtUDuiDoc
             // 
             this.txtUDuiDoc.AutoSize = true;
             this.txtUDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUDuiDoc.Location = new System.Drawing.Point(7, 331);
+            this.txtUDuiDoc.Location = new System.Drawing.Point(25, 333);
             this.txtUDuiDoc.Name = "txtUDuiDoc";
             this.txtUDuiDoc.Size = new System.Drawing.Size(48, 23);
             this.txtUDuiDoc.TabIndex = 43;
@@ -202,10 +219,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(240, 683);
+            this.btnUpdate.Location = new System.Drawing.Point(193, 683);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(165, 59);
+            this.btnUpdate.Size = new System.Drawing.Size(139, 42);
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -213,17 +230,17 @@
             // dtpUClientsBirthday
             // 
             this.dtpUClientsBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.dtpUClientsBirthday.Location = new System.Drawing.Point(12, 201);
+            this.dtpUClientsBirthday.Location = new System.Drawing.Point(30, 203);
             this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpUClientsBirthday.Name = "dtpUClientsBirthday";
-            this.dtpUClientsBirthday.Size = new System.Drawing.Size(393, 31);
+            this.dtpUClientsBirthday.Size = new System.Drawing.Size(291, 31);
             this.dtpUClientsBirthday.TabIndex = 7;
             // 
             // txtID
             // 
             this.txtID.AutoSize = true;
             this.txtID.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(7, 608);
+            this.txtID.Location = new System.Drawing.Point(26, 608);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(33, 23);
             this.txtID.TabIndex = 43;
@@ -233,7 +250,7 @@
             // 
             this.txtUCellphoneN.AutoSize = true;
             this.txtUCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUCellphoneN.Location = new System.Drawing.Point(7, 256);
+            this.txtUCellphoneN.Location = new System.Drawing.Point(25, 258);
             this.txtUCellphoneN.Name = "txtUCellphoneN";
             this.txtUCellphoneN.Size = new System.Drawing.Size(223, 23);
             this.txtUCellphoneN.TabIndex = 40;
@@ -242,26 +259,26 @@
             // tbUClientsName
             // 
             this.tbUClientsName.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.tbUClientsName.Location = new System.Drawing.Point(12, 43);
+            this.tbUClientsName.Location = new System.Drawing.Point(30, 45);
             this.tbUClientsName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUClientsName.Name = "tbUClientsName";
-            this.tbUClientsName.Size = new System.Drawing.Size(393, 31);
+            this.tbUClientsName.Size = new System.Drawing.Size(291, 31);
             this.tbUClientsName.TabIndex = 5;
             // 
             // tbUClientsSurname
             // 
             this.tbUClientsSurname.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.tbUClientsSurname.Location = new System.Drawing.Point(12, 122);
+            this.tbUClientsSurname.Location = new System.Drawing.Point(30, 124);
             this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUClientsSurname.Name = "tbUClientsSurname";
-            this.tbUClientsSurname.Size = new System.Drawing.Size(393, 31);
+            this.tbUClientsSurname.Size = new System.Drawing.Size(291, 31);
             this.tbUClientsSurname.TabIndex = 6;
             // 
             // txtUClientsBirthday
             // 
             this.txtUClientsBirthday.AutoSize = true;
             this.txtUClientsBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUClientsBirthday.Location = new System.Drawing.Point(7, 174);
+            this.txtUClientsBirthday.Location = new System.Drawing.Point(25, 176);
             this.txtUClientsBirthday.Name = "txtUClientsBirthday";
             this.txtUClientsBirthday.Size = new System.Drawing.Size(227, 23);
             this.txtUClientsBirthday.TabIndex = 41;
@@ -271,7 +288,7 @@
             // 
             this.txtUClientsName.AutoSize = true;
             this.txtUClientsName.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUClientsName.Location = new System.Drawing.Point(7, 16);
+            this.txtUClientsName.Location = new System.Drawing.Point(25, 18);
             this.txtUClientsName.Name = "txtUClientsName";
             this.txtUClientsName.Size = new System.Drawing.Size(104, 23);
             this.txtUClientsName.TabIndex = 37;
@@ -281,7 +298,7 @@
             // 
             this.txtUClientsSurname.AutoSize = true;
             this.txtUClientsSurname.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUClientsSurname.Location = new System.Drawing.Point(7, 95);
+            this.txtUClientsSurname.Location = new System.Drawing.Point(25, 97);
             this.txtUClientsSurname.Name = "txtUClientsSurname";
             this.txtUClientsSurname.Size = new System.Drawing.Size(109, 23);
             this.txtUClientsSurname.TabIndex = 36;
@@ -352,7 +369,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 42);
+            this.label1.Location = new System.Drawing.Point(34, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 25);
             this.label1.TabIndex = 1;
@@ -380,28 +397,11 @@
             this.tbSearchClient.Size = new System.Drawing.Size(393, 31);
             this.tbSearchClient.TabIndex = 1;
             // 
-            // dgvClientsTable
-            // 
-            this.dgvClientsTable.AllowUserToAddRows = false;
-            this.dgvClientsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvClientsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
-            this.dgvClientsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientsTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvClientsTable.Location = new System.Drawing.Point(437, 0);
-            this.dgvClientsTable.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvClientsTable.Name = "dgvClientsTable";
-            this.dgvClientsTable.ReadOnly = true;
-            this.dgvClientsTable.RowHeadersVisible = false;
-            this.dgvClientsTable.RowHeadersWidth = 51;
-            this.dgvClientsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientsTable.Size = new System.Drawing.Size(934, 650);
-            this.dgvClientsTable.TabIndex = 60;
-            // 
             // FrmClientsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 750);
+            this.ClientSize = new System.Drawing.Size(1371, 833);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -410,12 +410,12 @@
             this.Name = "FrmClientsView";
             this.Text = "Tabla de clientes";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientsTable)).EndInit();
             this.ResumeLayout(false);
 
         }
