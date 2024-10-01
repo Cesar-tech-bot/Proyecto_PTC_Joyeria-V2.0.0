@@ -78,7 +78,7 @@
             this.mskEmployeeDUI.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskEmployeeDUI.Location = new System.Drawing.Point(28, 358);
             this.mskEmployeeDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskEmployeeDUI.Mask = "0000000-0";
+            this.mskEmployeeDUI.Mask = "00000000-0";
             this.mskEmployeeDUI.Name = "mskEmployeeDUI";
             this.mskEmployeeDUI.Size = new System.Drawing.Size(510, 31);
             this.mskEmployeeDUI.TabIndex = 5;

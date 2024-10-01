@@ -16,6 +16,7 @@ namespace SistemaJoyería.Controller.ClientsController
     public class AddClientsController
     {
         FrmAddClients ObjAddCView;
+        FrmClientsView ObjClientsView;
 
         public AddClientsController(FrmAddClients viewAdd)
         {
@@ -44,7 +45,6 @@ namespace SistemaJoyería.Controller.ClientsController
             DisableCopyCutPaste(viewAdd.tbAddress);
         }
 
-  
 
         void SaveRegister(object sender, EventArgs e)
         {
@@ -56,14 +56,15 @@ namespace SistemaJoyería.Controller.ClientsController
             int AddressLength = ObjAddCView.tbAddress.Text.Length;
 
             // Eliminamos temporalmente los guiones para validar el formato de teléfono y DUI
-            string CellPhone = ObjAddCView.mskCellphoneN.Text.Trim();
-            string DUI = ObjAddCView.mskDuiDoc.Text.Trim();
-
+            string CellPhone = ObjAddCView.mskCellphoneN.Text.Trim().Replace("-", "");
+            string DUI = ObjAddCView.mskDuiDoc.Text.Trim().Replace("-", "");
 
             if (!(// Validamos si los campos de nombres y apellidos no están vacíos
                   string.IsNullOrEmpty(ClientsName) || string.IsNullOrEmpty(ClientsSurName) ||
-                  // Validamos si el teléfono tiene exactamente 8 dígitos sin contar guiones  // Validamos si el DUI tiene exactamente 9 dígitos sin contar guiones
-                  string.IsNullOrEmpty(CellPhone) || string.IsNullOrEmpty(DUI) ||                 
+                  // Validamos si el teléfono tiene exactamente 8 dígitos sin contar guiones  
+                  string.IsNullOrEmpty(CellPhone) || CellPhone.Length != 8 || !CellPhone.All(char.IsDigit) ||
+                  // Validamos si el DUI tiene exactamente 9 dígitos sin contar guiones
+                  string.IsNullOrEmpty(DUI) || DUI.Length != 9 || !DUI.All(char.IsDigit) ||
                   // Validamos si el campo de correo electrónico no está vacío //Validación con método
                   string.IsNullOrEmpty(Email) || !Emailverifaction(Email) ||
                   // Validamos si el campo de dirección no está vacío  // Validamos que la dirección no sobrepase los 100 dígitos
@@ -76,8 +77,8 @@ namespace SistemaJoyería.Controller.ClientsController
                 daoClient.FirstName = ClientsName;
                 daoClient.LastName = ClientsSurName;
                 daoClient.BirthDate = BirthDay;
-                daoClient.Phone = CellPhone;
-                daoClient.IdentityDocument = DUI;
+                daoClient.Phone =  ObjAddCView.mskCellphoneN.Text.Trim();
+                daoClient.IdentityDocument = ObjAddCView.mskDuiDoc.Text.Trim();
                 daoClient.Email = Email;
                 daoClient.AddressClient = Address;
 
@@ -85,8 +86,9 @@ namespace SistemaJoyería.Controller.ClientsController
                 int resultado = daoClient.RegisterClients();
                 if (resultado == 1)
                 {
-                    MessageBox.Show("El cliente fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El cliente fue registrado exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);                
                     ObjAddCView.Close();
+
                 }
                 else
                 {
@@ -98,11 +100,6 @@ namespace SistemaJoyería.Controller.ClientsController
                 MessageBox.Show("Datos faltantes o incorrectos, complete el formulario con la información requerida", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-
-
-
-
 
         //Eventos del View
         public void CleanInformation(object sender, EventArgs e)

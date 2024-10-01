@@ -42,7 +42,6 @@ namespace SistemaJoyería.Controller.EmployeesController
             DisableCopyCutPaste(viewAdd.txtAddressEmployee);
         }
 
-
         void SaveRegister(object sender, EventArgs e)
         {
             string EmployeesName = ObjAddView.txtEmployeeName.Text.Trim();
@@ -53,15 +52,14 @@ namespace SistemaJoyería.Controller.EmployeesController
             int AddressLength = ObjAddView.txtAddressEmployee.Text.Length;
 
             // Eliminamos temporalmente los guiones para validar el formato de teléfono y DUI
-            string CellPhone = ObjAddView.mskEmployeeCellphone.Text.Trim();
-            string DUI = ObjAddView.mskEmployeeDUI.Text.Trim();
-
+            string CellPhone = ObjAddView.mskEmployeeCellphone.Text.Trim().Replace("-", "");
+            string DUI = ObjAddView.mskEmployeeDUI.Text.Trim().Replace("-", "");
             if (!(// Validamos si los campos de nombres y apellidos no están vacíos
                   string.IsNullOrEmpty(EmployeesName) || string.IsNullOrEmpty(EmployeesSurName) ||
-                  // Validamos si el teléfono tiene exactamente 8 dígitos sin contar guiones
-                  string.IsNullOrEmpty(CellPhone) ||
-                  // Validamos si el DUI tiene exactamente 9 dígitos sin contar guiones
-                  string.IsNullOrEmpty(DUI) ||
+                     // Validamos si el teléfono tiene exactamente 8 dígitos sin contar guiones
+                  string.IsNullOrEmpty(CellPhone) || CellPhone.Length != 8 || !CellPhone.All(char.IsDigit) ||
+                   // Validamos si el DUI tiene exactamente 9 dígitos sin contar guiones
+                  string.IsNullOrEmpty(DUI) || DUI.Length != 9 || !DUI.All(char.IsDigit) ||
                   // Validamos si el campo de correo electrónico no está vacío y verificamos su formato
                   string.IsNullOrEmpty(Email) || !Emailverifaction(Email) ||
                   // Validamos si el campo de dirección no está vacío y si no sobrepasa los 100 caracteres
@@ -74,8 +72,8 @@ namespace SistemaJoyería.Controller.EmployeesController
                 daoEmployee.FirstNameEmployees= EmployeesName;
                 daoEmployee.LastNameEmployees1= EmployeesSurName;
                 daoEmployee.BirthDateEmployees1 = BirthDay;
-                daoEmployee.PhoneEmployees1 = CellPhone;
-                daoEmployee.IdentityDocumentEmployees1 = DUI;
+                daoEmployee.PhoneEmployees1 = ObjAddView.mskEmployeeCellphone.Text.Trim();
+                daoEmployee.IdentityDocumentEmployees1 = ObjAddView.mskEmployeeDUI.Text.Trim();
                 daoEmployee.EmailEmployees1 = Email;
                 daoEmployee.AddressEmployees1 = Address;
 

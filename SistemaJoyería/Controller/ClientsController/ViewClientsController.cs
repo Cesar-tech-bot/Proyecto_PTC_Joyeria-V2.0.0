@@ -64,7 +64,7 @@ namespace SistemaJoyería.Controller.ClientsController
         }
 
         //CRUD
-        void ShowDGVlients()
+        public void ShowDGVlients()
         {
             //Creamos un objeto de tipo DAO
             ClientsViewDAO daoVC = new ClientsViewDAO();
@@ -101,10 +101,10 @@ namespace SistemaJoyería.Controller.ClientsController
                 daoUpdate.IdClient = int.Parse(ID);
                 daoUpdate.FirstName = ClientsName;
                 daoUpdate.LastName = ClientsSurName;
-                daoUpdate.Phone = telefono;
+                daoUpdate.Phone = ObjView.mskUCellphoneN.Text.Trim();
                 daoUpdate.Email = Email;
                 daoUpdate.BirthDate = BirthDay;
-                daoUpdate.IdentityDocument = DUI;
+                daoUpdate.IdentityDocument = ObjView.mskUDuiDoc.Text.Trim();
                 daoUpdate.AddressClient = Address;
 
                 int retorno = daoUpdate.UpdateClients();
@@ -121,7 +121,7 @@ namespace SistemaJoyería.Controller.ClientsController
             }
             else
             {
-                MessageBox.Show("Datos faltantes o incorrectos, revise", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cliente no seleccionado o datos faltantes o incorrectos, favor verificar datos ingresados", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

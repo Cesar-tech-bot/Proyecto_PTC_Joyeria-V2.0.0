@@ -165,10 +165,10 @@ namespace SistemaJoyería.Controller.EmployeesController
                 daoUpdate.IdEmployees = int.Parse(ID);
                 daoUpdate.FirstNameEmployees = EmploName;
                 daoUpdate.LastNameEmployees1 = EmploSurName;
-                daoUpdate.PhoneEmployees1 = telefono;
+                daoUpdate.PhoneEmployees1 = ObjView.mskUpdateEmployeePhoneNumber.Text.Trim();
                 daoUpdate.EmailEmployees1 = Email;
                 daoUpdate.BirthDateEmployees1 = BirthDay;
-                daoUpdate.IdentityDocumentEmployees1 = DUI;
+                daoUpdate.IdentityDocumentEmployees1 = ObjView.mskUpdateEmployeeDUI.Text.Trim();
                 daoUpdate.AddressEmployees1 = Address;
 
                 int retorno = daoUpdate.UpdateEmployees();
