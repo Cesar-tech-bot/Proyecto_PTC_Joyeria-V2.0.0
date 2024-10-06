@@ -1,10 +1,8 @@
 ﻿using SistemaJoyería.Model.DAO;
 using SistemaJoyería.View.SalesDetailsView;
-using System;
 using System.Data;
-using System.Web.UI.WebControls.WebParts;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
+using System;
 
 namespace SistemaJoyería.Controller.SalesDetailsController
 {
@@ -24,7 +22,7 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             View.btnClear.Click += new EventHandler(ClearZone);
             //Otro tipo de método
             View.txtQuantity.TextChanged += new EventHandler(Limit3);
-            //View.cmbProduct.SelectedIndexChanged += new EventHandler(UpdateProductPrice);
+            View.cmbProduct.SelectedIndexChanged += new EventHandler(UpdateProductPrice);
             // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
             View.dtpDateSell.MinDate = DateTime.Today;
             View.dtpDateSell.MaxDate = DateTime.Today;
@@ -68,7 +66,7 @@ namespace SistemaJoyería.Controller.SalesDetailsController
         void FillClient()
         {
             //Creando un objeto de la clase DAOBooks
-            SalesDetailsViewDAO daoClient= new SalesDetailsViewDAO();
+            SalesDetailsViewDAO daoClient = new SalesDetailsViewDAO();
             DataSet dsC = daoClient.GetClients();
             ObjSalesDetails.cmbClient.DataSource = dsC.Tables["Clients"];
             ObjSalesDetails.cmbClient.DisplayMember = "FirstName";
@@ -123,24 +121,35 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             }
         }
 
-        //void UpdateProductPrice(object sender, EventArgs e)
-        //{
-        //    if (ObjSalesDetails.cmbProduct.SelectedValue != null)
-        //    {
-        //        int selectedProductId = (int)ObjSalesDetails.cmbProduct.SelectedValue;
-        //        SalesDetailsViewDAO dao = new SalesDetailsViewDAO();
-        //        decimal price = dao.GetProductPrice(selectedProductId);
+        void UpdateProductPrice(object sender, EventArgs e)
+        {
+            if (ObjSalesDetails.cmbProduct.SelectedValue != null)
+            {
+                try
+                {
 
-        //        if (price > 0)
-        //        {
-        //            ObjSalesDetails.txtPrice.Text = price.ToString("N2");
-        //        }
-        //        else
-        //        {
-        //            ObjSalesDetails.txtPrice.Clear();
-        //        }
-        //    }
-        //}
+                    int selectedProductId = Convert.ToInt32(ObjSalesDetails.cmbProduct.SelectedValue);
+
+                    SalesDetailsViewDAO dao = new SalesDetailsViewDAO();
+                    decimal price = dao.GetProductPrice(selectedProductId);
+
+                    if (price > 0)
+                    {
+                        ObjSalesDetails.mskPrice.Text = price.ToString("N2");
+                    }
+                    else
+                    {
+                        ObjSalesDetails.mskPrice.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //
+                }
+            }
+        }
+
+
 
         void ClearZone(object sender, EventArgs e)
         {
