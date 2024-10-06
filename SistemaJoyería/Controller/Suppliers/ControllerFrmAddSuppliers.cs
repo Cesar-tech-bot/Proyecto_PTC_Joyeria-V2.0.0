@@ -15,6 +15,9 @@ namespace SistemaJoyería.Controller.Suppliers
         private SupplierDTO supplier = new SupplierDTO();
         private FrmAddSuppliers vistaControlada;
 
+        // Variable estática para verificar si la ventana ya está abierta
+        private static FrmAddSuppliers frmAddSuppliersInstance = null;
+
         public ControllerFrmAddSuppliers(FrmAddSuppliers vistaPasada)
         {
             vistaControlada = vistaPasada;
@@ -36,6 +39,22 @@ namespace SistemaJoyería.Controller.Suppliers
 
             // Deshabilitar el menú contextual (clic derecho) para todos los campos de texto
             DisableContextMenu(vistaPasada);
+        }
+
+        // Método para abrir el formulario FrmAddSuppliers de manera modal con ShowDialog()
+        public void ShowFrmAddSuppliers()
+        {
+            // Verificar si el formulario ya está abierto
+            if (frmAddSuppliersInstance == null || frmAddSuppliersInstance.IsDisposed)
+            {
+                frmAddSuppliersInstance = new FrmAddSuppliers();
+                frmAddSuppliersInstance.ShowDialog();  // Abrir como modal
+            }
+            else
+            {
+                // Si ya está abierto, mostrar un mensaje al usuario
+                MessageBox.Show("El formulario de agregar proveedores ya está abierto.", "Formulario en uso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         // Método para registrar un proveedor
@@ -221,21 +240,14 @@ namespace SistemaJoyería.Controller.Suppliers
             }
         }
 
-        // Método para deshabilitar el menú contextual de copiar/pegar
-        private void DisableContextMenu(Control parent)
+        // Método para deshabilitar el menú contextual en campos de texto
+        private void DisableContextMenu(FrmAddSuppliers vista)
         {
-            foreach (Control ctrl in parent.Controls)
-            {
-                if (ctrl is TextBoxBase || ctrl is ComboBox)
-                {
-                    ctrl.ContextMenu = new ContextMenu(); // Asignar un menú vacío para deshabilitar el menú contextual
-                }
-
-                if (ctrl.HasChildren)
-                {
-                    DisableContextMenu(ctrl); // Aplicar recursivamente a todos los controles hijos
-                }
-            }
+            vista.txtNombreEmpresa.ContextMenu = new ContextMenu();
+            vista.txtNombreContacto.ContextMenu = new ContextMenu();
+            vista.txtTelefono.ContextMenu = new ContextMenu();
+            vista.txtEmail.ContextMenu = new ContextMenu();
+            vista.txtDireccion.ContextMenu = new ContextMenu();
         }
     }
 }

@@ -13,6 +13,10 @@ namespace SistemaJoyería.Controller.Suppliers
         private SupplierDTO supplier = new SupplierDTO(); // Objeto para manejar los datos del proveedor
         FrmSuppliers vistaControlada; // Referencia al formulario principal de proveedores
 
+        // Instancias de formularios para evitar duplicación
+        private FrmAddSuppliers frmAddSuppliers;
+        private FrmUpdateSuppliers frmUpdateSuppliers;
+
         // Constructor de la clase
         public ControllerSuppliers(FrmSuppliers vistaPasada)
         {
@@ -41,13 +45,21 @@ namespace SistemaJoyería.Controller.Suppliers
             // Verifica si hay un elemento seleccionado en la lista
             if (vistaControlada.listSuppliers.SelectedItems.Count > 0)
             {
-                // Obtiene el ID del proveedor seleccionado
-                string idBuena = vistaControlada.listSuppliers.SelectedItems[0].Text;
-                MessageBox.Show(idBuena); // Muestra el ID seleccionado (para depuración)
+                // Verifica si ya hay un formulario de actualización abierto
+                if (frmUpdateSuppliers == null || frmUpdateSuppliers.IsDisposed)
+                {
+                    // Obtiene el ID del proveedor seleccionado
+                    string idBuena = vistaControlada.listSuppliers.SelectedItems[0].Text;
+                    MessageBox.Show(idBuena); // Muestra el ID seleccionado (para depuración)
 
-                // Crea y muestra el formulario de actualización
-                FrmUpdateSuppliers frmUpdate = new FrmUpdateSuppliers(idBuena);
-                frmUpdate.Show();
+                    // Crea y muestra el formulario de actualización
+                    frmUpdateSuppliers = new FrmUpdateSuppliers(idBuena);
+                    frmUpdateSuppliers.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El formulario de actualización ya está abierto.", "Formulario en uso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             _supplierDAO.GetData(vistaControlada); // Actualiza la lista de proveedores
         }
@@ -55,9 +67,17 @@ namespace SistemaJoyería.Controller.Suppliers
         // Método para agregar un nuevo proveedor
         public void AddSupplier(SupplierDTO supplier)
         {
-            // Crea y muestra el formulario para agregar un nuevo proveedor
-            FrmAddSuppliers frmAdd = new FrmAddSuppliers();
-            frmAdd.Show();
+            // Verifica si ya hay un formulario de agregar abierto
+            if (frmAddSuppliers == null || frmAddSuppliers.IsDisposed)
+            {
+                // Crea y muestra el formulario para agregar un nuevo proveedor
+                frmAddSuppliers = new FrmAddSuppliers();
+                frmAddSuppliers.Show();
+            }
+            else
+            {
+                MessageBox.Show("El formulario de agregar ya está abierto.", "Formulario en uso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             _supplierDAO.GetData(vistaControlada); // Actualiza la lista de proveedores
         }
 
