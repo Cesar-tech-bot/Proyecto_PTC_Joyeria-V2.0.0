@@ -1,12 +1,5 @@
 ﻿using SistemaJoyería.Controller.Suppliers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaJoyería.View.Suppliers
@@ -29,7 +22,6 @@ namespace SistemaJoyería.View.Suppliers
             }
         }
 
-
         private void ValidacionSoloNumeros(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))
@@ -40,7 +32,7 @@ namespace SistemaJoyería.View.Suppliers
 
         private void FrmAddSuppliers_Load(object sender, EventArgs e)
         {
-
+            // Aquí puedes cargar cualquier lógica al iniciar el formulario
         }
 
         private void NombreEmpresa_Click(object sender, EventArgs e)
@@ -75,7 +67,7 @@ namespace SistemaJoyería.View.Suppliers
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            // Lógica para el botón de guardar proveedor
         }
     }
 }
