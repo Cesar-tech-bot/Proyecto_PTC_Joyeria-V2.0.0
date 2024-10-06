@@ -128,7 +128,7 @@ namespace SistemaJoyería.Model.DAO
                 //Definir instrucción de lo que se quiere hacer
                 string query = "SELECT IDEmployees,  FirstNameEmployees FROM Employees";
                 //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
-                SqlCommand cmdSelectE= new SqlCommand(query, command.Connection);
+                SqlCommand cmdSelectE = new SqlCommand(query, command.Connection);
                 //Se ejecuta el comando cmdSelect con la instrucción y la conexión
                 cmdSelectE.ExecuteNonQuery();
                 //Se crea un objeto de tipo SqlDataAdapter para facilitar el llenado del dataset
@@ -182,36 +182,36 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
-        //// Obtener precio del producto
-        //public decimal GetProductPrice(int productId)
-        //{
-        //    try
-        //    {
-        //        command.Connection = getConnection();
-        //        string query = "SELECT Price FROM Products WHERE IDProduct = @ProductID";
-        //        SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
-        //        cmdSelect.Parameters.AddWithValue("@ProductID", productId);
-        //        object result = cmdSelect.ExecuteScalar(); // Ejecuta la consulta y obtiene el primer valor de la primera fila
+        public decimal GetProductPrice(int productId)
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = "SELECT Price FROM Products WHERE IDProduct = @ProductID";
+                SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
+                cmdSelect.Parameters.AddWithValue("@ProductID", productId);
+                object result = cmdSelect.ExecuteScalar(); // Ejecuta la consulta y obtiene el primer valor de la primera fila
 
-        //        if (result != null && decimal.TryParse(result.ToString(), out decimal price))
-        //        {
-        //            return price;
-        //        }
-        //        else
-        //        {
-        //            return -1; // Si no se encuentra el producto o hay algún error
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"{ex.Message} Error al obtener el precio del producto.", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return -1;
-        //    }
-        //    finally
-        //    {
-        //        command.Connection.Close();
-        //    }
-        //}
+                if (result != null && decimal.TryParse(result.ToString(), out decimal price))
+                {
+                    return price;
+                }
+                else
+                {
+                    return -1; // Si no se encuentra el producto o hay algún error
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message} Error al obtener el precio del producto.", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+
 
     }
 }
