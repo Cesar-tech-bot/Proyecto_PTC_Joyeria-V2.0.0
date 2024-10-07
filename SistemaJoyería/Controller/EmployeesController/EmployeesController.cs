@@ -70,6 +70,17 @@ namespace SistemaJoyería.Controller.EmployeesController
             ObjView.dtpUpdateBirthDay.Enabled = false;
         }
 
+        void ReadOnly(object sender, EventArgs e)
+        {
+            ObjView.txtUpdateEmployeeName.ReadOnly = true;
+            ObjView.txtUpdateEmployeeLastName.ReadOnly = true;
+            ObjView.mskUpdateEmployeePhoneNumber.ReadOnly = true;
+            ObjView.mskUpdateEmployeeDUI.ReadOnly = true;
+            ObjView.txtUpdateEmployeeEmail.ReadOnly = true;
+            ObjView.txtUAddress.ReadOnly = true;
+            ObjView.dtpUpdateBirthDay.Enabled = false;
+        }
+
         void ShowDGVEmployees()
         {
             //Creamos un objeto de tipo DAO
@@ -201,13 +212,7 @@ namespace SistemaJoyería.Controller.EmployeesController
             ObjView.txtIDEmployee.Clear();
 
             // Hacemos que los campos sean de solo lectura
-            ObjView.txtUpdateEmployeeName.ReadOnly = true;
-            ObjView.txtUpdateEmployeeLastName.ReadOnly = true;
-            ObjView.mskUpdateEmployeePhoneNumber.ReadOnly = true;
-            ObjView.mskUpdateEmployeeDUI.ReadOnly = true;
-            ObjView.txtUpdateEmployeeEmail.ReadOnly = true;
-            ObjView.txtUAddress.ReadOnly = true;
-            ObjView.dtpUpdateBirthDay.Enabled = false;
+            ReadOnly(sender, e);
         }
 
         public void SearchEmployees(object sender, KeyPressEventArgs e)
