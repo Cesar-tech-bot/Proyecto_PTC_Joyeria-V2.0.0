@@ -34,10 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtServer = new System.Windows.Forms.TextBox();
+            this.txtDataB = new System.Windows.Forms.TextBox();
+            this.txtUserS = new System.Windows.Forms.TextBox();
+            this.txtPasswordS = new System.Windows.Forms.TextBox();
             this.btnConnect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,33 +92,33 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Contraseña";
             // 
-            // textBox1
+            // txtServer
             // 
-            this.textBox1.Location = new System.Drawing.Point(268, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtServer.Location = new System.Drawing.Point(268, 86);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(166, 20);
+            this.txtServer.TabIndex = 1;
             // 
-            // textBox2
+            // txtDataB
             // 
-            this.textBox2.Location = new System.Drawing.Point(462, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtDataB.Location = new System.Drawing.Point(462, 86);
+            this.txtDataB.Name = "txtDataB";
+            this.txtDataB.Size = new System.Drawing.Size(166, 20);
+            this.txtDataB.TabIndex = 2;
             // 
-            // textBox3
+            // txtUserS
             // 
-            this.textBox3.Location = new System.Drawing.Point(268, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtUserS.Location = new System.Drawing.Point(268, 161);
+            this.txtUserS.Name = "txtUserS";
+            this.txtUserS.Size = new System.Drawing.Size(166, 20);
+            this.txtUserS.TabIndex = 3;
             // 
-            // textBox4
+            // txtPasswordS
             // 
-            this.textBox4.Location = new System.Drawing.Point(462, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtPasswordS.Location = new System.Drawing.Point(462, 161);
+            this.txtPasswordS.Name = "txtPasswordS";
+            this.txtPasswordS.Size = new System.Drawing.Size(166, 20);
+            this.txtPasswordS.TabIndex = 4;
             // 
             // btnConnect
             // 
@@ -135,10 +135,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 278);
             this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPasswordS);
+            this.Controls.Add(this.txtUserS);
+            this.Controls.Add(this.txtDataB);
+            this.Controls.Add(this.txtServer);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,10 +159,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox txtServer;
+        public System.Windows.Forms.TextBox txtDataB;
+        public System.Windows.Forms.TextBox txtUserS;
+        public System.Windows.Forms.TextBox txtPasswordS;
         public System.Windows.Forms.Button btnConnect;
     }
 }

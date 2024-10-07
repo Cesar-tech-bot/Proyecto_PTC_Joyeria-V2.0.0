@@ -99,6 +99,7 @@
     <Compile Include="Controller\LoginController\LoginController.cs" />
     <Compile Include="Controller\ProductsController\ProductsController.cs" />
     <Compile Include="Controller\SalesDetailsController\ControllerFrmSalesDetails.cs" />
+    <Compile Include="Controller\ServerControl\ControllerServer.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
+    <Compile Include="Model\DTO\DTOdbContext.cs" />
     <Compile Include="Model\DTO\DTOSecurityQuestions.cs" />
     <Compile Include="Model\DTO\EmployeesViewDTO.cs" />
     <Compile Include="Model\DTO\FirstUseDTO.cs" />
@@ -349,9 +351,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\User1.png" />
     <None Include="Resources\Login.jpg" />
