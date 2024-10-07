@@ -300,7 +300,7 @@ namespace SistemaJoyería.Controller.ProductsController
             ObjProducts.cmbSuppliers.Text = string.Empty;
             ObjProducts.txtStock.Text = string.Empty;
             ObjProducts.mktPriceProduct.Text = string.Empty;
-            ObjProducts.dtpDate.Value = DateTime.Now;
+            ObjProducts.dtpDate.Value = DateTime.Today;
             ObjProducts.txtProductDescription.Text = string.Empty;
             ObjProducts.txtIDProducts.Text = string.Empty;
             // Deshabilitar el btn keep
