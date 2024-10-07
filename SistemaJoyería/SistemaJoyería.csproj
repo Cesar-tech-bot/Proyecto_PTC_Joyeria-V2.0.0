@@ -99,6 +99,7 @@
     <Compile Include="Controller\LoginController\LoginController.cs" />
     <Compile Include="Controller\ProductsController\ProductsController.cs" />
     <Compile Include="Controller\SalesDetailsController\ControllerFrmSalesDetails.cs" />
+    <Compile Include="Controller\ServerControl\ControllerServer.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmAddSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerFrmUpdateSuppliers.cs" />
     <Compile Include="Controller\Suppliers\ControllerSuppliers.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Model\DAO\SuppliersViewDAO.cs" />
     <Compile Include="Model\DAO\UpdateSuppliersDAO.cs" />
     <Compile Include="Model\DTO\ClientsViewDTO.cs" />
+    <Compile Include="Model\DTO\DTOdbContext.cs" />
     <Compile Include="Model\DTO\DTOSecurityQuestions.cs" />
     <Compile Include="Model\DTO\EmployeesViewDTO.cs" />
     <Compile Include="Model\DTO\FirstUseDTO.cs" />
@@ -235,6 +237,12 @@
     <Compile Include="View\SalesDetailsView\FrmSalesDetailView.Designer.cs">
       <DependentUpon>FrmSalesDetailView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ServerView\FrmServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ServerView\FrmServer.Designer.cs">
+      <DependentUpon>FrmServer.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Suppliers\FrmAddSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SalesDetailsView\FrmSalesDetailView.resx">
       <DependentUpon>FrmSalesDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ServerView\FrmServer.resx">
+      <DependentUpon>FrmServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Suppliers\FrmAddSuppliers.resx">
       <DependentUpon>FrmAddSuppliers.cs</DependentUpon>

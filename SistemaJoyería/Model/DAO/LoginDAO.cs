@@ -158,7 +158,7 @@ namespace SistemaJoyería.Model.DAO
             {
                 Command.Connection = getConnection();
 
-                string query = "INSERT INTO Users (LoginName, Password,  UserEmail, Estado, idRoles) VALUES (@LoginName, @Password, @UserEmail, @Estado, idRoles)";
+                string query = "INSERT INTO Users (LoginName, Password,  UserEmail, Estado, idRoles) VALUES (@LoginName, @Password, @UserEmail, @Estado, @idRoles)";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("LoginName", LoginName1);
                 cmd.Parameters.AddWithValue("Password", Password1);

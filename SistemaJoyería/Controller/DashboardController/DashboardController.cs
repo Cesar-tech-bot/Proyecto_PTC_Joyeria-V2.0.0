@@ -3,6 +3,7 @@ using SistemaJoyería.View.DashboardView;
 using SistemaJoyería.View.EmployeesView;
 using SistemaJoyería.View.ProductsView;
 using SistemaJoyería.View.SalesDetailsView;
+using SistemaJoyería.View.ServerView;
 using SistemaJoyería.View.Suppliers;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,20 @@ namespace SistemaJoyería.Controller.DashboardController
             ObjDashboard.btnSupplier.Click += new EventHandler(OpenSuppliers);
             ObjDashboard.btnClients.Click += new EventHandler(OpenClients);
             ObjDashboard.btnEmployee.Click += new EventHandler(OpenEmployee);
+            ObjDashboard.btnServer.Click += new EventHandler(OpenServer);
         }
 
         //Eventos
-        private void OpenProducts(Object sender, EventArgs e)
+
+        private void OpenServer(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario secundario
+            FrmServer secondaryForm = new FrmServer();
+
+            // Mostrar el formulario secundario
+            secondaryForm.Show();
+        }
+            private void OpenProducts(Object sender, EventArgs e)
         {
             AbrirFormulario<FrmProductsView>();
         }

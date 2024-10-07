@@ -54,10 +54,15 @@ namespace SistemaJoyería.Controller.ClientsController
         void InitialCharge(object sender, EventArgs e)
         {
             ShowDGVlients();
+            ReadOnly(sender, e);
+        }
+
+        void ReadOnly(object sender, EventArgs e)
+        {
             ObjView.tbUClientsName.ReadOnly = true;
             ObjView.tbUClientsSurname.ReadOnly = true;
             ObjView.mskUCellphoneN.ReadOnly = true;
-            ObjView.mskUDuiDoc.ReadOnly = true; 
+            ObjView.mskUDuiDoc.ReadOnly = true;
             ObjView.tbUEmail.ReadOnly = true;
             ObjView.tbUAddress.ReadOnly = true;
             ObjView.dtpUClientsBirthday.Enabled = false;
@@ -168,13 +173,7 @@ namespace SistemaJoyería.Controller.ClientsController
             ObjView.tbUAddress.Clear();
             ObjView.tbID.Clear();
 
-            ObjView.tbUClientsName.ReadOnly = true;
-            ObjView.tbUClientsSurname.ReadOnly = true;
-            ObjView.mskUCellphoneN.ReadOnly = true;
-            ObjView.mskUDuiDoc.ReadOnly = true;
-            ObjView.tbUEmail.ReadOnly = true;
-            ObjView.tbUAddress.ReadOnly = true;
-            ObjView.dtpUClientsBirthday.Enabled = false;
+            ReadOnly(sender, e);
 
         }
 
