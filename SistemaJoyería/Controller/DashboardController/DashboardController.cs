@@ -35,15 +35,12 @@ namespace SistemaJoyería.Controller.DashboardController
 
         //Eventos
 
-        private void OpenServer(object sender, EventArgs e)
+        void OpenServer(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario secundario
-            FrmServer secondaryForm = new FrmServer();
-
-            // Mostrar el formulario secundario
-            secondaryForm.Show();
+            FrmServer frmServer = new FrmServer();
+            frmServer.ShowDialog();
         }
-            private void OpenProducts(Object sender, EventArgs e)
+        private void OpenProducts(Object sender, EventArgs e)
         {
             AbrirFormulario<FrmProductsView>();
         }
