@@ -363,6 +363,7 @@
     <None Include="Resources\Pregunta.png" />
     <None Include="Resources\Gmail.png" />
     <None Include="Resources\descarga.png" />
+    <None Include="Resources\borrar.png" />
     <Content Include="Resources\Imagen del Logo.jpg" />
     <None Include="Resources\User.png" />
   </ItemGroup>
