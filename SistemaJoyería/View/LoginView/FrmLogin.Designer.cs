@@ -75,6 +75,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(445, 178);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.MaxLength = 50;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(329, 26);
             this.txtContraseña.TabIndex = 2;
@@ -95,6 +96,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(445, 97);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.MaxLength = 50;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(329, 26);
             this.txtUsuario.TabIndex = 1;

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnNewPssword = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,29 +59,29 @@
             this.btnNewPssword.Text = "Cambiar Contraseña";
             this.btnNewPssword.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtConfirmPassword
             // 
-            this.textBox3.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.textBox3.Location = new System.Drawing.Point(312, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 26);
-            this.textBox3.TabIndex = 3;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(312, 174);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(179, 26);
+            this.txtConfirmPassword.TabIndex = 3;
             // 
-            // textBox2
+            // txtNewPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.textBox2.Location = new System.Drawing.Point(312, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtNewPassword.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtNewPassword.Location = new System.Drawing.Point(312, 112);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(179, 26);
+            this.txtNewPassword.TabIndex = 2;
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.textBox1.Location = new System.Drawing.Point(312, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 26);
-            this.textBox1.TabIndex = 1;
+            this.txtUser.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txtUser.Location = new System.Drawing.Point(312, 51);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(179, 26);
+            this.txtUser.TabIndex = 1;
             // 
             // label9
             // 
@@ -214,9 +214,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 296);
             this.Controls.Add(this.btnNewPssword);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmPassword);
+            this.Controls.Add(this.txtNewPassword);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -241,9 +241,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnNewPssword;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtConfirmPassword;
+        public System.Windows.Forms.TextBox txtNewPassword;
+        public System.Windows.Forms.TextBox txtUser;
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label7;
