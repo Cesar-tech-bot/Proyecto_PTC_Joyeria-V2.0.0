@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace SistemaJoyería.View.Suppliers
 {
-    public partial class FrmSuppliers : Form 
+    public partial class FrmSuppliers : Form
     {
         public FrmSuppliers()
         {
@@ -42,11 +42,6 @@ namespace SistemaJoyería.View.Suppliers
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmSuppliers_Load(object sender, EventArgs e)
         {
 
         }

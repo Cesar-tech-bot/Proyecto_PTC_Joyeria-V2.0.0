@@ -51,10 +51,10 @@
             this.txtUClientsSurname = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnAddClients = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddClients = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearchClient = new System.Windows.Forms.Button();
             this.tbSearchClient = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
@@ -70,10 +70,10 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(0, 57);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 81);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1028, 552);
+            this.panel2.Size = new System.Drawing.Size(1046, 561);
             this.panel2.TabIndex = 7;
             // 
             // dgvClientsTable
@@ -89,7 +89,7 @@
             this.dgvClientsTable.RowHeadersVisible = false;
             this.dgvClientsTable.RowHeadersWidth = 51;
             this.dgvClientsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientsTable.Size = new System.Drawing.Size(762, 552);
+            this.dgvClientsTable.Size = new System.Drawing.Size(780, 561);
             this.dgvClientsTable.TabIndex = 60;
             // 
             // panel5
@@ -117,7 +117,7 @@
             this.panel5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(266, 552);
+            this.panel5.Size = new System.Drawing.Size(266, 561);
             this.panel5.TabIndex = 59;
             // 
             // btnClearUpdate
@@ -126,7 +126,7 @@
             this.btnClearUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnClearUpdate.ForeColor = System.Drawing.Color.White;
             this.btnClearUpdate.Location = new System.Drawing.Point(11, 516);
-            this.btnClearUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClearUpdate.Name = "btnClearUpdate";
             this.btnClearUpdate.Size = new System.Drawing.Size(104, 32);
             this.btnClearUpdate.TabIndex = 13;
@@ -137,7 +137,7 @@
             // 
             this.tbUEmail.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbUEmail.Location = new System.Drawing.Point(14, 328);
-            this.tbUEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUEmail.Name = "tbUEmail";
             this.tbUEmail.Size = new System.Drawing.Size(219, 26);
             this.tbUEmail.TabIndex = 10;
@@ -157,7 +157,7 @@
             // 
             this.tbUAddress.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbUAddress.Location = new System.Drawing.Point(15, 386);
-            this.tbUAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUAddress.Multiline = true;
             this.tbUAddress.Name = "tbUAddress";
             this.tbUAddress.Size = new System.Drawing.Size(219, 69);
@@ -178,7 +178,7 @@
             // 
             this.mskUDuiDoc.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskUDuiDoc.Location = new System.Drawing.Point(14, 266);
-            this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.mskUDuiDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mskUDuiDoc.Mask = "00000000-0";
             this.mskUDuiDoc.Name = "mskUDuiDoc";
             this.mskUDuiDoc.Size = new System.Drawing.Size(219, 26);
@@ -188,7 +188,7 @@
             // 
             this.tbID.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbID.Location = new System.Drawing.Point(43, 483);
-            this.tbID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbID.Name = "tbID";
             this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(219, 26);
@@ -198,7 +198,7 @@
             // 
             this.mskUCellphoneN.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.mskUCellphoneN.Location = new System.Drawing.Point(14, 207);
-            this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(2);
+            this.mskUCellphoneN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mskUCellphoneN.Mask = "0000-0000";
             this.mskUCellphoneN.Name = "mskUCellphoneN";
             this.mskUCellphoneN.Size = new System.Drawing.Size(219, 26);
@@ -221,7 +221,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(141, 516);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(104, 34);
             this.btnUpdate.TabIndex = 14;
@@ -232,7 +232,7 @@
             // 
             this.dtpUClientsBirthday.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.dtpUClientsBirthday.Location = new System.Drawing.Point(14, 146);
-            this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpUClientsBirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpUClientsBirthday.Name = "dtpUClientsBirthday";
             this.dtpUClientsBirthday.Size = new System.Drawing.Size(219, 26);
             this.dtpUClientsBirthday.TabIndex = 7;
@@ -263,7 +263,7 @@
             // 
             this.tbUClientsName.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbUClientsName.Location = new System.Drawing.Point(14, 25);
-            this.tbUClientsName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUClientsName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUClientsName.Name = "tbUClientsName";
             this.tbUClientsName.Size = new System.Drawing.Size(219, 26);
             this.tbUClientsName.TabIndex = 5;
@@ -272,7 +272,7 @@
             // 
             this.tbUClientsSurname.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.tbUClientsSurname.Location = new System.Drawing.Point(14, 87);
-            this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUClientsSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUClientsSurname.Name = "tbUClientsSurname";
             this.tbUClientsSurname.Size = new System.Drawing.Size(219, 26);
             this.tbUClientsSurname.TabIndex = 6;
@@ -316,18 +316,44 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 57);
+            this.panel1.Size = new System.Drawing.Size(1046, 81);
             this.panel1.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(0, 81);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 442);
             this.panel3.TabIndex = 2;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(819, 17);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(106, 44);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refrescar ";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            // 
+            // btnAddClients
+            // 
+            this.btnAddClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnAddClients.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClients.ForeColor = System.Drawing.Color.White;
+            this.btnAddClients.Location = new System.Drawing.Point(929, 17);
+            this.btnAddClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddClients.Name = "btnAddClients";
+            this.btnAddClients.Size = new System.Drawing.Size(106, 40);
+            this.btnAddClients.TabIndex = 4;
+            this.btnAddClients.Text = "Añadir";
+            this.btnAddClients.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -341,59 +367,29 @@
             this.panel4.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1028, 56);
+            this.panel4.Size = new System.Drawing.Size(1046, 83);
             this.panel4.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 21);
+            this.label1.Location = new System.Drawing.Point(26, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "CONTROL DE CLIENTES";
             // 
-            // btnAddClients
-            // 
-            this.btnAddClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnAddClients.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClients.ForeColor = System.Drawing.Color.White;
-            this.btnAddClients.Location = new System.Drawing.Point(869, 9);
-            this.btnAddClients.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddClients.Name = "btnAddClients";
-            this.btnAddClients.Size = new System.Drawing.Size(112, 42);
-            this.btnAddClients.TabIndex = 4;
-            this.btnAddClients.Text = "Añadir";
-            this.btnAddClients.UseVisualStyleBackColor = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(756, 9);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(109, 42);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refrescar ";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
             // btnSearchClient
             // 
-            this.btnSearchClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchClient.ForeColor = System.Drawing.Color.White;
-            this.btnSearchClient.Location = new System.Drawing.Point(570, 10);
-            this.btnSearchClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearchClient.Location = new System.Drawing.Point(580, 19);
+            this.btnSearchClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchClient.Name = "btnSearchClient";
-            this.btnSearchClient.Size = new System.Drawing.Size(133, 40);
+            this.btnSearchClient.Size = new System.Drawing.Size(143, 40);
             this.btnSearchClient.TabIndex = 2;
             this.btnSearchClient.Text = "Buscar";
             this.btnSearchClient.UseVisualStyleBackColor = false;
@@ -401,8 +397,8 @@
             // tbSearchClient
             // 
             this.tbSearchClient.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.tbSearchClient.Location = new System.Drawing.Point(270, 19);
-            this.tbSearchClient.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSearchClient.Location = new System.Drawing.Point(270, 29);
+            this.tbSearchClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbSearchClient.Name = "tbSearchClient";
             this.tbSearchClient.Size = new System.Drawing.Size(296, 26);
             this.tbSearchClient.TabIndex = 1;
@@ -411,10 +407,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1046, 642);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmClientsView";
