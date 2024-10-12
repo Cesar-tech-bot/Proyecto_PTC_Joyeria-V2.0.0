@@ -87,6 +87,7 @@
     <Compile Include="Controller\FirstUseController\FirstUseController.cs" />
     <Compile Include="Controller\LoginController\ChangeOriginalPasswordController.cs" />
     <Compile Include="Controller\LoginController\ChangePasswordController.cs" />
+    <Compile Include="Controller\LoginController\ChangePasswordController2.cs" />
     <Compile Include="Controller\LoginController\ControllerCambiarContraFromQuestions.cs" />
     <Compile Include="Controller\LoginController\ControllerInterFromAdmin.cs" />
     <Compile Include="Controller\LoginController\ControllerNewPasswordFromAdmin.cs" />
@@ -182,6 +183,12 @@
     </Compile>
     <Compile Include="View\LoginView\FrmChangePassword.Designer.cs">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView\FrmChangePassword2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView\FrmChangePassword2.Designer.cs">
+      <DependentUpon>FrmChangePassword2.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView\RecuperarCorreo.cs">
       <SubType>Form</SubType>
@@ -297,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView\FrmChangePassword2.resx">
+      <DependentUpon>FrmChangePassword2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\RecuperarCorreo.resx">
       <DependentUpon>RecuperarCorreo.cs</DependentUpon>

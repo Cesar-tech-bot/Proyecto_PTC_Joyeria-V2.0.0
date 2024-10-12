@@ -11,8 +11,6 @@ namespace SistemaJoyería.Controller.LoginController
     {
         private FrmQuestionsLogin objVerifications;
         private string username;
-        private List<string> validJewels;
-        private List<string> validColors;
 
         public ControllerQuestionVerification(FrmQuestionsLogin vista)
         {
@@ -29,14 +27,6 @@ namespace SistemaJoyería.Controller.LoginController
             // Configurar validación para el campo de visitas
             objVerifications.txtRespuesta3.KeyPress += new KeyPressEventHandler(ValidateNumericInput);
 
-            // Configurar validación para el campo de joyas
-            validJewels = new List<string> { "diamante", "esmeralda", "rubí", "zafiro", "perla", "ópalo", "topacio", "amatista", "aguamarina", "diamante de 1 quilate", "esmeralda de 2 quilates", "rubí de 3 quilates" };
-            objVerifications.txtRespuesta1.Leave += new EventHandler(ValidateJewel);
-
-            // Configurar validación para el campo de colores
-            validColors = new List<string> { "blanco", "negro", "rojo", "azul", "verde", "amarillo", "rosa", "púrpura", "plateado", "dorado" };
-            objVerifications.txtRespuesta2.Leave += new EventHandler(ValidateColor);
-
             // Quitar el menú
             objVerifications.Menu = null;
         }
@@ -52,26 +42,6 @@ namespace SistemaJoyería.Controller.LoginController
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-            }
-        }
-
-        private void ValidateJewel(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            if (!validJewels.Contains(textBox.Text.ToLower()))
-            {
-                MessageBox.Show("Por favor, ingrese una joya válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox.Clear();
-            }
-        }
-
-        private void ValidateColor(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            if (!validColors.Contains(textBox.Text.ToLower()))
-            {
-                MessageBox.Show("Por favor, ingrese un color válido para joyas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox.Clear();
             }
         }
 
@@ -99,7 +69,7 @@ namespace SistemaJoyería.Controller.LoginController
             {
                 MessageBox.Show("Las respuestas son correctas", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 objVerifications.Hide();
-                FrmChangePassword CambiarContra = new FrmChangePassword(username);
+                FrmChangePassword2 CambiarContra = new FrmChangePassword2();
                 CambiarContra.Show();
             }
             else
