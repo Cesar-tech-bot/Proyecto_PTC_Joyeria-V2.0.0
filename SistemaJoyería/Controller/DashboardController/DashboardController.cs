@@ -5,6 +5,7 @@ using SistemaJoyería.View.ProductsView;
 using SistemaJoyería.View.SalesDetailsView;
 using SistemaJoyería.View.ServerView;
 using SistemaJoyería.View.Suppliers;
+using SistemaJoyería.View.UsersView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,7 @@ namespace SistemaJoyería.Controller.DashboardController
             ObjDashboard.btnClients.Click += new EventHandler(OpenClients);
             ObjDashboard.btnEmployee.Click += new EventHandler(OpenEmployee);
             ObjDashboard.btnServer.Click += new EventHandler(OpenServer);
+            ObjDashboard.btnUsers.Click += new EventHandler(OpenUsers);
         }
 
         //Eventos
@@ -63,6 +65,10 @@ namespace SistemaJoyería.Controller.DashboardController
         private void OpenSales(Object sender, EventArgs e)
         {
             AbrirFormulario<FrmSalesDetailView>();
+        }
+        private void OpenUsers(Object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmUserView>();
         }
         //metodo para abrir formulario en el panel contenedor
         public void AbrirFormulario<MiForm>() where MiForm : Form, new()
