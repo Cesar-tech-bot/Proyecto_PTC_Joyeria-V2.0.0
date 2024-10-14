@@ -17,9 +17,12 @@ namespace SistemaJoyería.Model.DTO
 
         private string UserEmail;
 
+        private string idRoles;
+
         public int IDUser1 { get => IDUser; set => IDUser = value; }
         public string UserName1 { get => UserName; set => UserName = value; }
         public string Password1 { get => Password; set => Password = value; }
         public string UserEmail1 { get => UserEmail; set => UserEmail = value; }
+        public string IdRoles { get => idRoles; set => idRoles = value; }
     }
 }
