@@ -17,6 +17,6 @@ namespace SistemaJoyería.View.UsersView
         {
             InitializeComponent();
             UserViewController userViewController = new UserViewController(this);
-        }
+        }   
     }
 }

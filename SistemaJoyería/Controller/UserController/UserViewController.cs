@@ -48,6 +48,8 @@ namespace SistemaJoyería.Controller.UserController
             ObjView.txtUpdateUserEmail.ReadOnly = true;
             ObjView.txtUpdateUserPassword.ReadOnly = true;
             ObjView.cmbRolUser.Enabled = false;
+            ObjView.txtUpdateEstado.ReadOnly = true;
+            ObjView.txtIdUser.ReadOnly = true;
 
         }
 
@@ -71,49 +73,7 @@ namespace SistemaJoyería.Controller.UserController
             ObjView.dgvUser.DataSource = ds.Tables["v_Users"];
         }
 
-        void UpdateRegister(object sender, EventArgs e)
-        {
-            //Se crea variable para cada TB y MSK
-            string ID = ObjView.txtIdUser.Text.Trim();
-            string UserName = ObjView.txtUpdateUserName.Text.Trim();
-            string PassWord = ObjView.txtUpdateUserPassword.Text.Trim();
-            string Email = ObjView.txtUpdateUserEmail.Text.Trim();           
-            string Rol = ObjView.cmbRolUser.Text.Trim();
-
-            // Validamos si los campos de nombres y apellidos no están vacíos
-            if (!(string.IsNullOrEmpty(UserName) || 
-                  // Validamos si el campo de número de teléfono no está vacío y tiene exactamente 8 dígitos
-                  string.IsNullOrEmpty(PassWord) || PassWord.Length >= 8 || !PassWord.All(char.IsDigit) ||
-                  // Validamos si el campo de correo electrónico no está vacío y el formato del correo es correcto
-                  string.IsNullOrEmpty(Email) || !Emailverifaction(Email) ||
-                  // Validamos si los campos no están vacíos
-                   string.IsNullOrEmpty(Rol)))
-            {
-                // Si todas las validaciones pasan, actualizamos el registro
-                UserViewDAO daoUpdate = new UserViewDAO();
-                daoUpdate.IDUser1 = int.Parse(ID);
-                daoUpdate.UserName1 = UserName;
-                daoUpdate.Password1 = PassWord;
-                daoUpdate.UserEmail1 = Email;
-                daoUpdate.IdRoles = Rol;
-
-                int retorno = daoUpdate.UpdateUser();
-                if (retorno == 1)
-                {
-                    MessageBox.Show("El cliente seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ShowDGVUsers();
-                    ClearUpdateZone(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("El cliente seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Cliente no seleccionado o datos faltantes o incorrectos, favor verificar datos ingresados", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+        
 
         //Validar el patrón del correo
         private bool Emailverifaction(string email)
@@ -132,6 +92,56 @@ namespace SistemaJoyería.Controller.UserController
             // Si el correo electrónico no coincide con el patrón, devuelve false.
             return Regex.IsMatch(email, emailPattern);
         }
+        void UpdateRegister(object sender, EventArgs e)
+        {
+            // Se crea variable para cada TB y CMB
+            string ID = ObjView.txtIdUser.Text.Trim();
+            string UserName = ObjView.txtUpdateUserName.Text.Trim();
+            string PassWord = ObjView.txtUpdateUserPassword.Text.Trim();
+            string Email = ObjView.txtUpdateUserEmail.Text.Trim();
+            string Estado = ObjView.txtUpdateEstado.Text.Trim();
+            string Rol = ObjView.cmbRolUser.Text.Trim();
+
+            // Validamos si los campos requeridos no están vacíos
+            if (!(string.IsNullOrEmpty(UserName) ||
+                  string.IsNullOrEmpty(PassWord) ||
+                  string.IsNullOrEmpty(Email) || !Emailverifaction(Email)))
+            {
+                // Validamos que Rol sea un número válido antes de actualizar
+                if (int.TryParse(Rol, out int rolId))
+                {
+                    // Si todas las validaciones pasan, actualizamos el registro
+                    UserViewDAO daoUpdate = new UserViewDAO();
+                    daoUpdate.IDUser1 = int.Parse(ID);
+                    daoUpdate.UserName1 = UserName;
+                    daoUpdate.Password1 = PassWord;
+                    daoUpdate.UserEmail1 = Email;
+                    daoUpdate.Estado1 = Estado;
+                    daoUpdate.IdRoles1 = rolId;
+
+                    int retorno = daoUpdate.UpdateUser();
+                    if (retorno == 1)
+                    {
+                        MessageBox.Show("El Usuario seleccionado fue actualizado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowDGVUsers();
+                        ClearUpdateZone(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Usuario seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El rol seleccionado es inválido", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario no seleccionado o datos faltantes o incorrectos, favor verificar datos ingresados", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         void ClearUpdateZone(object sender, EventArgs e)
         {
@@ -151,7 +161,8 @@ namespace SistemaJoyería.Controller.UserController
             ObjView.txtUpdateUserName.Text = ObjView.dgvUser[1, pos].Value.ToString();
             ObjView.txtUpdateUserPassword.Text = (ObjView.dgvUser[2, pos].Value.ToString());
             ObjView.txtUpdateUserEmail.Text = ObjView.dgvUser[3, pos].Value.ToString();
-            ObjView.cmbRolUser.Text = ObjView.dgvUser[4, pos].Value.ToString();
+            ObjView.txtUpdateEstado.Text = ObjView.dgvUser[4, pos].Value.ToString();
+            ObjView.cmbRolUser.Text = ObjView.dgvUser[5, pos].Value.ToString();
         }
         void RefreshPage(object sender, EventArgs e)
         {
@@ -194,121 +205,3 @@ namespace SistemaJoyería.Controller.UserController
 
 
 
-
-//        //Validaciones 
-
-//        //Limitar a 25 Caracteres
-//        private void LimitCharacter25(TextBox textBox)
-//        {
-//            textBox.MaxLength = 25;
-//        }
-//        private void Limit25(object sender, EventArgs e)
-//        {
-//            TextBox textBox = (TextBox)sender;
-//            LimitCharacter25(textBox);
-//        }
-
-//        //Limitar a 50 Carácteres
-//        private void CharacterLimit50(TextBox textBox)
-//        {
-//            textBox.MaxLength = 50;
-//        }
-//        private void Limit50(object sender, EventArgs e)
-//        {
-//            TextBox textBox = (TextBox)sender;
-//            CharacterLimit50(textBox);
-//        }
-
-//        //Limitar a 150 Carácateres
-//        private void CharacterLimit150(TextBox textBox)
-//        {
-//            textBox.MaxLength = 150;
-//        }
-//        private void Limit150(object sender, EventArgs e)
-//        {
-//            TextBox textBox = (TextBox)sender;
-//            CharacterLimit150(textBox);
-//        }
-
-//        //Limitar copiar, pegar y cortar en los TB
-
-
-//        //Límitar copiar, pegar y cortar en los msk
-//        private void DisableCopyCutPasteMasked(MaskedTextBox maskedTextBox)
-//        {
-//            // Deshabilitamos el menú contextual del MaskedTextBox
-//            maskedTextBox.ContextMenu = new ContextMenu();
-
-//            // Capturamos el evento KeyDown para detectar si se intenta copiar, cortar o pegar con atajos de teclado
-//            maskedTextBox.KeyDown += (sender, e) =>
-//            {
-//                // Verificamos si se está intentando copiar (Ctrl + C), cortar (Ctrl + X), o pegar (Ctrl + V)
-//                if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
-//                {
-//                    e.SuppressKeyPress = true; // Suprimimos la tecla para evitar la acción
-//                }
-//            };
-//        }
-
-//      
-
-//        //Límitar s sólo letras y un espacio
-//        private void OnlyLettersSpace(object sender, KeyPressEventArgs e)
-//        {
-//            // Permitir solo letras y un único espacio
-//            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
-//            {
-//                e.Handled = true;
-//            }
-
-//            // Evitar más de un espacio consecutivo
-//            if (e.KeyChar == ' ' && (sender as TextBox).Text.EndsWith(" "))
-//            {
-//                e.Handled = true;
-//            }
-//        }
-
-//        //Límitar a un tener ningún espacio
-//        private void TbUEmail_KeyPress(object sender, KeyPressEventArgs e)
-//        {
-//            // Evitar cualquier espacio
-//            if (e.KeyChar == ' ')
-//            {
-//                e.Handled = true;
-//            }
-//        }
-
-//        //Límitar a solamente...
-//        private void TbUAddress_KeyPress(object sender, KeyPressEventArgs e)
-//        {
-//            // Permitir letras, números y los caracteres básicos de dirección
-//            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ' && e.KeyChar != ',' && e.KeyChar != '.')
-//            {
-//                e.Handled = true;
-//            }
-//        }
-
-//        private void mskCantidad_Validating(object sender, CancelEventArgs e)
-//        {
-//            // Verificamos si el contenido del MaskedTextBox es numérico y si cumple con el mínimo
-//            if (int.TryParse(ObjView.mskUCellphoneN.Text, out int cantidad))
-//            {
-//                int cantidadMinima = 8; // Define la cantidad mínima que deseas
-
-//                if (cantidad < cantidadMinima)
-//                {
-//                    e.Cancel = true;
-//                }
-//            }
-//            else
-//            {
-//                e.Cancel = true;
-//            }
-//        }
-
-//    }
-//}
-
-
-//    }
-//}
