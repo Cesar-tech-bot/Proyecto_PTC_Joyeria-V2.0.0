@@ -47,28 +47,36 @@ namespace SistemaJoyería.Model.DAO
         {
             try
             {
-                //Establecemos una conexión
+                // Establecemos una conexión
                 command.Connection = getConnection();
-                //Definir que acción se desea realizar
-                string queryUpdate = "UPDATE Users SET  LoginName = @param1, Password = @param2,  UserEmail = @param3 WHERE  IDUser = @param4";
+
+                // Definir que acción se desea realizar
+                string queryUpdate = "UPDATE Users SET LoginName = @param1, Password = @param2, UserEmail = @param3, Estado = @param4, idRoles = @param5 WHERE IDUser = @param6";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
-                cmdUpdate.Parameters.AddWithValue("param1", UserName1);
-                cmdUpdate.Parameters.AddWithValue("param2", Password1);
-                cmdUpdate.Parameters.AddWithValue("param3", UserEmail1);
-                cmdUpdate.Parameters.AddWithValue("param4", IDUser1);
-                //Retornamos la consulta
+
+                // Agregamos los parámetros
+                cmdUpdate.Parameters.AddWithValue("@param1", UserName1);
+                cmdUpdate.Parameters.AddWithValue("@param2", Password1);
+                cmdUpdate.Parameters.AddWithValue("@param3", UserEmail1);
+                cmdUpdate.Parameters.AddWithValue("@param4", Estado1);
+                cmdUpdate.Parameters.AddWithValue("@param5", IdRoles1);
+                cmdUpdate.Parameters.AddWithValue("@param6", IDUser1);
+
+                // Ejecutamos la consulta
                 return cmdUpdate.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} No se pudo actualizar la información del Usuario, verifique su conexión a internet o que los servicios esten activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message} No se pudo actualizar la información del Usuario, verifique su conexión a internet o que los servicios estén activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
             {
+                // Cerramos la conexión
                 command.Connection.Close();
             }
         }
+
 
         public DataSet SearchUser(string valor)
         {
