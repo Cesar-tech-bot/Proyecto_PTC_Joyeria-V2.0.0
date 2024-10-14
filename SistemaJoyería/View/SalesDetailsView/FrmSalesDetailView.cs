@@ -22,6 +22,5 @@ namespace SistemaJoyería.View.SalesDetailsView
             // Crear instancia del controlador
             salesDetailsController = new SalesDetailsController(this);
         }
-
     }
 }
