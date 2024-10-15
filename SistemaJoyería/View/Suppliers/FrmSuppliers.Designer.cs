@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnRefresacar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,21 @@
             this.panel1.Size = new System.Drawing.Size(966, 81);
             this.panel1.TabIndex = 5;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBuscar.Location = new System.Drawing.Point(362, 27);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(106, 34);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -77,7 +92,7 @@
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(106, 33);
-            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.TabIndex = 5;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
@@ -94,7 +109,7 @@
             this.btnRefresacar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnRefresacar.Name = "btnRefresacar";
             this.btnRefresacar.Size = new System.Drawing.Size(106, 33);
-            this.btnRefresacar.TabIndex = 3;
+            this.btnRefresacar.TabIndex = 4;
             this.btnRefresacar.Text = "Refrescar";
             this.btnRefresacar.UseVisualStyleBackColor = false;
             // 
@@ -111,7 +126,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(106, 32);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -129,7 +144,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(111, 32);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             // 
@@ -215,21 +230,6 @@
             // 
             this.columnHeader7.Text = "Dirección";
             this.columnHeader7.Width = 87;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.Location = new System.Drawing.Point(362, 27);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(106, 34);
-            this.btnBuscar.TabIndex = 17;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // FrmSuppliers
             // 
