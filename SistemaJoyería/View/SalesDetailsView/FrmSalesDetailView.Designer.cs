@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSalesDetailView));
             this.txtDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
+            this.btnImprent = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.dtpDateSell = new System.Windows.Forms.DateTimePicker();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnInsertSell = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.Label();
@@ -43,11 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtProductsSell = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnInsertSell = new System.Windows.Forms.Button();
-            this.btnImprent = new System.Windows.Forms.Button();
+            this.mskPrice = new System.Windows.Forms.MaskedTextBox();
             this.dgvSellInfo = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.PanelPrint = new System.Windows.Forms.Panel();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
@@ -93,32 +93,50 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(757, 272);
+            this.groupBox1.Size = new System.Drawing.Size(993, 272);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area de Ventas";
             // 
-            // mskPrice
+            // btnImprent
             // 
-            this.mskPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mskPrice.Location = new System.Drawing.Point(551, 131);
-            this.mskPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.mskPrice.Mask = "00.00";
-            this.mskPrice.Name = "mskPrice";
-            this.mskPrice.Size = new System.Drawing.Size(84, 26);
-            this.mskPrice.TabIndex = 11;
+            this.btnImprent.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnImprent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnImprent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnImprent.ForeColor = System.Drawing.Color.White;
+            this.btnImprent.Location = new System.Drawing.Point(829, 220);
+            this.btnImprent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprent.Name = "btnImprent";
+            this.btnImprent.Size = new System.Drawing.Size(151, 41);
+            this.btnImprent.TabIndex = 10;
+            this.btnImprent.Text = "Imprimir Factura";
+            this.btnImprent.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(522, 131);
+            this.label2.Location = new System.Drawing.Point(758, 131);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 26);
             this.label2.TabIndex = 9;
             this.label2.Text = "$";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(701, 220);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(103, 42);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "Refrescar";
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // dtpDateSell
             // 
@@ -129,12 +147,40 @@
             this.dtpDateSell.Size = new System.Drawing.Size(152, 26);
             this.dtpDateSell.TabIndex = 3;
             // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnClear.ForeColor = System.Drawing.Color.Snow;
+            this.btnClear.Location = new System.Drawing.Point(6, 221);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(107, 41);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Limpiar";
+            this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // btnInsertSell
+            // 
+            this.btnInsertSell.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnInsertSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnInsertSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnInsertSell.ForeColor = System.Drawing.Color.White;
+            this.btnInsertSell.Location = new System.Drawing.Point(144, 221);
+            this.btnInsertSell.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsertSell.Name = "btnInsertSell";
+            this.btnInsertSell.Size = new System.Drawing.Size(105, 41);
+            this.btnInsertSell.TabIndex = 6;
+            this.btnInsertSell.Text = "Registrar";
+            this.btnInsertSell.UseVisualStyleBackColor = false;
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(522, 95);
+            this.label6.Location = new System.Drawing.Point(758, 95);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(185, 25);
@@ -227,47 +273,15 @@
             this.txtProductsSell.TabIndex = 0;
             this.txtProductsSell.Text = "Seleccione producto:";
             // 
-            // btnClear
+            // mskPrice
             // 
-            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnClear.ForeColor = System.Drawing.Color.Snow;
-            this.btnClear.Location = new System.Drawing.Point(6, 221);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(107, 41);
-            this.btnClear.TabIndex = 5;
-            this.btnClear.Text = "Limpiar";
-            this.btnClear.UseVisualStyleBackColor = false;
-            // 
-            // btnInsertSell
-            // 
-            this.btnInsertSell.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnInsertSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnInsertSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnInsertSell.ForeColor = System.Drawing.Color.White;
-            this.btnInsertSell.Location = new System.Drawing.Point(144, 221);
-            this.btnInsertSell.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInsertSell.Name = "btnInsertSell";
-            this.btnInsertSell.Size = new System.Drawing.Size(105, 41);
-            this.btnInsertSell.TabIndex = 6;
-            this.btnInsertSell.Text = "Registrar";
-            this.btnInsertSell.UseVisualStyleBackColor = false;
-            // 
-            // btnImprent
-            // 
-            this.btnImprent.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnImprent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnImprent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnImprent.ForeColor = System.Drawing.Color.White;
-            this.btnImprent.Location = new System.Drawing.Point(593, 220);
-            this.btnImprent.Margin = new System.Windows.Forms.Padding(2);
-            this.btnImprent.Name = "btnImprent";
-            this.btnImprent.Size = new System.Drawing.Size(151, 41);
-            this.btnImprent.TabIndex = 10;
-            this.btnImprent.Text = "Imprimir Factura";
-            this.btnImprent.UseVisualStyleBackColor = false;
+            this.mskPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mskPrice.Location = new System.Drawing.Point(787, 131);
+            this.mskPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.mskPrice.Mask = "00.00";
+            this.mskPrice.Name = "mskPrice";
+            this.mskPrice.Size = new System.Drawing.Size(84, 26);
+            this.mskPrice.TabIndex = 11;
             // 
             // dgvSellInfo
             // 
@@ -281,22 +295,8 @@
             this.dgvSellInfo.ReadOnly = true;
             this.dgvSellInfo.RowHeadersWidth = 51;
             this.dgvSellInfo.RowTemplate.Height = 24;
-            this.dgvSellInfo.Size = new System.Drawing.Size(757, 255);
+            this.dgvSellInfo.Size = new System.Drawing.Size(993, 327);
             this.dgvSellInfo.TabIndex = 8;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(465, 220);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(103, 42);
-            this.btnRefresh.TabIndex = 9;
-            this.btnRefresh.Text = "Refrescar";
-            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // PanelPrint
             // 
@@ -306,7 +306,7 @@
             this.PanelPrint.Controls.Add(this.dgvSellInfo);
             this.PanelPrint.Location = new System.Drawing.Point(20, 308);
             this.PanelPrint.Name = "PanelPrint";
-            this.PanelPrint.Size = new System.Drawing.Size(757, 255);
+            this.PanelPrint.Size = new System.Drawing.Size(993, 327);
             this.PanelPrint.TabIndex = 11;
             // 
             // printPreviewDialog1
@@ -324,7 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 570);
+            this.ClientSize = new System.Drawing.Size(1046, 642);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.PanelPrint);
             this.Margin = new System.Windows.Forms.Padding(2);

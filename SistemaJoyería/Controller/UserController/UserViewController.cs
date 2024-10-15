@@ -20,8 +20,11 @@ namespace SistemaJoyería.Controller.UserController
         public UserViewController(FrmUserView view)
         {
             ObjView = view;
+            // Asignamos el ContextMenuStrip al DataGridView
+            ObjView.dgvUser.ContextMenuStrip = ObjView.cmsDeleteUser;
             view.Load += new EventHandler(InitialCharge);
             //Eventos del CRUD (Read, Delete, Update)
+            view.cmsDeleteUser.Click += new EventHandler(DeleteUser);
             view.btnUpdate.Click += new EventHandler(UpdateRegister);
             ////Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
@@ -73,7 +76,25 @@ namespace SistemaJoyería.Controller.UserController
             ObjView.dgvUser.DataSource = ds.Tables["v_Users"];
         }
 
-        
+        //Borrar Usuario
+        void DeleteUser(object sender, EventArgs e)
+        {
+            //capturando el indice de la fila
+
+            int pos = ObjView.dgvUser.CurrentRow.Index;
+            ProductsViewDAO daoDelete = new ProductsViewDAO();
+            daoDelete.IDProducto1 = int.Parse(ObjView.dgvUser[0, pos].Value.ToString());
+            int retorno = daoDelete.DeleteRecord();
+            if (retorno == 1)
+            {
+                MessageBox.Show("El usuario seleccionado fue eliminado", "proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El usuario seleccionado no pudo ser eliminado", "proceso incompletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowDGVUsers();
+            }
+        }
 
         //Validar el patrón del correo
         private bool Emailverifaction(string email)
