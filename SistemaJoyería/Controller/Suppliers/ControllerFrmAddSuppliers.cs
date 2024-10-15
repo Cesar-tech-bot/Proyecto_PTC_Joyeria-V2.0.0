@@ -69,7 +69,9 @@ namespace SistemaJoyería.Controller.Suppliers
                     if (result > 0)
                     {
                         MessageBox.Show("Proveedor registrado exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields();
+
+                        // Cerrar el formulario automáticamente después de guardar el proveedor
+                        vistaControlada.Close();
                     }
                 }
                 catch (SqlException ex)

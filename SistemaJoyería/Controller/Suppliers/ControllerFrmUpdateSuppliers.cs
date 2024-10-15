@@ -169,6 +169,8 @@ namespace SistemaJoyería.Controller.Suppliers
                 if (result > 0)
                 {
                     MessageBox.Show("Proveedor actualizado exitosamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Cerrar el formulario automáticamente después de actualizar el proveedor
                     vistaControlada.Close();
                 }
                 else

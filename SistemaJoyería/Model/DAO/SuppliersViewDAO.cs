@@ -1,7 +1,6 @@
 ﻿using SistemaJoyeria.Model.DTO;
 using SistemaJoyería.View.Suppliers;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -59,7 +58,7 @@ namespace SistemaJoyeria.DAO
             }
         }
 
-        // Método para buscar proveedores por nombre de empresa
+        // Método para buscar proveedores por nombre de empresa o nombre de contacto
         public void SearchData(FrmSuppliers vistaPasada)
         {
             try
@@ -67,8 +66,8 @@ namespace SistemaJoyeria.DAO
                 // Establece la conexión
                 command.Connection = getConnection();
 
-                // Query SQL para buscar proveedores por nombre de empresa
-                string query = "SELECT * FROM Suppliers WHERE CompanyName LIKE @searchingFor";
+                // Query SQL para buscar por nombre de empresa o nombre de contacto
+                string query = "SELECT * FROM Suppliers WHERE CompanyName LIKE @searchingFor OR ContactName LIKE @searchingFor";
 
                 using (SqlCommand cmdGet = new SqlCommand(query, command.Connection))
                 {
