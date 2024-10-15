@@ -8,6 +8,7 @@ using SistemaJoyería.View.Suppliers;
 using SistemaJoyería.View.UsersView;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,9 +34,8 @@ namespace SistemaJoyería.Controller.DashboardController
             ObjDashboard.btnEmployee.Click += new EventHandler(OpenEmployee);
             ObjDashboard.btnServer.Click += new EventHandler(OpenServer);
             ObjDashboard.btnUsers.Click += new EventHandler(OpenUsers);
-        }
 
-        //Eventos
+        }
 
         void OpenServer(object sender, EventArgs e)
         {
