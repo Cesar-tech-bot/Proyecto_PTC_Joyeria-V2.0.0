@@ -124,17 +124,13 @@ namespace SistemaJoyería.Controller.UserController
                   string.IsNullOrEmpty(PassWord) ||
                   string.IsNullOrEmpty(Email) || !Emailverifaction(Email)))
             {
-                // Validamos que Rol sea un número válido antes de actualizar
-                if (int.TryParse(Rol, out int rolId))
-                {
-                    // Si todas las validaciones pasan, actualizamos el registro
                     UserViewDAO daoUpdate = new UserViewDAO();
                     daoUpdate.IDUser1 = int.Parse(ID);
                     daoUpdate.UserName1 = UserName;
                     daoUpdate.Password1 = PassWord;
                     daoUpdate.UserEmail1 = Email;
                     daoUpdate.Estado1 = Estado;
-                    daoUpdate.IdRoles1 = rolId;
+                    daoUpdate.IdRoles1 = Rol;
 
                     int retorno = daoUpdate.UpdateUser();
                     if (retorno == 1)
@@ -147,11 +143,6 @@ namespace SistemaJoyería.Controller.UserController
                     {
                         MessageBox.Show("El Usuario seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("El rol seleccionado es inválido", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
             }
             else
             {
