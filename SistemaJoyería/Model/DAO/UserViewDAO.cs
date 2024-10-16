@@ -76,6 +76,30 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
+        public int DeleteUser()
+        {
+            try
+            {
+                //Establecemos una conexion
+                command.Connection = getConnection();
+                //Definir que accion se desea realizar   (un parametro para cada campo
+                string queryInsert = "Delete Employees Where IDEmployees = @param1";
+                SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
+                cmdInsert.Parameters.AddWithValue("param1", IDUser1);
+                return cmdInsert.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"{ex.Message} No se puede eliminar el Usuario, verifique su conexion a internet o que los servicios esten activos", "Error de insercción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+
         public DataSet SearchUser(string valor)
         {
             try

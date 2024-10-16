@@ -70,7 +70,7 @@
             this.txtIDProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIDProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtIDProducts.Location = new System.Drawing.Point(61, 556);
-            this.txtIDProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDProducts.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDProducts.Name = "txtIDProducts";
             this.txtIDProducts.ReadOnly = true;
             this.txtIDProducts.Size = new System.Drawing.Size(244, 30);
@@ -108,7 +108,7 @@
             this.lbMaterialProduct.AutoSize = true;
             this.lbMaterialProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaterialProduct.ForeColor = System.Drawing.Color.Black;
-            this.lbMaterialProduct.Location = new System.Drawing.Point(25, 60);
+            this.lbMaterialProduct.Location = new System.Drawing.Point(25, 72);
             this.lbMaterialProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMaterialProduct.Name = "lbMaterialProduct";
             this.lbMaterialProduct.Size = new System.Drawing.Size(89, 25);
@@ -135,18 +135,18 @@
             this.cmsDeleteProduct,
             this.cmsUpdateProduct});
             this.MenuProductos.Name = "MenuProductos";
-            this.MenuProductos.Size = new System.Drawing.Size(211, 80);
+            this.MenuProductos.Size = new System.Drawing.Size(210, 52);
             // 
             // cmsDeleteProduct
             // 
             this.cmsDeleteProduct.Name = "cmsDeleteProduct";
-            this.cmsDeleteProduct.Size = new System.Drawing.Size(210, 24);
+            this.cmsDeleteProduct.Size = new System.Drawing.Size(209, 24);
             this.cmsDeleteProduct.Text = "Eliminar producto";
             // 
             // cmsUpdateProduct
             // 
             this.cmsUpdateProduct.Name = "cmsUpdateProduct";
-            this.cmsUpdateProduct.Size = new System.Drawing.Size(210, 24);
+            this.cmsUpdateProduct.Size = new System.Drawing.Size(209, 24);
             this.cmsUpdateProduct.Text = "Actualizar producto";
             // 
             // panel1
@@ -160,7 +160,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1288, 102);
             this.panel1.TabIndex = 12;
@@ -172,7 +172,7 @@
             this.btnSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSearchProduct.ForeColor = System.Drawing.Color.White;
             this.btnSearchProduct.Location = new System.Drawing.Point(764, 34);
-            this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchProduct.Name = "btnSearchProduct";
             this.btnSearchProduct.Size = new System.Drawing.Size(141, 47);
             this.btnSearchProduct.TabIndex = 15;
@@ -198,7 +198,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(1144, 34);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(141, 47);
             this.btnRefresh.TabIndex = 13;
@@ -211,7 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtSearchProductos.Location = new System.Drawing.Point(327, 42);
-            this.txtSearchProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchProductos.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchProductos.Name = "txtSearchProductos";
             this.txtSearchProductos.Size = new System.Drawing.Size(393, 30);
             this.txtSearchProductos.TabIndex = 10;
@@ -223,7 +223,7 @@
             this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRestart.ForeColor = System.Drawing.Color.White;
             this.btnRestart.Location = new System.Drawing.Point(992, 34);
-            this.btnRestart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(141, 47);
             this.btnRestart.TabIndex = 12;
@@ -253,7 +253,7 @@
             this.panel2.Controls.Add(this.txtIDProducts);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 102);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(327, 664);
             this.panel2.TabIndex = 13;
@@ -278,7 +278,7 @@
             this.btnKeep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnKeep.ForeColor = System.Drawing.Color.Transparent;
             this.btnKeep.Location = new System.Drawing.Point(16, 610);
-            this.btnKeep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKeep.Margin = new System.Windows.Forms.Padding(4);
             this.btnKeep.Name = "btnKeep";
             this.btnKeep.Size = new System.Drawing.Size(139, 38);
             this.btnKeep.TabIndex = 66;
@@ -290,7 +290,7 @@
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtStock.Location = new System.Drawing.Point(21, 386);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(4);
             this.txtStock.MaxLength = 4;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(284, 30);
@@ -329,7 +329,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(173, 610);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 38);
             this.btnUpdate.TabIndex = 9;
@@ -354,7 +354,7 @@
             this.txtProductDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtProductDescription.Location = new System.Drawing.Point(21, 456);
-            this.txtProductDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductDescription.MaxLength = 100;
             this.txtProductDescription.Multiline = true;
             this.txtProductDescription.Name = "txtProductDescription";
@@ -366,7 +366,7 @@
             this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpDate.Location = new System.Drawing.Point(21, 316);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(284, 30);
             this.dtpDate.TabIndex = 5;
@@ -377,7 +377,7 @@
             this.mktPriceProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mktPriceProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.mktPriceProduct.Location = new System.Drawing.Point(21, 246);
-            this.mktPriceProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mktPriceProduct.Margin = new System.Windows.Forms.Padding(4);
             this.mktPriceProduct.Mask = "00.00";
             this.mktPriceProduct.Name = "mktPriceProduct";
             this.mktPriceProduct.Size = new System.Drawing.Size(284, 30);
@@ -390,7 +390,7 @@
             this.cmbSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbSuppliers.FormattingEnabled = true;
             this.cmbSuppliers.Location = new System.Drawing.Point(21, 173);
-            this.cmbSuppliers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSuppliers.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSuppliers.Name = "cmbSuppliers";
             this.cmbSuppliers.Size = new System.Drawing.Size(284, 33);
             this.cmbSuppliers.TabIndex = 3;
@@ -399,8 +399,8 @@
             // 
             this.txtProductMaterial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtProductMaterial.Location = new System.Drawing.Point(21, 103);
-            this.txtProductMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductMaterial.Location = new System.Drawing.Point(21, 101);
+            this.txtProductMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductMaterial.MaxLength = 15;
             this.txtProductMaterial.Name = "txtProductMaterial";
             this.txtProductMaterial.Size = new System.Drawing.Size(284, 30);
@@ -411,7 +411,7 @@
             this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtProductName.Location = new System.Drawing.Point(21, 33);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.MaxLength = 15;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(284, 30);
@@ -426,7 +426,7 @@
             this.dgvProduct.ContextMenuStrip = this.MenuProductos;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduct.Location = new System.Drawing.Point(327, 102);
-            this.dgvProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
@@ -445,7 +445,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProductsView";
             this.Text = "FrmProductsView";
             this.MenuProductos.ResumeLayout(false);
