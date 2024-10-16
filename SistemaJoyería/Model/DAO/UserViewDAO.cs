@@ -7,24 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaJoyería.Model.DTO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Net.Sockets;
+using System.Security.Cryptography;
 
 namespace SistemaJoyería.Model.DAO
 {
     public class UserViewDAO : UserViewDTO
     {
         SqlCommand command = new SqlCommand();
+
         public DataSet ShowDGV()
         {
             try
             {
-                //Establecemos la conexión para el command
+                // Establecemos la conexión para el command
                 command.Connection = getConnection();
-                //Definimos la consulta para seleccionar datos
+                // Definimos la consulta para seleccionar datos
                 string query = "SELECT * FROM v_Users";
                 SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
-                //Ejecutamos la consulta y obtenemos los datos
+                // Ejecutamos la consulta y obtenemos los datos
                 cmdSelect.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
                 DataSet ds = new DataSet();
@@ -38,7 +38,7 @@ namespace SistemaJoyería.Model.DAO
             }
             finally
             {
-                //Cerramos conexión
+                // Cerramos conexión
                 command.Connection.Close();
             }
         }
@@ -50,13 +50,16 @@ namespace SistemaJoyería.Model.DAO
                 // Establecemos una conexión
                 command.Connection = getConnection();
 
+                // Encriptar la contraseña con SHA256
+                string hashedPassword = ConvertToSHA256(Password1);
+
                 // Definir que acción se desea realizar
                 string queryUpdate = "UPDATE Users SET LoginName = @param1, Password = @param2, UserEmail = @param3, Estado = @param4, idRoles = @param5 WHERE IDUser = @param6";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
                 // Agregamos los parámetros
                 cmdUpdate.Parameters.AddWithValue("@param1", UserName1);
-                cmdUpdate.Parameters.AddWithValue("@param2", Password1);
+                cmdUpdate.Parameters.AddWithValue("@param2", hashedPassword); // Usamos la contraseña encriptada
                 cmdUpdate.Parameters.AddWithValue("@param3", UserEmail1);
                 cmdUpdate.Parameters.AddWithValue("@param4", Estado1);
                 cmdUpdate.Parameters.AddWithValue("@param5", IdRoles1);
@@ -77,7 +80,6 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
-
         public DataSet SearchUser(string valor)
         {
             try
@@ -85,7 +87,6 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
                 string query = $"SELECT * FROM v_Users WHERE [Nombre de Usuario] Like '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
-                //cmd.Parameters.AddWithValue("@Valor", valor);
                 cmd.ExecuteScalar();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet dataSet = new DataSet();
@@ -102,5 +103,22 @@ namespace SistemaJoyería.Model.DAO
             }
         }
 
+        // Función para convertir la contraseña a SHA256
+        private string ConvertToSHA256(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Convertir la contraseña a un array de bytes
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Convertir los bytes a una cadena
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
     }
 }
