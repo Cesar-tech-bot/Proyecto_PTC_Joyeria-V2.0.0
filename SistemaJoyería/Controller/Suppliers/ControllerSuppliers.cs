@@ -54,11 +54,7 @@ namespace SistemaJoyería.Controller.Suppliers
 
                     // Crea y muestra el formulario de actualización
                     frmUpdateSuppliers = new FrmUpdateSuppliers(idBuena);
-                    frmUpdateSuppliers.Show();
-                }
-                else
-                {
-                    MessageBox.Show("El formulario de actualización ya está abierto.", "Formulario en uso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    frmUpdateSuppliers.ShowDialog();
                 }
             }
             _supplierDAO.GetData(vistaControlada); // Actualiza la lista de proveedores
@@ -72,11 +68,7 @@ namespace SistemaJoyería.Controller.Suppliers
             {
                 // Crea y muestra el formulario para agregar un nuevo proveedor
                 frmAddSuppliers = new FrmAddSuppliers();
-                frmAddSuppliers.Show();
-            }
-            else
-            {
-                MessageBox.Show("El formulario de agregar ya está abierto.", "Formulario en uso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                frmAddSuppliers.ShowDialog();
             }
             _supplierDAO.GetData(vistaControlada); // Actualiza la lista de proveedores
         }

@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSalesDetailView));
             this.txtDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearchSale = new System.Windows.Forms.Button();
+            this.txtSearchSale = new System.Windows.Forms.TextBox();
             this.btnImprent = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -49,17 +51,15 @@
             this.txtProductsSell = new System.Windows.Forms.Label();
             this.mskPrice = new System.Windows.Forms.MaskedTextBox();
             this.dgvSellInfo = new System.Windows.Forms.DataGridView();
+            this.MenuVentas = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsDeleteSale = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelPrint = new System.Windows.Forms.Panel();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.MenuVentas = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsDeleteSale = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSearchSale = new System.Windows.Forms.Button();
-            this.txtSearchSale = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellInfo)).BeginInit();
-            this.PanelPrint.SuspendLayout();
             this.MenuVentas.SuspendLayout();
+            this.PanelPrint.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDate
@@ -104,6 +104,31 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area de Ventas";
+            // 
+            // btnSearchSale
+            // 
+            this.btnSearchSale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnSearchSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSearchSale.ForeColor = System.Drawing.Color.White;
+            this.btnSearchSale.Location = new System.Drawing.Point(1027, 27);
+            this.btnSearchSale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearchSale.Name = "btnSearchSale";
+            this.btnSearchSale.Size = new System.Drawing.Size(173, 46);
+            this.btnSearchSale.TabIndex = 14;
+            this.btnSearchSale.Text = "Buscar";
+            this.btnSearchSale.UseVisualStyleBackColor = false;
+            // 
+            // txtSearchSale
+            // 
+            this.txtSearchSale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSearchSale.Location = new System.Drawing.Point(643, 36);
+            this.txtSearchSale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchSale.Name = "txtSearchSale";
+            this.txtSearchSale.Size = new System.Drawing.Size(357, 30);
+            this.txtSearchSale.TabIndex = 13;
             // 
             // btnImprent
             // 
@@ -297,31 +322,8 @@
             this.dgvSellInfo.ReadOnly = true;
             this.dgvSellInfo.RowHeadersWidth = 51;
             this.dgvSellInfo.RowTemplate.Height = 24;
-            this.dgvSellInfo.Size = new System.Drawing.Size(1036, 347);
+            this.dgvSellInfo.Size = new System.Drawing.Size(1066, 347);
             this.dgvSellInfo.TabIndex = 8;
-            // 
-            // PanelPrint
-            // 
-            this.PanelPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelPrint.Controls.Add(this.dgvSellInfo);
-            this.PanelPrint.Location = new System.Drawing.Point(141, 379);
-            this.PanelPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PanelPrint.Name = "PanelPrint";
-            this.PanelPrint.Size = new System.Drawing.Size(1036, 347);
-            this.PanelPrint.TabIndex = 11;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
             // 
             // MenuVentas
             // 
@@ -337,30 +339,26 @@
             this.cmsDeleteSale.Size = new System.Drawing.Size(186, 24);
             this.cmsDeleteSale.Text = "Eliminar Usuario";
             // 
-            // btnSearchSale
+            // PanelPrint
             // 
-            this.btnSearchSale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearchSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnSearchSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSearchSale.ForeColor = System.Drawing.Color.White;
-            this.btnSearchSale.Location = new System.Drawing.Point(1027, 27);
-            this.btnSearchSale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearchSale.Name = "btnSearchSale";
-            this.btnSearchSale.Size = new System.Drawing.Size(173, 46);
-            this.btnSearchSale.TabIndex = 14;
-            this.btnSearchSale.Text = "Buscar";
-            this.btnSearchSale.UseVisualStyleBackColor = false;
+            this.PanelPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelPrint.Controls.Add(this.dgvSellInfo);
+            this.PanelPrint.Location = new System.Drawing.Point(117, 379);
+            this.PanelPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelPrint.Name = "PanelPrint";
+            this.PanelPrint.Size = new System.Drawing.Size(1066, 347);
+            this.PanelPrint.TabIndex = 11;
             // 
-            // txtSearchSale
+            // printPreviewDialog1
             // 
-            this.txtSearchSale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtSearchSale.Location = new System.Drawing.Point(643, 36);
-            this.txtSearchSale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearchSale.Name = "txtSearchSale";
-            this.txtSearchSale.Size = new System.Drawing.Size(357, 30);
-            this.txtSearchSale.TabIndex = 13;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // FrmSalesDetailView
             // 
@@ -375,8 +373,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellInfo)).EndInit();
-            this.PanelPrint.ResumeLayout(false);
             this.MenuVentas.ResumeLayout(false);
+            this.PanelPrint.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
