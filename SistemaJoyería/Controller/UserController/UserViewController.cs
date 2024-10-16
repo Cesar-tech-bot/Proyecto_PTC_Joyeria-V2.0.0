@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -23,10 +24,12 @@ namespace SistemaJoyería.Controller.UserController
             view.Load += new EventHandler(InitialCharge);
             //Eventos del CRUD (Read, Delete, Update)
             view.btnUpdate.Click += new EventHandler(UpdateRegister);
+            view.cmsDeleteUser.Click += new EventHandler(DeleteUser);
             ////Eventos
             view.btnRefresh.Click += new EventHandler(RefreshPage);
             view.btnClear.Click += new EventHandler(ClearUpdateZone);
             view.btnSearchUser.Click += new EventHandler(SearcUsersEvent);
+            //view.MenuProductos.MouseDown += new MouseEventHandler(OnlyDGV);
             ////Sección de Validaciones
             view.dgvUser.CellClick += new DataGridViewCellEventHandler(SelectUser);
             //view.txtUpdateUserEmail.KeyPress += new KeyPressEventHandler(TbUEmail_KeyPress);
@@ -35,13 +38,11 @@ namespace SistemaJoyería.Controller.UserController
             DisableCopyCutPaste(view.txtUpdateUserEmail);
             DisableCopyCutPaste(view.txtSearchUser);
         }
-
         void InitialCharge(object sender, EventArgs e)
         {
             ShowDGVUsers();
             ReadOnly(sender, e);
         }
-
         void ReadOnly(object sender, EventArgs e)
         {
             ObjView.txtUpdateUserName.ReadOnly = true;
@@ -52,7 +53,6 @@ namespace SistemaJoyería.Controller.UserController
             ObjView.txtIdUser.ReadOnly = true;
 
         }
-
         void NotReadOnly(object sender, EventArgs e)
         {
             ObjView.txtUpdateUserName.ReadOnly = false;
@@ -61,6 +61,27 @@ namespace SistemaJoyería.Controller.UserController
             ObjView.cmbRolUser.Enabled = true;
         }
 
+        // Asignar el evento MouseDown al DataGridView
+        //private void OnlyDGV(object sender, MouseEventArgs e)
+        //{
+        //    // Verificar si el clic fue con el botón derecho del mouse
+        //    if (e.Button == MouseButtons.Right)
+        //    {
+        //        // Obtener el índice de la fila bajo el cursor
+        //        var hitTestInfo = ObjView.dgvUser.HitTest(e.X, e.Y);
+
+        //        // Verificar si se ha hecho clic en una fila (no en el encabezado ni en una celda vacía)
+        //        if (hitTestInfo.RowIndex >= 0)
+        //        {
+        //            // Seleccionar la fila correspondiente
+        //            ObjView.dgvUser.ClearSelection();
+        //            ObjView.dgvUser.Rows[hitTestInfo.RowIndex].Selected = true;
+
+        //            // Mostrar el ContextMenuStrip en la posición del mouse
+        //            ObjView.MenuProductos.Show(ObjView.dgvUser, new Point(e.X, e.Y));
+        //        }
+        //    }
+        //}
 
         //CRUD
         public void ShowDGVUsers()
@@ -72,12 +93,8 @@ namespace SistemaJoyería.Controller.UserController
             //Asignamos la tabla del DataSet como la fuente de datos para el DataGridView
             ObjView.dgvUser.DataSource = ds.Tables["v_Users"];
         }
-
-        
-
         //Validar el patrón del correo
         private bool Emailverifaction(string email)
-
         {
             // Definimos el patrón para validar el formato de correo electrónico.
             // - El correo comience con uno o más caracteres que no sean @ ni espacios.
@@ -141,6 +158,24 @@ namespace SistemaJoyería.Controller.UserController
                 MessageBox.Show("Usuario no seleccionado o datos faltantes o incorrectos, favor verificar datos ingresados", "Revisa la información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        void DeleteUser(object sender, EventArgs e)
+        {
+            //capturando el indice de la fila
+
+            int pos = ObjView.dgvUser.CurrentRow.Index;
+            UserViewDAO daoDelete = new UserViewDAO();
+            daoDelete.IDUser1 = int.Parse(ObjView.dgvUser[0, pos].Value.ToString());
+            int retorno = daoDelete.DeleteUser();
+            if (retorno == 1)
+            {
+                MessageBox.Show("El usuario seleccionado fue eliminado", "proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowDGVUsers();
+            }
+            else
+            {
+                MessageBox.Show("El usuario seleccionado no pudo ser eliminado", "proceso incompletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);             
+            }
+        }
 
 
         void ClearUpdateZone(object sender, EventArgs e)
@@ -168,7 +203,6 @@ namespace SistemaJoyería.Controller.UserController
         {
             ShowDGVUsers();
         }
-
         public void SearchUsers(object sender, KeyPressEventArgs e)
         {
             SearchUsersController();
@@ -181,7 +215,7 @@ namespace SistemaJoyería.Controller.UserController
             DataSet ds = userViewDAO.SearchUser(ObjView.txtSearchUser.Text.Trim());
             ObjView.dgvUser.DataSource = ds.Tables["v_Users"];
         }
-        private void DisableCopyCutPaste(TextBox textBox)
+        void DisableCopyCutPaste(TextBox textBox)
         {
             // Deshabilitamos el menú contextual del TextBox
             textBox.ContextMenu = new ContextMenu();
