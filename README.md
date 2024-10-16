@@ -8,7 +8,6 @@ Clientes
 En el módulo de Clientes, el sistema permite realizar las siguientes acciones:
 - Añadir clientes: Registrar un nuevo cliente en el sistema.
 - Actualizar información de clientes: Modificar los datos de un cliente existente.
-- Eliminar clientes: Eliminar los registros de clientes que ya no son necesarios.
 - Buscar clientes: Realizar búsquedas de clientes específicos por diferentes criterios.
 
 Empleados
@@ -42,6 +41,7 @@ Ventas
 El módulo de Ventas permite gestionar las transacciones de ventas en la joyería:
 - Añadir una venta: Registrar una nueva venta, lo que actualizará automáticamente el inventario de productos.
 - Actualizar la tabla de ventas: La tabla de ventas se actualiza con cada nueva venta registrada.
+- Eliminar Venta: Remover venta por posible error humano.
 - Imprimir factura: Generar e imprimir una factura para las transacciones de venta realizadas.
 
 Servidor
