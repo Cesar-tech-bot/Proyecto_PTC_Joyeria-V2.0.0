@@ -49,6 +49,26 @@ namespace SistemaJoyería.Model.DAO
                 string query = "UPDATE Users SET Password = @contraseñaNueva WHERE  LoginName =@usuario";
                 SqlCommand cmd = new SqlCommand(query, SqlCommand.Connection);
                 cmd.Parameters.AddWithValue("usuario", LoginName1);
+                cmd.Parameters.AddWithValue("contraseñaNueva", Password1);
+
+                string encrypted = Password1;
+
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+
+                    // Computar el hash - Esta retorna un arreglo de bytes
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(encrypted));
+
+                    // Convertir byte array a string
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    encrypted = builder.ToString();
+                }
+
+                cmd.Parameters.AddWithValue("contraseñaNueva", encrypted);
 
                 string encrypted = Password1;
 

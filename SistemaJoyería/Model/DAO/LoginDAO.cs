@@ -42,14 +42,6 @@ namespace SistemaJoyería.Model.DAO
                     encriptada = builder.ToString();
                 }
 
-
-
-
-
-
-
-
-
                 cmd.Parameters.AddWithValue("user", LoginName1);
                 cmd.Parameters.AddWithValue("pass", encriptada);
                 SqlDataReader reader = cmd.ExecuteReader();
