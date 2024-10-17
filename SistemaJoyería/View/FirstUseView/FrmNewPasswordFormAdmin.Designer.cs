@@ -56,7 +56,7 @@
             this.BtnConfirmarNuevaContraAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.BtnConfirmarNuevaContraAdmin.ForeColor = System.Drawing.Color.White;
             this.BtnConfirmarNuevaContraAdmin.Location = new System.Drawing.Point(207, 352);
-            this.BtnConfirmarNuevaContraAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnConfirmarNuevaContraAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.BtnConfirmarNuevaContraAdmin.Name = "BtnConfirmarNuevaContraAdmin";
             this.BtnConfirmarNuevaContraAdmin.Size = new System.Drawing.Size(142, 48);
             this.BtnConfirmarNuevaContraAdmin.TabIndex = 4;
@@ -67,8 +67,8 @@
             // 
             this.txtNameUserAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtNameUserAdmin.Location = new System.Drawing.Point(173, 114);
-            this.txtNameUserAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNameUserAdmin.MaxLength = 1;
+            this.txtNameUserAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNameUserAdmin.MaxLength = 100;
             this.txtNameUserAdmin.Name = "txtNameUserAdmin";
             this.txtNameUserAdmin.Size = new System.Drawing.Size(202, 26);
             this.txtNameUserAdmin.TabIndex = 20;
@@ -77,8 +77,8 @@
             // 
             this.txtNuevaContraseñaNuevaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtNuevaContraseñaNuevaAdmin.Location = new System.Drawing.Point(173, 194);
-            this.txtNuevaContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNuevaContraseñaNuevaAdmin.MaxLength = 2;
+            this.txtNuevaContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNuevaContraseñaNuevaAdmin.MaxLength = 100;
             this.txtNuevaContraseñaNuevaAdmin.Name = "txtNuevaContraseñaNuevaAdmin";
             this.txtNuevaContraseñaNuevaAdmin.Size = new System.Drawing.Size(202, 26);
             this.txtNuevaContraseñaNuevaAdmin.TabIndex = 22;
@@ -87,8 +87,8 @@
             // 
             this.txtConfirmarContraseñaNuevaAdmin.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.txtConfirmarContraseñaNuevaAdmin.Location = new System.Drawing.Point(173, 289);
-            this.txtConfirmarContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtConfirmarContraseñaNuevaAdmin.MaxLength = 3;
+            this.txtConfirmarContraseñaNuevaAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmarContraseñaNuevaAdmin.MaxLength = 100;
             this.txtConfirmarContraseñaNuevaAdmin.Name = "txtConfirmarContraseñaNuevaAdmin";
             this.txtConfirmarContraseñaNuevaAdmin.Size = new System.Drawing.Size(202, 26);
             this.txtConfirmarContraseñaNuevaAdmin.TabIndex = 24;

@@ -16,6 +16,32 @@ namespace SistemaJoyería.Controller.LoginController
             objVerifications = vista;
             objVerifications.btnVerificarRespuestas.Click += new EventHandler(VerificarRespuestasDS);
             objVerifications.btnComeBack.Click += new EventHandler(ShowRecover);
+
+            // Deshabilitar copiar y pegar en todos los TextBox
+            DisableCopyPaste(objVerifications.txtUsuario);
+            DisableCopyPaste(objVerifications.txtRespuesta1);
+            DisableCopyPaste(objVerifications.txtRespuesta2);
+            DisableCopyPaste(objVerifications.txtRespuesta3);
+
+            // Configurar validación para el campo de visitas
+            objVerifications.txtRespuesta3.KeyPress += new KeyPressEventHandler(ValidateNumericInput);
+
+            // Quitar el menú
+            objVerifications.Menu = null;
+        }
+
+        private void DisableCopyPaste(TextBox textBox)
+        {
+            textBox.ShortcutsEnabled = false;
+            textBox.ContextMenu = new ContextMenu();
+        }
+
+        private void ValidateNumericInput(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         public void VerificarRespuestasDS(object sender, EventArgs e)
@@ -33,7 +59,7 @@ namespace SistemaJoyería.Controller.LoginController
             {
                 MessageBox.Show("Las respuestas son correctas", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 objVerifications.Hide();
-                FrmChangePassword CambiarContra = new FrmChangePassword(username);
+                FrmChangePassword2 CambiarContra = new FrmChangePassword2();
                 CambiarContra.Show();
             }
             else

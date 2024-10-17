@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -18,7 +19,7 @@ namespace SistemaJoyería.Model.DAO
         public bool ComprobarUsuario(string username)
         {
             SqlCommand.Connection = getConnection();
-            string query = "SELECT * FROM Users  WHERE LoginName=@usuario";
+            string query = "SELECT * FROM Users  WHERE UserEmail=@usuario";
             SqlCommand cmd = new SqlCommand(query, SqlCommand.Connection);
             cmd.Parameters.AddWithValue("usuario", username);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -48,16 +49,32 @@ namespace SistemaJoyería.Model.DAO
                 string query = "UPDATE Users SET Password = @contraseñaNueva WHERE  LoginName =@usuario";
                 SqlCommand cmd = new SqlCommand(query, SqlCommand.Connection);
                 cmd.Parameters.AddWithValue("usuario", LoginName1);
-                cmd.Parameters.AddWithValue("contraseñaNueva", Password1);
+
+                string encrypted = Password1;
+
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+
+                    // Computar el hash - Esta retorna un arreglo de bytes
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(encrypted));
+
+                    // Convertir byte array a string
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    encrypted = builder.ToString();
+                }
+                MessageBox.Show(encrypted);
+
+
+                cmd.Parameters.AddWithValue("contraseñaNueva", encrypted);
 
                 int lineasAfectadas = cmd.ExecuteNonQuery();
                 cmd.Parameters.AddWithValue("status", true);
                 SqlDataReader reader = cmd.ExecuteReader();
                 return reader.HasRows;
-
-
-
-
             }
             catch (SqlException sqlex)
             {

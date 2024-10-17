@@ -19,7 +19,7 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 SqlCommand.Connection = getConnection();
-                string query = "SELECT Password FROM Users WHERE idRole = 1  AND Estado = @Estado AND Password = @ContraseñaAdmin";
+                string query = "SELECT Password FROM Users WHERE idRoles = 1  AND Estado = @Estado AND Password = @ContraseñaAdmin";
                 SqlCommand cmd = new SqlCommand(query, SqlCommand.Connection);
                 cmd.Parameters.AddWithValue("ContraseñaAdmin", Password1);
                 cmd.Parameters.AddWithValue("Estado", true);
