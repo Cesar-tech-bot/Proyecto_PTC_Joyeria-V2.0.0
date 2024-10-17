@@ -1,6 +1,7 @@
 ﻿using SistemaJoyería.View.ClientsView;
 using SistemaJoyería.View.DashboardView;
 using SistemaJoyería.View.EmployeesView;
+using SistemaJoyería.View.LoginView;
 using SistemaJoyería.View.ProductsView;
 using SistemaJoyería.View.SalesDetailsView;
 using SistemaJoyería.View.ServerView;
@@ -34,9 +35,16 @@ namespace SistemaJoyería.Controller.DashboardController
             ObjDashboard.btnEmployee.Click += new EventHandler(OpenEmployee);
             ObjDashboard.btnServer.Click += new EventHandler(OpenServer);
             ObjDashboard.btnUsers.Click += new EventHandler(OpenUsers);
+            ObjDashboard.btnSignOut.Click += new EventHandler(SignOut);
 
         }
 
+        void SignOut(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();            
+            frmLogin.Show();
+            ObjDashboard.Hide();
+        }
         void OpenServer(object sender, EventArgs e)
         {
             FrmServer frmServer = new FrmServer();
