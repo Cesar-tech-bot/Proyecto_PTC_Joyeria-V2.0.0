@@ -27,12 +27,14 @@ namespace SistemaJoyería.Controller.LoginController
 
             DAOCambiarClave DAOdatacambiarClave = new DAOCambiarClave();
             CommonClassesController commonClasses = new CommonClassesController();
+
             DAOdatacambiarClave.LoginName1 = objNewPassword.txtNameUserAdmin.Text;
             DAOdatacambiarClave.Password1 = objNewPassword.txtNuevaContraseñaNuevaAdmin.Text;
-            string cadenaencriptada = commonClasses.ComputeSha256Hash(objNewPassword.txtNuevaContraseñaNuevaAdmin.Text);
-            string cadenaencriptada2 = commonClasses.ComputeSha256Hash(objNewPassword.txtConfirmarContraseñaNuevaAdmin.Text);
 
-            DAOdatacambiarClave.Password1 = commonClasses.ComputeSha256Hash(objNewPassword.txtConfirmarContraseñaNuevaAdmin.Text);
+            string cadenaencriptada = (objNewPassword.txtNuevaContraseñaNuevaAdmin.Text);
+            string cadenaencriptada2 = (objNewPassword.txtConfirmarContraseñaNuevaAdmin.Text);
+
+            DAOdatacambiarClave.Password1 = (objNewPassword.txtConfirmarContraseñaNuevaAdmin.Text);
 
             if (!(string.IsNullOrEmpty(objNewPassword.txtNameUserAdmin.Text.Trim()) ||
          string.IsNullOrEmpty(objNewPassword.txtConfirmarContraseñaNuevaAdmin.Text.Trim()) || string.IsNullOrEmpty(objNewPassword.txtNuevaContraseñaNuevaAdmin.Text.Trim())))

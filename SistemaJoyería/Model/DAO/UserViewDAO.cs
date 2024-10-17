@@ -51,7 +51,6 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
 
                 // Definir que acción se desea realizar
-                MessageBox.Show("Test");
                 string queryUpdate = "UPDATE Users SET LoginName = @param1, Password = @param2, UserEmail = @param3, Estado = @param4, idRoles = (SELECT idRol FROM Roles WHERE NombreRol = @param5) WHERE IDUser = @param6";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
@@ -101,7 +100,7 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexion
                 command.Connection = getConnection();
                 //Definir que accion se desea realizar   (un parametro para cada campo
-                string queryInsert = "Delete Employees Where IDEmployees = @param1";
+                string queryInsert = "Delete Users Where IDUser = @param1";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
                 cmdInsert.Parameters.AddWithValue("param1", IDUser1);
                 return cmdInsert.ExecuteNonQuery();

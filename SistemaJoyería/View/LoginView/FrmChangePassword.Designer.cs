@@ -156,7 +156,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::SistemaJoyería.Properties.Resources.Recuperar_contraseña;
-            this.pictureBox1.Location = new System.Drawing.Point(61, 201);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 231);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(8, 8, 4, 0);
             this.pictureBox1.Size = new System.Drawing.Size(154, 154);
@@ -171,7 +171,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(10, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 18);
+            this.label6.Size = new System.Drawing.Size(171, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "- Al menos un número";
             // 
@@ -182,7 +182,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(10, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 18);
+            this.label1.Size = new System.Drawing.Size(250, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Caracteristicas de la contraseña";
             // 
@@ -193,7 +193,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(10, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 18);
+            this.label5.Size = new System.Drawing.Size(232, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "- Al menos una minuscula A-Z";
             // 
@@ -204,7 +204,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(10, 111);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 18);
+            this.label4.Size = new System.Drawing.Size(236, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "- Al menos una mayuscula A-Z";
             // 
@@ -215,7 +215,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(10, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 18);
+            this.label3.Size = new System.Drawing.Size(192, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "- Un signo como \"$ % & #\"";
             // 
@@ -226,7 +226,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(10, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 18);
+            this.label2.Size = new System.Drawing.Size(217, 18);
             this.label2.TabIndex = 1;
             this.label2.Tag = "";
             this.label2.Text = "- 8 caracteres como mínimo";

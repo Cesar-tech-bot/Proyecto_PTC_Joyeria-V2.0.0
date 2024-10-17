@@ -152,7 +152,6 @@ namespace SistemaJoyería.Controller.UserController
         void DeleteUser(object sender, EventArgs e)
         {
             //capturando el indice de la fila
-
             int pos = ObjView.dgvUser.CurrentRow.Index;
             UserViewDAO daoDelete = new UserViewDAO();
             daoDelete.IDUser1 = int.Parse(ObjView.dgvUser[0, pos].Value.ToString());
