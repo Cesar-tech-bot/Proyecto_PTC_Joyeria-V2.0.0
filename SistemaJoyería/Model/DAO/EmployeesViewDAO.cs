@@ -43,29 +43,29 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection.Close();
             }
         }
+        public int DeleteEmployees()
+        {
+            try
+            {
+                //Establecemos una conexion
+                command.Connection = getConnection();
+                //Definir que accion se desea realizar   (un parametro para cada campo
+                string queryInsert = "Delete Employees Where IDEmployees = @param1";
+                SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
+                cmdInsert.Parameters.AddWithValue("param1", IdEmployees);
+                return cmdInsert.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
-        //public int DeleteEmployees()
-        //{
-        //    try
-        //    {
-        //        //Establecemos una conexión
-        //        command.Connection = getConnection();
-        //        //Definir que acción se desea realizar
-        //        string queryDelete = "DELETE Employee WHERE IDEmployee = @param1";
-        //        SqlCommand cmdDelete = new SqlCommand(queryDelete, command.Connection);
-        //        cmdDelete.Parameters.AddWithValue("param1", IdEmployee);
-        //        return cmdDelete.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"{ex.Message} No se pudo eliminar la información del empleado, verifique su conexión a internet o que los servicios esten activos", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return -1;
-        //    }
-        //    finally
-        //    {
-        //        command.Connection.Close();
-        //    }
-        //}
+                MessageBox.Show($"{ex.Message} No se puede eliminar el Usuario, verifique su conexion a internet o que los servicios esten activos", "Error de insercción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
 
         public int UpdateEmployees()
         {

@@ -1,6 +1,5 @@
 ﻿using SistemaJoyería.View.LoginView;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using SistemaJoyería.Model.DAO;
@@ -47,15 +46,6 @@ namespace SistemaJoyería.Controller.LoginController
 
         public void VerificarRespuestasDS(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(objVerifications.txtUsuario.Text) ||
-                string.IsNullOrWhiteSpace(objVerifications.txtRespuesta1.Text) ||
-                string.IsNullOrWhiteSpace(objVerifications.txtRespuesta2.Text) ||
-                string.IsNullOrWhiteSpace(objVerifications.txtRespuesta3.Text))
-            {
-                MessageBox.Show("Todos los campos deben estar llenos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             SqlCommand command = new SqlCommand();
             DAOSecurityQuestions SecurityResults = new DAOSecurityQuestions();
             SecurityResults.Usuario = objVerifications.txtUsuario.Text.Trim();

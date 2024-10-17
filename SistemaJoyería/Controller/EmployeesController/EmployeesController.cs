@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -25,7 +26,7 @@ namespace SistemaJoyería.Controller.EmployeesController
             //Eventos del CRUD (Read, Delete, Update)
             view.btnAddEmployee.Click += new EventHandler(ShowAddCEmployee);
             view.btnUpdate.Click += new EventHandler(UpdateRegister);
-            //view.cmbDelete.Click += new EventHandler(DeleteEmployee);
+            view.cmsDeleteEmployees.Click += new EventHandler(DeleteEmployee);
 
             //Eventos
             view.btnRestart.Click += new EventHandler(RefreshPage);
@@ -101,25 +102,25 @@ namespace SistemaJoyería.Controller.EmployeesController
            FrmAddEmployees frmAddEmployee = new FrmAddEmployees();
             frmAddEmployee.ShowDialog();
         }
+    
+        void DeleteEmployee(object sender, EventArgs e)
+        {
+            //capturando el indice de la fila
 
-        //void DeleteEmployee(object sender, EventArgs e)
-        //{
-        //    //Capturando el indice de la fila
-        //    int pos = ObjView.dgvEmployees.CurrentRow.Index;
-        //    EmployeesViewDAO daoDelete = new EmployeesViewDAO();
-        //    daoDelete.IdEmployee = int.Parse(ObjView.dgvEmployees[0, pos].Value.ToString());
-        //    int retorno = daoDelete.DeleteEmployees();
-        //    if (retorno == 1)
-        //    {
-        //        MessageBox.Show("El Empleado seleccionado fue eliminado", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        ShowDGVEmployees();
-        //        ClearUpdateZone(sender, e);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("El Empleado seleccionado no pudo ser eliminado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //    }
-        //}
+            int pos = ObjView.dgvEmployees.CurrentRow.Index;
+            EmployeesViewDAO daoDelete = new EmployeesViewDAO();
+            daoDelete.IdEmployees = int.Parse(ObjView.dgvEmployees[0, pos].Value.ToString());
+            int retorno = daoDelete.DeleteEmployees();
+            if (retorno == 1)
+            {
+                MessageBox.Show("El usuario seleccionado fue eliminado", "proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowDGVEmployees();
+            }
+            else
+            {
+                MessageBox.Show("El usuario seleccionado no pudo ser eliminado", "proceso incompletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }   
 
         void SelectEmployees(object sender, DataGridViewCellEventArgs e)
         {

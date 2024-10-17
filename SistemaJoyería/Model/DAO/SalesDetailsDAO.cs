@@ -62,6 +62,29 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection.Close();
             }
         }
+        public int DeleteSale()
+        {
+            try
+            {
+                //Establecemos una conexion
+                command.Connection = getConnection();
+                //Definir que accion se desea realizar   (un parametro para cada campo
+                string queryInsert = "Delete SalesDetails Where IDSaleDetail = @param1";
+                SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
+                cmdInsert.Parameters.AddWithValue("param1", IDSaleDetail1);
+                return cmdInsert.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"{ex.Message} No se puede eliminar la venta, verifique su conexion a internet o que los servicios esten activos", "Error de insercción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
 
         // Buscar detalles de venta
         public DataSet SearchSalesDetails(string valor)
@@ -69,18 +92,17 @@ namespace SistemaJoyería.Model.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = $"SELECT * FROM vw_Details WHERE IDProduct LIKE '%{valor}%'";
+                string query = $"SELECT * FROM vw_Details WHERE [Nombre del Producto] Like '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
-                cmd.Parameters.AddWithValue("@Valor", $"%{valor}%");
-                cmd.ExecuteNonQuery();
+                //cmd.Parameters.AddWithValue("@Valor", valor);
+                cmd.ExecuteScalar();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet, "SalesDetails");
+                adapter.Fill(dataSet, "vw_Details");
                 return dataSet;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"{ex.Message} No se pudo realizar la búsqueda.", "Error de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

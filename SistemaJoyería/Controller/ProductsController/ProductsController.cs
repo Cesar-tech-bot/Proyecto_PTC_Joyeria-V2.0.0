@@ -244,9 +244,11 @@ namespace SistemaJoyería.Controller.ProductsController
             {
                 MessageBox.Show("El producto seleccionado no pudo ser actualizado", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             //Habilitar el btn keep
             ObjProducts.btnKeep.Enabled = true;
         }
+
 
         //Guardar producto
         void KeepRegistrer(object sender, EventArgs e)

@@ -6,16 +6,16 @@ using System;
 using System.Drawing.Printing;
 using System.Drawing;
 
+
 namespace SistemaJoyería.Controller.SalesDetailsController
 {
     internal class SalesDetailsController
     {
         FrmSalesDetailView ObjSalesDetails;
-        PrintDocument printDocument; // Agregar PrintDocument como campo
+        private PrintDocument printDocument = new PrintDocument();
         public SalesDetailsController(FrmSalesDetailView View)
         {
-            ObjSalesDetails = View;
-            printDocument = new PrintDocument();
+            ObjSalesDetails = View;;
             // Crear evento para cuando se inicie el Formulario
             View.Load += new EventHandler(CargaInicial);
             // Eventos que se ejecutan con click
@@ -23,13 +23,12 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             View.btnRefresh.Click += new EventHandler(RefreshDGV);
             View.txtQuantity.KeyPress += new KeyPressEventHandler(OnlyNumber);
             View.btnClear.Click += new EventHandler(ClearZone);
-            View.btnImprent.Click += new EventHandler(PrintSalesDetails);            
-            // Crear PrintDocument e inicializar el evento PrintPage
-            printDocument = new PrintDocument();
-            printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
+            View.btnImprent.Click += new EventHandler(PrintDocumentt);
+            View.cmsDeleteSale.Click += new EventHandler(DeleteSale);
             //Otro tipo de método
             View.txtQuantity.TextChanged += new EventHandler(Limit3);
             View.cmbProduct.SelectedIndexChanged += new EventHandler(UpdateProductPrice);
+            View.btnSearchSale.Click += new EventHandler(SearcSaleEvent);
             // Establece la fecha mínima y máxima en el DateTimePicker para que solo permita la fecha de hoy
             View.dtpDateSell.MinDate = DateTime.Today;
             View.dtpDateSell.MaxDate = DateTime.Today;
@@ -39,6 +38,8 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             View.dtpDateSell.Enabled = false;
             DisableCopyCutPaste(View.txtQuantity);
             DisableCopyCutPasteMasked(View.mskPrice);
+            // Asignamos el evento PrintPage al documento de impresión
+            printDocument.PrintPage += new PrintPageEventHandler(PrintPanel);
         }
 
         void CargaInicial(object sender, EventArgs e)
@@ -47,6 +48,32 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             FillProducts();
             FillEmployees();
             FillClient();
+        }
+
+        // Manejador para la impresión
+        private void PrintPanel(object sender, PrintPageEventArgs e)
+        {
+            // Verifica que PanelPrint no sea nulo
+            if (ObjSalesDetails.PanelPrint != null)
+            {
+                // Crear un Bitmap del tamaño del Panel
+                Bitmap bm = new Bitmap(ObjSalesDetails.PanelPrint.Width, ObjSalesDetails.PanelPrint.Height);
+
+                // Dibuja el contenido del Panel en el Bitmap
+                ObjSalesDetails.PanelPrint.DrawToBitmap(bm, new Rectangle(0, 0, ObjSalesDetails.PanelPrint.Width, ObjSalesDetails.PanelPrint.Height));
+
+                // Dibuja el Bitmap en la página de impresión
+                e.Graphics.DrawImage(bm, 0, 0);
+            }
+        }
+
+        // Manejador del botón para mostrar el cuadro de vista previa de impresión
+        private void PrintDocumentt(object sender, EventArgs e)
+        {
+            // Configura el PrintPreviewDialog y asigna el documento de impresión
+            PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
+            printPreviewDialog1.Document = printDocument; // Asignamos el documento de impresión
+            printPreviewDialog1.ShowDialog(); // Mostrar la vista previa de impresión
         }
 
         //LLenarTB
@@ -78,6 +105,37 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             ObjSalesDetails.cmbClient.DataSource = dsC.Tables["Clients"];
             ObjSalesDetails.cmbClient.DisplayMember = "FirstName";
             ObjSalesDetails.cmbClient.ValueMember = "IDClient";
+        }
+
+        void DeleteSale(object sender, EventArgs e)
+        {
+            //capturando el indice de la fila
+
+            int pos = ObjSalesDetails.dgvSellInfo.CurrentRow.Index;
+            SalesDetailsViewDAO daoDelete = new SalesDetailsViewDAO();
+            daoDelete.IDSaleDetail1 = int.Parse(ObjSalesDetails.dgvSellInfo[0, pos].Value.ToString());
+            int retorno = daoDelete.DeleteSale();
+            if (retorno == 1)
+            {
+                MessageBox.Show("La venta seleccionada fue eliminada", "proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowDGVSalesDetails();
+            }
+            else
+            {
+                MessageBox.Show("La venta seleccionada no pudo ser eliminada", "proceso incompletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public void SearchSale(object sender, KeyPressEventArgs e)
+        {
+            SearchSaleController();
+        }
+        //Buscar productos
+        public void SearcSaleEvent(object sender, EventArgs e) { SearchSaleController(); }
+        void SearchSaleController()
+        {
+            SalesDetailsViewDAO SalesViewDAO = new SalesDetailsViewDAO();
+            DataSet ds = SalesViewDAO.SearchSalesDetails(ObjSalesDetails.txtProductsSell.Text.Trim());
+            ObjSalesDetails.dgvSellInfo.DataSource = ds.Tables["vw_Details"];
         }
 
         // Refrescar tabla
@@ -160,54 +218,8 @@ namespace SistemaJoyería.Controller.SalesDetailsController
             ObjSalesDetails.mskPrice.Clear();
 
         }
-        // Método para mostrar el cuadro de diálogo de impresión
-        void PrintSalesDetails(object sender, EventArgs e)
-        {
-            PrintDialog printDialog = new PrintDialog();
-            printDialog.Document = printDocument;
+       
 
-            if (printDialog.ShowDialog() == DialogResult.OK)
-            {
-                printDocument.Print();
-            }
-        }
-        // Evento para manejar la impresión
-        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            int yPos = 100;
-            int leftMargin = e.MarginBounds.Left;
-            Font font = new Font("Arial", 10);
-            Brush brush = Brushes.Black;
-
-            // Título
-            e.Graphics.DrawString("Detalles de Ventas", new Font("Arial", 14, FontStyle.Bold), brush, leftMargin, yPos);
-            yPos += 40;
-
-            // Imprimir encabezados
-            foreach (DataGridViewColumn column in ObjSalesDetails.dgvSellInfo.Columns)
-            {
-                e.Graphics.DrawString(column.HeaderText, font, brush, leftMargin, yPos);
-                leftMargin += 100;
-            }
-
-            yPos += 30;
-            leftMargin = e.MarginBounds.Left;
-
-            // Imprimir filas
-            foreach (DataGridViewRow row in ObjSalesDetails.dgvSellInfo.Rows)
-            {
-                if (row.Cells[0].Value != null)
-                {
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        e.Graphics.DrawString(cell.Value.ToString(), font, brush, leftMargin, yPos);
-                        leftMargin += 100;
-                    }
-                    yPos += 20;
-                    leftMargin = e.MarginBounds.Left;
-                }
-            }
-        }
         //Validaciones
         //Método para validar que sólo sean números
         private void OnlyNumber(object sender, KeyPressEventArgs e)
