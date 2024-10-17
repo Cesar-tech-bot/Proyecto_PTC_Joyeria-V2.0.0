@@ -51,7 +51,6 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
 
                 // Definir que acción se desea realizar
-                MessageBox.Show("Test");
                 string queryUpdate = "UPDATE Users SET LoginName = @param1, Password = @param2, UserEmail = @param3, Estado = @param4, idRoles = (SELECT idRol FROM Roles WHERE NombreRol = @param5) WHERE IDUser = @param6";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
