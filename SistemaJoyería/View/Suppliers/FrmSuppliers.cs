@@ -1,12 +1,5 @@
 ﻿using SistemaJoyería.Controller.Suppliers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaJoyería.View.Suppliers
@@ -21,10 +14,11 @@ namespace SistemaJoyería.View.Suppliers
             this.KeyDown += Form_KeyDown;
 
             // Hacemos que el ListView se ajuste de forma responsiva
-            this.listSuppliers.Dock = DockStyle.Fill; // Se extiende y ocupa todo el espacio disponible
+            this.listSuppliers.Dock = DockStyle.Fill; // El ListView se extiende y ocupa todo el espacio disponible
 
-            // Alternativamente, si quieres usar Anchor, puedes descomentar la siguiente línea:
-            // this.listSuppliers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            // Ajustar el tamaño de las columnas cuando se cambia el tamaño del formulario
+            this.Resize += new EventHandler(FrmSuppliers_Resize);
+            AjustarColumnasListView(); // Llamada inicial para ajustar columnas
         }
 
         // Método para bloquear copiar y pegar
@@ -36,14 +30,36 @@ namespace SistemaJoyería.View.Suppliers
             }
         }
 
+        // Ajustar las columnas del ListView al redimensionar el formulario
+        private void FrmSuppliers_Resize(object sender, EventArgs e)
+        {
+            AjustarColumnasListView();
+        }
+
+        // Método para ajustar las columnas proporcionalmente
+        private void AjustarColumnasListView()
+        {
+            if (listSuppliers.Columns.Count > 0)
+            {
+                // Dividir el ancho total del ListView entre el número de columnas
+                int totalWidth = listSuppliers.Width;
+                int columnCount = listSuppliers.Columns.Count;
+                int columnWidth = totalWidth / columnCount;
+
+                // Asignar el ancho proporcional a cada columna
+                for (int i = 0; i < listSuppliers.Columns.Count; i++)
+                {
+                    listSuppliers.Columns[i].Width = columnWidth;
+                }
+            }
+        }
+
         private void listSuppliers_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
