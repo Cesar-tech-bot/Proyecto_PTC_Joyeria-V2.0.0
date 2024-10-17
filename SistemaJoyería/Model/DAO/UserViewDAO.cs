@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaJoyería.Model.DTO;
+using System.Security.Cryptography;
 
 namespace SistemaJoyería.Model.DAO
 {
@@ -50,11 +51,28 @@ namespace SistemaJoyería.Model.DAO
                 command.Connection = getConnection();
 
                 // Definir que acción se desea realizar
-                string queryUpdate = "UPDATE Users SET LoginName = @param1, Password = @param2, UserEmail = @param3, Estado = @param4, idRoles = @param5 WHERE IDUser = @param6";
+                MessageBox.Show("Test");
+                string queryUpdate = "UPDATE Users SET LoginName = @param1, Password = @param2, UserEmail = @param3, Estado = @param4, idRoles = (SELECT idRol FROM Roles WHERE NombreRol = @param5) WHERE IDUser = @param6";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, command.Connection);
 
                 // Agregamos los parámetros
                 cmdUpdate.Parameters.AddWithValue("@param1", UserName1);
+
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+
+                    // Computar el hash - Esta retorna un arreglo de bytes
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(Password1));
+
+                    // Convertir byte array a string
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    Password1 = builder.ToString();
+                }
+
                 cmdUpdate.Parameters.AddWithValue("@param2", Password1); // Usamos la contraseña tal como la ingresó el usuario, sin encriptación
                 cmdUpdate.Parameters.AddWithValue("@param3", UserEmail1);
                 cmdUpdate.Parameters.AddWithValue("@param4", Estado1);
