@@ -100,7 +100,7 @@ namespace SistemaJoyería.Model.DAO
                 //Establecemos una conexion
                 command.Connection = getConnection();
                 //Definir que accion se desea realizar   (un parametro para cada campo
-                string queryInsert = "Delete Employees Where IDEmployees = @param1";
+                string queryInsert = "Delete Users Where IDUser = @param1";
                 SqlCommand cmdInsert = new SqlCommand(queryInsert, command.Connection);
                 cmdInsert.Parameters.AddWithValue("param1", IDUser1);
                 return cmdInsert.ExecuteNonQuery();
