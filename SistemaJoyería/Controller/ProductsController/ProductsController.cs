@@ -93,7 +93,7 @@ namespace SistemaJoyería.Controller.ProductsController
         //Refrescar tabla
         void ResfreshDGV(object sender, EventArgs e)
         {
-            ShowDGVProducts();
+            ShowDGVProducts();           
         }
 
         void ShowDGVProducts()
@@ -101,6 +101,7 @@ namespace SistemaJoyería.Controller.ProductsController
             ProductsViewDAO daoPD = new ProductsViewDAO();
             DataSet ds = daoPD.ShowDGV();
             ObjProducts.dgvProduct.DataSource = ds.Tables["vw_Products"];
+            ObjProducts.btnKeep.Enabled = true;
         }
 
         void FillComboSuppliers()
